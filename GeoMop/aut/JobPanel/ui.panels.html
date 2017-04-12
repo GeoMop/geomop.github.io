@@ -1,0 +1,377 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ui.panels package &mdash; Job Panel Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Job Panel Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="up" title="ui package" href="ui.html"/>
+        <link rel="next" title="ui.validators package" href="ui.validators.html"/>
+        <link rel="prev" title="ui.menus package" href="ui.menus.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexJP.html" class="icon icon-home"> Job Panel Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Jobs Scheduler Source</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="communication.html">communication package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">data package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="delegator.html">delegator module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html">helpers package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="job.html">job module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="locks.html">locks module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mj_service.html">mj_service module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">test module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_app.html">test_app module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_task.html">test_task module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ui.html">ui package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ui.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ui.actions.html">ui.actions package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.data.html">ui.data package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.dialogs.html">ui.dialogs package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.helpers.html">ui.helpers package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.imports.html">ui.imports package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.menus.html">ui.menus package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">ui.panels package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.panels.overview">ui.panels.overview module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.panels.tabs">ui.panels.tabs module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.panels">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ui.validators.html">ui.validators package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.com_manager">ui.com_manager module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.com_worker">ui.com_worker module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.main_window">ui.main_window module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.ssh_test">ui.ssh_test module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../indexJP.html">Job Panel Source Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../indexJP.html">Docs</a> &raquo;</li>
+      
+          <li><a href="ui.html">ui package</a> &raquo;</li>
+      
+    <li>ui.panels package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/aut/JobPanel/ui.panels.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ui-panels-package">
+<h1>ui.panels package<a class="headerlink" href="#ui-panels-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ui.panels.overview">
+<span id="ui-panels-overview-module"></span><h2>ui.panels.overview module<a class="headerlink" href="#module-ui.panels.overview" title="Permalink to this headline">¶</a></h2>
+<p>Table of MultiJobs
+&#64;author: Jan Gabriel
+&#64;contact: <a class="reference external" href="mailto:jan&#46;gabriel&#37;&#52;&#48;tul&#46;cz">jan<span>&#46;</span>gabriel<span>&#64;</span>tul<span>&#46;</span>cz</a></p>
+<dl class="class">
+<dt id="ui.panels.overview.Overview">
+<em class="property">class </em><code class="descclassname">ui.panels.overview.</code><code class="descname">Overview</code><span class="sig-paren">(</span><em>QWidget parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.overview.Overview" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QTreeWidget</span></code></p>
+<dl class="method">
+<dt id="ui.panels.overview.Overview.add_item">
+<code class="descname">add_item</code><span class="sig-paren">(</span><em>key</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.overview.Overview.add_item" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.panels.overview.Overview.reload_items">
+<code class="descname">reload_items</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.overview.Overview.reload_items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.panels.overview.Overview.remove_item">
+<code class="descname">remove_item</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.overview.Overview.remove_item" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.panels.overview.Overview.update_item">
+<code class="descname">update_item</code><span class="sig-paren">(</span><em>key</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.overview.Overview.update_item" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.panels.tabs">
+<span id="ui-panels-tabs-module"></span><h2>ui.panels.tabs module<a class="headerlink" href="#module-ui.panels.tabs" title="Permalink to this headline">¶</a></h2>
+<p>Table of MultiJobs
+&#64;author: Jan Gabriel
+&#64;contact: <a class="reference external" href="mailto:jan&#46;gabriel&#37;&#52;&#48;tul&#46;cz">jan<span>&#46;</span>gabriel<span>&#64;</span>tul<span>&#46;</span>cz</a></p>
+<dl class="class">
+<dt id="ui.panels.tabs.AbstractTab">
+<em class="property">class </em><code class="descclassname">ui.panels.tabs.</code><code class="descname">AbstractTab</code><span class="sig-paren">(</span><em>QWidget parent=None</em>, <em>Qt.WindowFlags flags=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.tabs.AbstractTab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QWidget</span></code></p>
+<dl class="method">
+<dt id="ui.panels.tabs.AbstractTab.resize_all_columns_to_contents">
+<code class="descname">resize_all_columns_to_contents</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.tabs.AbstractTab.resize_all_columns_to_contents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.panels.tabs.ConfigTab">
+<em class="property">class </em><code class="descclassname">ui.panels.tabs.</code><code class="descname">ConfigTab</code><span class="sig-paren">(</span><em>QWidget parent=None</em>, <em>Qt.WindowFlags flags=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.tabs.ConfigTab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.panels.tabs.FilesTab" title="ui.panels.tabs.FilesTab"><code class="xref py py-class docutils literal"><span class="pre">ui.panels.tabs.FilesTab</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.panels.tabs.FilesTab">
+<em class="property">class </em><code class="descclassname">ui.panels.tabs.</code><code class="descname">FilesTab</code><span class="sig-paren">(</span><em>QWidget parent=None</em>, <em>Qt.WindowFlags flags=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.tabs.FilesTab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.panels.tabs.AbstractTab" title="ui.panels.tabs.AbstractTab"><code class="xref py py-class docutils literal"><span class="pre">ui.panels.tabs.AbstractTab</span></code></a></p>
+<dl class="method">
+<dt id="ui.panels.tabs.FilesTab.reload_view">
+<code class="descname">reload_view</code><span class="sig-paren">(</span><em>file_objects</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.tabs.FilesTab.reload_view" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.panels.tabs.JobsTab">
+<em class="property">class </em><code class="descclassname">ui.panels.tabs.</code><code class="descname">JobsTab</code><span class="sig-paren">(</span><em>QWidget parent=None</em>, <em>Qt.WindowFlags flags=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.tabs.JobsTab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.panels.tabs.AbstractTab" title="ui.panels.tabs.AbstractTab"><code class="xref py py-class docutils literal"><span class="pre">ui.panels.tabs.AbstractTab</span></code></a></p>
+<dl class="method">
+<dt id="ui.panels.tabs.JobsTab.reload_view">
+<code class="descname">reload_view</code><span class="sig-paren">(</span><em>jobs</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.tabs.JobsTab.reload_view" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.panels.tabs.LogsTab">
+<em class="property">class </em><code class="descclassname">ui.panels.tabs.</code><code class="descname">LogsTab</code><span class="sig-paren">(</span><em>QWidget parent=None</em>, <em>Qt.WindowFlags flags=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.tabs.LogsTab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.panels.tabs.FilesTab" title="ui.panels.tabs.FilesTab"><code class="xref py py-class docutils literal"><span class="pre">ui.panels.tabs.FilesTab</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.panels.tabs.OverviewTab">
+<em class="property">class </em><code class="descclassname">ui.panels.tabs.</code><code class="descname">OverviewTab</code><span class="sig-paren">(</span><em>QWidget parent=None</em>, <em>Qt.WindowFlags flags=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.tabs.OverviewTab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.panels.tabs.AbstractTab" title="ui.panels.tabs.AbstractTab"><code class="xref py py-class docutils literal"><span class="pre">ui.panels.tabs.AbstractTab</span></code></a></p>
+<dl class="method">
+<dt id="ui.panels.tabs.OverviewTab.reload_view">
+<code class="descname">reload_view</code><span class="sig-paren">(</span><em>messages</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.tabs.OverviewTab.reload_view" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.panels.tabs.ResultsTab">
+<em class="property">class </em><code class="descclassname">ui.panels.tabs.</code><code class="descname">ResultsTab</code><span class="sig-paren">(</span><em>QWidget parent=None</em>, <em>Qt.WindowFlags flags=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.tabs.ResultsTab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.panels.tabs.FilesTab" title="ui.panels.tabs.FilesTab"><code class="xref py py-class docutils literal"><span class="pre">ui.panels.tabs.FilesTab</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.panels.tabs.Tabs">
+<em class="property">class </em><code class="descclassname">ui.panels.tabs.</code><code class="descname">Tabs</code><span class="sig-paren">(</span><em>QWidget parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.tabs.Tabs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QTabWidget</span></code></p>
+<dl class="method">
+<dt id="ui.panels.tabs.Tabs.reload_view">
+<code class="descname">reload_view</code><span class="sig-paren">(</span><em>mj</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.tabs.Tabs.reload_view" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.panels.tabs.UiTabs">
+<em class="property">class </em><code class="descclassname">ui.panels.tabs.</code><code class="descname">UiTabs</code><a class="headerlink" href="#ui.panels.tabs.UiTabs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="ui.panels.tabs.UiTabs.setup_ui">
+<code class="descname">setup_ui</code><span class="sig-paren">(</span><em>tab_widget</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.tabs.UiTabs.setup_ui" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.panels">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ui.panels" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ui.validators.html" class="btn btn-neutral float-right" title="ui.validators package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ui.menus.html" class="btn btn-neutral" title="ui.menus package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

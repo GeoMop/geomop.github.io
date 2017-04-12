@@ -1,0 +1,22 @@
+leconfig package
+================
+
+Submodules
+----------
+
+leconfig.leconfig module
+------------------------
+
+.. automodule:: leconfig.leconfig
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: leconfig
+    :members:
+    :undoc-members:
+    :show-inheritance:

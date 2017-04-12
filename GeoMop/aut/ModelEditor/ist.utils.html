@@ -1,0 +1,540 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ist.utils package &mdash; Model Editor Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Model Editor Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="up" title="ist package" href="ist.html"/>
+        <link rel="next" title="meconfig package" href="meconfig.html"/>
+        <link rel="prev" title="ist.formatters.extensions package" href="ist.formatters.extensions.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexME.html" class="icon icon-home"> Model Editor Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Model Editor Source</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="data.html">data package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html">helpers package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importer.html">importer module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ist.html">ist package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ist.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ist.formatters.html">ist.formatters package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">ist.utils package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ist.utils.htmltree">ist.utils.htmltree module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ist.utils">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ist.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ist.html#module-ist.info_text_generator">ist.info_text_generator module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ist.html#module-ist">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="meconfig.html">meconfig package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_editor.html">model_editor module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ui.html">ui package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="util.html">util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exporter.html">exporter module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="normalize_ist.html">normalize_ist module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../indexME.html">Model Editor Source Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../indexME.html">Docs</a> &raquo;</li>
+      
+          <li><a href="ist.html">ist package</a> &raquo;</li>
+      
+    <li>ist.utils package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/aut/ModelEditor/ist.utils.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ist-utils-package">
+<h1>ist.utils package<a class="headerlink" href="#ist-utils-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ist.utils.htmltree">
+<span id="ist-utils-htmltree-module"></span><h2>ist.utils.htmltree module<a class="headerlink" href="#module-ist.utils.htmltree" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ist.utils.htmltree.htmltree">
+<em class="property">class </em><code class="descclassname">ist.utils.htmltree.</code><code class="descname">htmltree</code><span class="sig-paren">(</span><em>tag_name='div'</em>, <em>cls=''</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Helper class for generating html documents</p>
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.add">
+<code class="descname">add</code><span class="sig-paren">(</span><em>element</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.add" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">appends element to top</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.bold">
+<code class="descname">bold</code><span class="sig-paren">(</span><em>value=''</em>, <em>attrib={}</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.bold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates bold element
+:param value: bold optional text
+:param attrib: optional attribute
+:return: element</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="ist.utils.htmltree.htmltree.chain_values">
+<em class="property">static </em><code class="descname">chain_values</code><span class="sig-paren">(</span><em>value</em>, <em>sub_value=''</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.chain_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for chaining given values
+Used in href and id creation
+:param value: main value
+:param sub_value: optional sub value
+:return: secured chained value: &#8220;values-subvalue&#8221;  or &#8220;value&#8221; in lowercase</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.cls">
+<code class="descname">cls</code><span class="sig-paren">(</span><em>cls</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.cls" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method sets class to root element
+:param id: id value</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.current">
+<code class="descname">current</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.current" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">current top</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.description">
+<code class="descname">description</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>method will append description element to top
+element has predefined class
+:param value:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.div">
+<code class="descname">div</code><span class="sig-paren">(</span><em>value=''</em>, <em>attrib={}</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.div" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates div element
+:param value: div optional text
+:param attrib: optional attribute
+:return: element</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.dump">
+<code class="descname">dump</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.dump" title="Permalink to this definition">¶</a></dt>
+<dd><p>Debug html dump
+:return:</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="ist.utils.htmltree.htmltree.generate_href">
+<em class="property">static </em><code class="descname">generate_href</code><span class="sig-paren">(</span><em>value</em>, <em>sub_value=''</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.generate_href" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method generates dict with href based on given value and sub_value
+:param value: href main value
+:param sub_value: id optional sub value part
+:return: dict with href key</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="ist.utils.htmltree.htmltree.generate_id">
+<em class="property">static </em><code class="descname">generate_id</code><span class="sig-paren">(</span><em>value</em>, <em>sub_value=''</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.generate_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method generates dict with id based on given value and sub_value
+:param value: id main value
+:param sub_value: id optional sub value part
+:return: dict with id key</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.h">
+<code class="descname">h</code><span class="sig-paren">(</span><em>title</em>, <em>subtitle=''</em>, <em>level='h3'</em>, <em>hide_subtitle=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.h" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates and appends header with level
+If subtitle is given href to title will consist of subtitle</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>title</strong> &#8211; main header title</li>
+<li><strong>subtitle</strong> &#8211; optional subtitle</li>
+<li><strong>level</strong> &#8211; h level</li>
+<li><strong>hide_subtitle</strong> &#8211; hide subtitle section</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.h2">
+<code class="descname">h2</code><span class="sig-paren">(</span><em>value=''</em>, <em>attrib={}</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.h2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates level 2 header also with &#8220;on the side&#8221; href with icon
+to this href
+:param value: header title
+:param attrib: optional attribute
+:return: element</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.h3">
+<code class="descname">h3</code><span class="sig-paren">(</span><em>value=''</em>, <em>attrib={}</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.h3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates level 3 header
+:param value: header title
+:param attrib: optional attribute
+:return: element</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.h4">
+<code class="descname">h4</code><span class="sig-paren">(</span><em>value=''</em>, <em>attrib={}</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.h4" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates level 4 header
+:param value: header title
+:param attrib: optional attribute
+:return: element</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.h5">
+<code class="descname">h5</code><span class="sig-paren">(</span><em>value=''</em>, <em>attrib={}</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.h5" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates level 5 header
+:param value: header title
+:param attrib: optional attribute
+:return: element</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.h6">
+<code class="descname">h6</code><span class="sig-paren">(</span><em>value=''</em>, <em>attrib={}</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.h6" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates level 6 header
+:param value: header title
+:param attrib: optional attribute
+:return: element</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.id">
+<code class="descname">id</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method sets id to root element
+:param id: id value</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.info">
+<code class="descname">info</code><span class="sig-paren">(</span><em>value=''</em>, <em>attrib={'class': 'leading-text'}</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates info element
+:param value: span optional text
+:param attrib: optional attribute, default has class of &#8216;leading-text&#8217;
+:return: element</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.italic">
+<code class="descname">italic</code><span class="sig-paren">(</span><em>value=''</em>, <em>attrib={}</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.italic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates em element
+:param value: em optional text
+:param attrib: optional attribute
+:return: element</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.li">
+<code class="descname">li</code><span class="sig-paren">(</span><em>value=''</em>, <em>attrib={}</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.li" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates li element
+:param value: li optional text
+:param attrib: optional attribute
+:return: element</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.link">
+<code class="descname">link</code><span class="sig-paren">(</span><em>target</em>, <em>text=''</em>, <em>ns=''</em>, <em>attrib={}</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.link" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates link element based on given attributes
+:param target: machine link name
+:param text: link title
+:param ns: namespace for link</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ist.utils.htmltree.htmltree.m2h">
+<code class="descname">m2h</code><em class="property"> = &lt;ist.formatters.markdown2html.markdown2html object&gt;</em><a class="headerlink" href="#ist.utils.htmltree.htmltree.m2h" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.ol">
+<code class="descname">ol</code><span class="sig-paren">(</span><em>value=''</em>, <em>attrib={}</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.ol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates ol element
+:param value: ol optional text
+:param attrib: optional attribute
+:return: element</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.open">
+<code class="descname">open</code><span class="sig-paren">(</span><em>tag_name</em>, <em>value=''</em>, <em>attrib={}</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method opens current element, shifts current top.
+When adding new elements, current top is this newly created
+:param tag_name: tag name
+:param value: optional text
+:param attrib: optional attribs
+:return: self</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.script">
+<code class="descname">script</code><span class="sig-paren">(</span><em>location</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.script" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method add css link script
+:param location: css file location relative to server
+:return: element</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="ist.utils.htmltree.htmltree.secure">
+<em class="property">static </em><code class="descname">secure</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.secure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for securing input value
+:param value: value to be secured
+:return: safe value consisting of numbers and alphabet chars and _ char</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.span">
+<code class="descname">span</code><span class="sig-paren">(</span><em>value=''</em>, <em>attrib={}</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.span" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates span element
+:param value: span optional text
+:param attrib: optional attribute
+:return: element</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.style">
+<code class="descname">style</code><span class="sig-paren">(</span><em>location</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.style" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method add css link style
+:param location: css file location relative to server
+:return: element</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.tag">
+<code class="descname">tag</code><span class="sig-paren">(</span><em>tag_name</em>, <em>value=''</em>, <em>attrib={}</em>, <em>no_escape=True</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method will create and append element with tag based on tag_name value
+:param tag_name: tag name
+:param value: tag value
+:param attrib: optional attribute dict
+:param no_escape: whether to escape value
+:return: element</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ist.utils.htmltree.htmltree.ul">
+<code class="descname">ul</code><span class="sig-paren">(</span><em>value=''</em>, <em>attrib={}</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ist.utils.htmltree.htmltree.ul" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method creates ul element
+:param value: ul optional text
+:param attrib: optional attribute
+:return: element</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ist.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ist.utils" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="meconfig.html" class="btn btn-neutral float-right" title="meconfig package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ist.formatters.extensions.html" class="btn btn-neutral" title="ist.formatters.extensions package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

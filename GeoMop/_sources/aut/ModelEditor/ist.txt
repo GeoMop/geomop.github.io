@@ -1,0 +1,30 @@
+ist package
+===========
+
+Subpackages
+-----------
+
+.. toctree::
+
+    ist.formatters
+    ist.utils
+
+Submodules
+----------
+
+ist.info_text_generator module
+------------------------------
+
+.. automodule:: ist.info_text_generator
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: ist
+    :members:
+    :undoc-members:
+    :show-inheritance:

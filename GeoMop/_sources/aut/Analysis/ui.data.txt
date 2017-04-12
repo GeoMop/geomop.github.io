@@ -1,0 +1,38 @@
+ui.data package
+===============
+
+Submodules
+----------
+
+ui.data.action_def module
+-------------------------
+
+.. automodule:: ui.data.action_def
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.data.diagram module
+----------------------
+
+.. automodule:: ui.data.diagram
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.data.diagram_structures module
+---------------------------------
+
+.. automodule:: ui.data.diagram_structures
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: ui.data
+    :members:
+    :undoc-members:
+    :show-inheritance:

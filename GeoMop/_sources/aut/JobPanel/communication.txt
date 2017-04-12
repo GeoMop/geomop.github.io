@@ -1,0 +1,94 @@
+communication package
+=====================
+
+Submodules
+----------
+
+communication.communication module
+----------------------------------
+
+.. automodule:: communication.communication
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+communication.communicator module
+---------------------------------
+
+.. automodule:: communication.communicator
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+communication.exec_output_comm module
+-------------------------------------
+
+.. automodule:: communication.exec_output_comm
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+communication.installation module
+---------------------------------
+
+.. automodule:: communication.installation
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+communication.jobs_communicator module
+--------------------------------------
+
+.. automodule:: communication.jobs_communicator
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+communication.pbs_input_comm module
+-----------------------------------
+
+.. automodule:: communication.pbs_input_comm
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+communication.pbs_output_comm module
+------------------------------------
+
+.. automodule:: communication.pbs_output_comm
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+communication.socket_input_comm module
+--------------------------------------
+
+.. automodule:: communication.socket_input_comm
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+communication.ssh_output_comm module
+------------------------------------
+
+.. automodule:: communication.ssh_output_comm
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+communication.std_input_comm module
+-----------------------------------
+
+.. automodule:: communication.std_input_comm
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: communication
+    :members:
+    :undoc-members:
+    :show-inheritance:

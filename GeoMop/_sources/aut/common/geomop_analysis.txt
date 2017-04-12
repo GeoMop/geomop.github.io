@@ -1,0 +1,30 @@
+geomop_analysis package
+=======================
+
+Submodules
+----------
+
+geomop_analysis.analysis module
+-------------------------------
+
+.. automodule:: geomop_analysis.analysis
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+geomop_analysis.yaml_support module
+-----------------------------------
+
+.. automodule:: geomop_analysis.yaml_support
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: geomop_analysis
+    :members:
+    :undoc-members:
+    :show-inheritance:

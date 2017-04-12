@@ -1,0 +1,572 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ui.imports package &mdash; Job Panel Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Job Panel Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="up" title="ui package" href="ui.html"/>
+        <link rel="next" title="ui.menus package" href="ui.menus.html"/>
+        <link rel="prev" title="ui.helpers.ssh package" href="ui.helpers.ssh.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexJP.html" class="icon icon-home"> Job Panel Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Jobs Scheduler Source</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="communication.html">communication package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">data package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="delegator.html">delegator module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html">helpers package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="job.html">job module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="locks.html">locks module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mj_service.html">mj_service module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">test module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_app.html">test_app module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_task.html">test_task module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ui.html">ui package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ui.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ui.actions.html">ui.actions package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.data.html">ui.data package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.dialogs.html">ui.dialogs package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.helpers.html">ui.helpers package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">ui.imports package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.imports.ie_presets">ui.imports.ie_presets module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.imports.workspaces_conf">ui.imports.workspaces_conf module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.imports">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ui.menus.html">ui.menus package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.panels.html">ui.panels package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.validators.html">ui.validators package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.com_manager">ui.com_manager module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.com_worker">ui.com_worker module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.main_window">ui.main_window module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.ssh_test">ui.ssh_test module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../indexJP.html">Job Panel Source Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../indexJP.html">Docs</a> &raquo;</li>
+      
+          <li><a href="ui.html">ui package</a> &raquo;</li>
+      
+    <li>ui.imports package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/aut/JobPanel/ui.imports.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ui-imports-package">
+<h1>ui.imports package<a class="headerlink" href="#ui-imports-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ui.imports.ie_presets">
+<span id="ui-imports-ie-presets-module"></span><h2>ui.imports.ie_presets module<a class="headerlink" href="#module-ui.imports.ie_presets" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ui.imports.ie_presets.IE">
+<em class="property">class </em><code class="descclassname">ui.imports.ie_presets.</code><code class="descname">IE</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.ie_presets.IE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Import and export of defined simple data.</p>
+<dl class="classmethod">
+<dt id="ui.imports.ie_presets.IE.cmp">
+<em class="property">classmethod </em><code class="descname">cmp</code><span class="sig-paren">(</span><em>item1</em>, <em>item2</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.ie_presets.IE.cmp" title="Permalink to this definition">¶</a></dt>
+<dd><p>export structure</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.imports.ie_presets.IE.default_items">
+<code class="descname">default_items</code><em class="property"> = {}</em><a class="headerlink" href="#ui.imports.ie_presets.IE.default_items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.imports.ie_presets.IE.export_">
+<code class="descname">export_</code><span class="sig-paren">(</span><em>datas</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.ie_presets.IE.export_" title="Permalink to this definition">¶</a></dt>
+<dd><p>export structure</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.imports.ie_presets.IE.import_">
+<code class="descname">import_</code><span class="sig-paren">(</span><em>temp_item</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.ie_presets.IE.import_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Import structure</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.imports.ie_presets.IE.items">
+<code class="descname">items</code><em class="property"> = []</em><a class="headerlink" href="#ui.imports.ie_presets.IE.items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.imports.ie_presets.IEEnv">
+<em class="property">class </em><code class="descclassname">ui.imports.ie_presets.</code><code class="descname">IEEnv</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.ie_presets.IEEnv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.imports.ie_presets.IE" title="ui.imports.ie_presets.IE"><code class="xref py py-class docutils literal"><span class="pre">ui.imports.ie_presets.IE</span></code></a></p>
+<dl class="attribute">
+<dt id="ui.imports.ie_presets.IEEnv.default_items">
+<code class="descname">default_items</code><em class="property"> = {}</em><a class="headerlink" href="#ui.imports.ie_presets.IEEnv.default_items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.imports.ie_presets.IEEnv.items">
+<code class="descname">items</code><em class="property"> = ['cli_params', 'flow_path', 'module_add', 'name', 'pbs_params', 'python_exec', 'scl_enable_exec']</em><a class="headerlink" href="#ui.imports.ie_presets.IEEnv.items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.imports.ie_presets.IEMj">
+<em class="property">class </em><code class="descclassname">ui.imports.ie_presets.</code><code class="descname">IEMj</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.ie_presets.IEMj" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.imports.ie_presets.IE" title="ui.imports.ie_presets.IE"><code class="xref py py-class docutils literal"><span class="pre">ui.imports.ie_presets.IE</span></code></a></p>
+<dl class="classmethod">
+<dt id="ui.imports.ie_presets.IEMj.cmp">
+<em class="property">classmethod </em><code class="descname">cmp</code><span class="sig-paren">(</span><em>item1</em>, <em>item2</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.ie_presets.IEMj.cmp" title="Permalink to this definition">¶</a></dt>
+<dd><p>export structure</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.imports.ie_presets.IEMj.default_items">
+<code class="descname">default_items</code><em class="property"> = {}</em><a class="headerlink" href="#ui.imports.ie_presets.IEMj.default_items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.imports.ie_presets.IEMj.export_">
+<code class="descname">export_</code><span class="sig-paren">(</span><em>datas</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.ie_presets.IEMj.export_" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.imports.ie_presets.IEMj.import_">
+<code class="descname">import_</code><span class="sig-paren">(</span><em>temp_item</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.ie_presets.IEMj.import_" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.imports.ie_presets.IEMj.items">
+<code class="descname">items</code><em class="property"> = ['analysis', 'log_level', 'name', 'number_of_processes', 'resource_preset', 'deleted_remote']</em><a class="headerlink" href="#ui.imports.ie_presets.IEMj.items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.imports.ie_presets.IEPbs">
+<em class="property">class </em><code class="descclassname">ui.imports.ie_presets.</code><code class="descname">IEPbs</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.ie_presets.IEPbs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.imports.ie_presets.IE" title="ui.imports.ie_presets.IE"><code class="xref py py-class docutils literal"><span class="pre">ui.imports.ie_presets.IE</span></code></a></p>
+<dl class="attribute">
+<dt id="ui.imports.ie_presets.IEPbs.default_items">
+<code class="descname">default_items</code><em class="property"> = {}</em><a class="headerlink" href="#ui.imports.ie_presets.IEPbs.default_items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.imports.ie_presets.IEPbs.items">
+<code class="descname">items</code><em class="property"> = ['infiniband', 'pbs_system', 'memory', 'name', 'nodes', 'ppn', 'queue', 'walltime']</em><a class="headerlink" href="#ui.imports.ie_presets.IEPbs.items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.imports.ie_presets.IERes">
+<em class="property">class </em><code class="descclassname">ui.imports.ie_presets.</code><code class="descname">IERes</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.ie_presets.IERes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.imports.ie_presets.IE" title="ui.imports.ie_presets.IE"><code class="xref py py-class docutils literal"><span class="pre">ui.imports.ie_presets.IE</span></code></a></p>
+<dl class="attribute">
+<dt id="ui.imports.ie_presets.IERes.default_items">
+<code class="descname">default_items</code><em class="property"> = {}</em><a class="headerlink" href="#ui.imports.ie_presets.IERes.default_items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.imports.ie_presets.IERes.items">
+<code class="descname">items</code><em class="property"> = ['j_execution_type', 'j_pbs_preset', 'j_remote_execution_type', 'j_ssh_preset', 'mj_execution_type', 'mj_pbs_preset', 'mj_remote_execution_type', 'mj_ssh_preset', 'name']</em><a class="headerlink" href="#ui.imports.ie_presets.IERes.items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.imports.ie_presets.IESsh">
+<em class="property">class </em><code class="descclassname">ui.imports.ie_presets.</code><code class="descname">IESsh</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.ie_presets.IESsh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.imports.ie_presets.IE" title="ui.imports.ie_presets.IE"><code class="xref py py-class docutils literal"><span class="pre">ui.imports.ie_presets.IE</span></code></a></p>
+<dl class="attribute">
+<dt id="ui.imports.ie_presets.IESsh.default_items">
+<code class="descname">default_items</code><em class="property"> = {'pwd': '', 'to_remote': False, 'key': '', 'to_pc': False}</em><a class="headerlink" href="#ui.imports.ie_presets.IESsh.default_items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.imports.ie_presets.IESsh.items">
+<code class="descname">items</code><em class="property"> = ['env', 'host', 'name', 'pbs_system', 'port', 'remote_dir', 'uid']</em><a class="headerlink" href="#ui.imports.ie_presets.IESsh.items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.imports.ie_presets.IEWorkspace">
+<em class="property">class </em><code class="descclassname">ui.imports.ie_presets.</code><code class="descname">IEWorkspace</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.ie_presets.IEWorkspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.imports.ie_presets.IE" title="ui.imports.ie_presets.IE"><code class="xref py py-class docutils literal"><span class="pre">ui.imports.ie_presets.IE</span></code></a></p>
+<dl class="attribute">
+<dt id="ui.imports.ie_presets.IEWorkspace.default_items">
+<code class="descname">default_items</code><em class="property"> = {}</em><a class="headerlink" href="#ui.imports.ie_presets.IEWorkspace.default_items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.imports.ie_presets.IEWorkspace.items">
+<code class="descname">items</code><em class="property"> = ['pc']</em><a class="headerlink" href="#ui.imports.ie_presets.IEWorkspace.items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.imports.workspaces_conf">
+<span id="ui-imports-workspaces-conf-module"></span><h2>ui.imports.workspaces_conf module<a class="headerlink" href="#module-ui.imports.workspaces_conf" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ui.imports.workspaces_conf.WorkspaceConf">
+<em class="property">class </em><code class="descclassname">ui.imports.workspaces_conf.</code><code class="descname">WorkspaceConf</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspaceConf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Workspace configuration</p>
+<dl class="class">
+<dt id="ui.imports.workspaces_conf.WorkspaceConf.LocalConf">
+<em class="property">class </em><code class="descname">LocalConf</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspaceConf.LocalConf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.imports.workspaces_conf.WorkspaceConf.check_config">
+<code class="descclassname">WorkspaceConf.</code><code class="descname">check_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspaceConf.check_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>compare workspace signature for equolity confirmation</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.imports.workspaces_conf.WorkspaceConf.get_config">
+<code class="descclassname">WorkspaceConf.</code><code class="descname">get_config</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspaceConf.get_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>deserialize config from workspace data</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.imports.workspaces_conf.WorkspaceConf.id">
+<code class="descclassname">WorkspaceConf.</code><code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspaceConf.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Id for link to workspaces mj statisctics (name of mj dir)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.imports.workspaces_conf.WorkspaceConf.import_workspace">
+<code class="descclassname">WorkspaceConf.</code><code class="descname">import_workspace</code><span class="sig-paren">(</span><em>mj_container</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspaceConf.import_workspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>deserialize presets from workspace data and import known mj</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.imports.workspaces_conf.WorkspaceConf.last_id">
+<code class="descclassname">WorkspaceConf.</code><code class="descname">last_id</code><em class="property"> = 0</em><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspaceConf.last_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.imports.workspaces_conf.WorkspaceConf.path">
+<code class="descclassname">WorkspaceConf.</code><code class="descname">path</code><em class="property"> = None</em><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspaceConf.path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Workspace path</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.imports.workspaces_conf.WorkspaceConf.pc">
+<code class="descclassname">WorkspaceConf.</code><code class="descname">pc</code><em class="property"> = None</em><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspaceConf.pc" title="Permalink to this definition">¶</a></dt>
+<dd><p>computer name</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.imports.workspaces_conf.WorkspaceConf.save_workspace">
+<code class="descclassname">WorkspaceConf.</code><code class="descname">save_workspace</code><span class="sig-paren">(</span><em>presets</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspaceConf.save_workspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>serialize workspace data to workspace settings directory</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.imports.workspaces_conf.WorkspaceConf.selected_analysis">
+<code class="descclassname">WorkspaceConf.</code><code class="descname">selected_analysis</code><em class="property"> = None</em><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspaceConf.selected_analysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>last selected analysis</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.imports.workspaces_conf.WorkspaceConf.selected_mj">
+<code class="descclassname">WorkspaceConf.</code><code class="descname">selected_mj</code><em class="property"> = None</em><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspaceConf.selected_mj" title="Permalink to this definition">¶</a></dt>
+<dd><p>last selected mj</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.imports.workspaces_conf.WorkspaceConf.uuid">
+<code class="descclassname">WorkspaceConf.</code><code class="descname">uuid</code><em class="property"> = None</em><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspaceConf.uuid" title="Permalink to this definition">¶</a></dt>
+<dd><p>workspace uuid for checking</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.imports.workspaces_conf.WorkspacesConf">
+<em class="property">class </em><code class="descclassname">ui.imports.workspaces_conf.</code><code class="descname">WorkspacesConf</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspacesConf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Known workspaces</p>
+<dl class="attribute">
+<dt id="ui.imports.workspaces_conf.WorkspacesConf.DIR">
+<code class="descname">DIR</code><em class="property"> = 'workspaces'</em><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspacesConf.DIR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.imports.workspaces_conf.WorkspacesConf.FILE_NAME">
+<code class="descname">FILE_NAME</code><em class="property"> = 'workspaces'</em><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspacesConf.FILE_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.imports.workspaces_conf.WorkspacesConf.get_id">
+<code class="descname">get_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspacesConf.get_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>get id selected mj</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.imports.workspaces_conf.WorkspacesConf.get_path">
+<code class="descname">get_path</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspacesConf.get_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>get path selected mj</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.imports.workspaces_conf.WorkspacesConf.get_selected_analysis">
+<code class="descname">get_selected_analysis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspacesConf.get_selected_analysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>get analysis from selected mj</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.imports.workspaces_conf.WorkspacesConf.get_selected_mj">
+<code class="descname">get_selected_mj</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspacesConf.get_selected_mj" title="Permalink to this definition">¶</a></dt>
+<dd><p>get mj selected during closing</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ui.imports.workspaces_conf.WorkspacesConf.open">
+<em class="property">classmethod </em><code class="descname">open</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspacesConf.open" title="Permalink to this definition">¶</a></dt>
+<dd><p>deserialize settings</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.imports.workspaces_conf.WorkspacesConf.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>selected_mj</em>, <em>selected_analysis</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspacesConf.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>serialize settings</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.imports.workspaces_conf.WorkspacesConf.save_to_workspace">
+<code class="descname">save_to_workspace</code><span class="sig-paren">(</span><em>presets</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspacesConf.save_to_workspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>save selected workspace to workspace directory</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.imports.workspaces_conf.WorkspacesConf.select_workspace">
+<code class="descname">select_workspace</code><span class="sig-paren">(</span><em>path</em>, <em>mj_container</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspacesConf.select_workspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>select new workspace</p>
+<p>If workspace is not in array, import it. If import is OK, return True,
+elseif workspace is oh switch it
+else show error message return False and stay in old workspace.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.imports.workspaces_conf.WorkspacesConf.selected">
+<code class="descname">selected</code><em class="property"> = None</em><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspacesConf.selected" title="Permalink to this definition">¶</a></dt>
+<dd><p>selected workspace</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.imports.workspaces_conf.WorkspacesConf.workspace">
+<code class="descname">workspace</code><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspacesConf.workspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Application main window.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.imports.workspaces_conf.WorkspacesConf.workspaces">
+<code class="descname">workspaces</code><em class="property"> = None</em><a class="headerlink" href="#ui.imports.workspaces_conf.WorkspacesConf.workspaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Workspaces array</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.imports">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ui.imports" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ui.menus.html" class="btn btn-neutral float-right" title="ui.menus package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ui.helpers.ssh.html" class="btn btn-neutral" title="ui.helpers.ssh package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

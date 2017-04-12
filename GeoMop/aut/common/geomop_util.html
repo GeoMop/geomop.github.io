@@ -1,0 +1,450 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>geomop_util package &mdash; GeoMop Common Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="GeoMop Common Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="next" title="model_data package" href="model_data.html"/>
+        <link rel="prev" title="geomop_dialogs package" href="geomop_dialogs.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexCommon.html" class="icon icon-home"> GeoMop Common Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Common Source</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="flow_util.html">flow_util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_analysis.html">geomop_analysis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_dialogs.html">geomop_dialogs package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">geomop_util package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-geomop_util.comparable">geomop_util.comparable module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-geomop_util.locators">geomop_util.locators module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-geomop_util.logging">geomop_util.logging module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-geomop_util.serializable">geomop_util.serializable module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-geomop_util.stylesheet_loader">geomop_util.stylesheet_loader module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-geomop_util.util">geomop_util.util module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-geomop_util">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="model_data.html">model_data package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyperclip.html">pyperclip package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyssh.html">pyssh package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">config module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="icon.html">icon module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version.html">version module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../indexCommon.html">GeoMop Common Source Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../indexCommon.html">Docs</a> &raquo;</li>
+      
+    <li>geomop_util package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/aut/common/geomop_util.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geomop-util-package">
+<h1>geomop_util package<a class="headerlink" href="#geomop-util-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-geomop_util.comparable">
+<span id="geomop-util-comparable-module"></span><h2>geomop_util.comparable module<a class="headerlink" href="#module-geomop_util.comparable" title="Permalink to this headline">¶</a></h2>
+<p>Comparable utility class.</p>
+<dl class="class">
+<dt id="geomop_util.comparable.ComparableMixin">
+<em class="property">class </em><code class="descclassname">geomop_util.comparable.</code><code class="descname">ComparableMixin</code><a class="headerlink" href="#geomop_util.comparable.ComparableMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Utility class &#8211; implements other rich comparison operators
+based on &lt; (less than).</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geomop_util.locators">
+<span id="geomop-util-locators-module"></span><h2>geomop_util.locators module<a class="headerlink" href="#module-geomop_util.locators" title="Permalink to this headline">¶</a></h2>
+<p>Classes for determining node and cursor location.</p>
+<dl class="class">
+<dt id="geomop_util.locators.Position">
+<em class="property">class </em><code class="descclassname">geomop_util.locators.</code><code class="descname">Position</code><span class="sig-paren">(</span><em>line=None</em>, <em>column=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_util.locators.Position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#geomop_util.comparable.ComparableMixin" title="geomop_util.comparable.ComparableMixin"><code class="xref py py-class docutils literal"><span class="pre">geomop_util.comparable.ComparableMixin</span></code></a></p>
+<p>Marks a cursor position in text.</p>
+<dl class="attribute">
+<dt id="geomop_util.locators.Position.column">
+<code class="descname">column</code><em class="property"> = None</em><a class="headerlink" href="#geomop_util.locators.Position.column" title="Permalink to this definition">¶</a></dt>
+<dd><p>column number; starts from 1</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="geomop_util.locators.Position.from_document_end">
+<em class="property">static </em><code class="descname">from_document_end</code><span class="sig-paren">(</span><em>document</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_util.locators.Position.from_document_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the last <cite>Position</cite> in the document.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="geomop_util.locators.Position.from_mark">
+<em class="property">static </em><code class="descname">from_mark</code><span class="sig-paren">(</span><em>mark</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_util.locators.Position.from_mark" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a <cite>Position</cite> from YAML mark.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="geomop_util.locators.Position.from_yaml_error">
+<em class="property">static </em><code class="descname">from_yaml_error</code><span class="sig-paren">(</span><em>yaml_error</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_util.locators.Position.from_yaml_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a <cite>Position</cite> from <cite>MarkedYAMLError</cite>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geomop_util.locators.Position.line">
+<code class="descname">line</code><em class="property"> = None</em><a class="headerlink" href="#geomop_util.locators.Position.line" title="Permalink to this definition">¶</a></dt>
+<dd><p>line number; starts from 1</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geomop_util.locators.Span">
+<em class="property">class </em><code class="descclassname">geomop_util.locators.</code><code class="descname">Span</code><span class="sig-paren">(</span><em>start=None</em>, <em>end=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_util.locators.Span" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#geomop_util.comparable.ComparableMixin" title="geomop_util.comparable.ComparableMixin"><code class="xref py py-class docutils literal"><span class="pre">geomop_util.comparable.ComparableMixin</span></code></a></p>
+<p>Borders a part of text.</p>
+<dl class="attribute">
+<dt id="geomop_util.locators.Span.end">
+<code class="descname">end</code><em class="property"> = None</em><a class="headerlink" href="#geomop_util.locators.Span.end" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#geomop_util.locators.Position" title="geomop_util.locators.Position"><code class="xref py py-class docutils literal"><span class="pre">Position</span></code></a> indicates the end of the section; exclusive</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="geomop_util.locators.Span.from_event">
+<em class="property">static </em><code class="descname">from_event</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_util.locators.Span.from_event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs <cite>Span</cite> from YAML <cite>event</cite>.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="geomop_util.locators.Span.from_marks">
+<em class="property">static </em><code class="descname">from_marks</code><span class="sig-paren">(</span><em>start_mark</em>, <em>end_mark</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_util.locators.Span.from_marks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs <cite>Span</cite> from YAML marks.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geomop_util.locators.Span.start">
+<code class="descname">start</code><em class="property"> = None</em><a class="headerlink" href="#geomop_util.locators.Span.start" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#geomop_util.locators.Position" title="geomop_util.locators.Position"><code class="xref py py-class docutils literal"><span class="pre">Position</span></code></a> indicates the start of the section; inclusive</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geomop_util.logging">
+<span id="geomop-util-logging-module"></span><h2>geomop_util.logging module<a class="headerlink" href="#module-geomop_util.logging" title="Permalink to this headline">¶</a></h2>
+<p>Module for GeoMop root context logging</p>
+<dl class="function">
+<dt id="geomop_util.logging.log_unhandled_exceptions">
+<code class="descclassname">geomop_util.logging.</code><code class="descname">log_unhandled_exceptions</code><span class="sig-paren">(</span><em>context_name</em>, <em>callback=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_util.logging.log_unhandled_exceptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize logging for unhandled exceptions.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>context_name</strong> (<em>str</em>) &#8211; name of the context (for example, ModelEditor)</li>
+<li><strong>callback</strong> (<em>function</em>) &#8211; a function callback with three parameters (type, exception, tback)
+that is called after the exception is logged</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geomop_util.serializable">
+<span id="geomop-util-serializable-module"></span><h2>geomop_util.serializable module<a class="headerlink" href="#module-geomop_util.serializable" title="Permalink to this headline">¶</a></h2>
+<p>Serialization module.</p>
+<dl class="class">
+<dt id="geomop_util.serializable.Serializable">
+<em class="property">class </em><code class="descclassname">geomop_util.serializable.</code><code class="descname">Serializable</code><span class="sig-paren">(</span><em>excluded=None</em>, <em>deleted=None</em>, <em>default=None</em>, <em>composite=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_util.serializable.Serializable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class defines special operations during the serialization process.</p>
+<dl class="docutils">
+<dt>It can:</dt>
+<dd><ul class="first last simple">
+<li>exclude certain keys from serialization</li>
+<li>delete key from serialized file (same as excluded, but used for deprecated / removed keys)</li>
+<li>set default values for keys if they are not specified in the source data</li>
+<li>allow serialization of nested objects</li>
+</ul>
+</dd>
+</dl>
+<p>Serialization of nested objects.
+Define nested keys in the composite dictionary. As a value, pass in the class to be instanced.
+If the class needs to reference itself, you can define __serializable__ after the class
+definition. See testing/common/test_serializable.py for example.</p>
+<dl class="staticmethod">
+<dt id="geomop_util.serializable.Serializable.dump">
+<em class="property">static </em><code class="descname">dump</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_util.serializable.Serializable.dump" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create serializable data structure from provided data.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="geomop_util.serializable.Serializable.load">
+<em class="property">static </em><code class="descname">load</code><span class="sig-paren">(</span><em>data</em>, <em>cls=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_util.serializable.Serializable.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create object data structure from native dict.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geomop_util.stylesheet_loader">
+<span id="geomop-util-stylesheet-loader-module"></span><h2>geomop_util.stylesheet_loader module<a class="headerlink" href="#module-geomop_util.stylesheet_loader" title="Permalink to this headline">¶</a></h2>
+<p>Module contains helper functions for loading stylesheets.</p>
+<dl class="function">
+<dt id="geomop_util.stylesheet_loader.load_stylesheet">
+<code class="descclassname">geomop_util.stylesheet_loader.</code><code class="descname">load_stylesheet</code><span class="sig-paren">(</span><em>path</em>, <em>resource_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_util.stylesheet_loader.load_stylesheet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads the stylesheet file to a string.</p>
+<p>This loading function fixes the paths in css files. All files in the css are considered
+relative to the resources directory. This function prepends all url(...) with the absolute
+path to resource directory. This makes the css resources load correctly independently of
+the working directory.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>path</strong> (<em>str</em>) &#8211; absolute path to the stylesheet</li>
+<li><strong>resource_dir</strong> (<em>str</em>) &#8211; absolute path to resource directory</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">stylesheet loaded as text</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geomop_util.util">
+<span id="geomop-util-util-module"></span><h2>geomop_util.util module<a class="headerlink" href="#module-geomop_util.util" title="Permalink to this headline">¶</a></h2>
+<p>Utility classes.</p>
+<dl class="class">
+<dt id="geomop_util.util.File">
+<em class="property">class </em><code class="descclassname">geomop_util.util.</code><code class="descname">File</code><span class="sig-paren">(</span><em>file_path</em>, <em>params=None</em>, <em>selected=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_util.util.File" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Represents a file entry in a config file.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="geomop_util.util.Parameter">
+<em class="property">class </em><code class="descclassname">geomop_util.util.</code><code class="descname">Parameter</code><span class="sig-paren">(</span><em>name=None</em>, <em>type=None</em>, <em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_util.util.Parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>A parameter in a config file.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="geomop_util.util.TextValue">
+<em class="property">class </em><code class="descclassname">geomop_util.util.</code><code class="descname">TextValue</code><span class="sig-paren">(</span><em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_util.util.TextValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Represents a value in the input text.</p>
+<dl class="attribute">
+<dt id="geomop_util.util.TextValue.span">
+<code class="descname">span</code><em class="property"> = None</em><a class="headerlink" href="#geomop_util.util.TextValue.span" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#geomop_util.locators.Span" title="geomop_util.locators.Span"><code class="xref py py-class docutils literal"><span class="pre">Span</span></code></a> specifies the position of value in input text</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geomop_util.util.TextValue.value">
+<code class="descname">value</code><em class="property"> = None</em><a class="headerlink" href="#geomop_util.util.TextValue.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>the value from input text</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geomop_util">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geomop_util" title="Permalink to this headline">¶</a></h2>
+<p>Common utilities for the whole GeoMop project.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="model_data.html" class="btn btn-neutral float-right" title="model_data package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="geomop_dialogs.html" class="btn btn-neutral" title="geomop_dialogs package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

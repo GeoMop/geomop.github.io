@@ -1,0 +1,38 @@
+ui.gitems package
+=================
+
+Submodules
+----------
+
+ui.gitems.line module
+---------------------
+
+.. automodule:: ui.gitems.line
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.gitems.point module
+----------------------
+
+.. automodule:: ui.gitems.point
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.gitems.states module
+-----------------------
+
+.. automodule:: ui.gitems.states
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: ui.gitems
+    :members:
+    :undoc-members:
+    :show-inheritance:

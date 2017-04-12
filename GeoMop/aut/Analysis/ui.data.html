@@ -1,0 +1,628 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ui.data package &mdash; GeoMop Analysis Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="GeoMop Analysis Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="up" title="ui package" href="ui.html"/>
+        <link rel="next" title="ui.gitems package" href="ui.gitems.html"/>
+        <link rel="prev" title="ui package" href="ui.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexAN.html" class="icon icon-home"> GeoMop Analysis Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Analysis Source</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="aeconfig.html">aeconfig package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client_pipeline.html">client_pipeline package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pipeline.html">pipeline package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ui.html">ui package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ui.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">ui.data package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.data.action_def">ui.data.action_def module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.data.diagram">ui.data.diagram module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.data.diagram_structures">ui.data.diagram_structures module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.data">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ui.gitems.html">ui.gitems package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.panels.html">ui.panels package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.mainwindow">ui.mainwindow module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_editor.html">analysis_editor module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../indexAN.html">GeoMop Analysis Source Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../indexAN.html">Docs</a> &raquo;</li>
+      
+          <li><a href="ui.html">ui package</a> &raquo;</li>
+      
+    <li>ui.data package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/aut/Analysis/ui.data.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ui-data-package">
+<h1>ui.data package<a class="headerlink" href="#ui-data-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ui.data.action_def">
+<span id="ui-data-action-def-module"></span><h2>ui.data.action_def module<a class="headerlink" href="#module-ui.data.action_def" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ui.data.action_def.Action">
+<em class="property">class </em><code class="descclassname">ui.data.action_def.</code><code class="descname">Action</code><span class="sig-paren">(</span><em>action_class</em>, <em>name</em>, <em>group</em>, <em>type</em>, <em>max_inputs=-1</em>, <em>parameters=[]</em>, <em>description=''</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.action_def.Action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Action data container for ActionsTypes class</p>
+<dl class="attribute">
+<dt id="ui.data.action_def.Action.action_class">
+<code class="descname">action_class</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.action_def.Action.action_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>action class name for instance creation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.Action.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.action_def.Action.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameter name for ui</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.Action.group">
+<code class="descname">group</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.action_def.Action.group" title="Permalink to this definition">¶</a></dt>
+<dd><p>string group action name for ui</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.Action.max_inputs">
+<code class="descname">max_inputs</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.action_def.Action.max_inputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>max number of inputs</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.Action.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.action_def.Action.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>string action name for ui</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.Action.parameters">
+<code class="descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.action_def.Action.parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>array of action parameter types description</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.Action.type">
+<code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.action_def.Action.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>ui action class</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.action_def.ActionParameter">
+<em class="property">class </em><code class="descclassname">ui.data.action_def.</code><code class="descname">ActionParameter</code><span class="sig-paren">(</span><em>name</em>, <em>type</em>, <em>description=''</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.action_def.ActionParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Action settings parameters defination</p>
+<dl class="attribute">
+<dt id="ui.data.action_def.ActionParameter.config_name">
+<code class="descname">config_name</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.action_def.ActionParameter.config_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameter name  in config settings</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.ActionParameter.description">
+<code class="descname">description</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.action_def.ActionParameter.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameter name for ui</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.ActionParameter.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.action_def.ActionParameter.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameter name for ui</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.ActionParameter.type">
+<code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.action_def.ActionParameter.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>UI interface type for parrameter settings</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.action_def.ActionTypes">
+<em class="property">class </em><code class="descclassname">ui.data.action_def.</code><code class="descname">ActionTypes</code><a class="headerlink" href="#ui.data.action_def.ActionTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></code></p>
+<p>Action types for ui</p>
+<dl class="attribute">
+<dt id="ui.data.action_def.ActionTypes.base">
+<code class="descname">base</code><em class="property"> = &lt;ActionTypes.base: 0&gt;</em><a class="headerlink" href="#ui.data.action_def.ActionTypes.base" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.ActionTypes.connector">
+<code class="descname">connector</code><em class="property"> = &lt;ActionTypes.connector: 1&gt;</em><a class="headerlink" href="#ui.data.action_def.ActionTypes.connector" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.ActionTypes.workflow">
+<code class="descname">workflow</code><em class="property"> = &lt;ActionTypes.workflow: 3&gt;</em><a class="headerlink" href="#ui.data.action_def.ActionTypes.workflow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.ActionTypes.wrapper">
+<code class="descname">wrapper</code><em class="property"> = &lt;ActionTypes.wrapper: 2&gt;</em><a class="headerlink" href="#ui.data.action_def.ActionTypes.wrapper" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.action_def.ParameterTypes">
+<em class="property">class </em><code class="descclassname">ui.data.action_def.</code><code class="descname">ParameterTypes</code><a class="headerlink" href="#ui.data.action_def.ParameterTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></code></p>
+<p>Action parameter types for UI</p>
+<p>UI can help and check parameter, that 
+afterwards is passed on pipeline as string</p>
+<dl class="attribute">
+<dt id="ui.data.action_def.ParameterTypes.action">
+<code class="descname">action</code><em class="property"> = &lt;ParameterTypes.action: 10&gt;</em><a class="headerlink" href="#ui.data.action_def.ParameterTypes.action" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.ParameterTypes.action_array">
+<code class="descname">action_array</code><em class="property"> = &lt;ParameterTypes.action_array: 11&gt;</em><a class="headerlink" href="#ui.data.action_def.ParameterTypes.action_array" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.ParameterTypes.bool">
+<code class="descname">bool</code><em class="property"> = &lt;ParameterTypes.bool: 3&gt;</em><a class="headerlink" href="#ui.data.action_def.ParameterTypes.bool" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.ParameterTypes.dtt">
+<code class="descname">dtt</code><em class="property"> = &lt;ParameterTypes.dtt: 7&gt;</em><a class="headerlink" href="#ui.data.action_def.ParameterTypes.dtt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.ParameterTypes.float">
+<code class="descname">float</code><em class="property"> = &lt;ParameterTypes.float: 2&gt;</em><a class="headerlink" href="#ui.data.action_def.ParameterTypes.float" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.ParameterTypes.gdtt">
+<code class="descname">gdtt</code><em class="property"> = &lt;ParameterTypes.gdtt: 6&gt;</em><a class="headerlink" href="#ui.data.action_def.ParameterTypes.gdtt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.ParameterTypes.input_file">
+<code class="descname">input_file</code><em class="property"> = &lt;ParameterTypes.input_file: 4&gt;</em><a class="headerlink" href="#ui.data.action_def.ParameterTypes.input_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.ParameterTypes.int">
+<code class="descname">int</code><em class="property"> = &lt;ParameterTypes.int: 1&gt;</em><a class="headerlink" href="#ui.data.action_def.ParameterTypes.int" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.ParameterTypes.output_file">
+<code class="descname">output_file</code><em class="property"> = &lt;ParameterTypes.output_file: 5&gt;</em><a class="headerlink" href="#ui.data.action_def.ParameterTypes.output_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.ParameterTypes.range_item">
+<code class="descname">range_item</code><em class="property"> = &lt;ParameterTypes.range_item: 8&gt;</em><a class="headerlink" href="#ui.data.action_def.ParameterTypes.range_item" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.ParameterTypes.string">
+<code class="descname">string</code><em class="property"> = &lt;ParameterTypes.string: 0&gt;</em><a class="headerlink" href="#ui.data.action_def.ParameterTypes.string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.action_def.ParameterTypes.workflow">
+<code class="descname">workflow</code><em class="property"> = &lt;ParameterTypes.workflow: 9&gt;</em><a class="headerlink" href="#ui.data.action_def.ParameterTypes.workflow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.data.diagram">
+<span id="ui-data-diagram-module"></span><h2>ui.data.diagram module<a class="headerlink" href="#module-ui.data.diagram" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ui.data.diagram.Diagram">
+<em class="property">class </em><code class="descclassname">ui.data.diagram.</code><code class="descname">Diagram</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram.Diagram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="staticmethod">
+<dt id="ui.data.diagram.Diagram.action_template">
+<em class="property">static </em><code class="descname">action_template</code><span class="sig-paren">(</span><em>i</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram.Diagram.action_template" title="Permalink to this definition">¶</a></dt>
+<dd><p>return action template i</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram.Diagram.add_connection">
+<code class="descname">add_connection</code><span class="sig-paren">(</span><em>in_node</em>, <em>out_node</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram.Diagram.add_connection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new connection to diagram data scheme</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram.Diagram.add_node">
+<code class="descname">add_node</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>template_num</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram.Diagram.add_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new action to diagram data scheme</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram.Diagram.connections">
+<code class="descname">connections</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram.Diagram.connections" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of diagram connections</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram.Diagram.delet_connection">
+<code class="descname">delet_connection</code><span class="sig-paren">(</span><em>conn</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram.Diagram.delet_connection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new connection to diagram data scheme</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram.Diagram.delete_node">
+<code class="descname">delete_node</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram.Diagram.delete_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete action and all its connections from
+diagram data scheme</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram.Diagram.file">
+<code class="descname">file</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram.Diagram.file" title="Permalink to this definition">¶</a></dt>
+<dd><p>serialize to file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram.Diagram.get_action_dict">
+<code class="descname">get_action_dict</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram.Diagram.get_action_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>return dict of action grouped to dictionary accoding group</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram.Diagram.get_conn">
+<code class="descname">get_conn</code><span class="sig-paren">(</span><em>node</em>, <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram.Diagram.get_conn" title="Permalink to this definition">¶</a></dt>
+<dd><p>return connection for set node and possition</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram.Diagram.load">
+<code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram.Diagram.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>serialize from file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram.Diagram.mark_invalid_connections">
+<code class="descname">mark_invalid_connections</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram.Diagram.mark_invalid_connections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mark connection to moved nodes for repaint</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram.Diagram.nodes">
+<code class="descname">nodes</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram.Diagram.nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of diagram nodes</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram.Diagram.recount_node_uniqueness">
+<code class="descname">recount_node_uniqueness</code><span class="sig-paren">(</span><em>aname</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram.Diagram.recount_node_uniqueness" title="Permalink to this definition">¶</a></dt>
+<dd><p>repair nodes unique numbering</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram.Diagram.save">
+<code class="descname">save</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram.Diagram.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>serialize to file</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.data.diagram_structures">
+<span id="ui-data-diagram-structures-module"></span><h2>ui.data.diagram_structures module<a class="headerlink" href="#module-ui.data.diagram_structures" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ui.data.diagram_structures.Connection">
+<em class="property">class </em><code class="descclassname">ui.data.diagram_structures.</code><code class="descname">Connection</code><span class="sig-paren">(</span><em>input</em>, <em>output</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Connection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class for graphic presentation of task</p>
+<dl class="method">
+<dt id="ui.data.diagram_structures.Connection.get_in_pos">
+<code class="descname">get_in_pos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Connection.get_in_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get input absolute possition</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.Connection.get_out_pos">
+<code class="descname">get_out_pos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Connection.get_out_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get output absolute possition</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Connection.input">
+<code class="descname">input</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Connection.input" title="Permalink to this definition">¶</a></dt>
+<dd><p>node from which connection come out</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.Connection.is_conn_point">
+<code class="descname">is_conn_point</code><span class="sig-paren">(</span><em>node</em>, <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Connection.is_conn_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Has connection end point on set possition (tolerance 2 point)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Connection.output">
+<code class="descname">output</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Connection.output" title="Permalink to this definition">¶</a></dt>
+<dd><p>node to which connection enter</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Connection.output_no">
+<code class="descname">output_no</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Connection.output_no" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of input node, to wicht connection enter</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Connection.repaint">
+<code class="descname">repaint</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Connection.repaint" title="Permalink to this definition">¶</a></dt>
+<dd><p>If is set to True, connection need repaint</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.diagram_structures.Node">
+<em class="property">class </em><code class="descclassname">ui.data.diagram_structures.</code><code class="descname">Node</code><span class="sig-paren">(</span><em>action_def</em>, <em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class for graphic presentation of task</p>
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Node.action">
+<code class="descname">action</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Node.action" title="Permalink to this definition">¶</a></dt>
+<dd><p>action from last validation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Node.action_def">
+<code class="descname">action_def</code><a class="headerlink" href="#ui.data.diagram_structures.Node.action_def" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return real action definition</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Node.out_port_pos">
+<code class="descname">out_port_pos</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Node.out_port_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>otput port absolute possition</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Node.parameters">
+<code class="descname">parameters</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Node.parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>string value of parameters in order as in action defination</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Node.pos">
+<code class="descname">pos</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Node.pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>node absolute possition</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Node.repaint">
+<code class="descname">repaint</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Node.repaint" title="Permalink to this definition">¶</a></dt>
+<dd><p>If is set to True, node need repaint</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Node.repaint_conn">
+<code class="descname">repaint_conn</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Node.repaint_conn" title="Permalink to this definition">¶</a></dt>
+<dd><p>If is set to True, related connections need repaint</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Node.unique">
+<code class="descname">unique</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Node.unique" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parameter for unique name of action</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Node.unique_name">
+<code class="descname">unique_name</code><a class="headerlink" href="#ui.data.diagram_structures.Node.unique_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return unique action name</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.data">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ui.data" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ui.gitems.html" class="btn btn-neutral float-right" title="ui.gitems package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ui.html" class="btn btn-neutral" title="ui package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,367 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>geomop_analysis package &mdash; GeoMop Common Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="GeoMop Common Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="next" title="geomop_dialogs package" href="geomop_dialogs.html"/>
+        <link rel="prev" title="flow_util package" href="flow_util.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexCommon.html" class="icon icon-home"> GeoMop Common Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Common Source</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="flow_util.html">flow_util package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">geomop_analysis package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-geomop_analysis.analysis">geomop_analysis.analysis module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-geomop_analysis.yaml_support">geomop_analysis.yaml_support module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-geomop_analysis">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_dialogs.html">geomop_dialogs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_util.html">geomop_util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_data.html">model_data package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyperclip.html">pyperclip package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyssh.html">pyssh package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">config module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="icon.html">icon module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version.html">version module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../indexCommon.html">GeoMop Common Source Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../indexCommon.html">Docs</a> &raquo;</li>
+      
+    <li>geomop_analysis package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/aut/common/geomop_analysis.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geomop-analysis-package">
+<h1>geomop_analysis package<a class="headerlink" href="#geomop-analysis-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-geomop_analysis.analysis">
+<span id="geomop-analysis-analysis-module"></span><h2>geomop_analysis.analysis module<a class="headerlink" href="#module-geomop_analysis.analysis" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="geomop_analysis.analysis.Analysis">
+<em class="property">class </em><code class="descclassname">geomop_analysis.analysis.</code><code class="descname">Analysis</code><span class="sig-paren">(</span><em>filename=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_analysis.analysis.Analysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Analysis settings and data.</p>
+<dl class="method">
+<dt id="geomop_analysis.analysis.Analysis.add_file">
+<code class="descname">add_file</code><span class="sig-paren">(</span><em>file_path</em>, <em>params=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_analysis.analysis.Analysis.add_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add or sync a file. If file exists, update parameters.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geomop_analysis.analysis.Analysis.analysis_dir">
+<code class="descname">analysis_dir</code><a class="headerlink" href="#geomop_analysis.analysis.Analysis.analysis_dir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geomop_analysis.analysis.Analysis.copy_into_mj_folder">
+<code class="descname">copy_into_mj_folder</code><span class="sig-paren">(</span><em>mj</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_analysis.analysis.Analysis.copy_into_mj_folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy this analysis into multijob folder.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geomop_analysis.analysis.Analysis.current">
+<code class="descname">current</code><em class="property"> = None</em><a class="headerlink" href="#geomop_analysis.analysis.Analysis.current" title="Permalink to this definition">¶</a></dt>
+<dd><p>currently opened analysis</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="geomop_analysis.analysis.Analysis.exists">
+<em class="property">static </em><code class="descname">exists</code><span class="sig-paren">(</span><em>workspace</em>, <em>analysis_name</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_analysis.analysis.Analysis.exists" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine whether project exists in a workspace.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="geomop_analysis.analysis.Analysis.get_workspace_config_dir">
+<em class="property">static </em><code class="descname">get_workspace_config_dir</code><span class="sig-paren">(</span><em>workspace</em>, <em>module</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_analysis.analysis.Analysis.get_workspace_config_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of all analyses in workspace.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geomop_analysis.analysis.Analysis.is_abs_path_in_analysis_dir">
+<code class="descname">is_abs_path_in_analysis_dir</code><span class="sig-paren">(</span><em>file_path</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_analysis.analysis.Analysis.is_abs_path_in_analysis_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether file exists in the analysis directory or subdirectories.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="geomop_analysis.analysis.Analysis.is_analysis">
+<em class="property">static </em><code class="descname">is_analysis</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_analysis.analysis.Analysis.is_analysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine if a path is an analysis directory.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="geomop_analysis.analysis.Analysis.list_analyses_in_workspace">
+<em class="property">static </em><code class="descname">list_analyses_in_workspace</code><span class="sig-paren">(</span><em>workspace</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_analysis.analysis.Analysis.list_analyses_in_workspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of all analyses in workspace.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geomop_analysis.analysis.Analysis.make_relative_path">
+<code class="descname">make_relative_path</code><span class="sig-paren">(</span><em>file_path</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_analysis.analysis.Analysis.make_relative_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes the path relative to analysis_dir.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geomop_analysis.analysis.Analysis.merge_params">
+<code class="descname">merge_params</code><span class="sig-paren">(</span><em>params</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_analysis.analysis.Analysis.merge_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merge another param collection into this one.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="geomop_analysis.analysis.Analysis.notify">
+<em class="property">static </em><code class="descname">notify</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_analysis.analysis.Analysis.notify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Observer method to update current analysis.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="geomop_analysis.analysis.Analysis.open">
+<em class="property">static </em><code class="descname">open</code><span class="sig-paren">(</span><em>workspace</em>, <em>analysis_name</em>, <em>sync_files=False</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_analysis.analysis.Analysis.open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve analysis from settings by its name and workspace.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="geomop_analysis.analysis.Analysis.open_from_mj">
+<em class="property">static </em><code class="descname">open_from_mj</code><span class="sig-paren">(</span><em>mj_dir</em>, <em>analysis_name='N/A'</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_analysis.analysis.Analysis.open_from_mj" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve analysis from multijob directory.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="geomop_analysis.analysis.Analysis.reload_current">
+<em class="property">static </em><code class="descname">reload_current</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geomop_analysis.analysis.Analysis.reload_current" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the current analysis file and updated the analysis data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geomop_analysis.analysis.Analysis.save">
+<code class="descname">save</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geomop_analysis.analysis.Analysis.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the current analysis as a config file.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geomop_analysis.analysis.Analysis.selected_file_paths">
+<code class="descname">selected_file_paths</code><a class="headerlink" href="#geomop_analysis.analysis.Analysis.selected_file_paths" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="geomop_analysis.analysis.InvalidAnalysis">
+<em class="property">exception </em><code class="descclassname">geomop_analysis.analysis.</code><code class="descname">InvalidAnalysis</code><a class="headerlink" href="#geomop_analysis.analysis.InvalidAnalysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geomop_analysis.yaml_support">
+<span id="geomop-analysis-yaml-support-module"></span><h2>geomop_analysis.yaml_support module<a class="headerlink" href="#module-geomop_analysis.yaml_support" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="geomop_analysis.yaml_support.YamlSupportLocal">
+<em class="property">class </em><code class="descclassname">geomop_analysis.yaml_support.</code><code class="descname">YamlSupportLocal</code><a class="headerlink" href="#geomop_analysis.yaml_support.YamlSupportLocal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="flow_util.html#flow_util.yaml_support.YamlSupportRemote" title="flow_util.yaml_support.YamlSupportRemote"><code class="xref py py-class docutils literal"><span class="pre">flow_util.yaml_support.YamlSupportRemote</span></code></a></p>
+<p>Class for extract regions, params, active processes
+and mesh file from .yaml files.</p>
+<dl class="method">
+<dt id="geomop_analysis.yaml_support.YamlSupportLocal.parse">
+<code class="descname">parse</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_analysis.yaml_support.YamlSupportLocal.parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse regions, params and active processes from .yaml file.
+Also computes hashes from .yaml and mesh files.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geomop_analysis">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geomop_analysis" title="Permalink to this headline">¶</a></h2>
+<p>Contains project settings classes for the GeoMop projects.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="geomop_dialogs.html" class="btn btn-neutral float-right" title="geomop_dialogs package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="flow_util.html" class="btn btn-neutral" title="flow_util package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,526 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ui.dialogs package &mdash; Model Editor Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Model Editor Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="up" title="ui package" href="ui.html"/>
+        <link rel="next" title="ui.menus package" href="ui.menus.html"/>
+        <link rel="prev" title="ui.components package" href="ui.components.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexME.html" class="icon icon-home"> Model Editor Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Model Editor Source</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="data.html">data package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html">helpers package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importer.html">importer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ist.html">ist package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meconfig.html">meconfig package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_editor.html">model_editor module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ui.html">ui package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ui.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ui.components.html">ui.components package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">ui.dialogs package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.dialogs.change_ist_dialog">ui.dialogs.change_ist_dialog module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.dialogs.find_replace_dialog">ui.dialogs.find_replace_dialog module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.dialogs.json_editor">ui.dialogs.json_editor module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.dialogs.settings_dialog">ui.dialogs.settings_dialog module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.dialogs.transformation_detail">ui.dialogs.transformation_detail module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.dialogs">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ui.menus.html">ui.menus package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.panels.html">ui.panels package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.template.html">ui.template package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.mainwindow">ui.mainwindow module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="util.html">util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exporter.html">exporter module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="normalize_ist.html">normalize_ist module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../indexME.html">Model Editor Source Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../indexME.html">Docs</a> &raquo;</li>
+      
+          <li><a href="ui.html">ui package</a> &raquo;</li>
+      
+    <li>ui.dialogs package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/aut/ModelEditor/ui.dialogs.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ui-dialogs-package">
+<h1>ui.dialogs package<a class="headerlink" href="#ui-dialogs-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ui.dialogs.change_ist_dialog">
+<span id="ui-dialogs-change-ist-dialog-module"></span><h2>ui.dialogs.change_ist_dialog module<a class="headerlink" href="#module-ui.dialogs.change_ist_dialog" title="Permalink to this headline">¶</a></h2>
+<p>Change IST dialog.</p>
+<dl class="class">
+<dt id="ui.dialogs.change_ist_dialog.ChangeISTDialog">
+<em class="property">class </em><code class="descclassname">ui.dialogs.change_ist_dialog.</code><code class="descname">ChangeISTDialog</code><span class="sig-paren">(</span><em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.change_ist_dialog.ChangeISTDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QDialog</span></code></p>
+<p>Dialog containing settings.</p>
+<dl class="attribute">
+<dt id="ui.dialogs.change_ist_dialog.ChangeISTDialog.MINIMUM_HEIGHT">
+<code class="descname">MINIMUM_HEIGHT</code><em class="property"> = 200</em><a class="headerlink" href="#ui.dialogs.change_ist_dialog.ChangeISTDialog.MINIMUM_HEIGHT" title="Permalink to this definition">¶</a></dt>
+<dd><p>minimum height of the dialog</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.dialogs.change_ist_dialog.ChangeISTDialog.MINIMUM_WIDTH">
+<code class="descname">MINIMUM_WIDTH</code><em class="property"> = 320</em><a class="headerlink" href="#ui.dialogs.change_ist_dialog.ChangeISTDialog.MINIMUM_WIDTH" title="Permalink to this definition">¶</a></dt>
+<dd><p>minimum width of the dialog</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.change_ist_dialog.ChangeISTDialog.accept">
+<code class="descname">accept</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.change_ist_dialog.ChangeISTDialog.accept" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles a confirmation.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.dialogs.find_replace_dialog">
+<span id="ui-dialogs-find-replace-dialog-module"></span><h2>ui.dialogs.find_replace_dialog module<a class="headerlink" href="#module-ui.dialogs.find_replace_dialog" title="Permalink to this headline">¶</a></h2>
+<p>Module contains dialogs for search functions - find and replace.</p>
+<dl class="class">
+<dt id="ui.dialogs.find_replace_dialog.FindReplaceDialog">
+<em class="property">class </em><code class="descclassname">ui.dialogs.find_replace_dialog.</code><code class="descname">FindReplaceDialog</code><span class="sig-paren">(</span><em>parent</em>, <em>replace_visible=False</em>, <em>defaults=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.find_replace_dialog.FindReplaceDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QDialog</span></code></p>
+<p>Dialog for finding and replacing text in editor.</p>
+<dl class="method">
+<dt id="ui.dialogs.find_replace_dialog.FindReplaceDialog.activateWindow">
+<code class="descname">activateWindow</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.find_replace_dialog.FindReplaceDialog.activateWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Activates the window and sets the focus.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.find_replace_dialog.FindReplaceDialog.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.find_replace_dialog.FindReplaceDialog.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear search text on close.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.dialogs.find_replace_dialog.FindReplaceDialog.is_case_sensitive">
+<code class="descname">is_case_sensitive</code><a class="headerlink" href="#ui.dialogs.find_replace_dialog.FindReplaceDialog.is_case_sensitive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether search is case sensitive.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.dialogs.find_replace_dialog.FindReplaceDialog.is_regex">
+<code class="descname">is_regex</code><a class="headerlink" href="#ui.dialogs.find_replace_dialog.FindReplaceDialog.is_regex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether search term is a regular expression.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.dialogs.find_replace_dialog.FindReplaceDialog.is_word">
+<code class="descname">is_word</code><a class="headerlink" href="#ui.dialogs.find_replace_dialog.FindReplaceDialog.is_word" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether search term should be matched to entire words only.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.find_replace_dialog.FindReplaceDialog.keyPressEvent">
+<code class="descname">keyPressEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.find_replace_dialog.FindReplaceDialog.keyPressEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle keypress events.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>event</strong> (<em>QKeyEvent</em>) &#8211; event with the key press information</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.find_replace_dialog.FindReplaceDialog.on_match_found">
+<code class="descname">on_match_found</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.find_replace_dialog.FindReplaceDialog.on_match_found" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle when match is found.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.find_replace_dialog.FindReplaceDialog.on_match_not_found">
+<code class="descname">on_match_not_found</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.find_replace_dialog.FindReplaceDialog.on_match_not_found" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle when match is not found.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.find_replace_dialog.FindReplaceDialog.perform_find">
+<code class="descname">perform_find</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.find_replace_dialog.FindReplaceDialog.perform_find" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform a search.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.find_replace_dialog.FindReplaceDialog.reject">
+<code class="descname">reject</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.find_replace_dialog.FindReplaceDialog.reject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear search term on reject.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.dialogs.find_replace_dialog.FindReplaceDialog.replace">
+<code class="descname">replace</code><a class="headerlink" href="#ui.dialogs.find_replace_dialog.FindReplaceDialog.replace" title="Permalink to this definition">¶</a></dt>
+<dd><p>When signal is triggered, currently selected text should be replaced and next search performed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>search term</strong> (<em>str</em>) &#8211; text to be looked for</li>
+<li><strong>replacement_text</strong> (<em>str</em>) &#8211; the replacement text</li>
+<li><strong>is_regex</strong> (<em>bool</em>) &#8211; whether search term is regular expression</li>
+<li><strong>is_case_sensitive</strong> (<em>bool</em>) &#8211; whether search is case sensitive</li>
+<li><strong>is_word</strong> (<em>bool</em>) &#8211; whether to look only for entire words</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.dialogs.find_replace_dialog.FindReplaceDialog.replace_all">
+<code class="descname">replace_all</code><a class="headerlink" href="#ui.dialogs.find_replace_dialog.FindReplaceDialog.replace_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>When signal is triggered, all occurrences that match the search term should be replaced.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>search term</strong> (<em>str</em>) &#8211; text to be looked for</li>
+<li><strong>replacement_text</strong> (<em>str</em>) &#8211; the replacement text</li>
+<li><strong>is_regex</strong> (<em>bool</em>) &#8211; whether search term is regular expression</li>
+<li><strong>is_case_sensitive</strong> (<em>bool</em>) &#8211; whether search is case sensitive</li>
+<li><strong>is_word</strong> (<em>bool</em>) &#8211; whether to look only for entire words</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.dialogs.find_replace_dialog.FindReplaceDialog.replacement_text">
+<code class="descname">replacement_text</code><a class="headerlink" href="#ui.dialogs.find_replace_dialog.FindReplaceDialog.replacement_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replacement text for matches.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.dialogs.find_replace_dialog.FindReplaceDialog.search">
+<code class="descname">search</code><a class="headerlink" href="#ui.dialogs.find_replace_dialog.FindReplaceDialog.search" title="Permalink to this definition">¶</a></dt>
+<dd><p>When signal is triggered, a search should be performed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>search term</strong> (<em>str</em>) &#8211; text to be looked for</li>
+<li><strong>is_regex</strong> (<em>bool</em>) &#8211; whether search term is regular expression</li>
+<li><strong>is_case_sensitive</strong> (<em>bool</em>) &#8211; whether search is case sensitive</li>
+<li><strong>is_word</strong> (<em>bool</em>) &#8211; whether to look only for entire words</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.dialogs.find_replace_dialog.FindReplaceDialog.search_term">
+<code class="descname">search_term</code><a class="headerlink" href="#ui.dialogs.find_replace_dialog.FindReplaceDialog.search_term" title="Permalink to this definition">¶</a></dt>
+<dd><p>Term entered into the search field.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.dialogs.json_editor">
+<span id="ui-dialogs-json-editor-module"></span><h2>ui.dialogs.json_editor module<a class="headerlink" href="#module-ui.dialogs.json_editor" title="Permalink to this headline">¶</a></h2>
+<p>JSON editor dialog.</p>
+<dl class="class">
+<dt id="ui.dialogs.json_editor.JsonEditorDlg">
+<em class="property">class </em><code class="descclassname">ui.dialogs.json_editor.</code><code class="descname">JsonEditorDlg</code><span class="sig-paren">(</span><em>path</em>, <em>name</em>, <em>label_name</em>, <em>json</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.json_editor.JsonEditorDlg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QDialog</span></code></p>
+<p>Dialog widget for JsonEditor.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.dialogs.settings_dialog">
+<span id="ui-dialogs-settings-dialog-module"></span><h2>ui.dialogs.settings_dialog module<a class="headerlink" href="#module-ui.dialogs.settings_dialog" title="Permalink to this headline">¶</a></h2>
+<p>Settings dialog.</p>
+<dl class="class">
+<dt id="ui.dialogs.settings_dialog.GeneralTab">
+<em class="property">class </em><code class="descclassname">ui.dialogs.settings_dialog.</code><code class="descname">GeneralTab</code><span class="sig-paren">(</span><em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.settings_dialog.GeneralTab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QWidget</span></code></p>
+<p>Tab containing common settings.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.dialogs.settings_dialog.KeyboardShortcutsTab">
+<em class="property">class </em><code class="descclassname">ui.dialogs.settings_dialog.</code><code class="descname">KeyboardShortcutsTab</code><span class="sig-paren">(</span><em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.settings_dialog.KeyboardShortcutsTab" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QWidget</span></code></p>
+<p>Tab containing keyboard shortcuts.</p>
+<dl class="method">
+<dt id="ui.dialogs.settings_dialog.KeyboardShortcutsTab.get_shortcuts">
+<code class="descname">get_shortcuts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.settings_dialog.KeyboardShortcutsTab.get_shortcuts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a dictionary of selected shortcuts.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dictionary of shortcut names and their string keyboard shortcut</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.settings_dialog.KeyboardShortcutsTab.init_keyboard_shortcuts_layout">
+<code class="descname">init_keyboard_shortcuts_layout</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.settings_dialog.KeyboardShortcutsTab.init_keyboard_shortcuts_layout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize keyboard shortcuts layout with the user configured shortcuts.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.settings_dialog.KeyboardShortcutsTab.restore_defaults">
+<code class="descname">restore_defaults</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.settings_dialog.KeyboardShortcutsTab.restore_defaults" title="Permalink to this definition">¶</a></dt>
+<dd><p>Restore default keyboard shortcuts.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.dialogs.settings_dialog.SettingsDialog">
+<em class="property">class </em><code class="descclassname">ui.dialogs.settings_dialog.</code><code class="descname">SettingsDialog</code><span class="sig-paren">(</span><em>parent</em>, <em>title='Settings'</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.settings_dialog.SettingsDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QDialog</span></code></p>
+<p>Dialog containing settings.</p>
+<dl class="attribute">
+<dt id="ui.dialogs.settings_dialog.SettingsDialog.MINIMUM_HEIGHT">
+<code class="descname">MINIMUM_HEIGHT</code><em class="property"> = 300</em><a class="headerlink" href="#ui.dialogs.settings_dialog.SettingsDialog.MINIMUM_HEIGHT" title="Permalink to this definition">¶</a></dt>
+<dd><p>minimum height of the dialog</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.dialogs.settings_dialog.SettingsDialog.MINIMUM_WIDTH">
+<code class="descname">MINIMUM_WIDTH</code><em class="property"> = 320</em><a class="headerlink" href="#ui.dialogs.settings_dialog.SettingsDialog.MINIMUM_WIDTH" title="Permalink to this definition">¶</a></dt>
+<dd><p>minimum width of the dialog</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.settings_dialog.SettingsDialog.accept">
+<code class="descname">accept</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.settings_dialog.SettingsDialog.accept" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles a confirmation.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.dialogs.transformation_detail">
+<span id="ui-dialogs-transformation-detail-module"></span><h2>ui.dialogs.transformation_detail module<a class="headerlink" href="#module-ui.dialogs.transformation_detail" title="Permalink to this headline">¶</a></h2>
+<p>Transformation dialog.</p>
+<dl class="class">
+<dt id="ui.dialogs.transformation_detail.TranformationDetailDlg">
+<em class="property">class </em><code class="descclassname">ui.dialogs.transformation_detail.</code><code class="descname">TranformationDetailDlg</code><span class="sig-paren">(</span><em>QWidget parent=None</em>, <em>Qt.WindowFlags flags=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.transformation_detail.TranformationDetailDlg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QDialog</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.dialogs">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ui.dialogs" title="Permalink to this headline">¶</a></h2>
+<p>Module with dialog windows.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ui.menus.html" class="btn btn-neutral float-right" title="ui.menus package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ui.components.html" class="btn btn-neutral" title="ui.components package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

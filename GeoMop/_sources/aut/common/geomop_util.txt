@@ -1,0 +1,62 @@
+geomop_util package
+===================
+
+Submodules
+----------
+
+geomop_util.comparable module
+-----------------------------
+
+.. automodule:: geomop_util.comparable
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+geomop_util.locators module
+---------------------------
+
+.. automodule:: geomop_util.locators
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+geomop_util.logging module
+--------------------------
+
+.. automodule:: geomop_util.logging
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+geomop_util.serializable module
+-------------------------------
+
+.. automodule:: geomop_util.serializable
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+geomop_util.stylesheet_loader module
+------------------------------------
+
+.. automodule:: geomop_util.stylesheet_loader
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+geomop_util.util module
+-----------------------
+
+.. automodule:: geomop_util.util
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: geomop_util
+    :members:
+    :undoc-members:
+    :show-inheritance:

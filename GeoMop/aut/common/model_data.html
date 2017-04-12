@@ -1,0 +1,873 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>model_data package &mdash; GeoMop Common Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="GeoMop Common Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="next" title="model_data.notifications package" href="model_data.notifications.html"/>
+        <link rel="prev" title="geomop_util package" href="geomop_util.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexCommon.html" class="icon icon-home"> GeoMop Common Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Common Source</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="flow_util.html">flow_util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_analysis.html">geomop_analysis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_dialogs.html">geomop_dialogs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_util.html">geomop_util package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">model_data package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="model_data.notifications.html">model_data.notifications package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="model_data.validation.html">model_data.validation package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="model_data.yaml.html">model_data.yaml package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-model_data.autoconversion">model_data.autoconversion module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-model_data.data_node">model_data.data_node module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-model_data.export_con">model_data.export_con module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-model_data.format">model_data.format module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-model_data.import_json">model_data.import_json module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-model_data">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pyperclip.html">pyperclip package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyssh.html">pyssh package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">config module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="icon.html">icon module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version.html">version module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../indexCommon.html">GeoMop Common Source Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../indexCommon.html">Docs</a> &raquo;</li>
+      
+    <li>model_data package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/aut/common/model_data.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="model-data-package">
+<h1>model_data package<a class="headerlink" href="#model-data-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="model_data.notifications.html">model_data.notifications package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="model_data.notifications.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_data.notifications.html#module-model_data.notifications.handler">model_data.notifications.handler module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_data.notifications.html#module-model_data.notifications.list">model_data.notifications.list module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_data.notifications.html#module-model_data.notifications.notification">model_data.notifications.notification module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_data.notifications.html#module-model_data.notifications">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="model_data.validation.html">model_data.validation package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="model_data.validation.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_data.validation.html#module-model_data.validation.checks">model_data.validation.checks module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_data.validation.html#module-model_data.validation.validator">model_data.validation.validator module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_data.validation.html#module-model_data.validation">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="model_data.yaml.html">model_data.yaml package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="model_data.yaml.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_data.yaml.html#module-model_data.yaml.constructor">model_data.yaml.constructor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_data.yaml.html#module-model_data.yaml.loader">model_data.yaml.loader module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_data.yaml.html#module-model_data.yaml.resolver">model_data.yaml.resolver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_data.yaml.html#module-model_data.yaml">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-model_data.autoconversion">
+<span id="model-data-autoconversion-module"></span><h2>model_data.autoconversion module<a class="headerlink" href="#module-model_data.autoconversion" title="Permalink to this headline">¶</a></h2>
+<p>GeoMop model auto-conversion module</p>
+<p>Ensures auto-conversion of data for specified format.</p>
+<dl class="function">
+<dt id="model_data.autoconversion.autoconvert">
+<code class="descclassname">model_data.autoconversion.</code><code class="descname">autoconvert</code><span class="sig-paren">(</span><em>node</em>, <em>input_type</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.autoconversion.autoconvert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs recursive auto-conversion on root node.</p>
+<dl class="docutils">
+<dt>Auto-conversions:</dt>
+<dd><ol class="first last arabic simple">
+<li>If Array is expected and scalar/record is found, either perform
+a transposition or encapsulate it in Array(s).</li>
+<li>If Record is expected and scalar/array is found, check
+reducible_to_key. If present, create the Record.</li>
+<li>If Abstract is expected and scalar/array is found, check if
+default_descendant fits rule 2.</li>
+</ol>
+</dd>
+</dl>
+<p>The function also converts data to the expected data types (if possible).</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="model_data.autoconversion.AutoConverter">
+<em class="property">class </em><code class="descclassname">model_data.autoconversion.</code><code class="descname">AutoConverter</code><a class="headerlink" href="#model_data.autoconversion.AutoConverter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Handle autoconverting layer of data.</p>
+<dl class="staticmethod">
+<dt id="model_data.autoconversion.AutoConverter.autoconvert">
+<em class="property">static </em><code class="descname">autoconvert</code><span class="sig-paren">(</span><em>node</em>, <em>input_type</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.autoconversion.AutoConverter.autoconvert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs recursive auto-conversion on root node.</p>
+<dl class="docutils">
+<dt>Auto-conversions:</dt>
+<dd><ol class="first last arabic simple">
+<li>If Array is expected and scalar/record is found, either perform
+a transposition or encapsulate it in Array(s).</li>
+<li>If Record is expected and scalar/array is found, check
+reducible_to_key. If present, create the Record.</li>
+<li>If Abstract is expected and scalar/array is found, check if
+default_descendant fits rule 2.</li>
+</ol>
+</dd>
+</dl>
+<p>The function also converts data to the expected data types (if possible).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.autoconversion.AutoConverter.in_transposition">
+<code class="descname">in_transposition</code><em class="property"> = False</em><a class="headerlink" href="#model_data.autoconversion.AutoConverter.in_transposition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-model_data.data_node">
+<span id="model-data-data-node-module"></span><h2>model_data.data_node module<a class="headerlink" href="#module-model_data.data_node" title="Permalink to this headline">¶</a></h2>
+<p>Data Node package</p>
+<p>Contains classes for representing the tree structure of config files.</p>
+<dl class="class">
+<dt id="model_data.data_node.CompositeDataNode">
+<em class="property">class </em><code class="descclassname">model_data.data_node.</code><code class="descname">CompositeDataNode</code><span class="sig-paren">(</span><em>key=None</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.data_node.CompositeDataNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#model_data.data_node.DataNode" title="model_data.data_node.DataNode"><code class="xref py py-class docutils literal"><span class="pre">model_data.data_node.DataNode</span></code></a></p>
+<p>Class defines the common behaviour of both Sequence an Mapping nodes.</p>
+<dl class="method">
+<dt id="model_data.data_node.CompositeDataNode.get_node_at_position">
+<code class="descname">get_node_at_position</code><span class="sig-paren">(</span><em>position</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.data_node.CompositeDataNode.get_node_at_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve <a class="reference internal" href="#model_data.data_node.DataNode" title="model_data.data_node.DataNode"><code class="xref py py-class docutils literal"><span class="pre">DataNode</span></code></a> at specified
+<code class="xref py py-class docutils literal"><span class="pre">Position</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="model_data.data_node.CompositeDataNode.is_child_on_line">
+<code class="descname">is_child_on_line</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.data_node.CompositeDataNode.is_child_on_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return if in set line is some child</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="model_data.data_node.CompositeDataNode.is_jsonchild_on_line">
+<code class="descname">is_jsonchild_on_line</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.data_node.CompositeDataNode.is_jsonchild_on_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return if in set line is some json child</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="model_data.data_node.DataNode">
+<em class="property">class </em><code class="descclassname">model_data.data_node.</code><code class="descname">DataNode</code><span class="sig-paren">(</span><em>key=None</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.data_node.DataNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Represents a node in the tree structure.</p>
+<p>The complete tree is represented by its root node.</p>
+<dl class="class">
+<dt id="model_data.data_node.DataNode.Implementation">
+<em class="property">class </em><code class="descname">Implementation</code><a class="headerlink" href="#model_data.data_node.DataNode.Implementation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></code></p>
+<p>Implementation type of <a class="reference internal" href="#model_data.data_node.DataNode" title="model_data.data_node.DataNode"><code class="xref py py-class docutils literal"><span class="pre">DataNode</span></code></a>.</p>
+<p>The different implementations are defined by the three node types in YAML.</p>
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.Implementation.mapping">
+<code class="descname">mapping</code><em class="property"> = &lt;Implementation.mapping: 3&gt;</em><a class="headerlink" href="#model_data.data_node.DataNode.Implementation.mapping" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.Implementation.scalar">
+<code class="descname">scalar</code><em class="property"> = &lt;Implementation.scalar: 1&gt;</em><a class="headerlink" href="#model_data.data_node.DataNode.Implementation.scalar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.Implementation.sequence">
+<code class="descname">sequence</code><em class="property"> = &lt;Implementation.sequence: 2&gt;</em><a class="headerlink" href="#model_data.data_node.DataNode.Implementation.sequence" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="model_data.data_node.DataNode.Origin">
+<em class="property">class </em><code class="descclassname">DataNode.</code><code class="descname">Origin</code><a class="headerlink" href="#model_data.data_node.DataNode.Origin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></code></p>
+<p>The origin of data node.</p>
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.Origin.ac_array">
+<code class="descname">ac_array</code><em class="property"> = &lt;Origin.ac_array: 2&gt;</em><a class="headerlink" href="#model_data.data_node.DataNode.Origin.ac_array" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.Origin.ac_reducible_to_key">
+<code class="descname">ac_reducible_to_key</code><em class="property"> = &lt;Origin.ac_reducible_to_key: 3&gt;</em><a class="headerlink" href="#model_data.data_node.DataNode.Origin.ac_reducible_to_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.Origin.ac_transposition">
+<code class="descname">ac_transposition</code><em class="property"> = &lt;Origin.ac_transposition: 5&gt;</em><a class="headerlink" href="#model_data.data_node.DataNode.Origin.ac_transposition" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.Origin.error">
+<code class="descname">error</code><em class="property"> = &lt;Origin.error: 4&gt;</em><a class="headerlink" href="#model_data.data_node.DataNode.Origin.error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.Origin.structure">
+<code class="descname">structure</code><em class="property"> = &lt;Origin.structure: 1&gt;</em><a class="headerlink" href="#model_data.data_node.DataNode.Origin.structure" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="model_data.data_node.DataNode.StructureType">
+<em class="property">class </em><code class="descclassname">DataNode.</code><code class="descname">StructureType</code><a class="headerlink" href="#model_data.data_node.DataNode.StructureType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></code></p>
+<p>The type of node in the text structure.</p>
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.StructureType.array">
+<code class="descname">array</code><em class="property"> = &lt;StructureType.array: 2&gt;</em><a class="headerlink" href="#model_data.data_node.DataNode.StructureType.array" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.StructureType.dict">
+<code class="descname">dict</code><em class="property"> = &lt;StructureType.dict: 3&gt;</em><a class="headerlink" href="#model_data.data_node.DataNode.StructureType.dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.StructureType.json_array">
+<code class="descname">json_array</code><em class="property"> = &lt;StructureType.json_array: 4&gt;</em><a class="headerlink" href="#model_data.data_node.DataNode.StructureType.json_array" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.StructureType.json_dict">
+<code class="descname">json_dict</code><em class="property"> = &lt;StructureType.json_dict: 5&gt;</em><a class="headerlink" href="#model_data.data_node.DataNode.StructureType.json_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.StructureType.scalar">
+<code class="descname">scalar</code><em class="property"> = &lt;StructureType.scalar: 1&gt;</em><a class="headerlink" href="#model_data.data_node.DataNode.StructureType.scalar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.absolute_path">
+<code class="descclassname">DataNode.</code><code class="descname">absolute_path</code><a class="headerlink" href="#model_data.data_node.DataNode.absolute_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>the absolute path to this node</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.anchor">
+<code class="descclassname">DataNode.</code><code class="descname">anchor</code><em class="property"> = None</em><a class="headerlink" href="#model_data.data_node.DataNode.anchor" title="Permalink to this definition">¶</a></dt>
+<dd><p>anchor of the node (<code class="xref py py-class docutils literal"><span class="pre">TextValue</span></code>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.children">
+<code class="descclassname">DataNode.</code><code class="descname">children</code><em class="property"> = None</em><a class="headerlink" href="#model_data.data_node.DataNode.children" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of children nodes</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.children_keys">
+<code class="descclassname">DataNode.</code><code class="descname">children_keys</code><a class="headerlink" href="#model_data.data_node.DataNode.children_keys" title="Permalink to this definition">¶</a></dt>
+<dd><p>all children node keys</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.delimiters">
+<code class="descclassname">DataNode.</code><code class="descname">delimiters</code><em class="property"> = None</em><a class="headerlink" href="#model_data.data_node.DataNode.delimiters" title="Permalink to this definition">¶</a></dt>
+<dd><p>outer border of node, span start point to first delimiter and to second; used for
+flow style nodes</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.end">
+<code class="descclassname">DataNode.</code><code class="descname">end</code><a class="headerlink" href="#model_data.data_node.DataNode.end" title="Permalink to this definition">¶</a></dt>
+<dd><p>the end :py:class:&lt;Position &lt;util.locators.Position&gt;` of node</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="model_data.data_node.DataNode.generate_absolute_path">
+<code class="descclassname">DataNode.</code><code class="descname">generate_absolute_path</code><span class="sig-paren">(</span><em>descendant_path=None</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.data_node.DataNode.generate_absolute_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>generate absolute path to this node, used recursively</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="model_data.data_node.DataNode.get_child">
+<code class="descclassname">DataNode.</code><code class="descname">get_child</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.data_node.DataNode.get_child" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a child node for the given key.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">child node of given key</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#model_data.data_node.DataNode" title="model_data.data_node.DataNode"><code class="xref py py-class docutils literal"><span class="pre">DataNode</span></code></a> or <code class="docutils literal"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="model_data.data_node.DataNode.get_info_text_data">
+<code class="descclassname">DataNode.</code><code class="descname">get_info_text_data</code><span class="sig-paren">(</span><em>is_parent=False</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.data_node.DataNode.get_info_text_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return data necessary to generate info_text.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>is_parent</strong> (<em>bool</em>) &#8211; if set to True, generate info_text for this node,
+instead of its parent node</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">necessary input_type ids and values to generate info_text</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#model_data.data_node.DataNode.StructureType.dict" title="model_data.data_node.DataNode.StructureType.dict">dict</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="model_data.data_node.DataNode.get_node_at_path">
+<code class="descclassname">DataNode.</code><code class="descname">get_node_at_path</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.data_node.DataNode.get_node_at_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find node at the given path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> (<em>str</em>) &#8211; absolute or relative path to the node, i.e. <code class="docutils literal"><span class="pre">/problem/pause_on_run</span></code></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the found node</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#model_data.data_node.DataNode" title="model_data.data_node.DataNode">DataNode</a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">LookupError - if no node is found</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="model_data.data_node.DataNode.get_node_at_position">
+<code class="descclassname">DataNode.</code><code class="descname">get_node_at_position</code><span class="sig-paren">(</span><em>position</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.data_node.DataNode.get_node_at_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve DataNode at specified position.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.hidden">
+<code class="descclassname">DataNode.</code><code class="descname">hidden</code><em class="property"> = None</em><a class="headerlink" href="#model_data.data_node.DataNode.hidden" title="Permalink to this definition">¶</a></dt>
+<dd><p>whether node is hidden in tree structure</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.implementation">
+<code class="descclassname">DataNode.</code><code class="descname">implementation</code><em class="property"> = None</em><a class="headerlink" href="#model_data.data_node.DataNode.implementation" title="Permalink to this definition">¶</a></dt>
+<dd><p>the type node implementation - see <a class="reference internal" href="#model_data.data_node.DataNode.Implementation" title="model_data.data_node.DataNode.Implementation"><code class="xref py py-class docutils literal"><span class="pre">DataNode.Implementation</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.input_type">
+<code class="descclassname">DataNode.</code><code class="descname">input_type</code><em class="property"> = None</em><a class="headerlink" href="#model_data.data_node.DataNode.input_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>input type specified by format</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="model_data.data_node.DataNode.is_child_on_line">
+<code class="descclassname">DataNode.</code><code class="descname">is_child_on_line</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.data_node.DataNode.is_child_on_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return if in set line is some child</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.is_flow">
+<code class="descclassname">DataNode.</code><code class="descname">is_flow</code><em class="property"> = None</em><a class="headerlink" href="#model_data.data_node.DataNode.is_flow" title="Permalink to this definition">¶</a></dt>
+<dd><p>outer structure of the node is in flow format</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="model_data.data_node.DataNode.is_jsonchild_on_line">
+<code class="descclassname">DataNode.</code><code class="descname">is_jsonchild_on_line</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.data_node.DataNode.is_jsonchild_on_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return if in set line is some json child</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.key">
+<code class="descclassname">DataNode.</code><code class="descname">key</code><em class="property"> = None</em><a class="headerlink" href="#model_data.data_node.DataNode.key" title="Permalink to this definition">¶</a></dt>
+<dd><p>key (name) of this node (<code class="xref py py-class docutils literal"><span class="pre">TextValue</span></code>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.notification_span">
+<code class="descclassname">DataNode.</code><code class="descname">notification_span</code><a class="headerlink" href="#model_data.data_node.DataNode.notification_span" title="Permalink to this definition">¶</a></dt>
+<dd><p>span for notification, preferably returns key span, falls back to span</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.origin">
+<code class="descclassname">DataNode.</code><code class="descname">origin</code><em class="property"> = None</em><a class="headerlink" href="#model_data.data_node.DataNode.origin" title="Permalink to this definition">¶</a></dt>
+<dd><p>indicates whether node is written in text or was created by an autoconversion
+(<a class="reference internal" href="#model_data.data_node.DataNode.Origin" title="model_data.data_node.DataNode.Origin"><code class="xref py py-class docutils literal"><span class="pre">DataNode.Origin</span></code></a>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.parent">
+<code class="descclassname">DataNode.</code><code class="descname">parent</code><em class="property"> = None</em><a class="headerlink" href="#model_data.data_node.DataNode.parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>parent <a class="reference internal" href="#model_data.data_node.DataNode" title="model_data.data_node.DataNode"><code class="xref py py-class docutils literal"><span class="pre">DataNode</span></code></a></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.ref">
+<code class="descclassname">DataNode.</code><code class="descname">ref</code><em class="property"> = None</em><a class="headerlink" href="#model_data.data_node.DataNode.ref" title="Permalink to this definition">¶</a></dt>
+<dd><p>reference to another <a class="reference internal" href="#model_data.data_node.DataNode" title="model_data.data_node.DataNode"><code class="xref py py-class docutils literal"><span class="pre">DataNode</span></code></a></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="model_data.data_node.DataNode.set_child">
+<code class="descclassname">DataNode.</code><code class="descname">set_child</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.data_node.DataNode.set_child" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the given node as child of this node.</p>
+<p>If the key already exists, replace the original child node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Param:</th><td class="field-body"><a class="reference internal" href="#model_data.data_node.DataNode" title="model_data.data_node.DataNode"><code class="xref py py-class docutils literal"><span class="pre">DataNode</span></code></a> to be set as a child</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.span">
+<code class="descclassname">DataNode.</code><code class="descname">span</code><em class="property"> = None</em><a class="headerlink" href="#model_data.data_node.DataNode.span" title="Permalink to this definition">¶</a></dt>
+<dd><p>the <code class="xref py py-class docutils literal"><span class="pre">Span</span></code> of this node&#8217;s value in text</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.start">
+<code class="descclassname">DataNode.</code><code class="descname">start</code><a class="headerlink" href="#model_data.data_node.DataNode.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>the beginning :py:class:&lt;Position &lt;util.locators.Position&gt;` of node
+(including its key)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.type">
+<code class="descclassname">DataNode.</code><code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#model_data.data_node.DataNode.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>specifies the type of Abstract</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.value">
+<code class="descclassname">DataNode.</code><code class="descname">value</code><em class="property"> = None</em><a class="headerlink" href="#model_data.data_node.DataNode.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>the scalar value of the node (<code class="xref py py-class docutils literal"><span class="pre">TextValue</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.data_node.DataNode.visible_children">
+<code class="descclassname">DataNode.</code><code class="descname">visible_children</code><a class="headerlink" href="#model_data.data_node.DataNode.visible_children" title="Permalink to this definition">¶</a></dt>
+<dd><p>all visible children nodes</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="model_data.data_node.MappingDataNode">
+<em class="property">class </em><code class="descclassname">model_data.data_node.</code><code class="descname">MappingDataNode</code><span class="sig-paren">(</span><em>key=None</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.data_node.MappingDataNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#model_data.data_node.CompositeDataNode" title="model_data.data_node.CompositeDataNode"><code class="xref py py-class docutils literal"><span class="pre">model_data.data_node.CompositeDataNode</span></code></a></p>
+<p>Implementation of <a class="reference internal" href="#model_data.data_node.DataNode" title="model_data.data_node.DataNode"><code class="xref py py-class docutils literal"><span class="pre">DataNode</span></code></a> for mapping nodes.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="model_data.data_node.ScalarDataNode">
+<em class="property">class </em><code class="descclassname">model_data.data_node.</code><code class="descname">ScalarDataNode</code><span class="sig-paren">(</span><em>key=None</em>, <em>parent=None</em>, <em>value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.data_node.ScalarDataNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#model_data.data_node.DataNode" title="model_data.data_node.DataNode"><code class="xref py py-class docutils literal"><span class="pre">model_data.data_node.DataNode</span></code></a></p>
+<p>Implementation of <a class="reference internal" href="#model_data.data_node.DataNode" title="model_data.data_node.DataNode"><code class="xref py py-class docutils literal"><span class="pre">DataNode</span></code></a> for scalar nodes.</p>
+<dl class="method">
+<dt id="model_data.data_node.ScalarDataNode.get_node_at_position">
+<code class="descname">get_node_at_position</code><span class="sig-paren">(</span><em>position</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.data_node.ScalarDataNode.get_node_at_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve <a class="reference internal" href="#model_data.data_node.DataNode" title="model_data.data_node.DataNode"><code class="xref py py-class docutils literal"><span class="pre">DataNode</span></code></a> at specified
+<code class="xref py py-class docutils literal"><span class="pre">Position</span></code>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="model_data.data_node.SequenceDataNode">
+<em class="property">class </em><code class="descclassname">model_data.data_node.</code><code class="descname">SequenceDataNode</code><span class="sig-paren">(</span><em>key=None</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.data_node.SequenceDataNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#model_data.data_node.CompositeDataNode" title="model_data.data_node.CompositeDataNode"><code class="xref py py-class docutils literal"><span class="pre">model_data.data_node.CompositeDataNode</span></code></a></p>
+<p>Implementation of <a class="reference internal" href="#model_data.data_node.DataNode" title="model_data.data_node.DataNode"><code class="xref py py-class docutils literal"><span class="pre">DataNode</span></code></a> for sequence nodes.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-model_data.export_con">
+<span id="model-data-export-con-module"></span><h2>model_data.export_con module<a class="headerlink" href="#module-model_data.export_con" title="Permalink to this headline">¶</a></h2>
+<p>Module for exporting the data structure to .con format.</p>
+<dl class="class">
+<dt id="model_data.export_con.Exporter">
+<em class="property">class </em><code class="descclassname">model_data.export_con.</code><code class="descname">Exporter</code><a class="headerlink" href="#model_data.export_con.Exporter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Exporter from data structure to con files.</p>
+<dl class="method">
+<dt id="model_data.export_con.Exporter.export_con">
+<code class="descname">export_con</code><span class="sig-paren">(</span><em>root</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.export_con.Exporter.export_con" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create .con text from a root data node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>root</strong> (<a class="reference internal" href="#model_data.data_node.DataNode" title="model_data.data_node.DataNode"><em>DataNode</em></a>) &#8211; the root of the data structure</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">text representation of the structure in .con format</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-model_data.format">
+<span id="model-data-format-module"></span><h2>model_data.format module<a class="headerlink" href="#module-model_data.format" title="Permalink to this headline">¶</a></h2>
+<p>Contains format specification class and methods to parse it from JSON.</p>
+<dl class="function">
+<dt id="model_data.format.get_root_input_type_from_json">
+<code class="descclassname">model_data.format.</code><code class="descname">get_root_input_type_from_json</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.format.get_root_input_type_from_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the root input type from JSON formatted string.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="model_data.format.is_param">
+<code class="descclassname">model_data.format.</code><code class="descname">is_param</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.format.is_param" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine whether given value is a parameter string.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="model_data.format.is_scalar">
+<code class="descclassname">model_data.format.</code><code class="descname">is_scalar</code><span class="sig-paren">(</span><em>input_type</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.format.is_scalar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns True if input_type is scalar.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="model_data.format.parse_format">
+<code class="descclassname">model_data.format.</code><code class="descname">parse_format</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.format.parse_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns root input type from data.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-model_data.import_json">
+<span id="model-data-import-json-module"></span><h2>model_data.import_json module<a class="headerlink" href="#module-model_data.import_json" title="Permalink to this headline">¶</a></h2>
+<p>GeomMop configuration file parsers</p>
+<p>This file contains the parsing functions for configuration files of Flow123d.
+Currently supports .con format (as specified by Flow123d manual v1.8.2).</p>
+<dl class="class">
+<dt id="model_data.import_json.Comment">
+<em class="property">class </em><code class="descclassname">model_data.import_json.</code><code class="descname">Comment</code><span class="sig-paren">(</span><em>path</em>, <em>text</em>, <em>after=False</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.import_json.Comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class for one comment</p>
+<dl class="attribute">
+<dt id="model_data.import_json.Comment.after">
+<code class="descname">after</code><em class="property"> = None</em><a class="headerlink" href="#model_data.import_json.Comment.after" title="Permalink to this definition">¶</a></dt>
+<dd><p>comment after key (else above key)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.import_json.Comment.inden_line">
+<code class="descname">inden_line</code><em class="property"> = None</em><a class="headerlink" href="#model_data.import_json.Comment.inden_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>line for computation of indentation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.import_json.Comment.pos">
+<code class="descname">pos</code><em class="property"> = None</em><a class="headerlink" href="#model_data.import_json.Comment.pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>position in associated file</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.import_json.Comment.rows">
+<code class="descname">rows</code><em class="property"> = None</em><a class="headerlink" href="#model_data.import_json.Comment.rows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Array of comments</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="model_data.import_json.Comment.set_yaml_position">
+<code class="descname">set_yaml_position</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.import_json.Comment.set_yaml_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>set position in yaml file</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="model_data.import_json.Comments">
+<em class="property">class </em><code class="descclassname">model_data.import_json.</code><code class="descname">Comments</code><a class="headerlink" href="#model_data.import_json.Comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class for comments processed</p>
+<dl class="class">
+<dt id="model_data.import_json.Comments.BlokType">
+<em class="property">class </em><code class="descname">BlokType</code><a class="headerlink" href="#model_data.import_json.Comments.BlokType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></code></p>
+<p>Type of block</p>
+<dl class="attribute">
+<dt id="model_data.import_json.Comments.BlokType.array">
+<code class="descname">array</code><em class="property"> = &lt;BlokType.array: 0&gt;</em><a class="headerlink" href="#model_data.import_json.Comments.BlokType.array" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.import_json.Comments.BlokType.dict">
+<code class="descname">dict</code><em class="property"> = &lt;BlokType.dict: 1&gt;</em><a class="headerlink" href="#model_data.import_json.Comments.BlokType.dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="model_data.import_json.Comments.comments">
+<code class="descclassname">Comments.</code><code class="descname">comments</code><em class="property"> = None</em><a class="headerlink" href="#model_data.import_json.Comments.comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>array of comments</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="model_data.import_json.Comments.read_comments_from_con">
+<code class="descclassname">Comments.</code><code class="descname">read_comments_from_con</code><span class="sig-paren">(</span><em>text</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.import_json.Comments.read_comments_from_con" title="Permalink to this definition">¶</a></dt>
+<dd><p>reread comments from con file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="model_data.import_json.Comments.sorte_by_yaml">
+<code class="descclassname">Comments.</code><code class="descname">sorte_by_yaml</code><span class="sig-paren">(</span><em>yaml</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.import_json.Comments.sorte_by_yaml" title="Permalink to this definition">¶</a></dt>
+<dd><p>sort comments by position in yaml file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="model_data.import_json.Comments.write_to_yaml">
+<code class="descclassname">Comments.</code><code class="descname">write_to_yaml</code><span class="sig-paren">(</span><em>yaml</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.import_json.Comments.write_to_yaml" title="Permalink to this definition">¶</a></dt>
+<dd><p>return yaml text with comments</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="model_data.import_json.fix_intendation">
+<code class="descclassname">model_data.import_json.</code><code class="descname">fix_intendation</code><span class="sig-paren">(</span><em>yaml</em>, <em>root</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.import_json.fix_intendation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move intendation for array</p>
+<p>This method suppose that that yaml is clean text created by yaml.dump 
+method with parameters defaultlt_flow_style=False and indent=2.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="model_data.import_json.fix_tags">
+<code class="descclassname">model_data.import_json.</code><code class="descname">fix_tags</code><span class="sig-paren">(</span><em>yaml</em>, <em>root</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.import_json.fix_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replase TYPE and refferences by tags</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="model_data.import_json.parse_con">
+<code class="descclassname">model_data.import_json.</code><code class="descname">parse_con</code><span class="sig-paren">(</span><em>con</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.import_json.parse_con" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parses a configuration file of Flow123d in .con format with given filename.</p>
+<p>Returns the yaml text structure.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="model_data.import_json.rewrite_comments">
+<code class="descclassname">model_data.import_json.</code><code class="descname">rewrite_comments</code><span class="sig-paren">(</span><em>con</em>, <em>yaml</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.import_json.rewrite_comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read comments from text (con file) and place it to yaml structure</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-model_data">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-model_data" title="Permalink to this headline">¶</a></h2>
+<p>Module for handling data structure.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="model_data.notifications.html" class="btn btn-neutral float-right" title="model_data.notifications package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="geomop_util.html" class="btn btn-neutral" title="geomop_util package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

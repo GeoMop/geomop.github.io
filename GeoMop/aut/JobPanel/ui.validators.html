@@ -1,0 +1,410 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ui.validators package &mdash; Job Panel Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Job Panel Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="up" title="ui package" href="ui.html"/>
+        <link rel="prev" title="ui.panels package" href="ui.panels.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexJP.html" class="icon icon-home"> Job Panel Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Jobs Scheduler Source</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="communication.html">communication package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">data package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="delegator.html">delegator module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html">helpers package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="job.html">job module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="locks.html">locks module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mj_service.html">mj_service module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">test module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_app.html">test_app module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_task.html">test_task module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ui.html">ui package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ui.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ui.actions.html">ui.actions package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.data.html">ui.data package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.dialogs.html">ui.dialogs package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.helpers.html">ui.helpers package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.imports.html">ui.imports package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.menus.html">ui.menus package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.panels.html">ui.panels package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">ui.validators package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.validators.validation">ui.validators.validation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.validators">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.com_manager">ui.com_manager module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.com_worker">ui.com_worker module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.main_window">ui.main_window module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.ssh_test">ui.ssh_test module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../indexJP.html">Job Panel Source Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../indexJP.html">Docs</a> &raquo;</li>
+      
+          <li><a href="ui.html">ui package</a> &raquo;</li>
+      
+    <li>ui.validators package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/aut/JobPanel/ui.validators.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ui-validators-package">
+<h1>ui.validators package<a class="headerlink" href="#ui-validators-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ui.validators.validation">
+<span id="ui-validators-validation-module"></span><h2>ui.validators.validation module<a class="headerlink" href="#module-ui.validators.validation" title="Permalink to this headline">¶</a></h2>
+<p>Validators for UI
+&#64;author: Jan Gabriel
+&#64;contact: <a class="reference external" href="mailto:jan&#46;gabriel&#37;&#52;&#48;tul&#46;cz">jan<span>&#46;</span>gabriel<span>&#64;</span>tul<span>&#46;</span>cz</a></p>
+<dl class="class">
+<dt id="ui.validators.validation.MemoryValidator">
+<em class="property">class </em><code class="descclassname">ui.validators.validation.</code><code class="descname">MemoryValidator</code><span class="sig-paren">(</span><em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.validators.validation.MemoryValidator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtGui.QRegExpValidator</span></code></p>
+<p>Memory validator, accepts only valid memory string.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.validators.validation.MultiJobNameValidator">
+<em class="property">class </em><code class="descclassname">ui.validators.validation.</code><code class="descname">MultiJobNameValidator</code><span class="sig-paren">(</span><em>rx=None</em>, <em>parent=None</em>, <em>excluded=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.validators.validation.MultiJobNameValidator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.validators.validation.PresetNameValidator" title="ui.validators.validation.PresetNameValidator"><code class="xref py py-class docutils literal"><span class="pre">ui.validators.validation.PresetNameValidator</span></code></a></p>
+<p>MultiJob validator, only alphanumeric values and (_-).</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.validators.validation.PbsNameValidator">
+<em class="property">class </em><code class="descclassname">ui.validators.validation.</code><code class="descname">PbsNameValidator</code><span class="sig-paren">(</span><em>rx=None</em>, <em>parent=None</em>, <em>excluded=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.validators.validation.PbsNameValidator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.validators.validation.PresetNameValidator" title="ui.validators.validation.PresetNameValidator"><code class="xref py py-class docutils literal"><span class="pre">ui.validators.validation.PresetNameValidator</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.validators.validation.PresetNameValidator">
+<em class="property">class </em><code class="descclassname">ui.validators.validation.</code><code class="descname">PresetNameValidator</code><span class="sig-paren">(</span><em>rx=None</em>, <em>parent=None</em>, <em>excluded=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.validators.validation.PresetNameValidator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtGui.QRegExpValidator</span></code></p>
+<p>Preset name validator.</p>
+<dl class="method">
+<dt id="ui.validators.validation.PresetNameValidator.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><em>str</em>, <em>int) -&gt; (QValidator.State</em>, <em>str</em>, <em>int</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.validators.validation.PresetNameValidator.validate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.validators.validation.RemoteDirectoryValidator">
+<em class="property">class </em><code class="descclassname">ui.validators.validation.</code><code class="descname">RemoteDirectoryValidator</code><span class="sig-paren">(</span><em>rx=None</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.validators.validation.RemoteDirectoryValidator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtGui.QRegExpValidator</span></code></p>
+<p>Remote directory validator, only alphanumeric values and (_-).</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.validators.validation.ScratchValidator">
+<em class="property">class </em><code class="descclassname">ui.validators.validation.</code><code class="descname">ScratchValidator</code><span class="sig-paren">(</span><em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.validators.validation.ScratchValidator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtGui.QRegExpValidator</span></code></p>
+<p>Scratch validator, accepts only valid scratch string.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.validators.validation.SshNameValidator">
+<em class="property">class </em><code class="descclassname">ui.validators.validation.</code><code class="descname">SshNameValidator</code><span class="sig-paren">(</span><em>rx=None</em>, <em>parent=None</em>, <em>excluded=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.validators.validation.SshNameValidator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.validators.validation.PresetNameValidator" title="ui.validators.validation.PresetNameValidator"><code class="xref py py-class docutils literal"><span class="pre">ui.validators.validation.PresetNameValidator</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.validators.validation.ValidationColorizer">
+<em class="property">class </em><code class="descclassname">ui.validators.validation.</code><code class="descname">ValidationColorizer</code><a class="headerlink" href="#ui.validators.validation.ValidationColorizer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Provides simple coloring capability.</p>
+<dl class="classmethod">
+<dt id="ui.validators.validation.ValidationColorizer.colorize">
+<em class="property">classmethod </em><code class="descname">colorize</code><span class="sig-paren">(</span><em>field</em>, <em>color</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.validators.validation.ValidationColorizer.colorize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Color background of the field with specified color.
+:param field: Field handler.
+:param color: Desired color.
+:return:</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ui.validators.validation.ValidationColorizer.colorize_by_validator">
+<em class="property">classmethod </em><code class="descname">colorize_by_validator</code><span class="sig-paren">(</span><em>field</em>, <em>validator=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.validators.validation.ValidationColorizer.colorize_by_validator" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>field</strong> &#8211; Field handler.</li>
+<li><strong>validator</strong> &#8211; External validator if needed, otherwise taken from</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>field.validator().
+:return: True if state is acceptable, otherwise False</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ui.validators.validation.ValidationColorizer.colorize_green">
+<em class="property">classmethod </em><code class="descname">colorize_green</code><span class="sig-paren">(</span><em>field</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.validators.validation.ValidationColorizer.colorize_green" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for green coloring.
+:param field: Field handler.
+:return:</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ui.validators.validation.ValidationColorizer.colorize_red">
+<em class="property">classmethod </em><code class="descname">colorize_red</code><span class="sig-paren">(</span><em>field</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.validators.validation.ValidationColorizer.colorize_red" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for red coloring.
+:param field: Field handler.
+:return:</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ui.validators.validation.ValidationColorizer.colorize_white">
+<em class="property">classmethod </em><code class="descname">colorize_white</code><span class="sig-paren">(</span><em>field</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.validators.validation.ValidationColorizer.colorize_white" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for white coloring.
+:param field: Field handler.
+:return:</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ui.validators.validation.ValidationColorizer.colorize_yellow">
+<em class="property">classmethod </em><code class="descname">colorize_yellow</code><span class="sig-paren">(</span><em>field</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.validators.validation.ValidationColorizer.colorize_yellow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for yellow coloring.
+:param field: Field handler.
+:return:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.validators.validation.ValidationColors">
+<em class="property">class </em><code class="descclassname">ui.validators.validation.</code><code class="descname">ValidationColors</code><a class="headerlink" href="#ui.validators.validation.ValidationColors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></code></p>
+<p>Holds colors for form validation.</p>
+<dl class="attribute">
+<dt id="ui.validators.validation.ValidationColors.green">
+<code class="descname">green</code><em class="property"> = &lt;ValidationColors.green: &lt;PyQt5.QtGui.QColor object at 0x7f45dba79dd8&gt;&gt;</em><a class="headerlink" href="#ui.validators.validation.ValidationColors.green" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.validators.validation.ValidationColors.red">
+<code class="descname">red</code><em class="property"> = &lt;ValidationColors.red: &lt;PyQt5.QtGui.QColor object at 0x7f45dba79d68&gt;&gt;</em><a class="headerlink" href="#ui.validators.validation.ValidationColors.red" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.validators.validation.ValidationColors.white">
+<code class="descname">white</code><em class="property"> = &lt;ValidationColors.white: &lt;PyQt5.QtGui.QColor object at 0x7f45dba79cf8&gt;&gt;</em><a class="headerlink" href="#ui.validators.validation.ValidationColors.white" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.validators.validation.ValidationColors.yellow">
+<code class="descname">yellow</code><em class="property"> = &lt;ValidationColors.yellow: &lt;PyQt5.QtGui.QColor object at 0x7f45dba79e48&gt;&gt;</em><a class="headerlink" href="#ui.validators.validation.ValidationColors.yellow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.validators.validation.WalltimeValidator">
+<em class="property">class </em><code class="descclassname">ui.validators.validation.</code><code class="descname">WalltimeValidator</code><span class="sig-paren">(</span><em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.validators.validation.WalltimeValidator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtGui.QRegExpValidator</span></code></p>
+<p>Ẅalltime validator, accepts only valid walltime string.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.validators">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ui.validators" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="ui.panels.html" class="btn btn-neutral" title="ui.panels package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

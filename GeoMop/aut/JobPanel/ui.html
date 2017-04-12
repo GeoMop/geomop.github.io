@@ -1,0 +1,785 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ui package &mdash; Job Panel Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Job Panel Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="next" title="ui.actions package" href="ui.actions.html"/>
+        <link rel="prev" title="test_task module" href="test_task.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexJP.html" class="icon icon-home"> Job Panel Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Jobs Scheduler Source</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="communication.html">communication package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">data package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="delegator.html">delegator module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html">helpers package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="job.html">job module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="locks.html">locks module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mj_service.html">mj_service module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">test module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_app.html">test_app module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_task.html">test_task module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">ui package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ui.actions.html">ui.actions package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.data.html">ui.data package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.dialogs.html">ui.dialogs package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.helpers.html">ui.helpers package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.imports.html">ui.imports package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.menus.html">ui.menus package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.panels.html">ui.panels package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.validators.html">ui.validators package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ui.com_manager">ui.com_manager module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ui.com_worker">ui.com_worker module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ui.main_window">ui.main_window module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ui.ssh_test">ui.ssh_test module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ui">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../indexJP.html">Job Panel Source Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../indexJP.html">Docs</a> &raquo;</li>
+      
+    <li>ui package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/aut/JobPanel/ui.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ui-package">
+<h1>ui package<a class="headerlink" href="#ui-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ui.actions.html">ui.actions package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ui.actions.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.actions.html#module-ui.actions.main_menu_actions">ui.actions.main_menu_actions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.actions.html#module-ui.actions">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ui.data.html">ui.data package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ui.data.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.data.html#module-ui.data.config_builder">ui.data.config_builder module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.data.html#module-ui.data.data_structures">ui.data.data_structures module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.data.html#module-ui.data.mj_data">ui.data.mj_data module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.data.html#module-ui.data.preset_data">ui.data.preset_data module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.data.html#module-ui.data.queues">ui.data.queues module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.data.html#module-ui.data.reg">ui.data.reg module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.data.html#module-ui.data">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ui.dialogs.html">ui.dialogs package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ui.dialogs.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.dialogs.html#module-ui.dialogs.dialogs">ui.dialogs.dialogs module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.dialogs.html#module-ui.dialogs.env_dialog">ui.dialogs.env_dialog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.dialogs.html#module-ui.dialogs.env_presets">ui.dialogs.env_presets module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.dialogs.html#module-ui.dialogs.import_dialog">ui.dialogs.import_dialog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.dialogs.html#module-ui.dialogs.message_dialog">ui.dialogs.message_dialog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.dialogs.html#module-ui.dialogs.multijob_dialog">ui.dialogs.multijob_dialog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.dialogs.html#module-ui.dialogs.options_dialog">ui.dialogs.options_dialog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.dialogs.html#module-ui.dialogs.password_dialog">ui.dialogs.password_dialog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.dialogs.html#module-ui.dialogs.pbs_dialog">ui.dialogs.pbs_dialog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.dialogs.html#module-ui.dialogs.pbs_presets">ui.dialogs.pbs_presets module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.dialogs.html#module-ui.dialogs.resource_dialog">ui.dialogs.resource_dialog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.dialogs.html#module-ui.dialogs.resource_presets">ui.dialogs.resource_presets module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.dialogs.html#module-ui.dialogs.ssh_dialog">ui.dialogs.ssh_dialog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.dialogs.html#module-ui.dialogs.ssh_presets">ui.dialogs.ssh_presets module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.dialogs.html#module-ui.dialogs.test_ssh_dialog">ui.dialogs.test_ssh_dialog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.dialogs.html#module-ui.dialogs">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ui.helpers.html">ui.helpers package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ui.helpers.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ui.helpers.ssh.html">ui.helpers.ssh package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="ui.helpers.ssh.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ui.helpers.ssh.html#module-ui.helpers.ssh.linux_conn">ui.helpers.ssh.linux_conn module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ui.helpers.ssh.html#module-ui.helpers.ssh.tests">ui.helpers.ssh.tests module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ui.helpers.ssh.html#module-ui.helpers.ssh">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ui.helpers.html#module-ui.helpers">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ui.imports.html">ui.imports package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ui.imports.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.imports.html#module-ui.imports.ie_presets">ui.imports.ie_presets module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.imports.html#module-ui.imports.workspaces_conf">ui.imports.workspaces_conf module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.imports.html#module-ui.imports">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ui.menus.html">ui.menus package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ui.menus.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.menus.html#module-ui.menus.analysis_menu">ui.menus.analysis_menu module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.menus.html#module-ui.menus.main_menu_bar">ui.menus.main_menu_bar module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.menus.html#module-ui.menus">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ui.panels.html">ui.panels package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ui.panels.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.panels.html#module-ui.panels.overview">ui.panels.overview module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.panels.html#module-ui.panels.tabs">ui.panels.tabs module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.panels.html#module-ui.panels">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ui.validators.html">ui.validators package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ui.validators.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.validators.html#module-ui.validators.validation">ui.validators.validation module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.validators.html#module-ui.validators">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ui.com_manager">
+<span id="ui-com-manager-module"></span><h2>ui.com_manager module<a class="headerlink" href="#module-ui.com_manager" title="Permalink to this headline">¶</a></h2>
+<p>JobPanel data reloader
+&#64;author: Jan Gabriel
+&#64;contact: <a class="reference external" href="mailto:jan&#46;gabriel&#37;&#52;&#48;tul&#46;cz">jan<span>&#46;</span>gabriel<span>&#64;</span>tul<span>&#46;</span>cz</a></p>
+<dl class="class">
+<dt id="ui.com_manager.ComManager">
+<em class="property">class </em><code class="descclassname">ui.com_manager.</code><code class="descname">ComManager</code><span class="sig-paren">(</span><em>data_app</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_manager.ComManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Usage:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">set application data to constructor</p>
+</li>
+<li><p class="first">add job id (key) to array (start_jobs,stop_jobs,resume_jobs,terminate_jobs)</p>
+</li>
+<li><p class="first">if current job is changed, set it</p>
+</li>
+<li><p class="first">each 0.5s call check function in main thread, after check returning should be done:</p>
+<blockquote>
+<div><ul>
+<li><dl class="first docutils">
+<dt>from arrays state_change_jobs,results_change_jobs,jobs_change_jobs pull</dt>
+<dd><p class="first last">jobs, and fix graphic presentation</p>
+</dd>
+</dl>
+</li>
+<li><p class="first">if application is stopping, check run_jobs and start_jobs arrays (in this case,
+check function can be call with higher frequency)</p>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">call stop_all or pause_all function and wait till run_jobs, delete_jobs and start_jobs array is not empty</p>
+</li>
+</ul>
+</div></blockquote>
+<dl class="attribute">
+<dt id="ui.com_manager.ComManager.current_job">
+<code class="descname">current_job</code><em class="property"> = None</em><a class="headerlink" href="#ui.com_manager.ComManager.current_job" title="Permalink to this definition">¶</a></dt>
+<dd><p>current job id</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.com_manager.ComManager.delete_jobs">
+<code class="descname">delete_jobs</code><em class="property"> = None</em><a class="headerlink" href="#ui.com_manager.ComManager.delete_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>array of jobs ids, that will be stopped</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.com_manager.ComManager.jobs_change_jobs">
+<code class="descname">jobs_change_jobs</code><em class="property"> = None</em><a class="headerlink" href="#ui.com_manager.ComManager.jobs_change_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>array of jobs ids, that have changed jobs state</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.com_manager.ComManager.jobs_deleted">
+<code class="descname">jobs_deleted</code><em class="property"> = None</em><a class="headerlink" href="#ui.com_manager.ComManager.jobs_deleted" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dictionary of jobs ids=&gt;None (ids=&gt;error), that was deleted data.
+If job was not deleted, in dictionary value is error text</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.com_manager.ComManager.logs_change_jobs">
+<code class="descname">logs_change_jobs</code><em class="property"> = None</em><a class="headerlink" href="#ui.com_manager.ComManager.logs_change_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>array of jobs ids, that have changed jobs logs</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.com_manager.ComManager.pause_all">
+<code class="descname">pause_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_manager.ComManager.pause_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pause all running and starting jobs (use when app is closing).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.com_manager.ComManager.poll">
+<code class="descname">poll</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_manager.ComManager.poll" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function plans and makes all the needed actions in the main thread.
+Function should be called periodically from the UI.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.com_manager.ComManager.results_change_jobs">
+<code class="descname">results_change_jobs</code><em class="property"> = None</em><a class="headerlink" href="#ui.com_manager.ComManager.results_change_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>array of jobs ids, that have changed results</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.com_manager.ComManager.resume_jobs">
+<code class="descname">resume_jobs</code><em class="property"> = None</em><a class="headerlink" href="#ui.com_manager.ComManager.resume_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>array of jobs ids, that will be resume</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.com_manager.ComManager.run_jobs">
+<code class="descname">run_jobs</code><em class="property"> = None</em><a class="headerlink" href="#ui.com_manager.ComManager.run_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>array of running jobs ids</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.com_manager.ComManager.start_jobs">
+<code class="descname">start_jobs</code><em class="property"> = None</em><a class="headerlink" href="#ui.com_manager.ComManager.start_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>array of job ids, that will be started</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.com_manager.ComManager.state_change_jobs">
+<code class="descname">state_change_jobs</code><em class="property"> = None</em><a class="headerlink" href="#ui.com_manager.ComManager.state_change_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>array of jobs ids, that have changed state</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.com_manager.ComManager.stop_all">
+<code class="descname">stop_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_manager.ComManager.stop_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>stop all running and starting jobs</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.com_manager.ComManager.stop_jobs">
+<code class="descname">stop_jobs</code><em class="property"> = None</em><a class="headerlink" href="#ui.com_manager.ComManager.stop_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>array of jobs ids, that will be stopped</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.com_manager.ComManager.terminate_jobs">
+<code class="descname">terminate_jobs</code><em class="property"> = None</em><a class="headerlink" href="#ui.com_manager.ComManager.terminate_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>array of jobs ids, that will be destroyed (try restart job and delete all processes and data)</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.com_worker">
+<span id="ui-com-worker-module"></span><h2>ui.com_worker module<a class="headerlink" href="#module-ui.com_worker" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ui.com_worker.ComWorker">
+<em class="property">class </em><code class="descclassname">ui.com_worker.</code><code class="descname">ComWorker</code><span class="sig-paren">(</span><em>key</em>, <em>com</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">threading.Thread</span></code></p>
+<p>Class created own thread for installation, communication and
+cancelling next communicators.</p>
+<dl class="method">
+<dt id="ui.com_worker.ComWorker.delete">
+<code class="descname">delete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>delete mj data</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.com_worker.ComWorker.finish">
+<code class="descname">finish</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.finish" title="Permalink to this definition">¶</a></dt>
+<dd><p>download data and stop communicator</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.com_worker.ComWorker.get_error">
+<code class="descname">get_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.get_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.com_worker.ComWorker.get_last_results">
+<code class="descname">get_last_results</code><span class="sig-paren">(</span><em>is_current</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.get_last_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>return tupple (state, error, jobs_downloaded, results_downloaded , logs_downloaded)
+if new state is not known return None
+if new files is not downloaded return None</p>
+<p>parameters:
+:param bool is_current: is job selected in gui</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="ui.com_worker.ComWorker.get_loger">
+<em class="property">static </em><code class="descname">get_loger</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.get_loger" title="Permalink to this definition">¶</a></dt>
+<dd><p>get logger</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.com_worker.ComWorker.get_sftp_download_state">
+<code class="descname">get_sftp_download_state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.get_sftp_download_state" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.com_worker.ComWorker.get_start_state">
+<code class="descname">get_start_state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.get_start_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>return instalation state</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.com_worker.ComWorker.init_update">
+<code class="descname">init_update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.init_update" title="Permalink to this definition">¶</a></dt>
+<dd><p>get state and download all files</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.com_worker.ComWorker.is_cancelled">
+<code class="descname">is_cancelled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.is_cancelled" title="Permalink to this definition">¶</a></dt>
+<dd><p>return if communicator is cancelled (stoping, pusing, terminating)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.com_worker.ComWorker.is_cancelling">
+<code class="descname">is_cancelling</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.is_cancelling" title="Permalink to this definition">¶</a></dt>
+<dd><p>return if communicator is cancelling (stoping, pusing, terminating)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.com_worker.ComWorker.is_deleted">
+<code class="descname">is_deleted</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.is_deleted" title="Permalink to this definition">¶</a></dt>
+<dd><p>return if mj data was deleted</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.com_worker.ComWorker.is_deleting">
+<code class="descname">is_deleting</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.is_deleting" title="Permalink to this definition">¶</a></dt>
+<dd><p>return if mj data is deleting</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.com_worker.ComWorker.is_error">
+<code class="descname">is_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.is_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return if communication is ended with error.
+If True is return thrad is stopped</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.com_worker.ComWorker.is_interupted">
+<code class="descname">is_interupted</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.is_interupted" title="Permalink to this definition">¶</a></dt>
+<dd><p>return if communication is interupted</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.com_worker.ComWorker.is_started">
+<code class="descname">is_started</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.is_started" title="Permalink to this definition">¶</a></dt>
+<dd><p>return if communication is started</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.com_worker.ComWorker.pause">
+<code class="descname">pause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.pause" title="Permalink to this definition">¶</a></dt>
+<dd><p>pause communicator</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.com_worker.ComWorker.resume">
+<code class="descname">resume</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.resume" title="Permalink to this definition">¶</a></dt>
+<dd><p>resume communication</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.com_worker.ComWorker.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.run" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.com_worker.ComWorker.start_mj">
+<code class="descname">start_mj</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.start_mj" title="Permalink to this definition">¶</a></dt>
+<dd><p>start communication</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.com_worker.ComWorker.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>stop communicator</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.com_worker.ComWorker.terminate">
+<code class="descname">terminate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.com_worker.ComWorker.terminate" title="Permalink to this definition">¶</a></dt>
+<dd><p>terminate communicator</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.com_worker.SftpDownloadState">
+<em class="property">class </em><code class="descclassname">ui.com_worker.</code><code class="descname">SftpDownloadState</code><a class="headerlink" href="#ui.com_worker.SftpDownloadState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></p>
+<p>Communication state for sftp download</p>
+<dl class="attribute">
+<dt id="ui.com_worker.SftpDownloadState.never">
+<code class="descname">never</code><em class="property"> = &lt;SftpDownloadState.never: 0&gt;</em><a class="headerlink" href="#ui.com_worker.SftpDownloadState.never" title="Permalink to this definition">¶</a></dt>
+<dd><p>sftp download is not never processed successfuly</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.com_worker.SftpDownloadState.not_last">
+<code class="descname">not_last</code><em class="property"> = &lt;SftpDownloadState.not_last: 1&gt;</em><a class="headerlink" href="#ui.com_worker.SftpDownloadState.not_last" title="Permalink to this definition">¶</a></dt>
+<dd><p>last sftp download is not processed successfuly</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.com_worker.SftpDownloadState.ok">
+<code class="descname">ok</code><em class="property"> = &lt;SftpDownloadState.ok: 2&gt;</em><a class="headerlink" href="#ui.com_worker.SftpDownloadState.ok" title="Permalink to this definition">¶</a></dt>
+<dd><p>last sftp download is processed successfuly</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.main_window">
+<span id="ui-main-window-module"></span><h2>ui.main_window module<a class="headerlink" href="#module-ui.main_window" title="Permalink to this headline">¶</a></h2>
+<p>Main window module
+&#64;author: Jan Gabriel
+&#64;contact: <a class="reference external" href="mailto:jan&#46;gabriel&#37;&#52;&#48;tul&#46;cz">jan<span>&#46;</span>gabriel<span>&#64;</span>tul<span>&#46;</span>cz</a></p>
+<dl class="class">
+<dt id="ui.main_window.MainWindow">
+<em class="property">class </em><code class="descclassname">ui.main_window.</code><code class="descname">MainWindow</code><span class="sig-paren">(</span><em>parent=None</em>, <em>data=None</em>, <em>com_manager=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.main_window.MainWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QMainWindow</span></code></p>
+<p>Job Panel main window class</p>
+<dl class="attribute">
+<dt id="ui.main_window.MainWindow.DEFAULT_POLL_INTERVAL">
+<code class="descname">DEFAULT_POLL_INTERVAL</code><em class="property"> = 500</em><a class="headerlink" href="#ui.main_window.MainWindow.DEFAULT_POLL_INTERVAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>default polling interval in ms</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.main_window.MainWindow.closeEvent">
+<code class="descname">closeEvent</code><span class="sig-paren">(</span><em>QCloseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.main_window.MainWindow.closeEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.main_window.MainWindow.cm_poll_interval">
+<code class="descname">cm_poll_interval</code><em class="property"> = None</em><a class="headerlink" href="#ui.main_window.MainWindow.cm_poll_interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>current com manager polling interval in ms</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="ui.main_window.MainWindow.copy_files">
+<em class="property">static </em><code class="descname">copy_files</code><span class="sig-paren">(</span><em>src_dir_path</em>, <em>dst_dir_path</em>, <em>files</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.main_window.MainWindow.copy_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>copy results files to workspace folder</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.main_window.MainWindow.current_mj">
+<code class="descname">current_mj</code><a class="headerlink" href="#ui.main_window.MainWindow.current_mj" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.main_window.MainWindow.handle_multijob_dialog">
+<code class="descname">handle_multijob_dialog</code><span class="sig-paren">(</span><em>purpose</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.main_window.MainWindow.handle_multijob_dialog" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.main_window.MainWindow.load_settings">
+<code class="descname">load_settings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.main_window.MainWindow.load_settings" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.main_window.MainWindow.multijobs_changed">
+<code class="descname">multijobs_changed</code><a class="headerlink" href="#ui.main_window.MainWindow.multijobs_changed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.main_window.MainWindow.notify">
+<code class="descname">notify</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.main_window.MainWindow.notify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle update of data.set_data.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.main_window.MainWindow.pause_all">
+<code class="descname">pause_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.main_window.MainWindow.pause_all" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.main_window.MainWindow.perform_multijob_startup_action">
+<code class="descname">perform_multijob_startup_action</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.main_window.MainWindow.perform_multijob_startup_action" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.main_window.MainWindow.perform_reload_action">
+<code class="descname">perform_reload_action</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.main_window.MainWindow.perform_reload_action" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.main_window.MainWindow.poll_com_manager">
+<code class="descname">poll_com_manager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.main_window.MainWindow.poll_com_manager" title="Permalink to this definition">¶</a></dt>
+<dd><p>poll com manager and update gui</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.main_window.MainWindow.report_error">
+<code class="descname">report_error</code><span class="sig-paren">(</span><em>msg</em>, <em>err=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.main_window.MainWindow.report_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Report an error with dialog.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.main_window.MainWindow.showEvent">
+<code class="descname">showEvent</code><span class="sig-paren">(</span><em>QShowEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.main_window.MainWindow.showEvent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.main_window.MainWindow.update_ui_locks">
+<code class="descname">update_ui_locks</code><span class="sig-paren">(</span><em>mj_id</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.main_window.MainWindow.update_ui_locks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.main_window.UiMainWindow">
+<em class="property">class </em><code class="descclassname">ui.main_window.</code><code class="descname">UiMainWindow</code><a class="headerlink" href="#ui.main_window.UiMainWindow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Jobs Panel UI</p>
+<dl class="method">
+<dt id="ui.main_window.UiMainWindow.setup_ui">
+<code class="descname">setup_ui</code><span class="sig-paren">(</span><em>main_window</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.main_window.UiMainWindow.setup_ui" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup basic UI</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.ssh_test">
+<span id="ui-ssh-test-module"></span><h2>ui.ssh_test module<a class="headerlink" href="#module-ui.ssh_test" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ui.ssh_test.SshTester">
+<em class="property">class </em><code class="descclassname">ui.ssh_test.</code><code class="descname">SshTester</code><span class="sig-paren">(</span><em>preset</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.ssh_test.SshTester" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">threading.Thread</span></code></p>
+<p>Class created own thread for for testing.</p>
+<dl class="method">
+<dt id="ui.ssh_test.SshTester.finished">
+<code class="descname">finished</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.ssh_test.SshTester.finished" title="Permalink to this definition">¶</a></dt>
+<dd><p>return if main thread is finished</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.ssh_test.SshTester.get_next_error">
+<code class="descname">get_next_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.ssh_test.SshTester.get_next_error" title="Permalink to this definition">¶</a></dt>
+<dd><p>return next error message</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.ssh_test.SshTester.get_next_log">
+<code class="descname">get_next_log</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.ssh_test.SshTester.get_next_log" title="Permalink to this definition">¶</a></dt>
+<dd><p>return next log message</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.ssh_test.SshTester.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.ssh_test.SshTester.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>testing</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.ssh_test.SshTester.start">
+<code class="descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.ssh_test.SshTester.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>start testing</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.ssh_test.SshTester.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.ssh_test.SshTester.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>stop testing</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ui" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ui.actions.html" class="btn btn-neutral float-right" title="ui.actions package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="test_task.html" class="btn btn-neutral" title="test_task module" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

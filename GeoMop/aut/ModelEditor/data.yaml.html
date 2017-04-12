@@ -1,0 +1,418 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>data.yaml package &mdash; Model Editor Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Model Editor Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="up" title="data package" href="data.html"/>
+        <link rel="next" title="helpers package" href="helpers.html"/>
+        <link rel="prev" title="data package" href="data.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexME.html" class="icon icon-home"> Model Editor Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Model Editor Source</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="data.html">data package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="data.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">data.yaml package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-data.yaml.transformator">data.yaml.transformator module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-data.yaml">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="data.html#module-data">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html">helpers package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importer.html">importer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ist.html">ist package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meconfig.html">meconfig package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_editor.html">model_editor module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ui.html">ui package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="util.html">util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exporter.html">exporter module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="normalize_ist.html">normalize_ist module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../indexME.html">Model Editor Source Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../indexME.html">Docs</a> &raquo;</li>
+      
+          <li><a href="data.html">data package</a> &raquo;</li>
+      
+    <li>data.yaml package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/aut/ModelEditor/data.yaml.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-yaml-package">
+<h1>data.yaml package<a class="headerlink" href="#data-yaml-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-data.yaml.transformator">
+<span id="data-yaml-transformator-module"></span><h2>data.yaml.transformator module<a class="headerlink" href="#module-data.yaml.transformator" title="Permalink to this headline">¶</a></h2>
+<p>File for transformation of yaml files to another version</p>
+<dl class="docutils">
+<dt>Wildchars:</dt>
+<dd><p class="first">In defined actions (if is not writen in next text else) is possible use simple
+wildchars. For key with name path and source_path:
+- * for one level of path
+- ** for one or more level of path
+For key with name destination_path, addition_path and set_type_path is 
+possible use replacement $1,$2,... .  This signify part of path in wildchars 
+on position 1,2,....
+Wildchars have three restrictions:</p>
+<blockquote class="last">
+<div><ul class="simple">
+<li>** can&#8217;t be last part of path (too many result cases)</li>
+<li><a href="#id1"><span class="problematic" id="id2">**</span></a>/* sequence is forbiden (too many result cases)</li>
+<li><strong>/</strong> sequence is forbiden (can&#8217;t determine replacements)</li>
+</ul>
+</div></blockquote>
+</dd>
+<dt>Filter:</dt>
+<dd><ul class="first last simple">
+<li>type-filter is a optional parameter for a key in possition path or source_path.
+If is the parameter set, a opperation is processed only for the key of set type.</li>
+<li>parent-type-filter is a optional filter parameter similar as type-filter but for
+parent of set key</li>
+<li>path-type-filter and path-type-filter-path are optional filter parameters 
+similar as type-filter but for data in set path (path-type-filter-path) and
+set type</li>
+<li>key-exists-filter -  is a optional parameter for a key in possition path or source_path.
+If is the parameter set, a opperation is processed only for the key with set child .</li>
+<li>key-not-exists-filter  -  is a optional parameter for a key in possition path or source_path.
+If is the parameter set, a opperation is processed only for the key without set child .</li>
+</ul>
+</dd>
+<dt>Actions:</dt>
+<dd><ul class="first last simple">
+<li>move-key - Move value of set key from source_path to destination_path.
+If create_path parameter is not set to True, not existing directory of 
+destination_path cause exception. If create_path is set to True, absent 
+path is created. Path with number is created as array with index one more 
+than last existing index, other path is created as record.
+If both path is same, only key is different, key is renamed. Destination_path 
+placed in source_path cause exception. If source_path not exist action si skipped.
+Refference or anchors is moved and if its relative possition is changed,
+result must be fixed by user. In this action can be used parameters
+set_type_path and new_type for replacing tag new_type in path &#8220;set_type_path&#8221;.
+If optional parameter keep-source is set to true, old key is kept.</li>
+<li>delete-key - Delete key on set path. If key contains anchor or refference,
+transporter try resolve reference. If path not exist, or contains some children
+action si skipped. If parameter deep is set to true, key is delete with containing 
+children.</li>
+<li>rename-type - Change tag on set path from old_name to new_name.</li>
+<li>change-value - Change value on set path from old_value to new_value.
+If node in specified path is not scallar type node, exception is raise.</li>
+<li>scale-value - multiply value in set path by scale. If node in specified 
+path is not scallar type node with numeric value, exception is raise.</li>
+<li>merge-arrays - Add array in addition_path after array in source path. If
+destination_path is defined, node is moved from source to this path.</li>
+<li>move-key-forward - Move node in specified path before all siblings nodes.
+(this action is use by import script for moving node with anchor after
+refference)</li>
+<li>add-key - add set key to path. Key parent should be existing abstract record.
+if optional parameters value or type is set, corresponding key parameter is 
+added.</li>
+<li>replace-value - Replace value on set path. Parameters pattern and 
+replacement have same meaning as in python regular Expression 
+function re.sub, where is pass on. Json style of transformation script
+requare duplication of all backslashed characters in pattern and 
+replacement parameters.</li>
+<li>move-key-forward - move key on set path to first position in structure</li>
+</ul>
+</dd>
+<dt>Description:</dt>
+<dd>Transformator check se json transformation file. If this file is in bad format,
+cause exception. After checking is processet action in set order. Repetitional
+processing this program can cause exception or corrupt data.</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example file&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Template for creating transformation file&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;old_format&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;new_format&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;move-key&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;parameters&quot;</span><span class="p">:{</span>
+                <span class="s2">&quot;source_path&quot;</span><span class="p">:</span><span class="s2">&quot;/problem/primary_equation/input_fields&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;destination_path&quot;</span><span class="p">:</span><span class="s2">&quot;/problem/mesh/balance&quot;</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;delete-key&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/problem/mesh/mesh_file&quot;</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;rename-type&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;/problem/primary_equation&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;old_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Steady_MH&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;new_name&quot;</span><span class="p">:</span> <span class="s2">&quot;SteadyMH&quot;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Wildchars Example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span> 
+  <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;move-key&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;source_path&quot;</span><span class="p">:</span><span class="s2">&quot;/**/input_fields/*/r_set&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;destination_path&quot;</span><span class="p">:</span><span class="s2">&quot;/$1/input_fields/$2/region&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="exception">
+<dt id="data.yaml.transformator.TransformationFileFormatError">
+<em class="property">exception </em><code class="descclassname">data.yaml.transformator.</code><code class="descname">TransformationFileFormatError</code><span class="sig-paren">(</span><em>msg</em><span class="sig-paren">)</span><a class="headerlink" href="#data.yaml.transformator.TransformationFileFormatError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>Represents an error in transformation file</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="data.yaml.transformator.Transformator">
+<em class="property">class </em><code class="descclassname">data.yaml.transformator.</code><code class="descname">Transformator</code><span class="sig-paren">(</span><em>transform_file</em>, <em>data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#data.yaml.transformator.Transformator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Transform yaml file to new version</p>
+<dl class="attribute">
+<dt id="data.yaml.transformator.Transformator.description">
+<code class="descname">description</code><a class="headerlink" href="#data.yaml.transformator.Transformator.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>return transformation description</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.yaml.transformator.Transformator.err">
+<code class="descname">err</code><em class="property"> = None</em><a class="headerlink" href="#data.yaml.transformator.Transformator.err" title="Permalink to this definition">¶</a></dt>
+<dd><p>Array of transformation errors</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.yaml.transformator.Transformator.name">
+<code class="descname">name</code><a class="headerlink" href="#data.yaml.transformator.Transformator.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>return transformation name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.yaml.transformator.Transformator.new_version">
+<code class="descname">new_version</code><a class="headerlink" href="#data.yaml.transformator.Transformator.new_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>return version of yaml document after transformation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="data.yaml.transformator.Transformator.old_version">
+<code class="descname">old_version</code><a class="headerlink" href="#data.yaml.transformator.Transformator.old_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>return version of yaml document befor transformation</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="data.yaml.transformator.Transformator.refresh">
+<code class="descname">refresh</code><span class="sig-paren">(</span><em>root_input_type</em>, <em>yaml</em>, <em>notification_handler</em>, <em>loader</em><span class="sig-paren">)</span><a class="headerlink" href="#data.yaml.transformator.Transformator.refresh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="data.yaml.transformator.Transformator.transform">
+<code class="descname">transform</code><span class="sig-paren">(</span><em>yaml</em>, <em>cfg</em><span class="sig-paren">)</span><a class="headerlink" href="#data.yaml.transformator.Transformator.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>transform yaml file</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-data.yaml">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-data.yaml" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="helpers.html" class="btn btn-neutral float-right" title="helpers package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="data.html" class="btn btn-neutral" title="data package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

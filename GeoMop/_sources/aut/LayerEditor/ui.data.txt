@@ -1,0 +1,22 @@
+ui.data package
+===============
+
+Submodules
+----------
+
+ui.data.diagram_structures module
+---------------------------------
+
+.. automodule:: ui.data.diagram_structures
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: ui.data
+    :members:
+    :undoc-members:
+    :show-inheritance:

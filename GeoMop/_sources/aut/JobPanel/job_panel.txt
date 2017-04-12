@@ -1,0 +1,7 @@
+job_panel module
+================
+
+.. automodule:: job_panel
+    :members:
+    :undoc-members:
+    :show-inheritance:

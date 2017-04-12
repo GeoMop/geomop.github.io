@@ -1,0 +1,1271 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ui.data package &mdash; Job Panel Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Job Panel Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="up" title="ui package" href="ui.html"/>
+        <link rel="next" title="ui.dialogs package" href="ui.dialogs.html"/>
+        <link rel="prev" title="ui.actions package" href="ui.actions.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexJP.html" class="icon icon-home"> Job Panel Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Jobs Scheduler Source</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="communication.html">communication package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">data package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="delegator.html">delegator module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html">helpers package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="job.html">job module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="locks.html">locks module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mj_service.html">mj_service module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">test module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_app.html">test_app module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_task.html">test_task module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ui.html">ui package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ui.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ui.actions.html">ui.actions package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">ui.data package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.data.config_builder">ui.data.config_builder module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.data.data_structures">ui.data.data_structures module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.data.mj_data">ui.data.mj_data module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.data.preset_data">ui.data.preset_data module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.data.queues">ui.data.queues module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.data.reg">ui.data.reg module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.data">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ui.dialogs.html">ui.dialogs package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.helpers.html">ui.helpers package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.imports.html">ui.imports package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.menus.html">ui.menus package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.panels.html">ui.panels package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.validators.html">ui.validators package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.com_manager">ui.com_manager module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.com_worker">ui.com_worker module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.main_window">ui.main_window module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.ssh_test">ui.ssh_test module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../indexJP.html">Job Panel Source Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../indexJP.html">Docs</a> &raquo;</li>
+      
+          <li><a href="ui.html">ui package</a> &raquo;</li>
+      
+    <li>ui.data package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/aut/JobPanel/ui.data.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ui-data-package">
+<h1>ui.data package<a class="headerlink" href="#ui-data-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ui.data.config_builder">
+<span id="ui-data-config-builder-module"></span><h2>ui.data.config_builder module<a class="headerlink" href="#module-ui.data.config_builder" title="Permalink to this headline">¶</a></h2>
+<p>Factory for generating config files.
+&#64;author: Jan Gabriel
+&#64;contact: <a class="reference external" href="mailto:jan&#46;gabriel&#37;&#52;&#48;tul&#46;cz">jan<span>&#46;</span>gabriel<span>&#64;</span>tul<span>&#46;</span>cz</a></p>
+<dl class="class">
+<dt id="ui.data.config_builder.ConfBuilder">
+<em class="property">class </em><code class="descclassname">ui.data.config_builder.</code><code class="descname">ConfBuilder</code><span class="sig-paren">(</span><em>basic_conf</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.config_builder.ConfBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="ui.data.config_builder.ConfBuilder.get_conf">
+<code class="descname">get_conf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.config_builder.ConfBuilder.get_conf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets internal conf state.
+:return: CommunicatorConf object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.config_builder.ConfBuilder.get_path">
+<code class="descname">get_path</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.config_builder.ConfBuilder.get_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get path to conf file.
+:return: Conf file path string.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.config_builder.ConfBuilder.set_comm_name">
+<code class="descname">set_comm_name</code><span class="sig-paren">(</span><em>comm_name</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.config_builder.ConfBuilder.set_comm_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.data.config_builder.ConfBuilder.set_env_extras">
+<code class="descname">set_env_extras</code><span class="sig-paren">(</span><em>env</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.config_builder.ConfBuilder.set_env_extras" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.data.config_builder.ConfBuilder.set_in_comm">
+<code class="descname">set_in_comm</code><span class="sig-paren">(</span><em>in_comm</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.config_builder.ConfBuilder.set_in_comm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.data.config_builder.ConfBuilder.set_libs_env">
+<code class="descname">set_libs_env</code><span class="sig-paren">(</span><em>libs_env</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.config_builder.ConfBuilder.set_libs_env" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.data.config_builder.ConfBuilder.set_next_comm">
+<code class="descname">set_next_comm</code><span class="sig-paren">(</span><em>next_comm</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.config_builder.ConfBuilder.set_next_comm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.data.config_builder.ConfBuilder.set_out_comm">
+<code class="descname">set_out_comm</code><span class="sig-paren">(</span><em>out_comm</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.config_builder.ConfBuilder.set_out_comm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.data.config_builder.ConfBuilder.set_paths_before_ssh">
+<code class="descname">set_paths_before_ssh</code><span class="sig-paren">(</span><em>workspace</em>, <em>mj</em>, <em>copy_ex_libs=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.config_builder.ConfBuilder.set_paths_before_ssh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.data.config_builder.ConfBuilder.set_paths_on_ssh">
+<code class="descname">set_paths_on_ssh</code><span class="sig-paren">(</span><em>ssh</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.config_builder.ConfBuilder.set_paths_on_ssh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.data.config_builder.ConfBuilder.set_pbs">
+<code class="descname">set_pbs</code><span class="sig-paren">(</span><em>pbs_conf</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.config_builder.ConfBuilder.set_pbs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.data.config_builder.ConfBuilder.set_python_env">
+<code class="descname">set_python_env</code><span class="sig-paren">(</span><em>python_env</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.config_builder.ConfBuilder.set_python_env" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.data.config_builder.ConfBuilder.set_ssh">
+<code class="descname">set_ssh</code><span class="sig-paren">(</span><em>ssh_conf</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.config_builder.ConfBuilder.set_ssh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.config_builder.ConfFactory">
+<em class="property">class </em><code class="descclassname">ui.data.config_builder.</code><code class="descname">ConfFactory</code><a class="headerlink" href="#ui.data.config_builder.ConfFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="staticmethod">
+<dt id="ui.data.config_builder.ConfFactory.get_env_conf">
+<em class="property">static </em><code class="descname">get_env_conf</code><span class="sig-paren">(</span><em>preset</em>, <em>install_job_libs=False</em>, <em>start_job_libs=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.config_builder.ConfFactory.get_env_conf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts preset data to communicator config for PythonEnv and LibsEnv.
+:param preset: Preset data object from UI.
+:param install_job_libs: True in case MultiJob or False in MultiJob
+and True in Remote if Remote exist.
+:param start_job_libs: True in case of Job.
+:return: PythonEnvConf object, LibsEnvConf object</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="ui.data.config_builder.ConfFactory.get_pbs_conf">
+<em class="property">static </em><code class="descname">get_pbs_conf</code><span class="sig-paren">(</span><em>preset</em>, <em>with_socket=True</em>, <em>pbs_params=None</em>, <em>dialect=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.config_builder.ConfFactory.get_pbs_conf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts preset data to communicator config for PBS.
+:param preset: Preset data object from UI.
+:param with_socket: Defines if pbs communicates with socket, True in
+case of multijob, otherwise False.
+:return: PbsConf object</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="ui.data.config_builder.ConfFactory.get_ssh_conf">
+<em class="property">classmethod </em><code class="descname">get_ssh_conf</code><span class="sig-paren">(</span><em>preset</em>, <em>mj_name</em>, <em>an_name</em>, <em>long_id</em>, <em>is_remote=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.config_builder.ConfFactory.get_ssh_conf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts preset data to communicator config for SSH.
+:param preset: Preset data object from UI.
+:return: SshConf object</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.config_builder.ConfigBuilder">
+<em class="property">class </em><code class="descclassname">ui.data.config_builder.</code><code class="descname">ConfigBuilder</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.config_builder.ConfigBuilder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="ui.data.config_builder.ConfigBuilder.app_version">
+<code class="descname">app_version</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.config_builder.ConfigBuilder.app_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Application version. If version in remote installation is different
+new installation is created.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.config_builder.ConfigBuilder.build">
+<code class="descname">build</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.config_builder.ConfigBuilder.build" title="Permalink to this definition">¶</a></dt>
+<dd><p>Build json config files into the ./jobs/mj_name/mj_conf
+:param key: Identification of preset.
+:return: app_conf</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.config_builder.ConfigBuilder.conf_long_id">
+<code class="descname">conf_long_id</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.config_builder.ConfigBuilder.conf_long_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Long id of configuration. If  in remote installation is different
+id new configuration is reloaded.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="ui.data.config_builder.ConfigBuilder.gain_login">
+<em class="property">static </em><code class="descname">gain_login</code><span class="sig-paren">(</span><em>cc</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.config_builder.ConfigBuilder.gain_login" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.data.data_structures">
+<span id="ui-data-data-structures-module"></span><h2>ui.data.data_structures module<a class="headerlink" href="#module-ui.data.data_structures" title="Permalink to this headline">¶</a></h2>
+<p>JobPanel data structures
+&#64;author: Jan Gabriel
+&#64;contact: <a class="reference external" href="mailto:jan&#46;gabriel&#37;&#52;&#48;tul&#46;cz">jan<span>&#46;</span>gabriel<span>&#64;</span>tul<span>&#46;</span>cz</a></p>
+<dl class="class">
+<dt id="ui.data.data_structures.ConfigData">
+<em class="property">class </em><code class="descclassname">ui.data.data_structures.</code><code class="descname">ConfigData</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.data_structures.ConfigData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Child class for Config data.</p>
+<dl class="attribute">
+<dt id="ui.data.data_structures.ConfigData.DIR">
+<code class="descname">DIR</code><em class="property"> = 'settings'</em><a class="headerlink" href="#ui.data.data_structures.ConfigData.DIR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.data_structures.ConfigData.FILE_NAME">
+<code class="descname">FILE_NAME</code><em class="property"> = 'settings'</em><a class="headerlink" href="#ui.data.data_structures.ConfigData.FILE_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.data_structures.ConfigData.analysis">
+<code class="descname">analysis</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.data_structures.ConfigData.analysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of active analysis</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.data_structures.ConfigData.local_env">
+<code class="descname">local_env</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.data_structures.ConfigData.local_env" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selected multijob in UI</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.data_structures.ConfigData.notify">
+<code class="descname">notify</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.data_structures.ConfigData.notify" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.data_structures.ConfigData.observers">
+<code class="descname">observers</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.data_structures.ConfigData.observers" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of observer objects to be notified on change.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="ui.data.data_structures.ConfigData.open">
+<em class="property">static </em><code class="descname">open</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.data_structures.ConfigData.open" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.data_structures.ConfigData.report_dir">
+<code class="descname">report_dir</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.data_structures.ConfigData.report_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Last folder wher was saved report file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.data_structures.ConfigData.save">
+<code class="descname">save</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.data_structures.ConfigData.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.data_structures.ConfigData.selected_mj">
+<code class="descname">selected_mj</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.data_structures.ConfigData.selected_mj" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selected multijob in UI</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.data_structures.DataContainer">
+<em class="property">class </em><code class="descclassname">ui.data.data_structures.</code><code class="descname">DataContainer</code><a class="headerlink" href="#ui.data.data_structures.DataContainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Wrapper class for all data containers.</p>
+<dl class="attribute">
+<dt id="ui.data.data_structures.DataContainer.DEBUG_MODE">
+<code class="descname">DEBUG_MODE</code><em class="property"> = False</em><a class="headerlink" href="#ui.data.data_structures.DataContainer.DEBUG_MODE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.data.data_structures.DataContainer.backup_presets">
+<code class="descname">backup_presets</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.data_structures.DataContainer.backup_presets" title="Permalink to this definition">¶</a></dt>
+<dd><p>backup actual presets to workspace dir</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.data_structures.DataContainer.open_all">
+<code class="descname">open_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.data_structures.DataContainer.open_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads all data containers for app.
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.data_structures.DataContainer.reload_workspace">
+<code class="descname">reload_workspace</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.data_structures.DataContainer.reload_workspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reload selected worspace</p>
+<p>Call this function after succesful selection of workspace
+and pausing workspace jobs</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.data_structures.DataContainer.save_all">
+<code class="descname">save_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.data_structures.DataContainer.save_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves all data containers for app.
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.data_structures.DataContainer.save_mj">
+<code class="descname">save_mj</code><span class="sig-paren">(</span><em>mj=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.data_structures.DataContainer.save_mj" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves only mj data for app.
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.data_structures.DataContainer.set_reload_funcs">
+<code class="descname">set_reload_funcs</code><span class="sig-paren">(</span><em>pause_func</em>, <em>reload_func</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.data_structures.DataContainer.set_reload_funcs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set functions for pausing and resuming all processes. 
+This functions is use for resetting</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.data_structures.EnvPresets">
+<em class="property">class </em><code class="descclassname">ui.data.data_structures.</code><code class="descname">EnvPresets</code><a class="headerlink" href="#ui.data.data_structures.EnvPresets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.data.data_structures.PersistentDict" title="ui.data.data_structures.PersistentDict"><code class="xref py py-class docutils literal"><span class="pre">ui.data.data_structures.PersistentDict</span></code></a></p>
+<p>Child class for ENV data.</p>
+<dl class="attribute">
+<dt id="ui.data.data_structures.EnvPresets.DIR">
+<code class="descname">DIR</code><em class="property"> = 'environments'</em><a class="headerlink" href="#ui.data.data_structures.EnvPresets.DIR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.data_structures.EnvPresets.FILE_NAME">
+<code class="descname">FILE_NAME</code><em class="property"> = 'environments'</em><a class="headerlink" href="#ui.data.data_structures.EnvPresets.FILE_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="ui.data.data_structures.EnvPresets.open">
+<em class="property">static </em><code class="descname">open</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.data_structures.EnvPresets.open" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.data_structures.MultiJobData">
+<em class="property">class </em><code class="descclassname">ui.data.data_structures.</code><code class="descname">MultiJobData</code><a class="headerlink" href="#ui.data.data_structures.MultiJobData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.data.data_structures.PersistentDict" title="ui.data.data_structures.PersistentDict"><code class="xref py py-class docutils literal"><span class="pre">ui.data.data_structures.PersistentDict</span></code></a></p>
+<p>Child class for MJ data.</p>
+<dl class="attribute">
+<dt id="ui.data.data_structures.MultiJobData.DIR">
+<code class="descname">DIR</code><em class="property"> = 'mj'</em><a class="headerlink" href="#ui.data.data_structures.MultiJobData.DIR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.data_structures.MultiJobData.FILE_NAME">
+<code class="descname">FILE_NAME</code><em class="property"> = 'mj'</em><a class="headerlink" href="#ui.data.data_structures.MultiJobData.FILE_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="ui.data.data_structures.MultiJobData.open">
+<em class="property">static </em><code class="descname">open</code><span class="sig-paren">(</span><em>id</em>, <em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.data_structures.MultiJobData.open" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.data.data_structures.MultiJobData.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.data_structures.MultiJobData.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.data_structures.PbsData">
+<em class="property">class </em><code class="descclassname">ui.data.data_structures.</code><code class="descname">PbsData</code><a class="headerlink" href="#ui.data.data_structures.PbsData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.data.data_structures.PersistentDict" title="ui.data.data_structures.PersistentDict"><code class="xref py py-class docutils literal"><span class="pre">ui.data.data_structures.PersistentDict</span></code></a></p>
+<p>Child class for PBS data.</p>
+<dl class="attribute">
+<dt id="ui.data.data_structures.PbsData.DIR">
+<code class="descname">DIR</code><em class="property"> = 'pbs'</em><a class="headerlink" href="#ui.data.data_structures.PbsData.DIR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.data_structures.PbsData.FILE_NAME">
+<code class="descname">FILE_NAME</code><em class="property"> = 'pbs'</em><a class="headerlink" href="#ui.data.data_structures.PbsData.FILE_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="ui.data.data_structures.PbsData.open">
+<em class="property">static </em><code class="descname">open</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.data_structures.PbsData.open" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.data_structures.PersistentDict">
+<em class="property">class </em><code class="descclassname">ui.data.data_structures.</code><code class="descname">PersistentDict</code><a class="headerlink" href="#ui.data.data_structures.PersistentDict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">dict</span></code></p>
+<p>Persistent dictionary containing configuration.</p>
+<dl class="staticmethod">
+<dt id="ui.data.data_structures.PersistentDict.open">
+<em class="property">static </em><code class="descname">open</code><span class="sig-paren">(</span><em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.data_structures.PersistentDict.open" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.data.data_structures.PersistentDict.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.data_structures.PersistentDict.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.data_structures.ResourcesData">
+<em class="property">class </em><code class="descclassname">ui.data.data_structures.</code><code class="descname">ResourcesData</code><a class="headerlink" href="#ui.data.data_structures.ResourcesData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.data.data_structures.PersistentDict" title="ui.data.data_structures.PersistentDict"><code class="xref py py-class docutils literal"><span class="pre">ui.data.data_structures.PersistentDict</span></code></a></p>
+<p>Child class for RES data.</p>
+<dl class="attribute">
+<dt id="ui.data.data_structures.ResourcesData.DIR">
+<code class="descname">DIR</code><em class="property"> = 'resources'</em><a class="headerlink" href="#ui.data.data_structures.ResourcesData.DIR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.data_structures.ResourcesData.FILE_NAME">
+<code class="descname">FILE_NAME</code><em class="property"> = 'resources'</em><a class="headerlink" href="#ui.data.data_structures.ResourcesData.FILE_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="ui.data.data_structures.ResourcesData.open">
+<em class="property">static </em><code class="descname">open</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.data_structures.ResourcesData.open" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.data_structures.SshData">
+<em class="property">class </em><code class="descclassname">ui.data.data_structures.</code><code class="descname">SshData</code><a class="headerlink" href="#ui.data.data_structures.SshData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.data.data_structures.PersistentDict" title="ui.data.data_structures.PersistentDict"><code class="xref py py-class docutils literal"><span class="pre">ui.data.data_structures.PersistentDict</span></code></a></p>
+<p>Child class for SSH data.</p>
+<dl class="attribute">
+<dt id="ui.data.data_structures.SshData.DIR">
+<code class="descname">DIR</code><em class="property"> = 'ssh'</em><a class="headerlink" href="#ui.data.data_structures.SshData.DIR" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.data_structures.SshData.FILE_NAME">
+<code class="descname">FILE_NAME</code><em class="property"> = 'ssh'</em><a class="headerlink" href="#ui.data.data_structures.SshData.FILE_NAME" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="ui.data.data_structures.SshData.open">
+<em class="property">static </em><code class="descname">open</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.data_structures.SshData.open" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.data.mj_data">
+<span id="ui-data-mj-data-module"></span><h2>ui.data.mj_data module<a class="headerlink" href="#module-ui.data.mj_data" title="Permalink to this headline">¶</a></h2>
+<p>MujtiJob data structure.
+&#64;author: Jan Gabriel
+&#64;contact: <a class="reference external" href="mailto:jan&#46;gabriel&#37;&#52;&#48;tul&#46;cz">jan<span>&#46;</span>gabriel<span>&#64;</span>tul<span>&#46;</span>cz</a></p>
+<dl class="class">
+<dt id="ui.data.mj_data.AMultiJobFile">
+<em class="property">class </em><code class="descclassname">ui.data.mj_data.</code><code class="descname">AMultiJobFile</code><span class="sig-paren">(</span><em>path</em>, <em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.mj_data.AMultiJobFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Abstract data container.</p>
+<dl class="attribute">
+<dt id="ui.data.mj_data.AMultiJobFile.file_name">
+<code class="descname">file_name</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.AMultiJobFile.file_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Short name of the file</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.AMultiJobFile.file_path">
+<code class="descname">file_path</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.AMultiJobFile.file_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path to file</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.AMultiJobFile.file_size">
+<code class="descname">file_size</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.AMultiJobFile.file_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>File size</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.AMultiJobFile.modification_time">
+<code class="descname">modification_time</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.AMultiJobFile.modification_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Time of the latest modification</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.mj_data.MultiJob">
+<em class="property">class </em><code class="descclassname">ui.data.mj_data.</code><code class="descname">MultiJob</code><span class="sig-paren">(</span><em>preset</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.mj_data.MultiJob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJob.error">
+<code class="descname">error</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJob.error" title="Permalink to this definition">¶</a></dt>
+<dd><p>mj error for error state</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.mj_data.MultiJob.get_configs">
+<code class="descname">get_configs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.mj_data.MultiJob.get_configs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scans res directory and returns config files.
+:return: List of MultiJobConf objects</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.mj_data.MultiJob.get_jobs">
+<code class="descname">get_jobs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.mj_data.MultiJob.get_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of Jobs that belong to MultiJob.
+:return: List of Jobs</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.mj_data.MultiJob.get_logs">
+<code class="descname">get_logs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.mj_data.MultiJob.get_logs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scans log directory and returns log files.
+:return: List of MultiJobLog objects</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.mj_data.MultiJob.get_preset">
+<code class="descname">get_preset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.mj_data.MultiJob.get_preset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get MultiJob preset.
+:return: MultiJobPreset object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.mj_data.MultiJob.get_results">
+<code class="descname">get_results</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.mj_data.MultiJob.get_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Scans res directory and returns results files.
+:return: List of MultiJobRes objects</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.mj_data.MultiJob.get_state">
+<code class="descname">get_state</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.mj_data.MultiJob.get_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return MultiJob state.
+:return: MultiJobState object</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJob.id">
+<code class="descname">id</code><a class="headerlink" href="#ui.data.mj_data.MultiJob.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get multijob id = analysis_name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJob.last_status">
+<code class="descname">last_status</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJob.last_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>State before deleting</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJob.preset">
+<code class="descname">preset</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJob.preset" title="Permalink to this definition">¶</a></dt>
+<dd><p>mj preset</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJob.state">
+<code class="descname">state</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJob.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>mj state</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.mj_data.MultiJobConf">
+<em class="property">class </em><code class="descclassname">ui.data.mj_data.</code><code class="descname">MultiJobConf</code><span class="sig-paren">(</span><em>path</em>, <em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.mj_data.MultiJobConf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.data.mj_data.AMultiJobFile" title="ui.data.mj_data.AMultiJobFile"><code class="xref py py-class docutils literal"><span class="pre">ui.data.mj_data.AMultiJobFile</span></code></a></p>
+<p>MultiJob conf data container.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.mj_data.MultiJobLog">
+<em class="property">class </em><code class="descclassname">ui.data.mj_data.</code><code class="descname">MultiJobLog</code><span class="sig-paren">(</span><em>path</em>, <em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.mj_data.MultiJobLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.data.mj_data.AMultiJobFile" title="ui.data.mj_data.AMultiJobFile"><code class="xref py py-class docutils literal"><span class="pre">ui.data.mj_data.AMultiJobFile</span></code></a></p>
+<p>MultiJob log data container.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.mj_data.MultiJobPreset">
+<em class="property">class </em><code class="descclassname">ui.data.mj_data.</code><code class="descname">MultiJobPreset</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.mj_data.MultiJobPreset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.data.preset_data.APreset" title="ui.data.preset_data.APreset"><code class="xref py py-class docutils literal"><span class="pre">ui.data.preset_data.APreset</span></code></a></p>
+<p>MultiJob preset data container.</p>
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJobPreset.analysis">
+<code class="descname">analysis</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJobPreset.analysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the analysis used in this multijob</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJobPreset.deleted_remote">
+<code class="descname">deleted_remote</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJobPreset.deleted_remote" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the source multijob (if reused).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJobPreset.from_mj">
+<code class="descname">from_mj</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJobPreset.from_mj" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the source multijob (if reused).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJobPreset.log_level">
+<code class="descname">log_level</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJobPreset.log_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logging level</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJobPreset.number_of_processes">
+<code class="descname">number_of_processes</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJobPreset.number_of_processes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of processes used by MultiJob</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJobPreset.resource_preset">
+<code class="descname">resource_preset</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJobPreset.resource_preset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selected resource preset</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.mj_data.MultiJobRes">
+<em class="property">class </em><code class="descclassname">ui.data.mj_data.</code><code class="descname">MultiJobRes</code><span class="sig-paren">(</span><em>path</em>, <em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.mj_data.MultiJobRes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.data.mj_data.AMultiJobFile" title="ui.data.mj_data.AMultiJobFile"><code class="xref py py-class docutils literal"><span class="pre">ui.data.mj_data.AMultiJobFile</span></code></a></p>
+<p>MultiJob log data container.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.mj_data.MultiJobState">
+<em class="property">class </em><code class="descclassname">ui.data.mj_data.</code><code class="descname">MultiJobState</code><span class="sig-paren">(</span><em>name</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.mj_data.MultiJobState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Data for current state of MultiJob</p>
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJobState.analysis">
+<code class="descname">analysis</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJobState.analysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the analysis</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.mj_data.MultiJobState.copy">
+<code class="descname">copy</code><span class="sig-paren">(</span><em>new_status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.mj_data.MultiJobState.copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deep copy state
+:param new_status: Set status if is not None
+:return: new state</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJobState.estimated_jobs">
+<code class="descname">estimated_jobs</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJobState.estimated_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Estimated count of jobs</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJobState.finished_jobs">
+<code class="descname">finished_jobs</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJobState.finished_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Count of finished jobs</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.mj_data.MultiJobState.get_status">
+<code class="descname">get_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.mj_data.MultiJobState.get_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return MultiJob status
+:return: Current TaskStatus</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJobState.insert_time">
+<code class="descname">insert_time</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJobState.insert_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>When MultiJob was started</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJobState.known_jobs">
+<code class="descname">known_jobs</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJobState.known_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Count of known jobs (minimal amount of jobs)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJobState.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJobState.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of multijob</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJobState.queued_time">
+<code class="descname">queued_time</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJobState.queued_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>When MultiJob was queued</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJobState.run_interval">
+<code class="descname">run_interval</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJobState.run_interval" title="Permalink to this definition">¶</a></dt>
+<dd><p>MultiJob run time from start in second</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJobState.running_jobs">
+<code class="descname">running_jobs</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJobState.running_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Count of running jobs</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.mj_data.MultiJobState.set_status">
+<code class="descname">set_status</code><span class="sig-paren">(</span><em>new_status</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.mj_data.MultiJobState.set_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Directly changes status of the MultiJob
+:param new_status: TaskStatus o replace current.
+:return: None</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJobState.start_time">
+<code class="descname">start_time</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJobState.start_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>When MultiJob was started</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJobState.status">
+<code class="descname">status</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJobState.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>MultiJob current status</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.mj_data.MultiJobState.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>new_state</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.mj_data.MultiJobState.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update new_state with received data
+:param new_state: Communication new_state data
+:return: None</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.mj_data.MultiJobState.update_time">
+<code class="descname">update_time</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.mj_data.MultiJobState.update_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>When MultiJobState  was last updated</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.data.preset_data">
+<span id="ui-data-preset-data-module"></span><h2>ui.data.preset_data module<a class="headerlink" href="#module-ui.data.preset_data" title="Permalink to this headline">¶</a></h2>
+<p>Unified data structure for presets.
+&#64;author: Jan Gabriel
+&#64;contact: <a class="reference external" href="mailto:jan&#46;gabriel&#37;&#52;&#48;tul&#46;cz">jan<span>&#46;</span>gabriel<span>&#64;</span>tul<span>&#46;</span>cz</a></p>
+<dl class="class">
+<dt id="ui.data.preset_data.APreset">
+<em class="property">class </em><code class="descclassname">ui.data.preset_data.</code><code class="descname">APreset</code><span class="sig-paren">(</span><em>name='Default Preset Name'</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.preset_data.APreset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="ui.data.preset_data.APreset.get_description">
+<code class="descname">get_description</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.preset_data.APreset.get_description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default description displayed in UI.
+(Presets should override this with custom description)
+:return: Custom description string.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.preset_data.APreset.get_name">
+<code class="descname">get_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.preset_data.APreset.get_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default name displayed in UI.
+:return: Name string of the preset.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.APreset.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.APreset.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Preset name</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.preset_data.EnvPreset">
+<em class="property">class </em><code class="descclassname">ui.data.preset_data.</code><code class="descname">EnvPreset</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.preset_data.EnvPreset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.data.preset_data.APreset" title="ui.data.preset_data.APreset"><code class="xref py py-class docutils literal"><span class="pre">ui.data.preset_data.APreset</span></code></a></p>
+<p>Environment preset data container.</p>
+<dl class="attribute">
+<dt id="ui.data.preset_data.EnvPreset.cli_params">
+<code class="descname">cli_params</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.EnvPreset.cli_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command line parameters for flow123d</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.EnvPreset.flow_path">
+<code class="descname">flow_path</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.EnvPreset.flow_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execution path to flow123d</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.EnvPreset.module_add">
+<code class="descname">module_add</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.EnvPreset.module_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Module name of required python version</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.EnvPreset.pbs_params">
+<code class="descname">pbs_params</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.EnvPreset.pbs_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>PBS parameters for running flow123d</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.EnvPreset.python_exec">
+<code class="descname">python_exec</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.EnvPreset.python_exec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alias or path to python executable</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.EnvPreset.scl_enable_exec">
+<code class="descname">scl_enable_exec</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.EnvPreset.scl_enable_exec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enable python exec set name over scl</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.preset_data.Id">
+<em class="property">class </em><code class="descclassname">ui.data.preset_data.</code><code class="descname">Id</code><a class="headerlink" href="#ui.data.preset_data.Id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="staticmethod">
+<dt id="ui.data.preset_data.Id.get_id">
+<em class="property">static </em><code class="descname">get_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.preset_data.Id.get_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.preset_data.PbsPreset">
+<em class="property">class </em><code class="descclassname">ui.data.preset_data.</code><code class="descname">PbsPreset</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.preset_data.PbsPreset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.data.preset_data.APreset" title="ui.data.preset_data.APreset"><code class="xref py py-class docutils literal"><span class="pre">ui.data.preset_data.APreset</span></code></a></p>
+<p>PBS preset data container.</p>
+<dl class="method">
+<dt id="ui.data.preset_data.PbsPreset.get_description">
+<code class="descname">get_description</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.preset_data.PbsPreset.get_description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default description displayed in UI.
+:return: String</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.PbsPreset.infiniband">
+<code class="descname">infiniband</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.PbsPreset.infiniband" title="Permalink to this definition">¶</a></dt>
+<dd><p>infiniband (metacentrum settings)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.PbsPreset.memory">
+<code class="descname">memory</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.PbsPreset.memory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required memory size on node</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.PbsPreset.nodes">
+<code class="descname">nodes</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.PbsPreset.nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of nodes for parallel computations</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.PbsPreset.pbs_system">
+<code class="descname">pbs_system</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.PbsPreset.pbs_system" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines PBS system dialect</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.PbsPreset.ppn">
+<code class="descname">ppn</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.PbsPreset.ppn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processors per node</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.PbsPreset.queue">
+<code class="descname">queue</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.PbsPreset.queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines preferred queue for execution</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.PbsPreset.walltime">
+<code class="descname">walltime</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.PbsPreset.walltime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Walltime defines maximum execution time in system</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.preset_data.ResPreset">
+<em class="property">class </em><code class="descclassname">ui.data.preset_data.</code><code class="descname">ResPreset</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.preset_data.ResPreset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.data.preset_data.APreset" title="ui.data.preset_data.APreset"><code class="xref py py-class docutils literal"><span class="pre">ui.data.preset_data.APreset</span></code></a></p>
+<p>Resource preset data container.</p>
+<dl class="method">
+<dt id="ui.data.preset_data.ResPreset.get_description">
+<code class="descname">get_description</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.preset_data.ResPreset.get_description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default description displayed in UI.
+:return: String</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.ResPreset.j_execution_type">
+<code class="descname">j_execution_type</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.ResPreset.j_execution_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines how to execute Job</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.ResPreset.j_pbs_preset">
+<code class="descname">j_pbs_preset</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.ResPreset.j_pbs_preset" title="Permalink to this definition">¶</a></dt>
+<dd><p>PBS preset for option</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.ResPreset.j_remote_execution_type">
+<code class="descname">j_remote_execution_type</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.ResPreset.j_remote_execution_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines how to execute Job remote component</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.ResPreset.j_ssh_preset">
+<code class="descname">j_ssh_preset</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.ResPreset.j_ssh_preset" title="Permalink to this definition">¶</a></dt>
+<dd><p>SSH preset for option</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.ResPreset.mj_execution_type">
+<code class="descname">mj_execution_type</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.ResPreset.mj_execution_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines how to execute MJ</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.ResPreset.mj_pbs_preset">
+<code class="descname">mj_pbs_preset</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.ResPreset.mj_pbs_preset" title="Permalink to this definition">¶</a></dt>
+<dd><p>PBS preset for option</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.ResPreset.mj_remote_execution_type">
+<code class="descname">mj_remote_execution_type</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.ResPreset.mj_remote_execution_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines how to execute MJ remote component</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.ResPreset.mj_ssh_preset">
+<code class="descname">mj_ssh_preset</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.ResPreset.mj_ssh_preset" title="Permalink to this definition">¶</a></dt>
+<dd><p>SSH preset for option</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.preset_data.SshPreset">
+<em class="property">class </em><code class="descclassname">ui.data.preset_data.</code><code class="descname">SshPreset</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.preset_data.SshPreset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.data.preset_data.APreset" title="ui.data.preset_data.APreset"><code class="xref py py-class docutils literal"><span class="pre">ui.data.preset_data.APreset</span></code></a></p>
+<p>SSH preset data container.</p>
+<dl class="attribute">
+<dt id="ui.data.preset_data.SshPreset.env">
+<code class="descname">env</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.SshPreset.env" title="Permalink to this definition">¶</a></dt>
+<dd><p>Settings for remote environment</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.preset_data.SshPreset.get_description">
+<code class="descname">get_description</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.preset_data.SshPreset.get_description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default description displayed in UI.
+:return: String</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.SshPreset.host">
+<code class="descname">host</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.SshPreset.host" title="Permalink to this definition">¶</a></dt>
+<dd><p>Host to connect</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.SshPreset.key">
+<code class="descname">key</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.SshPreset.key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key for password</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.SshPreset.pbs_system">
+<code class="descname">pbs_system</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.SshPreset.pbs_system" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines PBS system dialect</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.SshPreset.port">
+<code class="descname">port</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.SshPreset.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Port for connection</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.SshPreset.pwd">
+<code class="descname">pwd</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.SshPreset.pwd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Password</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.SshPreset.remote_dir">
+<code class="descname">remote_dir</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.SshPreset.remote_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remote directory name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.SshPreset.to_pc">
+<code class="descname">to_pc</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.SshPreset.to_pc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remember password on pc</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.SshPreset.to_remote">
+<code class="descname">to_remote</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.SshPreset.to_remote" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy password to remote</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.preset_data.SshPreset.uid">
+<code class="descname">uid</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.SshPreset.uid" title="Permalink to this definition">¶</a></dt>
+<dd><p>User ID</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.data.queues">
+<span id="ui-data-queues-module"></span><h2>ui.data.queues module<a class="headerlink" href="#module-ui.data.queues" title="Permalink to this headline">¶</a></h2>
+<p>Module for fatching queues from different systems.
+&#64;author: Jan Gabriel
+&#64;contact: <a class="reference external" href="mailto:jan&#46;gabriel&#37;&#52;&#48;tul&#46;cz">jan<span>&#46;</span>gabriel<span>&#64;</span>tul<span>&#46;</span>cz</a></p>
+<dl class="class">
+<dt id="ui.data.queues.PbsQueues">
+<em class="property">class </em><code class="descclassname">ui.data.queues.</code><code class="descname">PbsQueues</code><a class="headerlink" href="#ui.data.queues.PbsQueues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="staticmethod">
+<dt id="ui.data.queues.PbsQueues.get_system_queues">
+<em class="property">static </em><code class="descname">get_system_queues</code><span class="sig-paren">(</span><em>dialect_key</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.queues.PbsQueues.get_system_queues" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.data.reg">
+<span id="ui-data-reg-module"></span><h2>ui.data.reg module<a class="headerlink" href="#module-ui.data.reg" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ui.data.reg.Regs">
+<em class="property">class </em><code class="descclassname">ui.data.reg.</code><code class="descname">Regs</code><span class="sig-paren">(</span><em>home</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.reg.Regs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="ui.data.reg.Regs.del_id">
+<code class="descname">del_id</code><span class="sig-paren">(</span><em>reg</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.reg.Regs.del_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.data.reg.Regs.get_id">
+<code class="descname">get_id</code><span class="sig-paren">(</span><em>reg</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.reg.Regs.get_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.data.reg.Regs.set_id">
+<code class="descname">set_id</code><span class="sig-paren">(</span><em>id</em>, <em>reg</em>, <em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.reg.Regs.set_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.data">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ui.data" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ui.dialogs.html" class="btn btn-neutral float-right" title="ui.dialogs package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ui.actions.html" class="btn btn-neutral" title="ui.actions package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

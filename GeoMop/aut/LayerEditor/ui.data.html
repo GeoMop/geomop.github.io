@@ -1,0 +1,616 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ui.data package &mdash; Layer Editor Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Layer Editor Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="up" title="ui package" href="ui.html"/>
+        <link rel="next" title="ui.gitems package" href="ui.gitems.html"/>
+        <link rel="prev" title="ui package" href="ui.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexLE.html" class="icon icon-home"> Layer Editor Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Layer Editor Source</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="leconfig.html">leconfig package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ui.html">ui package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ui.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">ui.data package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.data.diagram_structures">ui.data.diagram_structures module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.data">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ui.gitems.html">ui.gitems package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.menus.html">ui.menus package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.panels.html">ui.panels package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.mainwindow">ui.mainwindow module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="layer_editor.html">layer_editor module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../indexLE.html">Layer Editor Source Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../indexLE.html">Docs</a> &raquo;</li>
+      
+          <li><a href="ui.html">ui package</a> &raquo;</li>
+      
+    <li>ui.data package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/aut/LayerEditor/ui.data.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ui-data-package">
+<h1>ui.data package<a class="headerlink" href="#ui-data-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ui.data.diagram_structures">
+<span id="ui-data-diagram-structures-module"></span><h2>ui.data.diagram_structures module<a class="headerlink" href="#module-ui.data.diagram_structures" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ui.data.diagram_structures.Diagram">
+<em class="property">class </em><code class="descclassname">ui.data.diagram_structures.</code><code class="descname">Diagram</code><a class="headerlink" href="#ui.data.diagram_structures.Diagram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Layer diagram</p>
+<p>Use only class functions for adding new shapes. This function ensure folloving 
+requirements. New class function must ensure this requirements too.
+requirements:</p>
+<blockquote>
+<div><ul class="simple">
+<li>All points is unique</li>
+<li>All points contains used lines</li>
+<li>Point is griater if is right or x coordinate is equol and point is below</li>
+<li>Line.p1&lt;line.p2</li>
+</ul>
+</div></blockquote>
+<dl class="method">
+<dt id="ui.data.diagram_structures.Diagram.add_line">
+<code class="descname">add_line</code><span class="sig-paren">(</span><em>p</em>, <em>x</em>, <em>y</em>, <em>label='Add line'</em>, <em>no_history=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Diagram.add_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add line from point p to [x,y]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.Diagram.add_new_point_to_line">
+<code class="descname">add_new_point_to_line</code><span class="sig-paren">(</span><em>line</em>, <em>x</em>, <em>y</em>, <em>label='Add new point to line'</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Diagram.add_new_point_to_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new point to line and split it</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.Diagram.add_point">
+<code class="descname">add_point</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>label='Add point'</em>, <em>id=None</em>, <em>not_history=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Diagram.add_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add point to canvas</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.Diagram.add_point_to_line">
+<code class="descname">add_point_to_line</code><span class="sig-paren">(</span><em>line</em>, <em>point</em>, <em>label='Add point to line'</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Diagram.add_point_to_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add point to line and split it. Return new line and array of lines that should be removed.
+This lines is released from data, but object is existed, and should be relesed after discarding
+graphic object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.Diagram.delete_line">
+<code class="descname">delete_line</code><span class="sig-paren">(</span><em>l</em>, <em>label='Delete line'</em>, <em>not_history=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Diagram.delete_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>remove set line from lines end points</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.Diagram.delete_point">
+<code class="descname">delete_point</code><span class="sig-paren">(</span><em>p</em>, <em>label='Delete point'</em>, <em>not_history=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Diagram.delete_point" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.Diagram.get_line_by_id">
+<code class="descname">get_line_by_id</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Diagram.get_line_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>return line or None if not exist</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.Diagram.get_point_by_id">
+<code class="descname">get_point_by_id</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Diagram.get_point_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>return point or None if not exist</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="ui.data.diagram_structures.Diagram.get_point_on_line">
+<em class="property">static </em><code class="descname">get_point_on_line</code><span class="sig-paren">(</span><em>line</em>, <em>px</em>, <em>py</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Diagram.get_point_on_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute point on line</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.Diagram.join_line">
+<code class="descname">join_line</code><span class="sig-paren">(</span><em>p1</em>, <em>p2</em>, <em>label=None</em>, <em>id=None</em>, <em>not_history=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Diagram.join_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add line from point p1 to p2</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Diagram.lines">
+<code class="descname">lines</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Diagram.lines" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of lines</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="ui.data.diagram_structures.Diagram.make_tmp_line">
+<em class="property">static </em><code class="descname">make_tmp_line</code><span class="sig-paren">(</span><em>p1x</em>, <em>p1y</em>, <em>p2x</em>, <em>p2y</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Diagram.make_tmp_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make temporrary line</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.Diagram.merge_point">
+<code class="descname">merge_point</code><span class="sig-paren">(</span><em>point</em>, <em>atached_point</em>, <em>label='Merge Points'</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Diagram.merge_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merge rwo points. Atached_point will be remove from data
+and shoud be released after discarding graphic object.
+Return array of lines that should be removed. This lines is 
+released from data, but object is existed, and should be relesed 
+after discarding graphic object.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.Diagram.move_point">
+<code class="descname">move_point</code><span class="sig-paren">(</span><em>p</em>, <em>x</em>, <em>y</em>, <em>label='Move point'</em>, <em>not_history=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Diagram.move_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add point to canvas</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.Diagram.move_point_after">
+<code class="descname">move_point_after</code><span class="sig-paren">(</span><em>p</em>, <em>x_old</em>, <em>y_old</em>, <em>label='Move point'</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Diagram.move_point_after" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call if point is moved by another way and need save history</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Diagram.pen">
+<code class="descname">pen</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Diagram.pen" title="Permalink to this definition">¶</a></dt>
+<dd><p>pen for object paintings</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Diagram.pen_changed">
+<code class="descname">pen_changed</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Diagram.pen_changed" title="Permalink to this definition">¶</a></dt>
+<dd><p>pen need be changed</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Diagram.points">
+<code class="descname">points</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Diagram.points" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of points</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.Diagram.recount_canvas">
+<code class="descname">recount_canvas</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Diagram.recount_canvas" title="Permalink to this definition">¶</a></dt>
+<dd><p>recount canvas size</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Diagram.rect">
+<code class="descname">rect</code><a class="headerlink" href="#ui.data.diagram_structures.Diagram.rect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.Diagram.redo_to_label">
+<code class="descname">redo_to_label</code><span class="sig-paren">(</span><em>label=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Diagram.redo_to_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>redo to set label, if label is None, redo to next operation, 
+that has not None label</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.Diagram.try_delete_point">
+<code class="descname">try_delete_point</code><span class="sig-paren">(</span><em>p</em>, <em>label='Delete point'</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Diagram.try_delete_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Try remove set point, and return it 
+if point is in some line return False</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.Diagram.undo_to_label">
+<code class="descname">undo_to_label</code><span class="sig-paren">(</span><em>label=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Diagram.undo_to_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>undo to set label, if label is None, undo to previous operation, 
+that has not None label</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Diagram.x">
+<code class="descname">x</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Diagram.x" title="Permalink to this definition">¶</a></dt>
+<dd><p>x vew possition</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Diagram.y">
+<code class="descname">y</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Diagram.y" title="Permalink to this definition">¶</a></dt>
+<dd><p>y viw possition</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Diagram.zoom">
+<code class="descname">zoom</code><a class="headerlink" href="#ui.data.diagram_structures.Diagram.zoom" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.diagram_structures.History">
+<em class="property">class </em><code class="descclassname">ui.data.diagram_structures.</code><code class="descname">History</code><span class="sig-paren">(</span><em>diagram</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.History" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Diagram history</p>
+<p>Basic diagram operation for history purpose</p>
+<dl class="class">
+<dt id="ui.data.diagram_structures.History.Step">
+<em class="property">class </em><code class="descname">Step</code><span class="sig-paren">(</span><em>operation</em>, <em>params=[]</em>, <em>label=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.History.Step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="ui.data.diagram_structures.History.Step.process">
+<code class="descname">process</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.History.Step.process" title="Permalink to this definition">¶</a></dt>
+<dd><p>process history step restoring</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.History.add_line">
+<code class="descclassname">History.</code><code class="descname">add_line</code><span class="sig-paren">(</span><em>id</em>, <em>p1_id</em>, <em>p2_id</em>, <em>label=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.History.add_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add add line to history operation.</p>
+<p>Calling function must ensure, that both points exist.
+Return invert operation</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.History.add_multi">
+<code class="descclassname">History.</code><code class="descname">add_multi</code><span class="sig-paren">(</span><em>label</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.History.add_multi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new name of multi operation after last operation</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.History.add_point">
+<code class="descclassname">History.</code><code class="descname">add_point</code><span class="sig-paren">(</span><em>id</em>, <em>x</em>, <em>y</em>, <em>label=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.History.add_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add add point to history operation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.History.delete_line">
+<code class="descclassname">History.</code><code class="descname">delete_line</code><span class="sig-paren">(</span><em>id</em>, <em>label=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.History.delete_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add delete line to history operation.</p>
+<p>If outer points contain this line, is removed from list.
+Return invert operation</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.History.delete_point">
+<code class="descclassname">History.</code><code class="descname">delete_point</code><span class="sig-paren">(</span><em>id</em>, <em>label=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.History.delete_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add delete point to history operation.</p>
+<p>Calling function must ensure, that any line using this poin is not exist .
+Return invert operation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.History.last_undo_steps">
+<code class="descclassname">History.</code><code class="descname">last_undo_steps</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.History.last_undo_steps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Len of steps list during last undo operation</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.History.move_point">
+<code class="descclassname">History.</code><code class="descname">move_point</code><span class="sig-paren">(</span><em>id</em>, <em>x</em>, <em>y</em>, <em>label=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.History.move_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add move point to history operation.</p>
+<p>Return invert operation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.History.multi">
+<code class="descclassname">History.</code><code class="descname">multi</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.History.multi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Step is small-grained history operation, multi is use for broad
+structuring of history steps. Milti ids dictionary of step label:id</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.History.redo_to_label">
+<code class="descclassname">History.</code><code class="descname">redo_to_label</code><span class="sig-paren">(</span><em>label=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.History.redo_to_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>redo to set label, if label is None, redo to next operation, 
+that has not None label</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.History.redo_to_multi">
+<code class="descclassname">History.</code><code class="descname">redo_to_multi</code><span class="sig-paren">(</span><em>label=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.History.redo_to_multi" title="Permalink to this definition">¶</a></dt>
+<dd><p>redo to set multi label</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.History.steps">
+<code class="descclassname">History.</code><code class="descname">steps</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.History.steps" title="Permalink to this definition">¶</a></dt>
+<dd><p>history steps</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.History.undo_steps">
+<code class="descclassname">History.</code><code class="descname">undo_steps</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.History.undo_steps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returned history steps</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.History.undo_to_label">
+<code class="descclassname">History.</code><code class="descname">undo_to_label</code><span class="sig-paren">(</span><em>label=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.History.undo_to_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>undo to set label, if label is None, undo to previous operation, 
+that has not None label</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.History.undo_to_multi">
+<code class="descclassname">History.</code><code class="descname">undo_to_multi</code><span class="sig-paren">(</span><em>label=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.History.undo_to_multi" title="Permalink to this definition">¶</a></dt>
+<dd><p>undo to set multi label</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.diagram_structures.Line">
+<em class="property">class </em><code class="descclassname">ui.data.diagram_structures.</code><code class="descname">Line</code><span class="sig-paren">(</span><em>p1</em>, <em>p2</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.data.diagram_structures.Line.object" title="ui.data.diagram_structures.Line.object"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Class for graphic presentation of line</p>
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Line.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Line.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Line history id</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Line.object">
+<code class="descname">object</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Line.object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Graphic object</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Line.p1">
+<code class="descname">p1</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Line.p1" title="Permalink to this definition">¶</a></dt>
+<dd><p>First point</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Line.p2">
+<code class="descname">p2</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Line.p2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Second point</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.Line.qrectf">
+<code class="descname">qrectf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Line.qrectf" title="Permalink to this definition">¶</a></dt>
+<dd><p>return QRectF coordinates</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.data.diagram_structures.Point">
+<em class="property">class </em><code class="descclassname">ui.data.diagram_structures.</code><code class="descname">Point</code><span class="sig-paren">(</span><em>x</em>, <em>y</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.data.diagram_structures.Point.object" title="ui.data.diagram_structures.Point.object"><code class="xref py py-class docutils literal"><span class="pre">object</span></code></a></p>
+<p>Class for graphic presentation of point</p>
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Point.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Point.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Line history id</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Point.lines">
+<code class="descname">lines</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Point.lines" title="Permalink to this definition">¶</a></dt>
+<dd><p>This point instance is use for these lines</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Point.object">
+<code class="descname">object</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Point.object" title="Permalink to this definition">¶</a></dt>
+<dd><p>Graphic object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.diagram_structures.Point.qpointf">
+<code class="descname">qpointf</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.diagram_structures.Point.qpointf" title="Permalink to this definition">¶</a></dt>
+<dd><p>return QPointF coordinates</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Point.x">
+<code class="descname">x</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Point.x" title="Permalink to this definition">¶</a></dt>
+<dd><p>x coordinate</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.data.diagram_structures.Point.y">
+<code class="descname">y</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.diagram_structures.Point.y" title="Permalink to this definition">¶</a></dt>
+<dd><p>y coordinate</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.data">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ui.data" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ui.gitems.html" class="btn btn-neutral float-right" title="ui.gitems package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ui.html" class="btn btn-neutral" title="ui package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

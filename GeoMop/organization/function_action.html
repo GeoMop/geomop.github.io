@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Creating new action (czech) &mdash; GeoMop Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="GeoMop Documentation 1.0.0-beta
+ documentation" href="../index.html"/>
+        <link rel="prev" title="Pylint Exceptions (czech)" href="pylint_rules.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoMop Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user/linux_installation_guide.html">Linux Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/model_editor.html">Model Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/analysis_pipeline_example.html">Analysis - Pipeline example (czech)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexAN.html">Analysis</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexME.html">ModelEditor</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexJP.html">JobPanel</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexLE.html">LayerEditor</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexCommon.html">Common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="procedures.html">Development Procedures (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rules.html">Development Rules (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pylint_rules.html">Pylint Exceptions (czech)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Creating new action (czech)</a><ul class="simple">
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">GeoMop Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Creating new action (czech)</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/organization/function_action.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="creating-new-action-czech">
+<h1>Creating new action (czech)<a class="headerlink" href="#creating-new-action-czech" title="Permalink to this headline">¶</a></h1>
+<p>Tento dokument popisuje vytvoření akce FunctionAction. Akce slouží k vyhodnocení
+funkce zadané jako parametr akce na základě předaných parametrů.</p>
+<div class="section" id="predek-tridy">
+<h2>Předek třídy<a class="headerlink" href="#predek-tridy" title="Permalink to this headline">¶</a></h2>
+<p>Třída byla odvozena ze třídy ParametrizedActionType, protože jde o třídu která je
+parametrizovaná.</p>
+<div class="highlight-python"><div class="highlight"><pre>class FunctionAction(ParametrizedActionType):
+</pre></div>
+</div>
+</div>
+<div class="section" id="jmeno-a-popis-akce">
+<h2>Jméno a popis akce<a class="headerlink" href="#jmeno-a-popis-akce" title="Permalink to this headline">¶</a></h2>
+<p>Definujeme jméno a popis třídy.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Function&quot;</span>
+<span class="sd">&quot;&quot;&quot;Display name of action&quot;&quot;&quot;</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s2">&quot;Function&quot;</span>
+<span class="sd">&quot;&quot;&quot;Display description of action&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="metoda-init">
+<h2>Metoda __init__<a class="headerlink" href="#metoda-init" title="Permalink to this headline">¶</a></h2>
+<p>Metoda __init__ bude přebírat parametry Params a Expressions. Dále je volána
+metoda __init__ předka.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    :param list of str Params: input parameters</span>
+<span class="sd">        example:</span>
+<span class="sd">        [&quot;x1&quot;, &quot;x2&quot;, &quot;x3&quot;]</span>
+<span class="sd">    :param list of srt Expressions: function prescription</span>
+<span class="sd">        example:</span>
+<span class="sd">        [&quot;y1 = 1 * x1 + 2 * x2&quot;, &quot;y2 = 3 * x1 + 4 * x2&quot;, &quot;y3 = sin(x3)&quot;]</span>
+<span class="sd">    :param action or DTT Input: action DTT variable</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="metoda-inicialize">
+<h2>Metoda _inicialize<a class="headerlink" href="#metoda-inicialize" title="Permalink to this headline">¶</a></h2>
+<p>Metoda _inicialize inicializuje proměné akce. Nastaví stav akce na ActionStateType.initialized.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="bp">self</span><span class="o">.</span><span class="n">_set_state</span><span class="p">(</span><span class="n">ActionStateType</span><span class="o">.</span><span class="n">initialized</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Zavolá metodu self._process_base_hash() pro vytvoření hashe ze základních údajů o třídě.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="bp">self</span><span class="o">.</span><span class="n">_process_base_hash</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Přidá vlastní parametry do hashe.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="s1">&#39;Params&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span> <span class="ow">and</span> \
+        <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_variables</span><span class="p">[</span><span class="s1">&#39;Params&#39;</span><span class="p">],</span> <span class="nb">list</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">par</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span><span class="p">[</span><span class="s1">&#39;Params&#39;</span><span class="p">]:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_hash</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="n">par</span><span class="p">,</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="s1">&#39;Expressions&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span> <span class="ow">and</span> \
+        <span class="nb">isinstance</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_variables</span><span class="p">[</span><span class="s1">&#39;Expressions&#39;</span><span class="p">],</span> <span class="nb">list</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">ex</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_variables</span><span class="p">[</span><span class="s1">&#39;Expressions&#39;</span><span class="p">]:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_hash</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">bytes</span><span class="p">(</span><span class="n">ex</span><span class="p">,</span> <span class="s2">&quot;utf-8&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>A nastaví výstup akce.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="bp">self</span><span class="o">.</span><span class="n">_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__func_output</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="metoda-get-variables-script">
+<h2>Metoda _get_variables_script<a class="headerlink" href="#metoda-get-variables-script" title="Permalink to this headline">¶</a></h2>
+<p>Metoda slouží k vygenerování pythoního skriptu seznamu &#8220;_variables&#8221;.
+Nejprve je volána metoda předka.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">var</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">_get_variables_script</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Dále jsou přidány proměné vlastní akce a výsledek je vrácen jako návratová hodnota.</p>
+</div>
+<div class="section" id="metoda-update">
+<h2>Metoda _update<a class="headerlink" href="#metoda-update" title="Permalink to this headline">¶</a></h2>
+<p>Tato metoda řeší vlastní provedení akce. V našem případě zavolá výpočet funkce.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="bp">self</span><span class="o">.</span><span class="n">_output</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__func_result</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Následně vrátí None.</p>
+</div>
+<div class="section" id="metoda-check-params">
+<h2>Metoda _check_params<a class="headerlink" href="#metoda-check-params" title="Permalink to this headline">¶</a></h2>
+<p>Metoda zkontroluje správnost zadání parametrů, včetně jejich typů.
+Vrátí seznam chyb, které nastaly při kontrole.</p>
+</div>
+<div class="section" id="metoda-validate">
+<h2>Metoda validate<a class="headerlink" href="#metoda-validate" title="Permalink to this headline">¶</a></h2>
+<p>Tato metoda slouží ke kontrole, jestli předchozí akce poskytuje na svém výstupu
+správný typ dat. Nejprve zavolá metodu předka.</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">err</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">validate</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Dále pak zkontroluje typ vrácený předchozí akcí. Vrací seznam zjistěných chyb.</p>
+</div>
+<div class="section" id="metoda-get-require-params">
+<h2>Metoda __get_require_params<a class="headerlink" href="#metoda-get-require-params" title="Permalink to this headline">¶</a></h2>
+<p>Slouží ke zjištění seznamu parametrů, které budou očekávány na vstupu akce.
+Tyto parametry získá z proměné &#8220;Params&#8221;.</p>
+</div>
+<div class="section" id="metoda-parse-expressions">
+<h2>Metoda __parse_expressions<a class="headerlink" href="#metoda-parse-expressions" title="Permalink to this headline">¶</a></h2>
+<p>Metoda slouží k předpřipravení předpisu funkce. Předpis rozdělí na výstupní proměnou
+a vlastní předpis. Metoda vrací seznam tuplů (výstupní proměná, předpis funkce).</p>
+</div>
+<div class="section" id="metoda-func-output">
+<h2>Metoda __func_output<a class="headerlink" href="#metoda-func-output" title="Permalink to this headline">¶</a></h2>
+<p>Tato metoda vygeneruje z předpisu funkce výstupní datový typ akce.</p>
+</div>
+<div class="section" id="metoda-func-result">
+<h2>Metoda __func_result<a class="headerlink" href="#metoda-func-result" title="Permalink to this headline">¶</a></h2>
+<p>Provede vlatní vyhodnocení funkce na základě parametrů předaných předchozí třídou.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="pylint_rules.html" class="btn btn-neutral" title="Pylint Exceptions (czech)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0-beta
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

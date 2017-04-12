@@ -1,0 +1,22 @@
+ist.formatters.extensions package
+=================================
+
+Submodules
+----------
+
+ist.formatters.extensions.md_latex module
+-----------------------------------------
+
+.. automodule:: ist.formatters.extensions.md_latex
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: ist.formatters.extensions
+    :members:
+    :undoc-members:
+    :show-inheritance:

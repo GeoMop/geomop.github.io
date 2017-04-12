@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ui.menus package &mdash; Model Editor Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Model Editor Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="up" title="ui package" href="ui.html"/>
+        <link rel="next" title="ui.panels package" href="ui.panels.html"/>
+        <link rel="prev" title="ui.dialogs package" href="ui.dialogs.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexME.html" class="icon icon-home"> Model Editor Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Model Editor Source</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="data.html">data package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html">helpers package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importer.html">importer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ist.html">ist package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meconfig.html">meconfig package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_editor.html">model_editor module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ui.html">ui package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ui.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ui.components.html">ui.components package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.dialogs.html">ui.dialogs package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">ui.menus package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.menus.analysis_menu">ui.menus.analysis_menu module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.menus.edit_menu">ui.menus.edit_menu module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.menus.file_menu">ui.menus.file_menu module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.menus.settings_menu">ui.menus.settings_menu module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.menus">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ui.panels.html">ui.panels package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.template.html">ui.template package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.mainwindow">ui.mainwindow module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="util.html">util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exporter.html">exporter module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="normalize_ist.html">normalize_ist module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../indexME.html">Model Editor Source Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../indexME.html">Docs</a> &raquo;</li>
+      
+          <li><a href="ui.html">ui package</a> &raquo;</li>
+      
+    <li>ui.menus package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/aut/ModelEditor/ui.menus.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ui-menus-package">
+<h1>ui.menus package<a class="headerlink" href="#ui-menus-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ui.menus.analysis_menu">
+<span id="ui-menus-analysis-menu-module"></span><h2>ui.menus.analysis_menu module<a class="headerlink" href="#module-ui.menus.analysis_menu" title="Permalink to this headline">¶</a></h2>
+<p>Module contains an edit menu widget.</p>
+<dl class="class">
+<dt id="ui.menus.analysis_menu.AnalysisMenu">
+<em class="property">class </em><code class="descclassname">ui.menus.analysis_menu.</code><code class="descname">AnalysisMenu</code><span class="sig-paren">(</span><em>parent</em>, <em>config</em>, <em>title='&amp;Analysis'</em>, <em>flow123d_versions=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.analysis_menu.AnalysisMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QMenu</span></code></p>
+<p>Menu with analyses.</p>
+<dl class="method">
+<dt id="ui.menus.analysis_menu.AnalysisMenu.reload_analysis">
+<code class="descname">reload_analysis</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.analysis_menu.AnalysisMenu.reload_analysis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reload all analysis from current workspace.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.menus.edit_menu">
+<span id="ui-menus-edit-menu-module"></span><h2>ui.menus.edit_menu module<a class="headerlink" href="#module-ui.menus.edit_menu" title="Permalink to this headline">¶</a></h2>
+<p>Module contains an edit menu widget.</p>
+<dl class="class">
+<dt id="ui.menus.edit_menu.EditMenu">
+<em class="property">class </em><code class="descclassname">ui.menus.edit_menu.</code><code class="descname">EditMenu</code><span class="sig-paren">(</span><em>parent</em>, <em>editor</em>, <em>title='&amp;Edit'</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.edit_menu.EditMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QMenu</span></code></p>
+<p>Menu with editing actions.</p>
+<dl class="method">
+<dt id="ui.menus.edit_menu.EditMenu.init_actions">
+<code class="descname">init_actions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.edit_menu.EditMenu.init_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the available actions.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.menus.edit_menu.EditMenu.init_menu">
+<code class="descname">init_menu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.edit_menu.EditMenu.init_menu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the menu user interface.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.menus.edit_menu.EditMenu.on_select_all_action">
+<code class="descname">on_select_all_action</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.edit_menu.EditMenu.on_select_all_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle selectAll action.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.menus.edit_menu.MainEditMenu">
+<em class="property">class </em><code class="descclassname">ui.menus.edit_menu.</code><code class="descname">MainEditMenu</code><span class="sig-paren">(</span><em>parent</em>, <em>editor</em>, <em>title='&amp;Edit'</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.edit_menu.MainEditMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.menus.edit_menu.EditMenu" title="ui.menus.edit_menu.EditMenu"><code class="xref py py-class docutils literal"><span class="pre">ui.menus.edit_menu.EditMenu</span></code></a></p>
+<p>Represents the main windows edit menu.
+Contains some extra features compared to <cite>EditMenu</cite>.</p>
+<dl class="method">
+<dt id="ui.menus.edit_menu.MainEditMenu.init_actions">
+<code class="descname">init_actions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.edit_menu.MainEditMenu.init_actions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the actions.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.menus.edit_menu.MainEditMenu.init_menu">
+<code class="descname">init_menu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.edit_menu.MainEditMenu.init_menu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the menu user interface.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.menus.edit_menu.MainEditMenu.on_find_action">
+<code class="descname">on_find_action</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.edit_menu.MainEditMenu.on_find_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles the find action.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.menus.edit_menu.MainEditMenu.on_replace_action">
+<code class="descname">on_replace_action</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.edit_menu.MainEditMenu.on_replace_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles the replace action.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.menus.file_menu">
+<span id="ui-menus-file-menu-module"></span><h2>ui.menus.file_menu module<a class="headerlink" href="#module-ui.menus.file_menu" title="Permalink to this headline">¶</a></h2>
+<p>Module contains file menu widget.</p>
+<dl class="class">
+<dt id="ui.menus.file_menu.MainFileMenu">
+<em class="property">class </em><code class="descclassname">ui.menus.file_menu.</code><code class="descname">MainFileMenu</code><span class="sig-paren">(</span><em>parent</em>, <em>model_editor</em>, <em>title='&amp;File'</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.file_menu.MainFileMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QMenu</span></code></p>
+<p>Menu with file actions.</p>
+<dl class="method">
+<dt id="ui.menus.file_menu.MainFileMenu.update_recent_files">
+<code class="descname">update_recent_files</code><span class="sig-paren">(</span><em>from_row=1</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.file_menu.MainFileMenu.update_recent_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>update recent file in menu</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.menus.settings_menu">
+<span id="ui-menus-settings-menu-module"></span><h2>ui.menus.settings_menu module<a class="headerlink" href="#module-ui.menus.settings_menu" title="Permalink to this headline">¶</a></h2>
+<p>Module contains settings menu widget.</p>
+<dl class="class">
+<dt id="ui.menus.settings_menu.MainSettingsMenu">
+<em class="property">class </em><code class="descclassname">ui.menus.settings_menu.</code><code class="descname">MainSettingsMenu</code><span class="sig-paren">(</span><em>parent</em>, <em>model_editor</em>, <em>title='&amp;Settings'</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.settings_menu.MainSettingsMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QMenu</span></code></p>
+<p>Menu with settings actions.</p>
+<dl class="method">
+<dt id="ui.menus.settings_menu.MainSettingsMenu.on_change_file_format">
+<code class="descname">on_change_file_format</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.settings_menu.MainSettingsMenu.on_change_file_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle change format action - display dialog.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.menus.settings_menu.MainSettingsMenu.on_options_action">
+<code class="descname">on_options_action</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.settings_menu.MainSettingsMenu.on_options_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handle options action - display settings.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.menus">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ui.menus" title="Permalink to this headline">¶</a></h2>
+<p>Module contains menu widgets.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ui.panels.html" class="btn btn-neutral float-right" title="ui.panels package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ui.dialogs.html" class="btn btn-neutral" title="ui.dialogs package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

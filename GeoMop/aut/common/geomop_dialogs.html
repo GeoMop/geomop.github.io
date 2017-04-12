@@ -1,0 +1,536 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>geomop_dialogs package &mdash; GeoMop Common Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="GeoMop Common Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="next" title="geomop_util package" href="geomop_util.html"/>
+        <link rel="prev" title="geomop_analysis package" href="geomop_analysis.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexCommon.html" class="icon icon-home"> GeoMop Common Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Common Source</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="flow_util.html">flow_util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_analysis.html">geomop_analysis package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">geomop_dialogs package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-geomop_dialogs.about_dialog">geomop_dialogs.about_dialog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-geomop_dialogs.analysis_dialog">geomop_dialogs.analysis_dialog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-geomop_dialogs.dialogs">geomop_dialogs.dialogs module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-geomop_dialogs.error_dialog">geomop_dialogs.error_dialog module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-geomop_dialogs">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_util.html">geomop_util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_data.html">model_data package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyperclip.html">pyperclip package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyssh.html">pyssh package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">config module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="icon.html">icon module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version.html">version module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../indexCommon.html">GeoMop Common Source Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../indexCommon.html">Docs</a> &raquo;</li>
+      
+    <li>geomop_dialogs package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/aut/common/geomop_dialogs.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geomop-dialogs-package">
+<h1>geomop_dialogs package<a class="headerlink" href="#geomop-dialogs-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-geomop_dialogs.about_dialog">
+<span id="geomop-dialogs-about-dialog-module"></span><h2>geomop_dialogs.about_dialog module<a class="headerlink" href="#module-geomop_dialogs.about_dialog" title="Permalink to this headline">¶</a></h2>
+<p>Module contains about dialog.</p>
+<dl class="class">
+<dt id="geomop_dialogs.about_dialog.GMAboutDialog">
+<em class="property">class </em><code class="descclassname">geomop_dialogs.about_dialog.</code><code class="descname">GMAboutDialog</code><span class="sig-paren">(</span><em>parent</em>, <em>title='GeoMop'</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.about_dialog.GMAboutDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QDialog</span></code></p>
+<p>Dialog for displaying information about the application.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geomop_dialogs.analysis_dialog">
+<span id="geomop-dialogs-analysis-dialog-module"></span><h2>geomop_dialogs.analysis_dialog module<a class="headerlink" href="#module-geomop_dialogs.analysis_dialog" title="Permalink to this headline">¶</a></h2>
+<p>Analysis dialog.
+.. codeauthor:: Tomas Krizek &lt;<a class="reference external" href="mailto:tomas&#46;krizek1&#37;&#52;&#48;tul&#46;cz">tomas<span>&#46;</span>krizek1<span>&#64;</span>tul<span>&#46;</span>cz</a>&gt;</p>
+<dl class="class">
+<dt id="geomop_dialogs.analysis_dialog.AnalysisDialog">
+<em class="property">class </em><code class="descclassname">geomop_dialogs.analysis_dialog.</code><code class="descname">AnalysisDialog</code><span class="sig-paren">(</span><em>parent=None</em>, <em>purpose=None</em>, <em>config=None</em>, <em>analysis=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.analysis_dialog.AnalysisDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#geomop_dialogs.dialogs.AFormDialog" title="geomop_dialogs.dialogs.AFormDialog"><code class="xref py py-class docutils literal"><span class="pre">geomop_dialogs.dialogs.AFormDialog</span></code></a></p>
+<p>Analysis dialog.</p>
+<dl class="attribute">
+<dt id="geomop_dialogs.analysis_dialog.AnalysisDialog.PURPOSE_ADD">
+<code class="descname">PURPOSE_ADD</code><em class="property"> = {'objectName': 'AddAnalysisDialog', 'title': 'Add new Analysis', 'subtitle': 'Please select details for new Analysis.', 'windowTitle': 'Create new Analysis', 'purposeType': 'PURPOSE_ADD'}</em><a class="headerlink" href="#geomop_dialogs.analysis_dialog.AnalysisDialog.PURPOSE_ADD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geomop_dialogs.analysis_dialog.AnalysisDialog.PURPOSE_COPY">
+<code class="descname">PURPOSE_COPY</code><em class="property"> = {'objectName': 'CopyAnalysis', 'title': 'Copy Analysis', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'windowTitle': 'Copy Analysis', 'purposeType': 'PURPOSE_COPY'}</em><a class="headerlink" href="#geomop_dialogs.analysis_dialog.AnalysisDialog.PURPOSE_COPY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geomop_dialogs.analysis_dialog.AnalysisDialog.PURPOSE_EDIT">
+<code class="descname">PURPOSE_EDIT</code><em class="property"> = {'objectName': 'EditAnalysisDialog', 'title': 'Edit Analysis', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'windowTitle': 'Edit Analysis', 'purposeType': 'PURPOSE_EDIT'}</em><a class="headerlink" href="#geomop_dialogs.analysis_dialog.AnalysisDialog.PURPOSE_EDIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geomop_dialogs.analysis_dialog.AnalysisDialog.accept">
+<code class="descname">accept</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.analysis_dialog.AnalysisDialog.accept" title="Permalink to this definition">¶</a></dt>
+<dd><p>Handles a confirmation.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geomop_dialogs.analysis_dialog.AnalysisDialog.get_data">
+<code class="descname">get_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.analysis_dialog.AnalysisDialog.get_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geomop_dialogs.analysis_dialog.AnalysisDialog.set_data">
+<code class="descname">set_data</code><span class="sig-paren">(</span><em>data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.analysis_dialog.AnalysisDialog.set_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geomop_dialogs.analysis_dialog.AnalysisDialog.valid">
+<code class="descname">valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.analysis_dialog.AnalysisDialog.valid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geomop_dialogs.analysis_dialog.UiAnalysisDialog">
+<em class="property">class </em><code class="descclassname">geomop_dialogs.analysis_dialog.</code><code class="descname">UiAnalysisDialog</code><a class="headerlink" href="#geomop_dialogs.analysis_dialog.UiAnalysisDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#geomop_dialogs.dialogs.UiFormDialog" title="geomop_dialogs.dialogs.UiFormDialog"><code class="xref py py-class docutils literal"><span class="pre">geomop_dialogs.dialogs.UiFormDialog</span></code></a></p>
+<p>UI extensions of form dialog.</p>
+<dl class="method">
+<dt id="geomop_dialogs.analysis_dialog.UiAnalysisDialog.setup_ui">
+<code class="descname">setup_ui</code><span class="sig-paren">(</span><em>dialog</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.analysis_dialog.UiAnalysisDialog.setup_ui" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geomop_dialogs.analysis_dialog.UiAnalysisDialog.update_params">
+<code class="descname">update_params</code><span class="sig-paren">(</span><em>sender=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.analysis_dialog.UiAnalysisDialog.update_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hide or show parameters based on currently checked files.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="geomop_dialogs.analysis_dialog.list_flow123d_versions">
+<code class="descclassname">geomop_dialogs.analysis_dialog.</code><code class="descname">list_flow123d_versions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.analysis_dialog.list_flow123d_versions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a list of flow123d version files without extentions.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geomop_dialogs.dialogs">
+<span id="geomop-dialogs-dialogs-module"></span><h2>geomop_dialogs.dialogs module<a class="headerlink" href="#module-geomop_dialogs.dialogs" title="Permalink to this headline">¶</a></h2>
+<p>Basic application dialog templates, other dialogs should inherit from those to
+maintain UI consistency.
+&#64;author: Jan Gabriel
+&#64;contact: <a class="reference external" href="mailto:jan&#46;gabriel&#37;&#52;&#48;tul&#46;cz">jan<span>&#46;</span>gabriel<span>&#64;</span>tul<span>&#46;</span>cz</a></p>
+<dl class="class">
+<dt id="geomop_dialogs.dialogs.AFormDialog">
+<em class="property">class </em><code class="descclassname">geomop_dialogs.dialogs.</code><code class="descname">AFormDialog</code><span class="sig-paren">(</span><em>old_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.dialogs.AFormDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QDialog</span></code></p>
+<p>Abstract form dialog with abstract data manipulation interface.</p>
+<dl class="attribute">
+<dt id="geomop_dialogs.dialogs.AFormDialog.PURPOSE_ADD">
+<code class="descname">PURPOSE_ADD</code><em class="property"> = {'objectName': 'AddDialog', 'title': 'Add', 'subtitle': 'Please select details.', 'windowTitle': 'Job Panel - Add', 'purposeType': 'PURPOSE_ADD'}</em><a class="headerlink" href="#geomop_dialogs.dialogs.AFormDialog.PURPOSE_ADD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geomop_dialogs.dialogs.AFormDialog.PURPOSE_COPY">
+<code class="descname">PURPOSE_COPY</code><em class="property"> = {'objectName': 'CopyDialog', 'title': 'Copy', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'windowTitle': 'Job Panel - Copy', 'purposeType': 'PURPOSE_COPY'}</em><a class="headerlink" href="#geomop_dialogs.dialogs.AFormDialog.PURPOSE_COPY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geomop_dialogs.dialogs.AFormDialog.PURPOSE_COPY_PREFIX">
+<code class="descname">PURPOSE_COPY_PREFIX</code><em class="property"> = 'Copy of'</em><a class="headerlink" href="#geomop_dialogs.dialogs.AFormDialog.PURPOSE_COPY_PREFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geomop_dialogs.dialogs.AFormDialog.PURPOSE_DELETE">
+<code class="descname">PURPOSE_DELETE</code><em class="property"> = {'objectName': 'DeleteDialog', 'title': 'Delete', 'subtitle': 'This should not happen.', 'windowTitle': 'Job Panel - Delete', 'purposeType': 'PURPOSE_DELETE'}</em><a class="headerlink" href="#geomop_dialogs.dialogs.AFormDialog.PURPOSE_DELETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geomop_dialogs.dialogs.AFormDialog.PURPOSE_EDIT">
+<code class="descname">PURPOSE_EDIT</code><em class="property"> = {'objectName': 'Edit Dialog', 'title': 'Edit', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'windowTitle': 'Job Panel - Edit', 'purposeType': 'PURPOSE_EDIT'}</em><a class="headerlink" href="#geomop_dialogs.dialogs.AFormDialog.PURPOSE_EDIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geomop_dialogs.dialogs.AFormDialog.accept">
+<code class="descname">accept</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.dialogs.AFormDialog.accept" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accepts the form if all data fields are valid.
+:return: None</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geomop_dialogs.dialogs.AFormDialog.accepted">
+<code class="descname">accepted</code><a class="headerlink" href="#geomop_dialogs.dialogs.AFormDialog.accepted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geomop_dialogs.dialogs.AFormDialog.exec_add">
+<code class="descname">exec_add</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.dialogs.AFormDialog.exec_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for add purpose.
+:return: dialog.exec()</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geomop_dialogs.dialogs.AFormDialog.exec_copy">
+<code class="descname">exec_copy</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.dialogs.AFormDialog.exec_copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for copy purpose.
+:param data: Data to be pre filled in dialog.
+:return: dialog.exec()</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geomop_dialogs.dialogs.AFormDialog.exec_edit">
+<code class="descname">exec_edit</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.dialogs.AFormDialog.exec_edit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for edit purpose.
+:param data: Data to be pre filled in dialog.
+:return: dialog.exec()</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geomop_dialogs.dialogs.AFormDialog.exec_with_purpose">
+<code class="descname">exec_with_purpose</code><span class="sig-paren">(</span><em>purpose</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.dialogs.AFormDialog.exec_with_purpose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executes dialog with given purpose and data.
+:param purpose: Purpose of the dialog. (ADD/EDIT/COPY)
+:param data: Data to be pre filled in dialog.
+:return: dialog.exec()</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geomop_dialogs.dialogs.AFormDialog.get_data">
+<code class="descname">get_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.dialogs.AFormDialog.get_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets data from form fields. Used by accept signal.
+(To be overridden in child)
+:return: Dialog preset</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geomop_dialogs.dialogs.AFormDialog.purpose">
+<code class="descname">purpose</code><em class="property"> = None</em><a class="headerlink" href="#geomop_dialogs.dialogs.AFormDialog.purpose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geomop_dialogs.dialogs.AFormDialog.set_data">
+<code class="descname">set_data</code><span class="sig-paren">(</span><em>data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.dialogs.AFormDialog.set_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set data to form fields.
+(To be overridden in child)
+:param data: Preset data to be used.
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geomop_dialogs.dialogs.AFormDialog.set_purpose">
+<code class="descname">set_purpose</code><span class="sig-paren">(</span><em>purpose={'objectName': 'AddDialog'</em>, <em>'title': 'Add'</em>, <em>'subtitle': 'Please select details.'</em>, <em>'windowTitle': 'Job Panel - Add'</em>, <em>'purposeType': 'PURPOSE_ADD'}</em>, <em>data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.dialogs.AFormDialog.set_purpose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the purpose of the dialog. Used for default data labels and
+accept handling.
+:param purpose: Dialog purpose. (ADD/EDIT/COPY)
+:param data: Data to be pre filled if None dialog is cleared.
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geomop_dialogs.dialogs.AFormDialog.valid">
+<code class="descname">valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.dialogs.AFormDialog.valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validates input fields and returns True if valid. Otherwise points
+out problems with form.
+(To be overridden in child)
+:return: None</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geomop_dialogs.dialogs.APresetsDialog">
+<em class="property">class </em><code class="descclassname">geomop_dialogs.dialogs.</code><code class="descname">APresetsDialog</code><a class="headerlink" href="#geomop_dialogs.dialogs.APresetsDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QDialog</span></code></p>
+<p>Abstract preset dialog.</p>
+<dl class="method">
+<dt id="geomop_dialogs.dialogs.APresetsDialog.connect_slots">
+<code class="descname">connect_slots</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.dialogs.APresetsDialog.connect_slots" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect generic slots for dialog
+(must be called after UI setup in child)
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geomop_dialogs.dialogs.APresetsDialog.create_dialog">
+<code class="descname">create_dialog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.dialogs.APresetsDialog.create_dialog" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geomop_dialogs.dialogs.APresetsDialog.handle_presets_dialog">
+<code class="descname">handle_presets_dialog</code><span class="sig-paren">(</span><em>purpose</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.dialogs.APresetsDialog.handle_presets_dialog" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geomop_dialogs.dialogs.APresetsDialog.presets">
+<code class="descname">presets</code><em class="property"> = {}</em><a class="headerlink" href="#geomop_dialogs.dialogs.APresetsDialog.presets" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geomop_dialogs.dialogs.APresetsDialog.presets_changed">
+<code class="descname">presets_changed</code><a class="headerlink" href="#geomop_dialogs.dialogs.APresetsDialog.presets_changed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geomop_dialogs.dialogs.APresetsDialog.reload_view">
+<code class="descname">reload_view</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.dialogs.APresetsDialog.reload_view" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geomop_dialogs.dialogs.UiFormDialog">
+<em class="property">class </em><code class="descclassname">geomop_dialogs.dialogs.</code><code class="descname">UiFormDialog</code><a class="headerlink" href="#geomop_dialogs.dialogs.UiFormDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>UI of basic form dialog.</p>
+<dl class="method">
+<dt id="geomop_dialogs.dialogs.UiFormDialog.setup_ui">
+<code class="descname">setup_ui</code><span class="sig-paren">(</span><em>dialog</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.dialogs.UiFormDialog.setup_ui" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup UI on passed dialog.
+:param dialog: All UI components are attached to this dialog.
+:return: Decorated dialog</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geomop_dialogs.dialogs.UiPresetsDialog">
+<em class="property">class </em><code class="descclassname">geomop_dialogs.dialogs.</code><code class="descname">UiPresetsDialog</code><a class="headerlink" href="#geomop_dialogs.dialogs.UiPresetsDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>UI of basic presets dialog.</p>
+<dl class="method">
+<dt id="geomop_dialogs.dialogs.UiPresetsDialog.setup_ui">
+<code class="descname">setup_ui</code><span class="sig-paren">(</span><em>dialog</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.dialogs.UiPresetsDialog.setup_ui" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup UI on passed dialog.
+:param dialog: All UI components are attached to this dialog.
+:return: Decorated dialog</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geomop_dialogs.error_dialog">
+<span id="geomop-dialogs-error-dialog-module"></span><h2>geomop_dialogs.error_dialog module<a class="headerlink" href="#module-geomop_dialogs.error_dialog" title="Permalink to this headline">¶</a></h2>
+<p>GeoMop&#8217;s dialogs shared between different contexts.</p>
+<p>Dialogs have a standard appearance across contexts.</p>
+<dl class="class">
+<dt id="geomop_dialogs.error_dialog.GMErrorDialog">
+<em class="property">class </em><code class="descclassname">geomop_dialogs.error_dialog.</code><code class="descname">GMErrorDialog</code><span class="sig-paren">(</span><em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.error_dialog.GMErrorDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QMessageBox</span></code></p>
+<p>Error dialog for GeoMop graphic applications</p>
+<dl class="method">
+<dt id="geomop_dialogs.error_dialog.GMErrorDialog.open_error_dialog">
+<code class="descname">open_error_dialog</code><span class="sig-paren">(</span><em>text</em>, <em>error=None</em>, <em>title='GeoMop Error'</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.error_dialog.GMErrorDialog.open_error_dialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display dialog with title, text and error message in detail.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geomop_dialogs.error_dialog.GMErrorDialog.open_error_report_dialog">
+<code class="descname">open_error_report_dialog</code><span class="sig-paren">(</span><em>errors</em>, <em>msg='Process notifications:'</em>, <em>title='GeoMop Operation Report'</em><span class="sig-paren">)</span><a class="headerlink" href="#geomop_dialogs.error_dialog.GMErrorDialog.open_error_report_dialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display dialog with title, text and error message in detail.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geomop_dialogs">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geomop_dialogs" title="Permalink to this headline">¶</a></h2>
+<p>Module contains standardized GeoMop dialogs used across contexts.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="geomop_util.html" class="btn btn-neutral float-right" title="geomop_util package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="geomop_analysis.html" class="btn btn-neutral" title="geomop_analysis package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

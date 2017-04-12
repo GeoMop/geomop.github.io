@@ -1,0 +1,134 @@
+ui.dialogs package
+==================
+
+Submodules
+----------
+
+ui.dialogs.dialogs module
+-------------------------
+
+.. automodule:: ui.dialogs.dialogs
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.dialogs.env_dialog module
+----------------------------
+
+.. automodule:: ui.dialogs.env_dialog
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.dialogs.env_presets module
+-----------------------------
+
+.. automodule:: ui.dialogs.env_presets
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.dialogs.import_dialog module
+-------------------------------
+
+.. automodule:: ui.dialogs.import_dialog
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.dialogs.message_dialog module
+--------------------------------
+
+.. automodule:: ui.dialogs.message_dialog
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.dialogs.multijob_dialog module
+---------------------------------
+
+.. automodule:: ui.dialogs.multijob_dialog
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.dialogs.options_dialog module
+--------------------------------
+
+.. automodule:: ui.dialogs.options_dialog
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.dialogs.password_dialog module
+---------------------------------
+
+.. automodule:: ui.dialogs.password_dialog
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.dialogs.pbs_dialog module
+----------------------------
+
+.. automodule:: ui.dialogs.pbs_dialog
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.dialogs.pbs_presets module
+-----------------------------
+
+.. automodule:: ui.dialogs.pbs_presets
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.dialogs.resource_dialog module
+---------------------------------
+
+.. automodule:: ui.dialogs.resource_dialog
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.dialogs.resource_presets module
+----------------------------------
+
+.. automodule:: ui.dialogs.resource_presets
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.dialogs.ssh_dialog module
+----------------------------
+
+.. automodule:: ui.dialogs.ssh_dialog
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.dialogs.ssh_presets module
+-----------------------------
+
+.. automodule:: ui.dialogs.ssh_presets
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.dialogs.test_ssh_dialog module
+---------------------------------
+
+.. automodule:: ui.dialogs.test_ssh_dialog
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: ui.dialogs
+    :members:
+    :undoc-members:
+    :show-inheritance:

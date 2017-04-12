@@ -1,0 +1,17 @@
+data package
+============
+
+Subpackages
+-----------
+
+.. toctree::
+
+    data.yaml
+
+Module contents
+---------------
+
+.. automodule:: data
+    :members:
+    :undoc-members:
+    :show-inheritance:

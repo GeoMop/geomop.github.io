@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>model_data.yaml package &mdash; GeoMop Common Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="GeoMop Common Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="up" title="model_data package" href="model_data.html"/>
+        <link rel="next" title="pyperclip package" href="pyperclip.html"/>
+        <link rel="prev" title="model_data.validation package" href="model_data.validation.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexCommon.html" class="icon icon-home"> GeoMop Common Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Common Source</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="flow_util.html">flow_util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_analysis.html">geomop_analysis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_dialogs.html">geomop_dialogs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_util.html">geomop_util package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="model_data.html">model_data package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="model_data.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="model_data.notifications.html">model_data.notifications package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="model_data.validation.html">model_data.validation package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">model_data.yaml package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-model_data.yaml.constructor">model_data.yaml.constructor module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-model_data.yaml.loader">model_data.yaml.loader module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-model_data.yaml.resolver">model_data.yaml.resolver module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-model_data.yaml">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="model_data.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_data.html#module-model_data.autoconversion">model_data.autoconversion module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_data.html#module-model_data.data_node">model_data.data_node module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_data.html#module-model_data.export_con">model_data.export_con module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_data.html#module-model_data.format">model_data.format module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_data.html#module-model_data.import_json">model_data.import_json module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model_data.html#module-model_data">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pyperclip.html">pyperclip package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyssh.html">pyssh package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">config module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="icon.html">icon module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version.html">version module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../indexCommon.html">GeoMop Common Source Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../indexCommon.html">Docs</a> &raquo;</li>
+      
+          <li><a href="model_data.html">model_data package</a> &raquo;</li>
+      
+    <li>model_data.yaml package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/aut/common/model_data.yaml.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="model-data-yaml-package">
+<h1>model_data.yaml package<a class="headerlink" href="#model-data-yaml-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-model_data.yaml.constructor">
+<span id="model-data-yaml-constructor-module"></span><h2>model_data.yaml.constructor module<a class="headerlink" href="#module-model_data.yaml.constructor" title="Permalink to this headline">¶</a></h2>
+<p>Customized PyYAML Constructor</p>
+<dl class="function">
+<dt id="model_data.yaml.constructor.construct_scalar">
+<code class="descclassname">model_data.yaml.constructor.</code><code class="descname">construct_scalar</code><span class="sig-paren">(</span><em>value</em>, <em>tag</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.yaml.constructor.construct_scalar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Constructs a scalar value of the correct python type.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-model_data.yaml.loader">
+<span id="model-data-yaml-loader-module"></span><h2>model_data.yaml.loader module<a class="headerlink" href="#module-model_data.yaml.loader" title="Permalink to this headline">¶</a></h2>
+<p>Package for generating DataNode structure from YAML document.</p>
+<dl class="class">
+<dt id="model_data.yaml.loader.Loader">
+<em class="property">class </em><code class="descclassname">model_data.yaml.loader.</code><code class="descname">Loader</code><span class="sig-paren">(</span><em>notification_handler=None</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.yaml.loader.Loader" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Generates DataNode structure from YAML document.</p>
+<dl class="method">
+<dt id="model_data.yaml.loader.Loader.load">
+<code class="descname">load</code><span class="sig-paren">(</span><em>document</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.yaml.loader.Loader.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads the YAML document and returns the root DataNode.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-model_data.yaml.resolver">
+<span id="model-data-yaml-resolver-module"></span><h2>model_data.yaml.resolver module<a class="headerlink" href="#module-model_data.yaml.resolver" title="Permalink to this headline">¶</a></h2>
+<p>Customized pyyaml resolver</p>
+<dl class="function">
+<dt id="model_data.yaml.resolver.resolve_scalar_tag">
+<code class="descclassname">model_data.yaml.resolver.</code><code class="descname">resolve_scalar_tag</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#model_data.yaml.resolver.resolve_scalar_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resolves a tag for scalar value.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-model_data.yaml">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-model_data.yaml" title="Permalink to this headline">¶</a></h2>
+<p>Module for YAML parsing.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pyperclip.html" class="btn btn-neutral float-right" title="pyperclip package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="model_data.validation.html" class="btn btn-neutral" title="model_data.validation package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

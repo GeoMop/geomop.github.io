@@ -1,0 +1,22 @@
+ui.panels package
+=================
+
+Submodules
+----------
+
+ui.panels.diagram module
+------------------------
+
+.. automodule:: ui.panels.diagram
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: ui.panels
+    :members:
+    :undoc-members:
+    :show-inheritance:

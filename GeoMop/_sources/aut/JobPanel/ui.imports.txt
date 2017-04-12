@@ -1,0 +1,30 @@
+ui.imports package
+==================
+
+Submodules
+----------
+
+ui.imports.ie_presets module
+----------------------------
+
+.. automodule:: ui.imports.ie_presets
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.imports.workspaces_conf module
+---------------------------------
+
+.. automodule:: ui.imports.workspaces_conf
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: ui.imports
+    :members:
+    :undoc-members:
+    :show-inheritance:

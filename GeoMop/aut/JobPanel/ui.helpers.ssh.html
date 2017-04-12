@@ -1,0 +1,485 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ui.helpers.ssh package &mdash; Job Panel Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="Job Panel Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="up" title="ui.helpers package" href="ui.helpers.html"/>
+        <link rel="next" title="ui.imports package" href="ui.imports.html"/>
+        <link rel="prev" title="ui.helpers package" href="ui.helpers.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexJP.html" class="icon icon-home"> Job Panel Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Jobs Scheduler Source</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="communication.html">communication package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">data package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="delegator.html">delegator module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html">helpers package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="job.html">job module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="locks.html">locks module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mj_service.html">mj_service module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">test module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_app.html">test_app module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_task.html">test_task module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="ui.html">ui package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="ui.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="ui.actions.html">ui.actions package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.data.html">ui.data package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.dialogs.html">ui.dialogs package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="ui.helpers.html">ui.helpers package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="ui.helpers.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ui.helpers.html#module-ui.helpers">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="ui.imports.html">ui.imports package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.menus.html">ui.menus package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.panels.html">ui.panels package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.validators.html">ui.validators package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.com_manager">ui.com_manager module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.com_worker">ui.com_worker module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.main_window">ui.main_window module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.ssh_test">ui.ssh_test module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui">Module contents</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../indexJP.html">Job Panel Source Documentation</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../indexJP.html">Docs</a> &raquo;</li>
+      
+          <li><a href="ui.html">ui package</a> &raquo;</li>
+      
+          <li><a href="ui.helpers.html">ui.helpers package</a> &raquo;</li>
+      
+    <li>ui.helpers.ssh package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/aut/JobPanel/ui.helpers.ssh.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ui-helpers-ssh-package">
+<h1>ui.helpers.ssh package<a class="headerlink" href="#ui-helpers-ssh-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ui.helpers.ssh.linux_conn">
+<span id="ui-helpers-ssh-linux-conn-module"></span><h2>ui.helpers.ssh.linux_conn module<a class="headerlink" href="#module-ui.helpers.ssh.linux_conn" title="Permalink to this headline">¶</a></h2>
+<p>ssh connection for testing</p>
+<p>if error was occured throw exception</p>
+<dl class="class">
+<dt id="ui.helpers.ssh.linux_conn.Conn">
+<em class="property">class </em><code class="descclassname">ui.helpers.ssh.linux_conn.</code><code class="descname">Conn</code><span class="sig-paren">(</span><em>ssh</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.linux_conn.Conn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="ui.helpers.ssh.linux_conn.Conn.cd">
+<code class="descname">cd</code><span class="sig-paren">(</span><em>dir</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.linux_conn.Conn.cd" title="Permalink to this definition">¶</a></dt>
+<dd><p>change current folder</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.linux_conn.Conn.connect">
+<code class="descname">connect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.linux_conn.Conn.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect to ssh</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.linux_conn.Conn.connect_sftp">
+<code class="descname">connect_sftp</code><span class="sig-paren">(</span><em>local</em>, <em>remote</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.linux_conn.Conn.connect_sftp" title="Permalink to this definition">¶</a></dt>
+<dd><p>return sftp connection</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.linux_conn.Conn.create_dir">
+<code class="descname">create_dir</code><span class="sig-paren">(</span><em>dir</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.linux_conn.Conn.create_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>create folder</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.linux_conn.Conn.disconnect">
+<code class="descname">disconnect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.linux_conn.Conn.disconnect" title="Permalink to this definition">¶</a></dt>
+<dd><p>disconnect ssh</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.linux_conn.Conn.disconnect_sftp">
+<code class="descname">disconnect_sftp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.linux_conn.Conn.disconnect_sftp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disonnect sftp</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.linux_conn.Conn.download_dir">
+<code class="descname">download_dir</code><span class="sig-paren">(</span><em>dir</em>, <em>result_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.linux_conn.Conn.download_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>download directory over sftp connection</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.linux_conn.Conn.download_file">
+<code class="descname">download_file</code><span class="sig-paren">(</span><em>file</em>, <em>result_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.linux_conn.Conn.download_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>download file over sftp connection</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.linux_conn.Conn.get_flow123_help">
+<code class="descname">get_flow123_help</code><span class="sig-paren">(</span><em>flow</em>, <em>modules</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.linux_conn.Conn.get_flow123_help" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call flow123s with help parameter and return result</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.linux_conn.Conn.get_pbs_info">
+<code class="descname">get_pbs_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.linux_conn.Conn.get_pbs_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call pbs -version and pbs -q and obtain version and list of queues</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.linux_conn.Conn.get_python_version">
+<code class="descname">get_python_version</code><span class="sig-paren">(</span><em>interpreter</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.linux_conn.Conn.get_python_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>return python version</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.linux_conn.Conn.ls_dir">
+<code class="descname">ls_dir</code><span class="sig-paren">(</span><em>dir</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.linux_conn.Conn.ls_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>return folders and files text names in array</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.linux_conn.Conn.ping">
+<code class="descname">ping</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.linux_conn.Conn.ping" title="Permalink to this definition">¶</a></dt>
+<dd><p>ping to server</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.linux_conn.Conn.pwd">
+<code class="descname">pwd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.linux_conn.Conn.pwd" title="Permalink to this definition">¶</a></dt>
+<dd><p>return current folder</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.linux_conn.Conn.remove_dir">
+<code class="descname">remove_dir</code><span class="sig-paren">(</span><em>dir</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.linux_conn.Conn.remove_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>renove folder</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.linux_conn.Conn.test_python_script">
+<code class="descname">test_python_script</code><span class="sig-paren">(</span><em>interpreter</em>, <em>script_file</em>, <em>file_name</em>, <em>file_text</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.linux_conn.Conn.test_python_script" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test script file.</p>
+<p>Test supposed that script expected three parameters. First is
+printed during script running. Second is file name, that is 
+created and third is text wrote to this file.
+If other text than is past as parameter is printed, text is evaluate
+as error message.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.linux_conn.Conn.upload_dir">
+<code class="descname">upload_dir</code><span class="sig-paren">(</span><em>dir</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.linux_conn.Conn.upload_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>upload dir over sftp connection</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.linux_conn.Conn.upload_file">
+<code class="descname">upload_file</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.linux_conn.Conn.upload_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>upload file over sftp connection</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="ui.helpers.ssh.linux_conn.SshError">
+<em class="property">exception </em><code class="descclassname">ui.helpers.ssh.linux_conn.</code><code class="descname">SshError</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.linux_conn.SshError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>Exception raised for errors in ssh class.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.helpers.ssh.tests">
+<span id="ui-helpers-ssh-tests-module"></span><h2>ui.helpers.ssh.tests module<a class="headerlink" href="#module-ui.helpers.ssh.tests" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ui.helpers.ssh.tests.Tests">
+<em class="property">class </em><code class="descclassname">ui.helpers.ssh.tests.</code><code class="descname">Tests</code><span class="sig-paren">(</span><em>ssh</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.tests.Tests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="ui.helpers.ssh.tests.Tests.close_connection">
+<code class="descname">close_connection</code><span class="sig-paren">(</span><em>mess=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.tests.Tests.close_connection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close ssh connection</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.tests.Tests.close_sftp">
+<code class="descname">close_sftp</code><span class="sig-paren">(</span><em>mess=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.tests.Tests.close_sftp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close sftp connection</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.tests.Tests.create_dir_struc">
+<code class="descname">create_dir_struc</code><span class="sig-paren">(</span><em>mess=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.tests.Tests.create_dir_struc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create directory on remote</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.tests.Tests.download_dir">
+<code class="descname">download_dir</code><span class="sig-paren">(</span><em>mess=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.tests.Tests.download_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dowload file over sftp</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.tests.Tests.download_file">
+<code class="descname">download_file</code><span class="sig-paren">(</span><em>mess=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.tests.Tests.download_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dowload file over sftp</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.tests.Tests.open_connection">
+<code class="descname">open_connection</code><span class="sig-paren">(</span><em>mess=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.tests.Tests.open_connection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inicoalize ssh connection</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.tests.Tests.open_sftp">
+<code class="descname">open_sftp</code><span class="sig-paren">(</span><em>mess=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.tests.Tests.open_sftp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inicoalize sftp connection</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.tests.Tests.ping">
+<code class="descname">ping</code><span class="sig-paren">(</span><em>mess=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.tests.Tests.ping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close ssh connection</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.tests.Tests.remove_dir">
+<code class="descname">remove_dir</code><span class="sig-paren">(</span><em>mess=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.tests.Tests.remove_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove directory directory remote</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.tests.Tests.run_python">
+<code class="descname">run_python</code><span class="sig-paren">(</span><em>mess</em>, <em>env</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.tests.Tests.run_python" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run python script on Remote</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.tests.Tests.test_flow123d">
+<code class="descname">test_flow123d</code><span class="sig-paren">(</span><em>mess</em>, <em>env</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.tests.Tests.test_flow123d" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test flow123d properties</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.tests.Tests.test_pbs">
+<code class="descname">test_pbs</code><span class="sig-paren">(</span><em>mess=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.tests.Tests.test_pbs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test pbs version and list of queues</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.tests.Tests.test_python">
+<code class="descname">test_python</code><span class="sig-paren">(</span><em>mess</em>, <em>env</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.tests.Tests.test_python" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test python properties</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.tests.Tests.upload_dir">
+<code class="descname">upload_dir</code><span class="sig-paren">(</span><em>mess=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.tests.Tests.upload_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upload dir over sftp</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.helpers.ssh.tests.Tests.upload_file">
+<code class="descname">upload_file</code><span class="sig-paren">(</span><em>mess=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.ssh.tests.Tests.upload_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upload file over sftp</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.helpers.ssh">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ui.helpers.ssh" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ui.imports.html" class="btn btn-neutral float-right" title="ui.imports package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ui.helpers.html" class="btn btn-neutral" title="ui.helpers package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta
+',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
