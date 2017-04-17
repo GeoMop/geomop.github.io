@@ -14,6 +14,8 @@
 
   
   
+  
+  
 
   
 
@@ -31,6 +33,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Model Editor Source Documentation 1.0.0-beta
  documentation" href="../../index.html"/>
         <link rel="up" title="ui package" href="ui.html"/>
@@ -44,6 +49,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -85,7 +91,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Model Editor Source</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Model Editor Source</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="data.html">data package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="helpers.html">helpers package</a></li>
@@ -98,7 +107,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ui.components.html">ui.components package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ui.dialogs.html">ui.dialogs package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ui.menus.html">ui.menus package</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">ui.panels package</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ui.panels package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-ui.panels.debug_info">ui.panels.debug_info module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-ui.panels.error_tab">ui.panels.error_tab module</a></li>
@@ -135,8 +144,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../indexME.html">Model Editor Source Documentation</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../indexME.html">Model Editor Source Documentation</a>
+        
       </nav>
 
 
@@ -145,25 +156,42 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../indexME.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../../indexME.html">Docs</a> &raquo;</li>
+        
           <li><a href="ui.html">ui package</a> &raquo;</li>
-      
-    <li>ui.panels package</li>
+        
+      <li>ui.panels package</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/aut/ModelEditor/ui.panels.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../../_sources/aut/ModelEditor/ui.panels.rstc.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -300,7 +328,7 @@
 
 <dl class="method">
 <dt id="ui.panels.info_panel.InfoPanelWidget.update_from_data">
-<code class="descname">update_from_data</code><span class="sig-paren">(</span><em>data</em>, <em>set_home=True</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.info_panel.InfoPanelWidget.update_from_data" title="Permalink to this definition">¶</a></dt>
+<code class="descname">update_from_data</code><span class="sig-paren">(</span><em>data</em>, <em>set_home</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.info_panel.InfoPanelWidget.update_from_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generate and show the info text from data.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -834,11 +862,11 @@ or is in inner structure.</p>
 This class serves to indicate when these changes should be joined together to form a single
 undo/redo change.</p>
 <p>This class is used by the <cite>YamlEditorWidget</cite> class using the with statement:</p>
-<div class="highlight-python"><div class="highlight"><pre>reload_chunk = ReloadChunk()
-with reload_chunk:
-    # perform multiple changes
-    # reload_chunk.freeze_reload prevents reload changes during editing
-# upon exit, onExit event is triggered (can be connected to textChanged)
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">reload_chunk</span> <span class="o">=</span> <span class="n">ReloadChunk</span><span class="p">()</span>
+<span class="k">with</span> <span class="n">reload_chunk</span><span class="p">:</span>
+    <span class="c1"># perform multiple changes</span>
+    <span class="c1"># reload_chunk.freeze_reload prevents reload changes during editing</span>
+<span class="c1"># upon exit, onExit event is triggered (can be connected to textChanged)</span>
 </pre></div>
 </div>
 <dl class="docutils">
@@ -956,9 +984,15 @@ with reload_chunk:
 
 <dl class="method">
 <dt id="ui.panels.yaml_editor.YamlEditorWidget.comment">
-<code class="descname">comment</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.yaml_editor.YamlEditorWidget.comment" title="Permalink to this definition">¶</a></dt>
+<code class="descname">comment</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.yaml_editor.YamlEditorWidget.comment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Toggle comment for selected lines.</p>
-<p>If no line is selected, toggle comment for current line.</p>
+<blockquote>
+<div>If var. line is not none and line is in selected lines, toggle
+comment for selected lines else line comment in var. line.        
+If  is var. line is none no line and selected, toggle comment</div></blockquote>
+<p>for the current line.</p>
+<blockquote>
+<div>If no line is selected, toggle comment for current line.</div></blockquote>
 </dd></dl>
 
 <dl class="method">
@@ -1076,9 +1110,11 @@ with reload_chunk:
 
 <dl class="method">
 <dt id="ui.panels.yaml_editor.YamlEditorWidget.indent">
-<code class="descname">indent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.yaml_editor.YamlEditorWidget.indent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">indent</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.yaml_editor.YamlEditorWidget.indent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Indent the selected line(s).</p>
-<p>If no line is selected, indent the current line.</p>
+<p>If var. line is not none and line is in selected lines, unindent selected
+else line in var. line.        
+If var. line is none and no line is selected, indent the current line.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1375,9 +1411,11 @@ position is selected.</td>
 
 <dl class="method">
 <dt id="ui.panels.yaml_editor.YamlEditorWidget.unindent">
-<code class="descname">unindent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.yaml_editor.YamlEditorWidget.unindent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">unindent</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.yaml_editor.YamlEditorWidget.unindent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unindent the selected line(s).</p>
-<p>If no line is selected, unindent the current line.</p>
+<p>If var. line is not none and line is in selected lines, unindent selected
+else line in var. line.        
+If  is var. line is none no line and selected, unindent the current line.</p>
 </dd></dl>
 
 </dd></dl>
@@ -1391,15 +1429,18 @@ position is selected.</td>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ui.template.html" class="btn btn-neutral float-right" title="ui.template package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ui.template.html" class="btn btn-neutral float-right" title="ui.template package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ui.menus.html" class="btn btn-neutral" title="ui.menus package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ui.menus.html" class="btn btn-neutral" title="ui.menus package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1430,11 +1471,11 @@ position is selected.</td>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'1.0.0-beta
-',
+            VERSION:'1.0.0-beta',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

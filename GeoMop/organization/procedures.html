@@ -14,6 +14,8 @@
 
   
   
+  
+  
 
   
 
@@ -31,6 +33,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="GeoMop Documentation 1.0.0-beta
  documentation" href="../index.html"/>
         <link rel="next" title="Development Rules (czech)" href="rules.html"/>
@@ -43,6 +48,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -84,7 +90,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">User Guide</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Guide</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../user/linux_installation_guide.html">Linux Installation Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../user/model_editor.html">Model Editor</a></li>
@@ -97,9 +106,7 @@
 <li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexJP.html">JobPanel</a></li>
 <li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexLE.html">LayerEditor</a></li>
 <li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexCommon.html">Common</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Development Procedures (czech)</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Development Procedures (czech)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rules.html">Development Rules (czech)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pylint_rules.html">Pylint Exceptions (czech)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="function_action.html">Creating new action (czech)</a></li>
@@ -115,8 +122,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">GeoMop Documentation</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoMop Documentation</a>
+        
       </nav>
 
 
@@ -125,23 +134,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>Development Procedures (czech)</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Development Procedures (czech)</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/organization/procedures.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/organization/procedures.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -169,7 +195,7 @@
 <p>Pro kontrolu se používá <a class="reference external" href="www.pylint.org">pyLint</a>. V hlavním adresáři každého
 modulu je soubor pylintrc, v kterém se píší pravidla pro vyjímky. Další vyjímky
 je možné napsat na začátek souboru, nebo nad vyjmutý řádek. Pravidla pro tyto
-vyjímky budou vznikat během vývoje a budou zapisovány do <a class="reference internal" href="pylint_rules.html"><em>samostatného souboru</em></a>.</p>
+vyjímky budou vznikat během vývoje a budou zapisovány do <a class="reference internal" href="pylint_rules.html"><span class="doc">samostatného souboru</span></a>.</p>
 <p>Bohužel s kontrolou kódu nemám zkušenosti a některé požadavky vyplynou až během
 vývoje. Proto zde popíši oblasti, na které by jsem se chtěl při kontrole kódu
 zaměřit a to co nekontrolovat vyplyne z porovnání poměru režie/přínos. To co
@@ -224,7 +250,7 @@ a do finální podoby generována pomocí <a class="reference external" href="ht
 <a class="reference external" href="http://sphinx-doc.org/index.htmls">sphinx</a> pak umožnuje dodat pěkné formátování textu
 a vygenerovat požadovaný formát dokumentu. Generovat celou vývojářskou je možné
 z adresáře <code class="docutils literal"><span class="pre">doc/</span></code> pomocí make a požadovaného formátu. Například:</p>
-<div class="highlight-python"><div class="highlight"><pre>make html
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
 </pre></div>
 </div>
 <p>Dokumentace se skládá z uživatelské příručky, organizačních pokynů pro vývoj (v adresáři
@@ -241,7 +267,7 @@ uživatelské dokumentace.</p>
 <p>Pro automatické generování dokumentace lze využít git hook <code class="docutils literal"><span class="pre">pre-push</span></code>. Skript, který vygeneruje
 a pushne vytvořenou dokumentaci je umísťen v adresáři <code class="docutils literal"><span class="pre">resources/development</span></code>. Pro použití je
 potřeba ho po naklonování repozitáře přesunout mezi git hooks, které se mají vykonat.</p>
-<div class="highlight-bash"><div class="highlight"><pre>cp resources/development/pre-push .git/hooks/
+<div class="highlight-bash"><div class="highlight"><pre><span></span>cp resources/development/pre-push .git/hooks/
 chmod +x .git/hooks/pre-push
 </pre></div>
 </div>
@@ -257,7 +283,7 @@ kompletnější.</p>
 <h2>Testování - automatické testy<a class="headerlink" href="#testovani-automaticke-testy" title="Permalink to this headline">¶</a></h2>
 <p>Pro psaní automatických testů je použit <a class="reference external" href="http://pytest.org/latest/">pyTest</a>. Testy
 je možné lokálně spustit z testing adresáře příkazem:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">RunTests</span><span class="o">.</span><span class="n">sh</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">RunTests</span><span class="o">.</span><span class="n">sh</span>
 </pre></div>
 </div>
 <p>UI testy qt částí aplikace je možné dělat pomocí qt knihovny
@@ -308,7 +334,7 @@ to znamenat vyřešit a zdokumentovat instalaci prostředí a přidání alterna
 <p>Pro vývoj i běh se doporučuje používat virtuální prostředí, více viz
 <a class="reference external" href="../install/linux_installation_guide.html#virtual-environment">uživatelská dokumentace</a>. Pro
 instalaci závislostí potřebných k vývoji aplikace lze použít následující příkaz:</p>
-<div class="highlight-python"><div class="highlight"><pre>pip install -r requirements-development.txt
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">-</span><span class="n">development</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 </div>
@@ -344,15 +370,18 @@ nápověda pro náš kód.</li>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="rules.html" class="btn btn-neutral float-right" title="Development Rules (czech)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="rules.html" class="btn btn-neutral float-right" title="Development Rules (czech)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../user/analysis_pipeline_example.html" class="btn btn-neutral" title="Analysis - Pipeline example (czech)" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../user/analysis_pipeline_example.html" class="btn btn-neutral" title="Analysis - Pipeline example (czech)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -383,11 +412,11 @@ nápověda pro náš kód.</li>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'1.0.0-beta
-',
+            VERSION:'1.0.0-beta',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

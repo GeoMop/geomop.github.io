@@ -14,6 +14,8 @@
 
   
   
+  
+  
 
   
 
@@ -31,6 +33,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="GeoMop Common Source Documentation 1.0.0-beta
  documentation" href="../../index.html"/>
         <link rel="up" title="model_data package" href="model_data.html"/>
@@ -44,6 +49,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -85,7 +91,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Common Source</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Common Source</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="flow_util.html">flow_util package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="geomop_analysis.html">geomop_analysis package</a></li>
@@ -93,7 +102,7 @@
 <li class="toctree-l1"><a class="reference internal" href="geomop_util.html">geomop_util package</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="model_data.html">model_data package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="model_data.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">model_data.notifications package</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">model_data.notifications package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-model_data.notifications.handler">model_data.notifications.handler module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-model_data.notifications.list">model_data.notifications.list module</a></li>
@@ -135,8 +144,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../indexCommon.html">GeoMop Common Source Documentation</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../indexCommon.html">GeoMop Common Source Documentation</a>
+        
       </nav>
 
 
@@ -145,25 +156,42 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../indexCommon.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../../indexCommon.html">Docs</a> &raquo;</li>
+        
           <li><a href="model_data.html">model_data package</a> &raquo;</li>
-      
-    <li>model_data.notifications package</li>
+        
+      <li>model_data.notifications package</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/aut/common/model_data.notifications.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../../_sources/aut/common/model_data.notifications.rstd.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -224,22 +252,22 @@ of data structure.</p>
 <p>Severity of a notification.</p>
 <dl class="attribute">
 <dt id="model_data.notifications.notification.Notification.Severity.error">
-<code class="descname">error</code><em class="property"> = &lt;Severity.error: 2&gt;</em><a class="headerlink" href="#model_data.notifications.notification.Notification.Severity.error" title="Permalink to this definition">¶</a></dt>
+<code class="descname">error</code><em class="property"> = 2</em><a class="headerlink" href="#model_data.notifications.notification.Notification.Severity.error" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="model_data.notifications.notification.Notification.Severity.fatal">
-<code class="descname">fatal</code><em class="property"> = &lt;Severity.fatal: 3&gt;</em><a class="headerlink" href="#model_data.notifications.notification.Notification.Severity.fatal" title="Permalink to this definition">¶</a></dt>
+<code class="descname">fatal</code><em class="property"> = 3</em><a class="headerlink" href="#model_data.notifications.notification.Notification.Severity.fatal" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="model_data.notifications.notification.Notification.Severity.info">
-<code class="descname">info</code><em class="property"> = &lt;Severity.info: 0&gt;</em><a class="headerlink" href="#model_data.notifications.notification.Notification.Severity.info" title="Permalink to this definition">¶</a></dt>
+<code class="descname">info</code><em class="property"> = 0</em><a class="headerlink" href="#model_data.notifications.notification.Notification.Severity.info" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="model_data.notifications.notification.Notification.Severity.warning">
-<code class="descname">warning</code><em class="property"> = &lt;Severity.warning: 1&gt;</em><a class="headerlink" href="#model_data.notifications.notification.Notification.Severity.warning" title="Permalink to this definition">¶</a></dt>
+<code class="descname">warning</code><em class="property"> = 1</em><a class="headerlink" href="#model_data.notifications.notification.Notification.Severity.warning" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -285,15 +313,18 @@ of data structure.</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="model_data.validation.html" class="btn btn-neutral float-right" title="model_data.validation package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="model_data.validation.html" class="btn btn-neutral float-right" title="model_data.validation package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="model_data.html" class="btn btn-neutral" title="model_data package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="model_data.html" class="btn btn-neutral" title="model_data package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -324,11 +355,11 @@ of data structure.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'1.0.0-beta
-',
+            VERSION:'1.0.0-beta',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

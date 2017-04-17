@@ -14,6 +14,8 @@
 
   
   
+  
+  
 
   
 
@@ -31,6 +33,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Model Editor Source Documentation 1.0.0-beta
  documentation" href="../../index.html"/>
         <link rel="next" title="model_editor module" href="model_editor.html"/>
@@ -43,6 +48,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -84,13 +90,16 @@
           
             
             
-                <p class="caption"><span class="caption-text">Model Editor Source</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Model Editor Source</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="data.html">data package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="helpers.html">helpers package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="importer.html">importer module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ist.html">ist package</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">meconfig package</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">meconfig package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-meconfig.meconfig">meconfig.meconfig module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-meconfig">Module contents</a></li>
@@ -117,8 +126,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../indexME.html">Model Editor Source Documentation</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../indexME.html">Model Editor Source Documentation</a>
+        
       </nav>
 
 
@@ -127,23 +138,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../indexME.html">Docs</a> &raquo;</li>
-      
-    <li>meconfig package</li>
+    
+      <li><a href="../../indexME.html">Docs</a> &raquo;</li>
+        
+      <li>meconfig package</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/aut/ModelEditor/meconfig.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../../_sources/aut/ModelEditor/meconfig.rstc.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -186,10 +214,25 @@
 <dd><p>Serialized variables</p>
 </dd></dl>
 
+<dl class="classmethod">
+<dt id="meconfig.meconfig.MEConfig.confront_file_timestamp">
+<em class="property">classmethod </em><code class="descname">confront_file_timestamp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#meconfig.meconfig.MEConfig.confront_file_timestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compare file timestamp with file time and if is diferent
+show dialog, and reload file content.
+:return: if file is reloaded</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="meconfig.meconfig.MEConfig.curr_file">
 <code class="descname">curr_file</code><em class="property"> = None</em><a class="headerlink" href="#meconfig.meconfig.MEConfig.curr_file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Serialized variables</p>
+<dd><p>Name of open file</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="meconfig.meconfig.MEConfig.curr_file_timestamp">
+<code class="descname">curr_file_timestamp</code><em class="property"> = None</em><a class="headerlink" href="#meconfig.meconfig.MEConfig.curr_file_timestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Timestamp of opened file, if editor text is
+imported or new timestamp is None</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -222,7 +265,7 @@
 
 <dl class="attribute">
 <dt id="meconfig.meconfig.MEConfig.format_dir">
-<code class="descname">format_dir</code><em class="property"> = '/home/pavel/work/GeoMop/src/ModelEditor/resources/../../common/resources/ist'</em><a class="headerlink" href="#meconfig.meconfig.MEConfig.format_dir" title="Permalink to this definition">¶</a></dt>
+<code class="descname">format_dir</code><em class="property"> = '/var/lib/jenkins/workspace/gm-doc/src/ModelEditor/resources/../../common/resources/ist'</em><a class="headerlink" href="#meconfig.meconfig.MEConfig.format_dir" title="Permalink to this definition">¶</a></dt>
 <dd><p>path to a folder containing IST files</p>
 </dd></dl>
 
@@ -283,7 +326,7 @@
 
 <dl class="attribute">
 <dt id="meconfig.meconfig.MEConfig.info_text_html_root_dir">
-<code class="descname">info_text_html_root_dir</code><em class="property"> = '/home/pavel/work/GeoMop/src/ModelEditor/resources/ist_html'</em><a class="headerlink" href="#meconfig.meconfig.MEConfig.info_text_html_root_dir" title="Permalink to this definition">¶</a></dt>
+<code class="descname">info_text_html_root_dir</code><em class="property"> = '/var/lib/jenkins/workspace/gm-doc/src/ModelEditor/resources/ist_html'</em><a class="headerlink" href="#meconfig.meconfig.MEConfig.info_text_html_root_dir" title="Permalink to this definition">¶</a></dt>
 <dd><p>path to a root folder for InfoText</p>
 </dd></dl>
 
@@ -345,7 +388,7 @@
 
 <dl class="attribute">
 <dt id="meconfig.meconfig.MEConfig.resource_dir">
-<code class="descname">resource_dir</code><em class="property"> = '/home/pavel/work/GeoMop/src/ModelEditor/resources'</em><a class="headerlink" href="#meconfig.meconfig.MEConfig.resource_dir" title="Permalink to this definition">¶</a></dt>
+<code class="descname">resource_dir</code><em class="property"> = '/var/lib/jenkins/workspace/gm-doc/src/ModelEditor/resources'</em><a class="headerlink" href="#meconfig.meconfig.MEConfig.resource_dir" title="Permalink to this definition">¶</a></dt>
 <dd><p>path to a folder containing resources</p>
 </dd></dl>
 
@@ -381,7 +424,7 @@
 
 <dl class="attribute">
 <dt id="meconfig.meconfig.MEConfig.stylesheet_dir">
-<code class="descname">stylesheet_dir</code><em class="property"> = '/home/pavel/work/GeoMop/src/ModelEditor/resources/css'</em><a class="headerlink" href="#meconfig.meconfig.MEConfig.stylesheet_dir" title="Permalink to this definition">¶</a></dt>
+<code class="descname">stylesheet_dir</code><em class="property"> = '/var/lib/jenkins/workspace/gm-doc/src/ModelEditor/resources/css'</em><a class="headerlink" href="#meconfig.meconfig.MEConfig.stylesheet_dir" title="Permalink to this definition">¶</a></dt>
 <dd><p>path to a folder containing Qt stylesheets</p>
 </dd></dl>
 
@@ -399,7 +442,7 @@
 
 <dl class="attribute">
 <dt id="meconfig.meconfig.MEConfig.transformation_dir">
-<code class="descname">transformation_dir</code><em class="property"> = '/home/pavel/work/GeoMop/src/ModelEditor/resources/transformation'</em><a class="headerlink" href="#meconfig.meconfig.MEConfig.transformation_dir" title="Permalink to this definition">¶</a></dt>
+<code class="descname">transformation_dir</code><em class="property"> = '/var/lib/jenkins/workspace/gm-doc/src/ModelEditor/resources/transformation'</em><a class="headerlink" href="#meconfig.meconfig.MEConfig.transformation_dir" title="Permalink to this definition">¶</a></dt>
 <dd><p>path to a folder containing transformation files</p>
 </dd></dl>
 
@@ -443,15 +486,18 @@
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="model_editor.html" class="btn btn-neutral float-right" title="model_editor module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="model_editor.html" class="btn btn-neutral float-right" title="model_editor module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ist.utils.html" class="btn btn-neutral" title="ist.utils package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ist.utils.html" class="btn btn-neutral" title="ist.utils package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -482,11 +528,11 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'1.0.0-beta
-',
+            VERSION:'1.0.0-beta',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

@@ -14,6 +14,8 @@
 
   
   
+  
+  
 
   
 
@@ -31,6 +33,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Model Editor Source Documentation 1.0.0-beta
  documentation" href="../../index.html"/>
         <link rel="next" title="ist package" href="ist.html"/>
@@ -43,6 +48,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -84,11 +90,14 @@
           
             
             
-                <p class="caption"><span class="caption-text">Model Editor Source</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Model Editor Source</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="data.html">data package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="helpers.html">helpers package</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">importer module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">importer module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ist.html">ist package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="meconfig.html">meconfig package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="model_editor.html">model_editor module</a></li>
@@ -112,8 +121,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../indexME.html">Model Editor Source Documentation</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../indexME.html">Model Editor Source Documentation</a>
+        
       </nav>
 
 
@@ -122,23 +133,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../indexME.html">Docs</a> &raquo;</li>
-      
-    <li>importer module</li>
+    
+      <li><a href="../../indexME.html">Docs</a> &raquo;</li>
+        
+      <li>importer module</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/aut/ModelEditor/importer.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../../_sources/aut/ModelEditor/importer.rstc.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -153,14 +181,14 @@
 [&#8211;destination-file [DESTINATION_FILE]] &#8211;con_file CON_FILE</dd>
 </dl>
 <p>Parameters:</p>
-<div class="highlight-python"><div class="highlight"><pre>-h, --help
-    show this help message and exit
---transformation-name [TRANSFORMATION_NAME [TRANSFORMATION_NAME ...]]
-    Transformation rules contained in the Model Editor that are processed after import
---destination-file [DESTINATION_FILE]
-    The destination file if is different from source file
---con_file CON_FILE
-    Con input file
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">h</span><span class="p">,</span> <span class="o">--</span><span class="n">help</span>
+    <span class="n">show</span> <span class="n">this</span> <span class="n">help</span> <span class="n">message</span> <span class="ow">and</span> <span class="n">exit</span>
+<span class="o">--</span><span class="n">transformation</span><span class="o">-</span><span class="n">name</span> <span class="p">[</span><span class="n">TRANSFORMATION_NAME</span> <span class="p">[</span><span class="n">TRANSFORMATION_NAME</span> <span class="o">...</span><span class="p">]]</span>
+    <span class="n">Transformation</span> <span class="n">rules</span> <span class="n">contained</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">Model</span> <span class="n">Editor</span> <span class="n">that</span> <span class="n">are</span> <span class="n">processed</span> <span class="n">after</span> <span class="kn">import</span>
+<span class="o">--</span><span class="n">destination</span><span class="o">-</span><span class="n">file</span> <span class="p">[</span><span class="n">DESTINATION_FILE</span><span class="p">]</span>
+    <span class="n">The</span> <span class="n">destination</span> <span class="n">file</span> <span class="k">if</span> <span class="ow">is</span> <span class="n">different</span> <span class="kn">from</span> <span class="nn">source</span> <span class="n">file</span>
+<span class="o">--</span><span class="n">con_file</span> <span class="n">CON_FILE</span>
+    <span class="n">Con</span> <span class="nb">input</span> <span class="n">file</span>
 </pre></div>
 </div>
 <dl class="docutils">
@@ -175,15 +203,18 @@ after import in set order by <a class="reference internal" href="data.yaml.html#
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ist.html" class="btn btn-neutral float-right" title="ist package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ist.html" class="btn btn-neutral float-right" title="ist package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="helpers.subyaml.html" class="btn btn-neutral" title="helpers.subyaml package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="helpers.subyaml.html" class="btn btn-neutral" title="helpers.subyaml package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -214,11 +245,11 @@ after import in set order by <a class="reference internal" href="data.yaml.html#
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'1.0.0-beta
-',
+            VERSION:'1.0.0-beta',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

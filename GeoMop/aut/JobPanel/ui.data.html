@@ -14,6 +14,8 @@
 
   
   
+  
+  
 
   
 
@@ -31,6 +33,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Job Panel Source Documentation 1.0.0-beta
  documentation" href="../../index.html"/>
         <link rel="up" title="ui package" href="ui.html"/>
@@ -44,6 +49,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -85,7 +91,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Jobs Scheduler Source</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Jobs Scheduler Source</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="communication.html">communication package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data.html">data package</a></li>
@@ -100,7 +109,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="ui.html">ui package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="ui.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ui.actions.html">ui.actions package</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">ui.data package</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ui.data package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-ui.data.config_builder">ui.data.config_builder module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-ui.data.data_structures">ui.data.data_structures module</a></li>
@@ -143,8 +152,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../indexJP.html">Job Panel Source Documentation</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../indexJP.html">Job Panel Source Documentation</a>
+        
       </nav>
 
 
@@ -153,25 +164,42 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../indexJP.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../../indexJP.html">Docs</a> &raquo;</li>
+        
           <li><a href="ui.html">ui package</a> &raquo;</li>
-      
-    <li>ui.data package</li>
+        
+      <li>ui.data package</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/aut/JobPanel/ui.data.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../../_sources/aut/JobPanel/ui.data.rstb.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -904,6 +932,18 @@ This functions is use for resetting</p>
 <dd><p>Preset name</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="ui.data.preset_data.APreset.re_name">
+<code class="descname">re_name</code><em class="property"> = re.compile('^[a-zA-Z0-9]([a-zA-Z0-9]|[_-])*$')</em><a class="headerlink" href="#ui.data.preset_data.APreset.re_name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.data.preset_data.APreset.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><em>excluded</em>, <em>permited</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.preset_data.APreset.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>validate set data end return dictionary of invalid key, with error
+description</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -1006,6 +1046,15 @@ This functions is use for resetting</p>
 <dt id="ui.data.preset_data.PbsPreset.queue">
 <code class="descname">queue</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.PbsPreset.queue" title="Permalink to this definition">¶</a></dt>
 <dd><p>Defines preferred queue for execution</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.preset_data.PbsPreset.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><em>excluded</em>, <em>permited</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.preset_data.PbsPreset.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>validate set data end return dictionary of invalid key, with error
+description
+:param excluded: Is dictionary of lists excluded values for set key.
+:param permited: Is dictionary of lists permited values for set key.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1150,6 +1199,21 @@ This functions is use for resetting</p>
 <dd><p>User ID</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="ui.data.preset_data.SshPreset.use_tunneling">
+<code class="descname">use_tunneling</code><em class="property"> = None</em><a class="headerlink" href="#ui.data.preset_data.SshPreset.use_tunneling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Communication is switch to socket over ssh tunnel</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.data.preset_data.SshPreset.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><em>excluded</em>, <em>permited</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.data.preset_data.SshPreset.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>validate set data end return dictionary of invalid key, with error
+description
+:param excluded: Is dictionary of lists excluded values for set key.
+:param permited: Is dictionary of lists permited values for set key.</p>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -1201,15 +1265,18 @@ This functions is use for resetting</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ui.dialogs.html" class="btn btn-neutral float-right" title="ui.dialogs package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ui.dialogs.html" class="btn btn-neutral float-right" title="ui.dialogs package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ui.actions.html" class="btn btn-neutral" title="ui.actions package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ui.actions.html" class="btn btn-neutral" title="ui.actions package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1240,11 +1307,11 @@ This functions is use for resetting</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'1.0.0-beta
-',
+            VERSION:'1.0.0-beta',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

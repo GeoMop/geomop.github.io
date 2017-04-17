@@ -14,6 +14,8 @@
 
   
   
+  
+  
 
   
 
@@ -31,6 +33,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Model Editor Source Documentation 1.0.0-beta
  documentation" href="../../index.html"/>
         <link rel="next" title="helpers.subyaml package" href="helpers.subyaml.html"/>
@@ -43,6 +48,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -84,10 +90,13 @@
           
             
             
-                <p class="caption"><span class="caption-text">Model Editor Source</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Model Editor Source</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="data.html">data package</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">helpers package</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">helpers package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="helpers.subyaml.html">helpers.subyaml package</a></li>
 </ul>
@@ -122,8 +131,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../indexME.html">Model Editor Source Documentation</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../indexME.html">Model Editor Source Documentation</a>
+        
       </nav>
 
 
@@ -132,23 +143,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../indexME.html">Docs</a> &raquo;</li>
-      
-    <li>helpers package</li>
+    
+      <li><a href="../../indexME.html">Docs</a> &raquo;</li>
+        
+      <li>helpers package</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/aut/ModelEditor/helpers.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../../_sources/aut/ModelEditor/helpers.rstc.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -360,7 +388,7 @@ options, set the autocomplete state to hidden.</p>
 <p>Keyboard shortcuts helper.</p>
 <dl class="data">
 <dt id="helpers.keyboard_shortcuts.DEFAULT_USER_SHORTCUTS">
-<code class="descclassname">helpers.keyboard_shortcuts.</code><code class="descname">DEFAULT_USER_SHORTCUTS</code><em class="property"> = {'undo': 'Ctrl+Z', 'show_autocompletion': 'Ctrl+Space', 'save_file': 'Ctrl+S', 'new_file': 'Ctrl+N', 'comment': 'Ctrl+/', 'save_file_as': 'Ctrl+Shift+S', 'edit_format': 'Ctrl+E', 'open_file': 'Ctrl+O', 'find': 'Ctrl+F', 'replace': 'Ctrl+H', 'open_window': 'Ctrl+W', 'import_file': 'Ctrl+I', 'redo': 'Ctrl+Y', 'exit': 'Ctrl+Q'}</em><a class="headerlink" href="#helpers.keyboard_shortcuts.DEFAULT_USER_SHORTCUTS" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">helpers.keyboard_shortcuts.</code><code class="descname">DEFAULT_USER_SHORTCUTS</code><em class="property"> = {'open_window': 'Ctrl+W', 'open_file': 'Ctrl+O', 'replace': 'Ctrl+H', 'exit': 'Ctrl+Q', 'redo': 'Ctrl+Y', 'find': 'Ctrl+F', 'comment': 'Ctrl+/', 'save_file': 'Ctrl+S', 'save_file_as': 'Ctrl+Shift+S', 'new_file': 'Ctrl+N', 'edit_format': 'Ctrl+E', 'show_autocompletion': 'Ctrl+Space', 'undo': 'Ctrl+Z', 'import_file': 'Ctrl+I'}</em><a class="headerlink" href="#helpers.keyboard_shortcuts.DEFAULT_USER_SHORTCUTS" title="Permalink to this definition">¶</a></dt>
 <dd><p>default keyboard shortcuts</p>
 </dd></dl>
 
@@ -421,13 +449,13 @@ options, set the autocomplete state to hidden.</p>
 
 <dl class="data">
 <dt id="helpers.keyboard_shortcuts.SHORTCUT_LABELS">
-<code class="descclassname">helpers.keyboard_shortcuts.</code><code class="descname">SHORTCUT_LABELS</code><em class="property"> = {'undo': 'Undo an action', 'show_autocompletion': 'Display autocompletion options', 'save_file': 'Save file', 'new_file': 'New file', 'comment': 'Toggle comment', 'save_file_as': 'Save file as', 'edit_format': 'Edit format file', 'open_file': 'Open file', 'find': 'Find dialog', 'replace': 'Replace dialog', 'open_window': 'Open window', 'import_file': 'Import file', 'redo': 'Redo an action', 'exit': 'Quit application'}</em><a class="headerlink" href="#helpers.keyboard_shortcuts.SHORTCUT_LABELS" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">helpers.keyboard_shortcuts.</code><code class="descname">SHORTCUT_LABELS</code><em class="property"> = {'open_window': 'Open window', 'open_file': 'Open file', 'replace': 'Replace dialog', 'exit': 'Quit application', 'redo': 'Redo an action', 'find': 'Find dialog', 'comment': 'Toggle comment', 'save_file': 'Save file', 'save_file_as': 'Save file as', 'new_file': 'New file', 'edit_format': 'Edit format file', 'show_autocompletion': 'Display autocompletion options', 'undo': 'Undo an action', 'import_file': 'Import file'}</em><a class="headerlink" href="#helpers.keyboard_shortcuts.SHORTCUT_LABELS" title="Permalink to this definition">¶</a></dt>
 <dd><p>labels of shortcuts to be displayed in the user interface</p>
 </dd></dl>
 
 <dl class="data">
 <dt id="helpers.keyboard_shortcuts.SYSTEM_SHORTCUTS">
-<code class="descclassname">helpers.keyboard_shortcuts.</code><code class="descname">SYSTEM_SHORTCUTS</code><em class="property"> = {'paste': 'Ctrl+V', 'select_all': 'Ctrl+A', 'unindent': 'Shift+Tab', 'cut': 'Ctrl+X', 'copy': 'Ctrl+C', 'delete': 'Delete', 'escape': 'Esc', 'tab': 'Tab', 'f3': 'F3', 'backspace': 'Backspace'}</em><a class="headerlink" href="#helpers.keyboard_shortcuts.SYSTEM_SHORTCUTS" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">helpers.keyboard_shortcuts.</code><code class="descname">SYSTEM_SHORTCUTS</code><em class="property"> = {'tab': 'Tab', 'unindent': 'Shift+Tab', 'delete': 'Delete', 'select_all': 'Ctrl+A', 'escape': 'Esc', 'paste': 'Ctrl+V', 'cut': 'Ctrl+X', 'copy': 'Ctrl+C', 'f3': 'F3', 'backspace': 'Backspace'}</em><a class="headerlink" href="#helpers.keyboard_shortcuts.SYSTEM_SHORTCUTS" title="Permalink to this definition">¶</a></dt>
 <dd><p>system keyboard shortcuts that can not be changed by user</p>
 </dd></dl>
 
@@ -458,15 +486,18 @@ options, set the autocomplete state to hidden.</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="helpers.subyaml.html" class="btn btn-neutral float-right" title="helpers.subyaml package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="helpers.subyaml.html" class="btn btn-neutral float-right" title="helpers.subyaml package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="data.yaml.html" class="btn btn-neutral" title="data.yaml package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="data.yaml.html" class="btn btn-neutral" title="data.yaml package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -497,11 +528,11 @@ options, set the autocomplete state to hidden.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'1.0.0-beta
-',
+            VERSION:'1.0.0-beta',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

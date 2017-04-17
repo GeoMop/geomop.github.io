@@ -14,6 +14,8 @@
 
   
   
+  
+  
 
   
 
@@ -31,6 +33,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Job Panel Source Documentation 1.0.0-beta
  documentation" href="../../index.html"/>
         <link rel="next" title="data package" href="data.html"/>
@@ -43,6 +48,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -84,9 +90,12 @@
           
             
             
-                <p class="caption"><span class="caption-text">Jobs Scheduler Source</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Jobs Scheduler Source</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">communication package</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">communication package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-communication.communication">communication.communication module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-communication.communicator">communication.communicator module</a></li>
@@ -97,6 +106,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-communication.pbs_output_comm">communication.pbs_output_comm module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-communication.socket_input_comm">communication.socket_input_comm module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-communication.ssh_output_comm">communication.ssh_output_comm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-communication.ssh_output_tunnel_comm">communication.ssh_output_tunnel_comm module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-communication.std_input_comm">communication.std_input_comm module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-communication">Module contents</a></li>
 </ul>
@@ -127,8 +137,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../indexJP.html">Job Panel Source Documentation</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../indexJP.html">Job Panel Source Documentation</a>
+        
       </nav>
 
 
@@ -137,23 +149,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../indexJP.html">Docs</a> &raquo;</li>
-      
-    <li>communication package</li>
+    
+      <li><a href="../../indexJP.html">Docs</a> &raquo;</li>
+        
+      <li>communication package</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/aut/JobPanel/communication.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../../_sources/aut/JobPanel/communication.rstb.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -491,6 +520,12 @@ that is send.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="communication.communicator.Communicator.local_tunnel">
+<code class="descname">local_tunnel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#communication.communicator.Communicator.local_tunnel" title="Permalink to this definition">¶</a></dt>
+<dd><p>make ssh tunel synchrony on local computer</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="communication.communicator.Communicator.lock_installation">
 <code class="descname">lock_installation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#communication.communicator.Communicator.lock_installation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set installation locks, return if should installation continue</p>
@@ -606,6 +641,12 @@ Use send_action instead, if you want work in real time</p>
 <p>After all function try kill next communicator (if next communicator is exec and was restored
 killing fails, but previous action should be functional - restore is possible only for active 
 connections)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.communicator.Communicator.tunnel">
+<code class="descname">tunnel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#communication.communicator.Communicator.tunnel" title="Permalink to this definition">¶</a></dt>
+<dd><p>make ssh tunnel</p>
 </dd></dl>
 
 <dl class="staticmethod">
@@ -1136,7 +1177,7 @@ user defined idle function in this variable is called .</p>
 <dt>For connection over ssh make:</dt>
 <dd><ul class="first last simple">
 <li>Find next unconnected over socket job and send add_job message to it
-over remote. If job_conn akcion is returned, connect, and continue 
+over remote. If socket_conn akcion is returned, connect, and continue 
 connecion over socket</li>
 </ul>
 </dd>
@@ -1335,6 +1376,12 @@ connections)</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="communication.socket_input_comm.SocketInputComm.lazy_reconnect">
+<code class="descname">lazy_reconnect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#communication.socket_input_comm.SocketInputComm.lazy_reconnect" title="Permalink to this definition">¶</a></dt>
+<dd><p>reconnect session during next message reading</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="communication.socket_input_comm.SocketInputComm.load_state">
 <code class="descname">load_state</code><span class="sig-paren">(</span><em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#communication.socket_input_comm.SocketInputComm.load_state" title="Permalink to this definition">¶</a></dt>
 <dd><p>load state from variable</p>
@@ -1474,6 +1521,63 @@ connections)</p>
 </dd></dl>
 
 </div>
+<div class="section" id="module-communication.ssh_output_tunnel_comm">
+<span id="communication-ssh-output-tunnel-comm-module"></span><h2>communication.ssh_output_tunnel_comm module<a class="headerlink" href="#module-communication.ssh_output_tunnel_comm" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="communication.ssh_output_tunnel_comm.SshOutputTunnelComm">
+<em class="property">class </em><code class="descclassname">communication.ssh_output_tunnel_comm.</code><code class="descname">SshOutputTunnelComm</code><span class="sig-paren">(</span><em>host</em>, <em>tunnel_port</em>, <em>mj_name</em>, <em>an_name</em>, <em>name</em>, <em>password=''</em><span class="sig-paren">)</span><a class="headerlink" href="#communication.ssh_output_tunnel_comm.SshOutputTunnelComm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#communication.ssh_output_comm.SshOutputComm" title="communication.ssh_output_comm.SshOutputComm"><code class="xref py py-class docutils literal"><span class="pre">communication.ssh_output_comm.SshOutputComm</span></code></a></p>
+<p>Ancestor of communication classes</p>
+<dl class="method">
+<dt id="communication.ssh_output_tunnel_comm.SshOutputTunnelComm.create_tunnel">
+<code class="descname">create_tunnel</code><span class="sig-paren">(</span><em>port</em>, <em>host</em><span class="sig-paren">)</span><a class="headerlink" href="#communication.ssh_output_tunnel_comm.SshOutputTunnelComm.create_tunnel" title="Permalink to this definition">¶</a></dt>
+<dd><p>create socket connection over ssh tunnel</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.ssh_output_tunnel_comm.SshOutputTunnelComm.disconnect">
+<code class="descname">disconnect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#communication.ssh_output_tunnel_comm.SshOutputTunnelComm.disconnect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="communication.ssh_output_tunnel_comm.SshOutputTunnelComm.load_state">
+<code class="descname">load_state</code><span class="sig-paren">(</span><em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#communication.ssh_output_tunnel_comm.SshOutputTunnelComm.load_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>load state from variable</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.ssh_output_tunnel_comm.SshOutputTunnelComm.receive">
+<code class="descname">receive</code><span class="sig-paren">(</span><em>timeout=60</em><span class="sig-paren">)</span><a class="headerlink" href="#communication.ssh_output_tunnel_comm.SshOutputTunnelComm.receive" title="Permalink to this definition">¶</a></dt>
+<dd><p>receive json message</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.ssh_output_tunnel_comm.SshOutputTunnelComm.save_state">
+<code class="descname">save_state</code><span class="sig-paren">(</span><em>state</em><span class="sig-paren">)</span><a class="headerlink" href="#communication.ssh_output_tunnel_comm.SshOutputTunnelComm.save_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>save state to variable</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="communication.ssh_output_tunnel_comm.SshOutputTunnelComm.send">
+<code class="descname">send</code><span class="sig-paren">(</span><em>mess</em><span class="sig-paren">)</span><a class="headerlink" href="#communication.ssh_output_tunnel_comm.SshOutputTunnelComm.send" title="Permalink to this definition">¶</a></dt>
+<dd><p>send json message</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="communication.ssh_output_tunnel_comm.SshOutputTunnelComm.socket">
+<code class="descname">socket</code><em class="property"> = None</em><a class="headerlink" href="#communication.ssh_output_tunnel_comm.SshOutputTunnelComm.socket" title="Permalink to this definition">¶</a></dt>
+<dd><p>socket connection over ssh tunnel</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="communication.ssh_output_tunnel_comm.SshOutputTunnelComm.tunnel">
+<code class="descname">tunnel</code><em class="property"> = None</em><a class="headerlink" href="#communication.ssh_output_tunnel_comm.SshOutputTunnelComm.tunnel" title="Permalink to this definition">¶</a></dt>
+<dd><p>ssh tunnel</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
 <div class="section" id="module-communication.std_input_comm">
 <span id="communication-std-input-comm-module"></span><h2>communication.std_input_comm module<a class="headerlink" href="#module-communication.std_input_comm" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
@@ -1546,15 +1650,18 @@ connections)</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="data.html" class="btn btn-neutral float-right" title="data package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="data.html" class="btn btn-neutral float-right" title="data package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../../indexJP.html" class="btn btn-neutral" title="Job Panel Source Documentation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../../indexJP.html" class="btn btn-neutral" title="Job Panel Source Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1585,11 +1692,11 @@ connections)</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'1.0.0-beta
-',
+            VERSION:'1.0.0-beta',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

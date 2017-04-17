@@ -14,6 +14,8 @@
 
   
   
+  
+  
 
   
 
@@ -31,6 +33,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Model Editor Source Documentation 1.0.0-beta
  documentation" href="../../index.html"/>
         <link rel="up" title="data package" href="data.html"/>
@@ -44,6 +49,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -85,11 +91,14 @@
           
             
             
-                <p class="caption"><span class="caption-text">Model Editor Source</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Model Editor Source</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="data.html">data package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="data.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">data.yaml package</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">data.yaml package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-data.yaml.transformator">data.yaml.transformator module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-data.yaml">Module contents</a></li>
@@ -125,8 +134,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../indexME.html">Model Editor Source Documentation</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../indexME.html">Model Editor Source Documentation</a>
+        
       </nav>
 
 
@@ -135,25 +146,42 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../indexME.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../../indexME.html">Docs</a> &raquo;</li>
+        
           <li><a href="data.html">data package</a> &raquo;</li>
-      
-    <li>data.yaml package</li>
+        
+      <li>data.yaml package</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/aut/ModelEditor/data.yaml.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../../_sources/aut/ModelEditor/data.yaml.rstc.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -244,7 +272,7 @@ cause exception. After checking is processet action in set order. Repetitional
 processing this program can cause exception or corrupt data.</dd>
 </dl>
 <p>Example:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example file&quot;</span><span class="p">,</span>
     <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Template for creating transformation file&quot;</span><span class="p">,</span>
     <span class="s2">&quot;old_format&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
@@ -276,7 +304,7 @@ processing this program can cause exception or corrupt data.</dd>
 </pre></div>
 </div>
 <p>Wildchars Example:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span> 
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span> 
   <span class="s2">&quot;action&quot;</span><span class="p">:</span> <span class="s2">&quot;move-key&quot;</span><span class="p">,</span>
   <span class="s2">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="s2">&quot;source_path&quot;</span><span class="p">:</span><span class="s2">&quot;/**/input_fields/*/r_set&quot;</span><span class="p">,</span>
@@ -348,15 +376,18 @@ processing this program can cause exception or corrupt data.</dd>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="helpers.html" class="btn btn-neutral float-right" title="helpers package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="helpers.html" class="btn btn-neutral float-right" title="helpers package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="data.html" class="btn btn-neutral" title="data package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="data.html" class="btn btn-neutral" title="data package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -387,11 +418,11 @@ processing this program can cause exception or corrupt data.</dd>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'1.0.0-beta
-',
+            VERSION:'1.0.0-beta',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

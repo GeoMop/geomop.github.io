@@ -14,6 +14,8 @@
 
   
   
+  
+  
 
   
 
@@ -31,6 +33,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Model Editor Source Documentation 1.0.0-beta
  documentation" href="../../index.html"/>
         <link rel="next" title="ui package" href="ui.html"/>
@@ -43,6 +48,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -84,14 +90,17 @@
           
             
             
-                <p class="caption"><span class="caption-text">Model Editor Source</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Model Editor Source</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="data.html">data package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="helpers.html">helpers package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="importer.html">importer module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ist.html">ist package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="meconfig.html">meconfig package</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">model_editor module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">model_editor module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ui.html">ui package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="util.html">util package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exporter.html">exporter module</a></li>
@@ -112,8 +121,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../indexME.html">Model Editor Source Documentation</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../indexME.html">Model Editor Source Documentation</a>
+        
       </nav>
 
 
@@ -122,23 +133,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../indexME.html">Docs</a> &raquo;</li>
-      
-    <li>model_editor module</li>
+    
+      <li><a href="../../indexME.html">Docs</a> &raquo;</li>
+        
+      <li>model_editor module</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/aut/ModelEditor/model_editor.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../../_sources/aut/ModelEditor/model_editor.rstc.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -152,6 +180,12 @@
 <em class="property">class </em><code class="descclassname">model_editor.</code><code class="descname">ModelEditor</code><a class="headerlink" href="#model_editor.ModelEditor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Model editor main class</p>
+<dl class="method">
+<dt id="model_editor.ModelEditor.check_file">
+<code class="descname">check_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#model_editor.ModelEditor.check_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>timer for file time checking in ms</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="model_editor.ModelEditor.edit_format">
 <code class="descname">edit_format</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#model_editor.ModelEditor.edit_format" title="Permalink to this definition">¶</a></dt>
@@ -206,6 +240,12 @@
 <dd><p>open new instance of model editor</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="model_editor.ModelEditor.reloader_timer">
+<code class="descname">reloader_timer</code><em class="property"> = None</em><a class="headerlink" href="#model_editor.ModelEditor.reloader_timer" title="Permalink to this definition">¶</a></dt>
+<dd><p>timer for file time checking in ms</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="model_editor.ModelEditor.save_as">
 <code class="descname">save_as</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#model_editor.ModelEditor.save_as" title="Permalink to this definition">¶</a></dt>
@@ -239,6 +279,12 @@
 
 </dd></dl>
 
+<dl class="data">
+<dt id="model_editor.RELOAD_INTERVAL">
+<code class="descclassname">model_editor.</code><code class="descname">RELOAD_INTERVAL</code><em class="property"> = 5000</em><a class="headerlink" href="#model_editor.RELOAD_INTERVAL" title="Permalink to this definition">¶</a></dt>
+<dd><p>interval for file time checjing in ms</p>
+</dd></dl>
+
 <dl class="function">
 <dt id="model_editor.main">
 <code class="descclassname">model_editor.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#model_editor.main" title="Permalink to this definition">¶</a></dt>
@@ -249,15 +295,18 @@
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ui.html" class="btn btn-neutral float-right" title="ui package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ui.html" class="btn btn-neutral float-right" title="ui package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="meconfig.html" class="btn btn-neutral" title="meconfig package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="meconfig.html" class="btn btn-neutral" title="meconfig package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -288,11 +337,11 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'1.0.0-beta
-',
+            VERSION:'1.0.0-beta',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

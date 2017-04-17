@@ -14,6 +14,8 @@
 
   
   
+  
+  
 
   
 
@@ -31,6 +33,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="Job Panel Source Documentation 1.0.0-beta
  documentation" href="index.html"/>
         <link rel="next" title="communication package" href="aut/JobPanel/communication.html"/> 
@@ -42,6 +47,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -83,7 +89,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Jobs Scheduler Source</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Jobs Scheduler Source</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="aut/JobPanel/communication.html">communication package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="aut/JobPanel/data.html">data package</a></li>
@@ -112,8 +121,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="#">Job Panel Source Documentation</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Job Panel Source Documentation</a>
+        
       </nav>
 
 
@@ -122,23 +133,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="#">Docs</a> &raquo;</li>
-      
-    <li>Job Panel Source Documentation</li>
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Job Panel Source Documentation</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="_sources/indexJP.txt" rel="nofollow"> View page source</a>
+            
+            <a href="_sources/indexJP.rstb.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -146,8 +174,8 @@
             
   <div class="section" id="job-panel-source-documentation">
 <h1>Job Panel Source Documentation<a class="headerlink" href="#job-panel-source-documentation" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound" id="jobs-scheduler-source">
-<p class="caption"><span class="caption-text">Jobs Scheduler Source</span><a class="headerlink" href="#jobs-scheduler-source" title="Permalink to this toctree">¶</a></p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Jobs Scheduler Source</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="aut/JobPanel/communication.html">communication package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="aut/JobPanel/communication.html#submodules">Submodules</a></li>
@@ -160,6 +188,7 @@
 <li class="toctree-l2"><a class="reference internal" href="aut/JobPanel/communication.html#module-communication.pbs_output_comm">communication.pbs_output_comm module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="aut/JobPanel/communication.html#module-communication.socket_input_comm">communication.socket_input_comm module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="aut/JobPanel/communication.html#module-communication.ssh_output_comm">communication.ssh_output_comm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="aut/JobPanel/communication.html#module-communication.ssh_output_tunnel_comm">communication.ssh_output_tunnel_comm module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="aut/JobPanel/communication.html#module-communication.std_input_comm">communication.std_input_comm module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="aut/JobPanel/communication.html#module-communication">Module contents</a></li>
 </ul>
@@ -278,8 +307,8 @@
 </li>
 </ul>
 </div>
-<div class="toctree-wrapper compound" id="geomop">
-<p class="caption"><span class="caption-text">GeoMop</span><a class="headerlink" href="#geomop" title="Permalink to this toctree">¶</a></p>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">GeoMop</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
 </ul>
@@ -295,12 +324,15 @@
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="aut/JobPanel/communication.html" class="btn btn-neutral float-right" title="communication package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="aut/JobPanel/communication.html" class="btn btn-neutral float-right" title="communication package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>
@@ -332,11 +364,11 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.0.0-beta
-',
+            VERSION:'1.0.0-beta',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

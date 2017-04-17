@@ -14,6 +14,8 @@
 
   
   
+  
+  
 
   
 
@@ -31,6 +33,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Layer Editor Source Documentation 1.0.0-beta
  documentation" href="../../index.html"/>
         <link rel="up" title="ui package" href="ui.html"/>
@@ -44,6 +49,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -85,7 +91,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Layer Editor Source</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Layer Editor Source</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="leconfig.html">leconfig package</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="ui.html">ui package</a><ul class="current">
@@ -93,7 +102,7 @@
 <li class="toctree-l3"><a class="reference internal" href="ui.data.html">ui.data package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ui.gitems.html">ui.gitems package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ui.menus.html">ui.menus package</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">ui.panels package</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ui.panels package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-ui.panels.diagram">ui.panels.diagram module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-ui.panels">Module contents</a></li>
@@ -123,8 +132,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../indexLE.html">Layer Editor Source Documentation</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../indexLE.html">Layer Editor Source Documentation</a>
+        
       </nav>
 
 
@@ -133,25 +144,42 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../indexLE.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../../indexLE.html">Docs</a> &raquo;</li>
+        
           <li><a href="ui.html">ui package</a> &raquo;</li>
-      
-    <li>ui.panels package</li>
+        
+      <li>ui.panels package</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/aut/LayerEditor/ui.panels.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../../_sources/aut/LayerEditor/ui.panels.rsta.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -222,7 +250,7 @@
 
 <dl class="method">
 <dt id="ui.panels.diagram.Diagram.mouseReleaseEvent">
-<code class="descname">mouseReleaseEvent</code><span class="sig-paren">(</span><em>QGraphicsSceneMouseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.diagram.Diagram.mouseReleaseEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">mouseReleaseEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.panels.diagram.Diagram.mouseReleaseEvent" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -289,12 +317,12 @@ to signal and change visualisation.</p>
 <p>Diagram Operations states</p>
 <dl class="attribute">
 <dt id="ui.panels.diagram.OperatinState.line">
-<code class="descname">line</code><em class="property"> = &lt;OperatinState.line: 0&gt;</em><a class="headerlink" href="#ui.panels.diagram.OperatinState.line" title="Permalink to this definition">¶</a></dt>
+<code class="descname">line</code><em class="property"> = 0</em><a class="headerlink" href="#ui.panels.diagram.OperatinState.line" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="ui.panels.diagram.OperatinState.point">
-<code class="descname">point</code><em class="property"> = &lt;OperatinState.point: 1&gt;</em><a class="headerlink" href="#ui.panels.diagram.OperatinState.point" title="Permalink to this definition">¶</a></dt>
+<code class="descname">point</code><em class="property"> = 1</em><a class="headerlink" href="#ui.panels.diagram.OperatinState.point" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -307,15 +335,18 @@ to signal and change visualisation.</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="layer_editor.html" class="btn btn-neutral float-right" title="layer_editor module" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="layer_editor.html" class="btn btn-neutral float-right" title="layer_editor module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ui.menus.html" class="btn btn-neutral" title="ui.menus package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ui.menus.html" class="btn btn-neutral" title="ui.menus package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -346,11 +377,11 @@ to signal and change visualisation.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'1.0.0-beta
-',
+            VERSION:'1.0.0-beta',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

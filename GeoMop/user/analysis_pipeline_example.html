@@ -14,6 +14,8 @@
 
   
   
+  
+  
 
   
 
@@ -31,6 +33,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="GeoMop Documentation 1.0.0-beta
  documentation" href="../index.html"/>
         <link rel="next" title="Development Procedures (czech)" href="../organization/procedures.html"/>
@@ -43,6 +48,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -84,11 +90,14 @@
           
             
             
-                <p class="caption"><span class="caption-text">User Guide</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Guide</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="linux_installation_guide.html">Linux Installation Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="model_editor.html">Model Editor</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Analysis - Pipeline example (czech)</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Analysis - Pipeline example (czech)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#variablegenerator">VariableGenerator</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#workflow">Workflow</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#connector">Connector</a></li>
@@ -124,8 +133,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">GeoMop Documentation</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoMop Documentation</a>
+        
       </nav>
 
 
@@ -134,23 +145,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
-    <li>Analysis - Pipeline example (czech)</li>
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Analysis - Pipeline example (czech)</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../_sources/user/analysis_pipeline_example.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../_sources/user/analysis_pipeline_example.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -163,14 +191,14 @@
 <h2>VariableGenerator<a class="headerlink" href="#variablegenerator" title="Permalink to this headline">¶</a></h2>
 <p>Vytvoříme akci VariableGenerator, která bude na svém výstupu poskytovat ensemble typu Float,
 obsahující tři hodnoty typu Float.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">vg</span> <span class="o">=</span> <span class="n">VariableGenerator</span><span class="p">(</span><span class="n">Variable</span><span class="o">=</span><span class="n">Ensemble</span><span class="p">(</span><span class="n">Float</span><span class="p">(),</span> <span class="n">Float</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span> <span class="n">Float</span><span class="p">(</span><span class="mf">2.0</span><span class="p">),</span> <span class="n">Float</span><span class="p">(</span><span class="mf">3.0</span><span class="p">)))</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">vg</span> <span class="o">=</span> <span class="n">VariableGenerator</span><span class="p">(</span><span class="n">Variable</span><span class="o">=</span><span class="n">Ensemble</span><span class="p">(</span><span class="n">Float</span><span class="p">(),</span> <span class="n">Float</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span> <span class="n">Float</span><span class="p">(</span><span class="mf">2.0</span><span class="p">),</span> <span class="n">Float</span><span class="p">(</span><span class="mf">3.0</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="workflow">
 <h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
 <p>Část pipeliny budeme chtít vykonávat opakovaně, vložíme ji tedy do akce Workflow.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">w</span> <span class="o">=</span> <span class="n">Workflow</span><span class="p">()</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">w</span> <span class="o">=</span> <span class="n">Workflow</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -178,7 +206,7 @@ obsahující tři hodnoty typu Float.</p>
 <h2>Connector<a class="headerlink" href="#connector" title="Permalink to this headline">¶</a></h2>
 <p>Do workflow budou vstupovat položky typu Float, na vstupu FunctionAction musí být typ
 Struct, použijeme tedy konektor, který typ upraví.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">c1</span> <span class="o">=</span> <span class="n">Connector</span><span class="p">()</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">c1</span> <span class="o">=</span> <span class="n">Connector</span><span class="p">()</span>
 <span class="n">c1</span><span class="o">.</span><span class="n">set_inputs</span><span class="p">([</span><span class="n">w</span><span class="o">.</span><span class="n">input</span><span class="p">()])</span>
 <span class="n">c1</span><span class="o">.</span><span class="n">set_config</span><span class="p">(</span><span class="n">Convertor</span> <span class="o">=</span> <span class="n">Convertor</span><span class="p">(</span><span class="n">Struct</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">))))</span>
 </pre></div>
@@ -189,7 +217,7 @@ Struct, použijeme tedy konektor, který typ upraví.</p>
 <p>Uvnitř workflow umístíme akci FunctionAction.
 Jako vstup do této akce bude sloužit vstup do akce workflou.
 Pro akci FunctionAction definujeme vstupní parametry a vlastní předpis funkce.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">f</span> <span class="o">=</span> <span class="n">FunctionAction</span><span class="p">(</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="n">FunctionAction</span><span class="p">(</span>
     <span class="n">Inputs</span><span class="o">=</span><span class="p">[</span><span class="n">c1</span><span class="p">],</span>
     <span class="n">Params</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">],</span>
     <span class="n">Expressions</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;y = 2 * x + 3&quot;</span><span class="p">]</span>
@@ -201,13 +229,13 @@ Pro akci FunctionAction definujeme vstupní parametry a vlastní předpis funkce
 <h2>Connector<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Budeme požadovat, aby na výstupu z workflou byl Struct s polozkou &#8220;z&#8221;,
 výstup z akce FunctionAction je Struct s polozkou y, použijeme tedy příslušný konvertor.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">c2</span> <span class="o">=</span> <span class="n">Connector</span><span class="p">()</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">c2</span> <span class="o">=</span> <span class="n">Connector</span><span class="p">()</span>
 <span class="n">c2</span><span class="o">.</span><span class="n">set_inputs</span><span class="p">([</span><span class="n">f</span><span class="p">])</span>
 <span class="n">c2</span><span class="o">.</span><span class="n">set_config</span><span class="p">(</span><span class="n">Convertor</span> <span class="o">=</span> <span class="n">Convertor</span><span class="p">(</span><span class="n">Struct</span><span class="p">(</span><span class="n">z</span><span class="o">=</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">y</span><span class="p">)))</span>
 </pre></div>
 </div>
 <p>Nastavíme vstup a výstup workflow.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">w</span><span class="o">.</span><span class="n">set_config</span><span class="p">(</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">w</span><span class="o">.</span><span class="n">set_config</span><span class="p">(</span>
     <span class="n">OutputAction</span><span class="o">=</span><span class="n">c2</span><span class="p">,</span>
     <span class="n">InputAction</span><span class="o">=</span><span class="n">c1</span>
 <span class="p">)</span>
@@ -217,7 +245,7 @@ výstup z akce FunctionAction je Struct s polozkou y, použijeme tedy přísluš
 <div class="section" id="foreach">
 <h2>ForEach<a class="headerlink" href="#foreach" title="Permalink to this headline">¶</a></h2>
 <p>Celý workflow budeme opakovaně vykonávat pomocí akce ForEach.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">fe</span> <span class="o">=</span> <span class="n">ForEach</span><span class="p">(</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">fe</span> <span class="o">=</span> <span class="n">ForEach</span><span class="p">(</span>
     <span class="n">Inputs</span><span class="o">=</span><span class="p">[</span><span class="n">vg</span><span class="p">],</span>
     <span class="n">WrappedAction</span><span class="o">=</span><span class="n">w</span>
 <span class="p">)</span>
@@ -227,21 +255,21 @@ výstup z akce FunctionAction je Struct s polozkou y, použijeme tedy přísluš
 <div class="section" id="printdttaction">
 <h2>PrintDTTAction<a class="headerlink" href="#printdttaction" title="Permalink to this headline">¶</a></h2>
 <p>Výstup budeme chtít uložit do souboru, použijeme tedy akci PrintDTTAction.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">pa</span> <span class="o">=</span> <span class="n">PrintDTTAction</span><span class="p">(</span><span class="n">Inputs</span><span class="o">=</span><span class="p">[</span><span class="n">fe</span><span class="p">],</span> <span class="n">OutputFile</span><span class="o">=</span><span class="s2">&quot;output.txt&quot;</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pa</span> <span class="o">=</span> <span class="n">PrintDTTAction</span><span class="p">(</span><span class="n">Inputs</span><span class="o">=</span><span class="p">[</span><span class="n">fe</span><span class="p">],</span> <span class="n">OutputFile</span><span class="o">=</span><span class="s2">&quot;output.txt&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="pipeline">
 <h2>Pipeline<a class="headerlink" href="#pipeline" title="Permalink to this headline">¶</a></h2>
 <p>Celá pipeline je umístěna v akci Pipeline.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">p</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">ResultActions</span><span class="o">=</span><span class="p">[</span><span class="n">fe</span><span class="p">])</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span><span class="n">ResultActions</span><span class="o">=</span><span class="p">[</span><span class="n">fe</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="vysledna-pipeline">
 <h2>Výsledná pipeline<a class="headerlink" href="#vysledna-pipeline" title="Permalink to this headline">¶</a></h2>
 <p>Zdrojový kód celé pipeliny vypadá tedy následovně.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">vg</span> <span class="o">=</span> <span class="n">VariableGenerator</span><span class="p">(</span><span class="n">Variable</span><span class="o">=</span><span class="n">Ensemble</span><span class="p">(</span><span class="n">Float</span><span class="p">(),</span> <span class="n">Float</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span> <span class="n">Float</span><span class="p">(</span><span class="mf">2.0</span><span class="p">),</span> <span class="n">Float</span><span class="p">(</span><span class="mf">3.0</span><span class="p">)))</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">vg</span> <span class="o">=</span> <span class="n">VariableGenerator</span><span class="p">(</span><span class="n">Variable</span><span class="o">=</span><span class="n">Ensemble</span><span class="p">(</span><span class="n">Float</span><span class="p">(),</span> <span class="n">Float</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span> <span class="n">Float</span><span class="p">(</span><span class="mf">2.0</span><span class="p">),</span> <span class="n">Float</span><span class="p">(</span><span class="mf">3.0</span><span class="p">)))</span>
 <span class="n">w</span> <span class="o">=</span> <span class="n">Workflow</span><span class="p">()</span>
 <span class="n">c1</span> <span class="o">=</span> <span class="n">Connector</span><span class="p">()</span>
 <span class="n">c1</span><span class="o">.</span><span class="n">set_inputs</span><span class="p">([</span><span class="n">w</span><span class="o">.</span><span class="n">input</span><span class="p">()])</span>
@@ -271,15 +299,18 @@ výstup z akce FunctionAction je Struct s polozkou y, použijeme tedy přísluš
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../organization/procedures.html" class="btn btn-neutral float-right" title="Development Procedures (czech)" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../organization/procedures.html" class="btn btn-neutral float-right" title="Development Procedures (czech)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="model_editor.html" class="btn btn-neutral" title="Model Editor" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="model_editor.html" class="btn btn-neutral" title="Model Editor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -310,11 +341,11 @@ výstup z akce FunctionAction je Struct s polozkou y, použijeme tedy přísluš
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'1.0.0-beta
-',
+            VERSION:'1.0.0-beta',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

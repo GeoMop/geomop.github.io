@@ -14,6 +14,8 @@
 
   
   
+  
+  
 
   
 
@@ -31,6 +33,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Job Panel Source Documentation 1.0.0-beta
  documentation" href="../../index.html"/>
         <link rel="up" title="ui package" href="ui.html"/>
@@ -44,6 +49,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -85,7 +91,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Jobs Scheduler Source</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Jobs Scheduler Source</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="communication.html">communication package</a></li>
 <li class="toctree-l1"><a class="reference internal" href="data.html">data package</a></li>
@@ -101,7 +110,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="ui.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ui.actions.html">ui.actions package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ui.data.html">ui.data package</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">ui.dialogs package</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">ui.dialogs package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-ui.dialogs.dialogs">ui.dialogs.dialogs module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-ui.dialogs.env_dialog">ui.dialogs.env_dialog module</a></li>
@@ -152,8 +161,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../indexJP.html">Job Panel Source Documentation</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../indexJP.html">Job Panel Source Documentation</a>
+        
       </nav>
 
 
@@ -162,25 +173,42 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../indexJP.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../../indexJP.html">Docs</a> &raquo;</li>
+        
           <li><a href="ui.html">ui package</a> &raquo;</li>
-      
-    <li>ui.dialogs package</li>
+        
+      <li>ui.dialogs package</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/aut/JobPanel/ui.dialogs.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../../_sources/aut/JobPanel/ui.dialogs.rstb.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -198,18 +226,129 @@ maintain UI consistency.
 &#64;author: Jan Gabriel
 &#64;contact: <a class="reference external" href="mailto:jan&#46;gabriel&#37;&#52;&#48;tul&#46;cz">jan<span>&#46;</span>gabriel<span>&#64;</span>tul<span>&#46;</span>cz</a></p>
 <dl class="class">
+<dt id="ui.dialogs.dialogs.AFormContainer">
+<em class="property">class </em><code class="descclassname">ui.dialogs.dialogs.</code><code class="descname">AFormContainer</code><span class="sig-paren">(</span><em>old_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.dialogs.AFormContainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Abstract form dialog with abstract data manipulation interface.</p>
+<dl class="attribute">
+<dt id="ui.dialogs.dialogs.AFormContainer.PURPOSE_ADD">
+<code class="descname">PURPOSE_ADD</code><em class="property"> = {'windowTitle': 'Job Panel - Add', 'title': 'Add', 'subtitle': 'Please select details.', 'objectName': 'AddDialog', 'purposeType': 'PURPOSE_ADD'}</em><a class="headerlink" href="#ui.dialogs.dialogs.AFormContainer.PURPOSE_ADD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.dialogs.dialogs.AFormContainer.PURPOSE_COPY">
+<code class="descname">PURPOSE_COPY</code><em class="property"> = {'windowTitle': 'Job Panel - Copy', 'title': 'Copy', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'objectName': 'CopyDialog', 'purposeType': 'PURPOSE_COPY'}</em><a class="headerlink" href="#ui.dialogs.dialogs.AFormContainer.PURPOSE_COPY" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.dialogs.dialogs.AFormContainer.PURPOSE_COPY_PREFIX">
+<code class="descname">PURPOSE_COPY_PREFIX</code><em class="property"> = 'Copy of'</em><a class="headerlink" href="#ui.dialogs.dialogs.AFormContainer.PURPOSE_COPY_PREFIX" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.dialogs.dialogs.AFormContainer.PURPOSE_DELETE">
+<code class="descname">PURPOSE_DELETE</code><em class="property"> = {'windowTitle': 'Job Panel - Delete', 'title': 'Delete', 'subtitle': 'This should not happen.', 'objectName': 'DeleteDialog', 'purposeType': 'PURPOSE_DELETE'}</em><a class="headerlink" href="#ui.dialogs.dialogs.AFormContainer.PURPOSE_DELETE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.dialogs.dialogs.AFormContainer.PURPOSE_EDIT">
+<code class="descname">PURPOSE_EDIT</code><em class="property"> = {'windowTitle': 'Job Panel - Edit', 'title': 'Edit', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'objectName': 'Edit Dialog', 'purposeType': 'PURPOSE_EDIT'}</em><a class="headerlink" href="#ui.dialogs.dialogs.AFormContainer.PURPOSE_EDIT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.dialogs.AFormContainer.exec_add">
+<code class="descname">exec_add</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.dialogs.AFormContainer.exec_add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for add purpose.
+:return: dialog.exec()</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.dialogs.AFormContainer.exec_copy">
+<code class="descname">exec_copy</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.dialogs.AFormContainer.exec_copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for copy purpose.
+:param data: Data to be pre filled in dialog.
+:return: dialog.exec()</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.dialogs.AFormContainer.exec_edit">
+<code class="descname">exec_edit</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.dialogs.AFormContainer.exec_edit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convenience method for edit purpose.
+:param data: Data to be pre filled in dialog.
+:return: dialog.exec()</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.dialogs.AFormContainer.exec_with_purpose">
+<code class="descname">exec_with_purpose</code><span class="sig-paren">(</span><em>purpose</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.dialogs.AFormContainer.exec_with_purpose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Executes dialog with given purpose and data.
+:param purpose: Purpose of the dialog. (ADD/EDIT/COPY)
+:param data: Data to be pre filled in dialog.
+:return: dialog.exec()</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.dialogs.AFormContainer.first_focus">
+<code class="descname">first_focus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.dialogs.AFormContainer.first_focus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get focus to first property</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.dialogs.AFormContainer.get_data">
+<code class="descname">get_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.dialogs.AFormContainer.get_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets data from form fields. Used by accept signal.
+(To be overridden in child)
+:return: Dialog preset</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.dialogs.dialogs.AFormContainer.purpose">
+<code class="descname">purpose</code><em class="property"> = None</em><a class="headerlink" href="#ui.dialogs.dialogs.AFormContainer.purpose" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.dialogs.AFormContainer.set_data">
+<code class="descname">set_data</code><span class="sig-paren">(</span><em>data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.dialogs.AFormContainer.set_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set data to form fields.
+(To be overridden in child)
+:param data: Preset data to be used.
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.dialogs.AFormContainer.set_purpose">
+<code class="descname">set_purpose</code><span class="sig-paren">(</span><em>purpose={'windowTitle': 'Job Panel - Add'</em>, <em>'title': 'Add'</em>, <em>'subtitle': 'Please select details.'</em>, <em>'objectName': 'AddDialog'</em>, <em>'purposeType': 'PURPOSE_ADD'}</em>, <em>data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.dialogs.AFormContainer.set_purpose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the purpose of the dialog. Used for default data labels and
+accept handling.
+:param purpose: Dialog purpose. (ADD/EDIT/COPY)
+:param data: Data to be pre filled if None dialog is cleared.
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.dialogs.AFormContainer.valid">
+<code class="descname">valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.dialogs.AFormContainer.valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Validates input fields and returns True if valid. Otherwise points
+out problems with form.
+(To be overridden in child)
+:return: None</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="ui.dialogs.dialogs.AFormDialog">
 <em class="property">class </em><code class="descclassname">ui.dialogs.dialogs.</code><code class="descname">AFormDialog</code><span class="sig-paren">(</span><em>old_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.dialogs.AFormDialog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QDialog</span></code></p>
 <p>Abstract form dialog with abstract data manipulation interface.</p>
 <dl class="attribute">
 <dt id="ui.dialogs.dialogs.AFormDialog.PURPOSE_ADD">
-<code class="descname">PURPOSE_ADD</code><em class="property"> = {'purposeType': 'PURPOSE_ADD', 'subtitle': 'Please select details.', 'windowTitle': 'Job Panel - Add', 'objectName': 'AddDialog', 'title': 'Add'}</em><a class="headerlink" href="#ui.dialogs.dialogs.AFormDialog.PURPOSE_ADD" title="Permalink to this definition">¶</a></dt>
+<code class="descname">PURPOSE_ADD</code><em class="property"> = {'windowTitle': 'Job Panel - Add', 'title': 'Add', 'subtitle': 'Please select details.', 'objectName': 'AddDialog', 'purposeType': 'PURPOSE_ADD'}</em><a class="headerlink" href="#ui.dialogs.dialogs.AFormDialog.PURPOSE_ADD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="ui.dialogs.dialogs.AFormDialog.PURPOSE_COPY">
-<code class="descname">PURPOSE_COPY</code><em class="property"> = {'purposeType': 'PURPOSE_COPY', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'windowTitle': 'Job Panel - Copy', 'objectName': 'CopyDialog', 'title': 'Copy'}</em><a class="headerlink" href="#ui.dialogs.dialogs.AFormDialog.PURPOSE_COPY" title="Permalink to this definition">¶</a></dt>
+<code class="descname">PURPOSE_COPY</code><em class="property"> = {'windowTitle': 'Job Panel - Copy', 'title': 'Copy', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'objectName': 'CopyDialog', 'purposeType': 'PURPOSE_COPY'}</em><a class="headerlink" href="#ui.dialogs.dialogs.AFormDialog.PURPOSE_COPY" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -219,12 +358,12 @@ maintain UI consistency.
 
 <dl class="attribute">
 <dt id="ui.dialogs.dialogs.AFormDialog.PURPOSE_DELETE">
-<code class="descname">PURPOSE_DELETE</code><em class="property"> = {'purposeType': 'PURPOSE_DELETE', 'subtitle': 'This should not happen.', 'windowTitle': 'Job Panel - Delete', 'objectName': 'DeleteDialog', 'title': 'Delete'}</em><a class="headerlink" href="#ui.dialogs.dialogs.AFormDialog.PURPOSE_DELETE" title="Permalink to this definition">¶</a></dt>
+<code class="descname">PURPOSE_DELETE</code><em class="property"> = {'windowTitle': 'Job Panel - Delete', 'title': 'Delete', 'subtitle': 'This should not happen.', 'objectName': 'DeleteDialog', 'purposeType': 'PURPOSE_DELETE'}</em><a class="headerlink" href="#ui.dialogs.dialogs.AFormDialog.PURPOSE_DELETE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="ui.dialogs.dialogs.AFormDialog.PURPOSE_EDIT">
-<code class="descname">PURPOSE_EDIT</code><em class="property"> = {'purposeType': 'PURPOSE_EDIT', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'windowTitle': 'Job Panel - Edit', 'objectName': 'Edit Dialog', 'title': 'Edit'}</em><a class="headerlink" href="#ui.dialogs.dialogs.AFormDialog.PURPOSE_EDIT" title="Permalink to this definition">¶</a></dt>
+<code class="descname">PURPOSE_EDIT</code><em class="property"> = {'windowTitle': 'Job Panel - Edit', 'title': 'Edit', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'objectName': 'Edit Dialog', 'purposeType': 'PURPOSE_EDIT'}</em><a class="headerlink" href="#ui.dialogs.dialogs.AFormDialog.PURPOSE_EDIT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -295,7 +434,7 @@ maintain UI consistency.
 
 <dl class="method">
 <dt id="ui.dialogs.dialogs.AFormDialog.set_purpose">
-<code class="descname">set_purpose</code><span class="sig-paren">(</span><em>purpose={'purposeType': 'PURPOSE_ADD'</em>, <em>'subtitle': 'Please select details.'</em>, <em>'windowTitle': 'Job Panel - Add'</em>, <em>'objectName': 'AddDialog'</em>, <em>'title': 'Add'}</em>, <em>data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.dialogs.AFormDialog.set_purpose" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_purpose</code><span class="sig-paren">(</span><em>purpose={'windowTitle': 'Job Panel - Add'</em>, <em>'title': 'Add'</em>, <em>'subtitle': 'Please select details.'</em>, <em>'objectName': 'AddDialog'</em>, <em>'purposeType': 'PURPOSE_ADD'}</em>, <em>data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.dialogs.AFormDialog.set_purpose" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the purpose of the dialog. Used for default data labels and
 accept handling.
 :param purpose: Dialog purpose. (ADD/EDIT/COPY)
@@ -316,7 +455,7 @@ out problems with form.
 
 <dl class="class">
 <dt id="ui.dialogs.dialogs.APresetsDialog">
-<em class="property">class </em><code class="descclassname">ui.dialogs.dialogs.</code><code class="descname">APresetsDialog</code><a class="headerlink" href="#ui.dialogs.dialogs.APresetsDialog" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">ui.dialogs.dialogs.</code><code class="descname">APresetsDialog</code><span class="sig-paren">(</span><em>parent</em>, <em>presets</em>, <em>subdlg_class</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.dialogs.APresetsDialog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QDialog</span></code></p>
 <p>Abstract preset dialog.</p>
 <dl class="method">
@@ -327,40 +466,50 @@ out problems with form.
 :return: None</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="ui.dialogs.dialogs.APresetsDialog.create_dialog">
-<code class="descname">create_dialog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.dialogs.APresetsDialog.create_dialog" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="attribute">
+<dt id="ui.dialogs.dialogs.APresetsDialog.last_selected">
+<code class="descname">last_selected</code><em class="property"> = None</em><a class="headerlink" href="#ui.dialogs.dialogs.APresetsDialog.last_selected" title="Permalink to this definition">¶</a></dt>
+<dd><p>Last selected item for reverse operation</p>
+</dd></dl>
 
-<dl class="method">
-<dt id="ui.dialogs.dialogs.APresetsDialog.handle_presets_dialog">
-<code class="descname">handle_presets_dialog</code><span class="sig-paren">(</span><em>purpose</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.dialogs.APresetsDialog.handle_presets_dialog" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="attribute">
+<dt id="ui.dialogs.dialogs.APresetsDialog.new_data">
+<code class="descname">new_data</code><em class="property"> = None</em><a class="headerlink" href="#ui.dialogs.dialogs.APresetsDialog.new_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>in subdialog is new data</p>
+</dd></dl>
 
 <dl class="attribute">
 <dt id="ui.dialogs.dialogs.APresetsDialog.presets">
 <code class="descname">presets</code><em class="property"> = {}</em><a class="headerlink" href="#ui.dialogs.dialogs.APresetsDialog.presets" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>data</p>
+</dd></dl>
 
 <dl class="attribute">
-<dt id="ui.dialogs.dialogs.APresetsDialog.presets_changed">
-<code class="descname">presets_changed</code><a class="headerlink" href="#ui.dialogs.dialogs.APresetsDialog.presets_changed" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="ui.dialogs.dialogs.APresetsDialog.presets_dlg">
+<code class="descname">presets_dlg</code><em class="property"> = None</em><a class="headerlink" href="#ui.dialogs.dialogs.APresetsDialog.presets_dlg" title="Permalink to this definition">¶</a></dt>
+<dd><p>dialog with selected preset</p>
+</dd></dl>
 
 <dl class="attribute">
-<dt id="ui.dialogs.dialogs.APresetsDialog.presets_changed_par">
-<code class="descname">presets_changed_par</code><a class="headerlink" href="#ui.dialogs.dialogs.APresetsDialog.presets_changed_par" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="ui.dialogs.dialogs.APresetsDialog.reload_data">
+<code class="descname">reload_data</code><em class="property"> = None</em><a class="headerlink" href="#ui.dialogs.dialogs.APresetsDialog.reload_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reload data during reload</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="ui.dialogs.dialogs.APresetsDialog.reload_view">
-<code class="descname">reload_view</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.dialogs.APresetsDialog.reload_view" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="descname">reload_view</code><span class="sig-paren">(</span><em>data</em>, <em>first=True</em>, <em>new_sel=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.dialogs.APresetsDialog.reload_view" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reload view.</p>
+<p>parameters:
+:param bool first: is selected first row
+:param string new_sel: is selected row with set key</p>
+</dd></dl>
 
-<dl class="method">
-<dt id="ui.dialogs.dialogs.APresetsDialog.set_presets">
-<code class="descname">set_presets</code><span class="sig-paren">(</span><em>presets</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.dialogs.APresetsDialog.set_presets" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="attribute">
+<dt id="ui.dialogs.dialogs.APresetsDialog.subdialog">
+<code class="descname">subdialog</code><em class="property"> = None</em><a class="headerlink" href="#ui.dialogs.dialogs.APresetsDialog.subdialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>subdialog form</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -392,6 +541,12 @@ out problems with form.
 :return: Decorated dialog</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="ui.dialogs.dialogs.UiPresetsDialog.subdialog">
+<code class="descname">subdialog</code><em class="property"> = None</em><a class="headerlink" href="#ui.dialogs.dialogs.UiPresetsDialog.subdialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selected preset panel</p>
+</dd></dl>
+
 </dd></dl>
 
 </div>
@@ -402,23 +557,29 @@ out problems with form.
 &#64;contact: <a class="reference external" href="mailto:jan&#46;gabriel&#37;&#52;&#48;tul&#46;cz">jan<span>&#46;</span>gabriel<span>&#64;</span>tul<span>&#46;</span>cz</a></p>
 <dl class="class">
 <dt id="ui.dialogs.env_dialog.EnvDialog">
-<em class="property">class </em><code class="descclassname">ui.dialogs.env_dialog.</code><code class="descname">EnvDialog</code><span class="sig-paren">(</span><em>parent=None</em>, <em>excluded_names=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.env_dialog.EnvDialog" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ui.dialogs.dialogs.AFormDialog" title="ui.dialogs.dialogs.AFormDialog"><code class="xref py py-class docutils literal"><span class="pre">ui.dialogs.dialogs.AFormDialog</span></code></a></p>
+<em class="property">class </em><code class="descclassname">ui.dialogs.env_dialog.</code><code class="descname">EnvDialog</code><span class="sig-paren">(</span><em>parent</em>, <em>excluded_names=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.env_dialog.EnvDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.dialogs.dialogs.AFormContainer" title="ui.dialogs.dialogs.AFormContainer"><code class="xref py py-class docutils literal"><span class="pre">ui.dialogs.dialogs.AFormContainer</span></code></a></p>
 <p>Dialog executive code with bindings and other functionality.</p>
 <dl class="attribute">
 <dt id="ui.dialogs.env_dialog.EnvDialog.PURPOSE_ADD">
-<code class="descname">PURPOSE_ADD</code><em class="property"> = {'purposeType': 'PURPOSE_ADD', 'subtitle': 'Please select details for new Environment.', 'windowTitle': 'Job Panel - Add Environment', 'objectName': 'AddEnvDialog', 'title': 'Add Environment'}</em><a class="headerlink" href="#ui.dialogs.env_dialog.EnvDialog.PURPOSE_ADD" title="Permalink to this definition">¶</a></dt>
+<code class="descname">PURPOSE_ADD</code><em class="property"> = {'windowTitle': 'Job Panel - Add Environment', 'title': 'Add Environment', 'subtitle': 'Please select details for new Environment.', 'objectName': 'AddEnvDialog', 'purposeType': 'PURPOSE_ADD'}</em><a class="headerlink" href="#ui.dialogs.env_dialog.EnvDialog.PURPOSE_ADD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="ui.dialogs.env_dialog.EnvDialog.PURPOSE_COPY">
-<code class="descname">PURPOSE_COPY</code><em class="property"> = {'purposeType': 'PURPOSE_COPY', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'windowTitle': 'Job Panel - Copy Environment', 'objectName': 'CopyEnvDialog', 'title': 'Copy Environment'}</em><a class="headerlink" href="#ui.dialogs.env_dialog.EnvDialog.PURPOSE_COPY" title="Permalink to this definition">¶</a></dt>
+<code class="descname">PURPOSE_COPY</code><em class="property"> = {'windowTitle': 'Job Panel - Copy Environment', 'title': 'Copy Environment', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'objectName': 'CopyEnvDialog', 'purposeType': 'PURPOSE_COPY'}</em><a class="headerlink" href="#ui.dialogs.env_dialog.EnvDialog.PURPOSE_COPY" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="ui.dialogs.env_dialog.EnvDialog.PURPOSE_EDIT">
-<code class="descname">PURPOSE_EDIT</code><em class="property"> = {'purposeType': 'PURPOSE_EDIT', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'windowTitle': 'Job Panel - Edit Environment', 'objectName': 'EditEnvDialog', 'title': 'Edit Environment'}</em><a class="headerlink" href="#ui.dialogs.env_dialog.EnvDialog.PURPOSE_EDIT" title="Permalink to this definition">¶</a></dt>
+<code class="descname">PURPOSE_EDIT</code><em class="property"> = {'windowTitle': 'Job Panel - Edit Environment', 'title': 'Edit Environment', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'objectName': 'EditEnvDialog', 'purposeType': 'PURPOSE_EDIT'}</em><a class="headerlink" href="#ui.dialogs.env_dialog.EnvDialog.PURPOSE_EDIT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.env_dialog.EnvDialog.first_focus">
+<code class="descname">first_focus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.env_dialog.EnvDialog.first_focus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get focus to first property</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="ui.dialogs.env_dialog.EnvDialog.get_data">
@@ -426,13 +587,14 @@ out problems with form.
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="ui.dialogs.env_dialog.EnvDialog.set_data">
-<code class="descname">set_data</code><span class="sig-paren">(</span><em>data=None</em>, <em>is_edit=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.env_dialog.EnvDialog.set_data" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="ui.dialogs.env_dialog.EnvDialog.is_dirty">
+<code class="descname">is_dirty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.env_dialog.EnvDialog.is_dirty" title="Permalink to this definition">¶</a></dt>
+<dd><p>return if data was changes</p>
+</dd></dl>
 
 <dl class="method">
-<dt id="ui.dialogs.env_dialog.EnvDialog.valid">
-<code class="descname">valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.env_dialog.EnvDialog.valid" title="Permalink to this definition">¶</a></dt>
+<dt id="ui.dialogs.env_dialog.EnvDialog.set_data">
+<code class="descname">set_data</code><span class="sig-paren">(</span><em>data=None</em>, <em>is_edit=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.env_dialog.EnvDialog.set_data" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -440,11 +602,11 @@ out problems with form.
 <dl class="class">
 <dt id="ui.dialogs.env_dialog.UiEnvDialog">
 <em class="property">class </em><code class="descclassname">ui.dialogs.env_dialog.</code><code class="descname">UiEnvDialog</code><a class="headerlink" href="#ui.dialogs.env_dialog.UiEnvDialog" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ui.dialogs.dialogs.UiFormDialog" title="ui.dialogs.dialogs.UiFormDialog"><code class="xref py py-class docutils literal"><span class="pre">ui.dialogs.dialogs.UiFormDialog</span></code></a></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>UI extensions of form dialog.</p>
 <dl class="method">
 <dt id="ui.dialogs.env_dialog.UiEnvDialog.setup_ui">
-<code class="descname">setup_ui</code><span class="sig-paren">(</span><em>dialog</em>, <em>excluded_names</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.env_dialog.UiEnvDialog.setup_ui" title="Permalink to this definition">¶</a></dt>
+<code class="descname">setup_ui</code><span class="sig-paren">(</span><em>dialog</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.env_dialog.UiEnvDialog.setup_ui" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -457,7 +619,7 @@ out problems with form.
 &#64;contact: <a class="reference external" href="mailto:jan&#46;gabriel&#37;&#52;&#48;tul&#46;cz">jan<span>&#46;</span>gabriel<span>&#64;</span>tul<span>&#46;</span>cz</a></p>
 <dl class="class">
 <dt id="ui.dialogs.env_presets.EnvPresets">
-<em class="property">class </em><code class="descclassname">ui.dialogs.env_presets.</code><code class="descname">EnvPresets</code><span class="sig-paren">(</span><em>parent=None</em>, <em>presets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.env_presets.EnvPresets" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">ui.dialogs.env_presets.</code><code class="descname">EnvPresets</code><span class="sig-paren">(</span><em>parent</em>, <em>presets</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.env_presets.EnvPresets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ui.dialogs.dialogs.APresetsDialog" title="ui.dialogs.dialogs.APresetsDialog"><code class="xref py py-class docutils literal"><span class="pre">ui.dialogs.dialogs.APresetsDialog</span></code></a></p>
 <p>Dialog executive code with bindings and other functionality.</p>
 </dd></dl>
@@ -495,7 +657,7 @@ out problems with form.
 <span id="ui-dialogs-message-dialog-module"></span><h2>ui.dialogs.message_dialog module<a class="headerlink" href="#module-ui.dialogs.message_dialog" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="ui.dialogs.message_dialog.MessageDialog">
-<em class="property">class </em><code class="descclassname">ui.dialogs.message_dialog.</code><code class="descname">MessageDialog</code><span class="sig-paren">(</span><em>QWidget parent=None</em>, <em>Qt.WindowFlags flags=0</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.message_dialog.MessageDialog" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">ui.dialogs.message_dialog.</code><code class="descname">MessageDialog</code><span class="sig-paren">(</span><em>parent</em>, <em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.message_dialog.MessageDialog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QWidget</span></code></p>
 <dl class="attribute">
 <dt id="ui.dialogs.message_dialog.MessageDialog.MESSAGE_ON_EXIT">
@@ -509,7 +671,7 @@ out problems with form.
 
 <dl class="method">
 <dt id="ui.dialogs.message_dialog.MessageDialog.closeEvent">
-<code class="descname">closeEvent</code><span class="sig-paren">(</span><em>QCloseEvent</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.message_dialog.MessageDialog.closeEvent" title="Permalink to this definition">¶</a></dt>
+<code class="descname">closeEvent</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.message_dialog.MessageDialog.closeEvent" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -527,12 +689,12 @@ out problems with form.
 <p>Dialog executive code with bindings and other functionality.</p>
 <dl class="attribute">
 <dt id="ui.dialogs.multijob_dialog.MultiJobDialog.PURPOSE_ADD">
-<code class="descname">PURPOSE_ADD</code><em class="property"> = {'purposeType': 'PURPOSE_ADD', 'subtitle': 'Please select details to schedule set of tasks for computation and press Run to start multijob.', 'windowTitle': 'Job Panel - Add MultiJob', 'objectName': 'AddMultiJobDialog', 'title': 'Add MultiJob'}</em><a class="headerlink" href="#ui.dialogs.multijob_dialog.MultiJobDialog.PURPOSE_ADD" title="Permalink to this definition">¶</a></dt>
+<code class="descname">PURPOSE_ADD</code><em class="property"> = {'windowTitle': 'Job Panel - Add MultiJob', 'title': 'Add MultiJob', 'subtitle': 'Please select details to schedule set of tasks for computation and press Run to start multijob.', 'objectName': 'AddMultiJobDialog', 'purposeType': 'PURPOSE_ADD'}</em><a class="headerlink" href="#ui.dialogs.multijob_dialog.MultiJobDialog.PURPOSE_ADD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="ui.dialogs.multijob_dialog.MultiJobDialog.PURPOSE_COPY">
-<code class="descname">PURPOSE_COPY</code><em class="property"> = {'purposeType': 'PURPOSE_COPY', 'subtitle': 'Change desired parameters and press Run to start multijob.', 'windowTitle': 'Job Panel - Copy MultiJob', 'objectName': 'CopyMultiJobDialog', 'title': 'Copy MultiJob'}</em><a class="headerlink" href="#ui.dialogs.multijob_dialog.MultiJobDialog.PURPOSE_COPY" title="Permalink to this definition">¶</a></dt>
+<code class="descname">PURPOSE_COPY</code><em class="property"> = {'windowTitle': 'Job Panel - Copy MultiJob', 'title': 'Copy MultiJob', 'subtitle': 'Change desired parameters and press Run to start multijob.', 'objectName': 'CopyMultiJobDialog', 'purposeType': 'PURPOSE_COPY'}</em><a class="headerlink" href="#ui.dialogs.multijob_dialog.MultiJobDialog.PURPOSE_COPY" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -642,23 +804,29 @@ out problems with form.
 &#64;contact: <a class="reference external" href="mailto:jan&#46;gabriel&#37;&#52;&#48;tul&#46;cz">jan<span>&#46;</span>gabriel<span>&#64;</span>tul<span>&#46;</span>cz</a></p>
 <dl class="class">
 <dt id="ui.dialogs.pbs_dialog.PbsDialog">
-<em class="property">class </em><code class="descclassname">ui.dialogs.pbs_dialog.</code><code class="descname">PbsDialog</code><span class="sig-paren">(</span><em>parent=None</em>, <em>excluded_names=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.pbs_dialog.PbsDialog" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ui.dialogs.dialogs.AFormDialog" title="ui.dialogs.dialogs.AFormDialog"><code class="xref py py-class docutils literal"><span class="pre">ui.dialogs.dialogs.AFormDialog</span></code></a></p>
+<em class="property">class </em><code class="descclassname">ui.dialogs.pbs_dialog.</code><code class="descname">PbsDialog</code><span class="sig-paren">(</span><em>parent</em>, <em>excluded_names</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.pbs_dialog.PbsDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.dialogs.dialogs.AFormContainer" title="ui.dialogs.dialogs.AFormContainer"><code class="xref py py-class docutils literal"><span class="pre">ui.dialogs.dialogs.AFormContainer</span></code></a></p>
 <p>Dialog executive code with bindings and other functionality.</p>
 <dl class="attribute">
 <dt id="ui.dialogs.pbs_dialog.PbsDialog.PURPOSE_ADD">
-<code class="descname">PURPOSE_ADD</code><em class="property"> = {'purposeType': 'PURPOSE_ADD', 'subtitle': 'Please select details for PBS options.', 'windowTitle': 'Job Panel - Add PBS options', 'objectName': 'AddPbsDialog', 'title': 'Add PBS options'}</em><a class="headerlink" href="#ui.dialogs.pbs_dialog.PbsDialog.PURPOSE_ADD" title="Permalink to this definition">¶</a></dt>
+<code class="descname">PURPOSE_ADD</code><em class="property"> = {'windowTitle': 'Job Panel - Add PBS options', 'title': 'Add PBS options', 'subtitle': 'Please select details for PBS options.', 'objectName': 'AddPbsDialog', 'purposeType': 'PURPOSE_ADD'}</em><a class="headerlink" href="#ui.dialogs.pbs_dialog.PbsDialog.PURPOSE_ADD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="ui.dialogs.pbs_dialog.PbsDialog.PURPOSE_COPY">
-<code class="descname">PURPOSE_COPY</code><em class="property"> = {'purposeType': 'PURPOSE_COPY', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'windowTitle': 'Job Panel - Copy PBS options', 'objectName': 'CopyPbsDialog', 'title': 'Copy PBS options'}</em><a class="headerlink" href="#ui.dialogs.pbs_dialog.PbsDialog.PURPOSE_COPY" title="Permalink to this definition">¶</a></dt>
+<code class="descname">PURPOSE_COPY</code><em class="property"> = {'windowTitle': 'Job Panel - Copy PBS options', 'title': 'Copy PBS options', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'objectName': 'CopyPbsDialog', 'purposeType': 'PURPOSE_COPY'}</em><a class="headerlink" href="#ui.dialogs.pbs_dialog.PbsDialog.PURPOSE_COPY" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="ui.dialogs.pbs_dialog.PbsDialog.PURPOSE_EDIT">
-<code class="descname">PURPOSE_EDIT</code><em class="property"> = {'purposeType': 'PURPOSE_EDIT', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'windowTitle': 'Job Panel - Edit PBS options', 'objectName': 'EditPbsDialog', 'title': 'Edit PBS options'}</em><a class="headerlink" href="#ui.dialogs.pbs_dialog.PbsDialog.PURPOSE_EDIT" title="Permalink to this definition">¶</a></dt>
+<code class="descname">PURPOSE_EDIT</code><em class="property"> = {'windowTitle': 'Job Panel - Edit PBS options', 'title': 'Edit PBS options', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'objectName': 'EditPbsDialog', 'purposeType': 'PURPOSE_EDIT'}</em><a class="headerlink" href="#ui.dialogs.pbs_dialog.PbsDialog.PURPOSE_EDIT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.pbs_dialog.PbsDialog.first_focus">
+<code class="descname">first_focus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.pbs_dialog.PbsDialog.first_focus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get focus to first property</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="ui.dialogs.pbs_dialog.PbsDialog.get_data">
@@ -666,13 +834,14 @@ out problems with form.
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="ui.dialogs.pbs_dialog.PbsDialog.set_data">
-<code class="descname">set_data</code><span class="sig-paren">(</span><em>data=None</em>, <em>is_edit=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.pbs_dialog.PbsDialog.set_data" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dt id="ui.dialogs.pbs_dialog.PbsDialog.is_dirty">
+<code class="descname">is_dirty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.pbs_dialog.PbsDialog.is_dirty" title="Permalink to this definition">¶</a></dt>
+<dd><p>return if data was changes</p>
+</dd></dl>
 
 <dl class="method">
-<dt id="ui.dialogs.pbs_dialog.PbsDialog.valid">
-<code class="descname">valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.pbs_dialog.PbsDialog.valid" title="Permalink to this definition">¶</a></dt>
+<dt id="ui.dialogs.pbs_dialog.PbsDialog.set_data">
+<code class="descname">set_data</code><span class="sig-paren">(</span><em>data=None</em>, <em>is_edit=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.pbs_dialog.PbsDialog.set_data" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -680,7 +849,7 @@ out problems with form.
 <dl class="class">
 <dt id="ui.dialogs.pbs_dialog.UiPbsDialog">
 <em class="property">class </em><code class="descclassname">ui.dialogs.pbs_dialog.</code><code class="descname">UiPbsDialog</code><a class="headerlink" href="#ui.dialogs.pbs_dialog.UiPbsDialog" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ui.dialogs.dialogs.UiFormDialog" title="ui.dialogs.dialogs.UiFormDialog"><code class="xref py py-class docutils literal"><span class="pre">ui.dialogs.dialogs.UiFormDialog</span></code></a></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>UI extensions of form dialog.</p>
 <dl class="method">
 <dt id="ui.dialogs.pbs_dialog.UiPbsDialog.setup_ui">
@@ -697,9 +866,15 @@ out problems with form.
 &#64;contact: <a class="reference external" href="mailto:jan&#46;gabriel&#37;&#52;&#48;tul&#46;cz">jan<span>&#46;</span>gabriel<span>&#64;</span>tul<span>&#46;</span>cz</a></p>
 <dl class="class">
 <dt id="ui.dialogs.pbs_presets.PbsPresets">
-<em class="property">class </em><code class="descclassname">ui.dialogs.pbs_presets.</code><code class="descname">PbsPresets</code><span class="sig-paren">(</span><em>parent=None</em>, <em>presets=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.pbs_presets.PbsPresets" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">ui.dialogs.pbs_presets.</code><code class="descname">PbsPresets</code><span class="sig-paren">(</span><em>parent</em>, <em>presets</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.pbs_presets.PbsPresets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ui.dialogs.dialogs.APresetsDialog" title="ui.dialogs.dialogs.APresetsDialog"><code class="xref py py-class docutils literal"><span class="pre">ui.dialogs.dialogs.APresetsDialog</span></code></a></p>
 <p>Dialog executive code with bindings and other functionality.</p>
+<dl class="attribute">
+<dt id="ui.dialogs.pbs_presets.PbsPresets.ui">
+<code class="descname">ui</code><em class="property"> = None</em><a class="headerlink" href="#ui.dialogs.pbs_presets.PbsPresets.ui" title="Permalink to this definition">¶</a></dt>
+<dd><p>Form builed</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -722,22 +897,22 @@ out problems with form.
 &#64;contact: <a class="reference external" href="mailto:jan&#46;gabriel&#37;&#52;&#48;tul&#46;cz">jan<span>&#46;</span>gabriel<span>&#64;</span>tul<span>&#46;</span>cz</a></p>
 <dl class="class">
 <dt id="ui.dialogs.resource_dialog.ResourceDialog">
-<em class="property">class </em><code class="descclassname">ui.dialogs.resource_dialog.</code><code class="descname">ResourceDialog</code><span class="sig-paren">(</span><em>parent=None</em>, <em>excluded_names=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.resource_dialog.ResourceDialog" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ui.dialogs.dialogs.AFormDialog" title="ui.dialogs.dialogs.AFormDialog"><code class="xref py py-class docutils literal"><span class="pre">ui.dialogs.dialogs.AFormDialog</span></code></a></p>
+<em class="property">class </em><code class="descclassname">ui.dialogs.resource_dialog.</code><code class="descname">ResourceDialog</code><span class="sig-paren">(</span><em>parent</em>, <em>excluded_names=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.resource_dialog.ResourceDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.dialogs.dialogs.AFormContainer" title="ui.dialogs.dialogs.AFormContainer"><code class="xref py py-class docutils literal"><span class="pre">ui.dialogs.dialogs.AFormContainer</span></code></a></p>
 <p>Dialog executive code with bindings and other functionality.</p>
 <dl class="attribute">
 <dt id="ui.dialogs.resource_dialog.ResourceDialog.PURPOSE_ADD">
-<code class="descname">PURPOSE_ADD</code><em class="property"> = {'purposeType': 'PURPOSE_ADD', 'subtitle': 'Please select details for new Resource.', 'windowTitle': 'Job Panel - Add Resource', 'objectName': 'AddResourcehDialog', 'title': 'Add Resource'}</em><a class="headerlink" href="#ui.dialogs.resource_dialog.ResourceDialog.PURPOSE_ADD" title="Permalink to this definition">¶</a></dt>
+<code class="descname">PURPOSE_ADD</code><em class="property"> = {'windowTitle': 'Job Panel - Add Resource', 'title': 'Add Resource', 'subtitle': 'Please select details for new Resource.', 'objectName': 'AddResourcehDialog', 'purposeType': 'PURPOSE_ADD'}</em><a class="headerlink" href="#ui.dialogs.resource_dialog.ResourceDialog.PURPOSE_ADD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="ui.dialogs.resource_dialog.ResourceDialog.PURPOSE_COPY">
-<code class="descname">PURPOSE_COPY</code><em class="property"> = {'purposeType': 'PURPOSE_COPY', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'windowTitle': 'Job Panel - Copy Resource', 'objectName': 'CopyResourceDialog', 'title': 'Copy Resource'}</em><a class="headerlink" href="#ui.dialogs.resource_dialog.ResourceDialog.PURPOSE_COPY" title="Permalink to this definition">¶</a></dt>
+<code class="descname">PURPOSE_COPY</code><em class="property"> = {'windowTitle': 'Job Panel - Copy Resource', 'title': 'Copy Resource', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'objectName': 'CopyResourceDialog', 'purposeType': 'PURPOSE_COPY'}</em><a class="headerlink" href="#ui.dialogs.resource_dialog.ResourceDialog.PURPOSE_COPY" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
 <dt id="ui.dialogs.resource_dialog.ResourceDialog.PURPOSE_EDIT">
-<code class="descname">PURPOSE_EDIT</code><em class="property"> = {'purposeType': 'PURPOSE_EDIT', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'windowTitle': 'Job Panel - Edit Resource', 'objectName': 'EditResourceDialog', 'title': 'Edit Resource'}</em><a class="headerlink" href="#ui.dialogs.resource_dialog.ResourceDialog.PURPOSE_EDIT" title="Permalink to this definition">¶</a></dt>
+<code class="descname">PURPOSE_EDIT</code><em class="property"> = {'windowTitle': 'Job Panel - Edit Resource', 'title': 'Edit Resource', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'objectName': 'EditResourceDialog', 'purposeType': 'PURPOSE_EDIT'}</em><a class="headerlink" href="#ui.dialogs.resource_dialog.ResourceDialog.PURPOSE_EDIT" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -746,9 +921,21 @@ out problems with form.
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="ui.dialogs.resource_dialog.ResourceDialog.first_focus">
+<code class="descname">first_focus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.resource_dialog.ResourceDialog.first_focus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get focus to first property</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="ui.dialogs.resource_dialog.ResourceDialog.get_data">
 <code class="descname">get_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.resource_dialog.ResourceDialog.get_data" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.dialogs.resource_dialog.ResourceDialog.is_dirty">
+<code class="descname">is_dirty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.resource_dialog.ResourceDialog.is_dirty" title="Permalink to this definition">¶</a></dt>
+<dd><p>return if data was changes</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="ui.dialogs.resource_dialog.ResourceDialog.set_data">
@@ -765,17 +952,12 @@ out problems with form.
 <code class="descname">set_ssh_presets</code><span class="sig-paren">(</span><em>ssh</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.resource_dialog.ResourceDialog.set_ssh_presets" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="ui.dialogs.resource_dialog.ResourceDialog.valid">
-<code class="descname">valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.resource_dialog.ResourceDialog.valid" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="ui.dialogs.resource_dialog.UiResourceDialog">
 <em class="property">class </em><code class="descclassname">ui.dialogs.resource_dialog.</code><code class="descname">UiResourceDialog</code><a class="headerlink" href="#ui.dialogs.resource_dialog.UiResourceDialog" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ui.dialogs.dialogs.UiFormDialog" title="ui.dialogs.dialogs.UiFormDialog"><code class="xref py py-class docutils literal"><span class="pre">ui.dialogs.dialogs.UiFormDialog</span></code></a></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>UI extensions of form dialog.</p>
 <dl class="attribute">
 <dt id="ui.dialogs.resource_dialog.UiResourceDialog.DELEGATOR_LABEL">
@@ -847,13 +1029,14 @@ out problems with form.
 &#64;contact: <a class="reference external" href="mailto:jan&#46;gabriel&#37;&#52;&#48;tul&#46;cz">jan<span>&#46;</span>gabriel<span>&#64;</span>tul<span>&#46;</span>cz</a></p>
 <dl class="class">
 <dt id="ui.dialogs.resource_presets.ResourcePresets">
-<em class="property">class </em><code class="descclassname">ui.dialogs.resource_presets.</code><code class="descname">ResourcePresets</code><span class="sig-paren">(</span><em>parent=None</em>, <em>presets=None</em>, <em>pbs=None</em>, <em>ssh=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.resource_presets.ResourcePresets" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">ui.dialogs.resource_presets.</code><code class="descname">ResourcePresets</code><span class="sig-paren">(</span><em>parent</em>, <em>presets</em>, <em>pbs=None</em>, <em>ssh=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.resource_presets.ResourcePresets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ui.dialogs.dialogs.APresetsDialog" title="ui.dialogs.dialogs.APresetsDialog"><code class="xref py py-class docutils literal"><span class="pre">ui.dialogs.dialogs.APresetsDialog</span></code></a></p>
 <p>Dialog executive code with bindings and other functionality.</p>
-<dl class="method">
-<dt id="ui.dialogs.resource_presets.ResourcePresets.create_dialog">
-<code class="descname">create_dialog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.resource_presets.ResourcePresets.create_dialog" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="attribute">
+<dt id="ui.dialogs.resource_presets.ResourcePresets.ui">
+<code class="descname">ui</code><em class="property"> = None</em><a class="headerlink" href="#ui.dialogs.resource_presets.ResourcePresets.ui" title="Permalink to this definition">¶</a></dt>
+<dd><p>Form builed</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -877,23 +1060,14 @@ out problems with form.
 &#64;contact: <a class="reference external" href="mailto:jan&#46;gabriel&#37;&#52;&#48;tul&#46;cz">jan<span>&#46;</span>gabriel<span>&#64;</span>tul<span>&#46;</span>cz</a></p>
 <dl class="class">
 <dt id="ui.dialogs.ssh_dialog.SshDialog">
-<em class="property">class </em><code class="descclassname">ui.dialogs.ssh_dialog.</code><code class="descname">SshDialog</code><span class="sig-paren">(</span><em>parent=None</em>, <em>excluded_names=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.ssh_dialog.SshDialog" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ui.dialogs.dialogs.AFormDialog" title="ui.dialogs.dialogs.AFormDialog"><code class="xref py py-class docutils literal"><span class="pre">ui.dialogs.dialogs.AFormDialog</span></code></a></p>
+<em class="property">class </em><code class="descclassname">ui.dialogs.ssh_dialog.</code><code class="descname">SshDialog</code><span class="sig-paren">(</span><em>parent</em>, <em>excluded_names=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.ssh_dialog.SshDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ui.dialogs.dialogs.AFormContainer" title="ui.dialogs.dialogs.AFormContainer"><code class="xref py py-class docutils literal"><span class="pre">ui.dialogs.dialogs.AFormContainer</span></code></a></p>
 <p>Dialog executive code with bindings and other functionality.</p>
-<dl class="attribute">
-<dt id="ui.dialogs.ssh_dialog.SshDialog.PURPOSE_ADD">
-<code class="descname">PURPOSE_ADD</code><em class="property"> = {'purposeType': 'PURPOSE_ADD', 'subtitle': 'Please select details for new SSH host.', 'windowTitle': 'Job Panel - Add SSH host', 'objectName': 'AddSshDialog', 'title': 'Add SSH host'}</em><a class="headerlink" href="#ui.dialogs.ssh_dialog.SshDialog.PURPOSE_ADD" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ui.dialogs.ssh_dialog.SshDialog.PURPOSE_COPY">
-<code class="descname">PURPOSE_COPY</code><em class="property"> = {'purposeType': 'PURPOSE_COPY', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'windowTitle': 'Job Panel - Copy SSH host', 'objectName': 'CopySshDialog', 'title': 'Copy SSH host'}</em><a class="headerlink" href="#ui.dialogs.ssh_dialog.SshDialog.PURPOSE_COPY" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="ui.dialogs.ssh_dialog.SshDialog.PURPOSE_EDIT">
-<code class="descname">PURPOSE_EDIT</code><em class="property"> = {'purposeType': 'PURPOSE_EDIT', 'subtitle': 'Change desired parameters and press SAVE to apply changes.', 'windowTitle': 'Job Panel - Edit SSH host', 'objectName': 'EditSshDialog', 'title': 'Edit SSH host'}</em><a class="headerlink" href="#ui.dialogs.ssh_dialog.SshDialog.PURPOSE_EDIT" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="method">
+<dt id="ui.dialogs.ssh_dialog.SshDialog.first_focus">
+<code class="descname">first_focus</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.ssh_dialog.SshDialog.first_focus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get focus to first property</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="ui.dialogs.ssh_dialog.SshDialog.get_data">
@@ -907,6 +1081,12 @@ out problems with form.
 </dd></dl>
 
 <dl class="method">
+<dt id="ui.dialogs.ssh_dialog.SshDialog.is_dirty">
+<code class="descname">is_dirty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.ssh_dialog.SshDialog.is_dirty" title="Permalink to this definition">¶</a></dt>
+<dd><p>return if data was changes</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="ui.dialogs.ssh_dialog.SshDialog.set_data">
 <code class="descname">set_data</code><span class="sig-paren">(</span><em>data=None</em>, <em>is_edit=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.ssh_dialog.SshDialog.set_data" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -916,17 +1096,12 @@ out problems with form.
 <code class="descname">set_data_container</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.ssh_dialog.SshDialog.set_data_container" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="ui.dialogs.ssh_dialog.SshDialog.valid">
-<code class="descname">valid</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.ssh_dialog.SshDialog.valid" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 </dd></dl>
 
 <dl class="class">
 <dt id="ui.dialogs.ssh_dialog.UiSshDialog">
 <em class="property">class </em><code class="descclassname">ui.dialogs.ssh_dialog.</code><code class="descname">UiSshDialog</code><a class="headerlink" href="#ui.dialogs.ssh_dialog.UiSshDialog" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#ui.dialogs.dialogs.UiFormDialog" title="ui.dialogs.dialogs.UiFormDialog"><code class="xref py py-class docutils literal"><span class="pre">ui.dialogs.dialogs.UiFormDialog</span></code></a></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>UI extensions of form dialog.</p>
 <dl class="attribute">
 <dt id="ui.dialogs.ssh_dialog.UiSshDialog.ENV_LABEL">
@@ -935,7 +1110,7 @@ out problems with form.
 
 <dl class="method">
 <dt id="ui.dialogs.ssh_dialog.UiSshDialog.setup_ui">
-<code class="descname">setup_ui</code><span class="sig-paren">(</span><em>dialog</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.ssh_dialog.UiSshDialog.setup_ui" title="Permalink to this definition">¶</a></dt>
+<code class="descname">setup_ui</code><span class="sig-paren">(</span><em>dialog</em>, <em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.ssh_dialog.UiSshDialog.setup_ui" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -948,13 +1123,14 @@ out problems with form.
 &#64;contact: <a class="reference external" href="mailto:jan&#46;gabriel&#37;&#52;&#48;tul&#46;cz">jan<span>&#46;</span>gabriel<span>&#64;</span>tul<span>&#46;</span>cz</a></p>
 <dl class="class">
 <dt id="ui.dialogs.ssh_presets.SshPresets">
-<em class="property">class </em><code class="descclassname">ui.dialogs.ssh_presets.</code><code class="descname">SshPresets</code><span class="sig-paren">(</span><em>parent=None</em>, <em>presets=None</em>, <em>container=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.ssh_presets.SshPresets" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">ui.dialogs.ssh_presets.</code><code class="descname">SshPresets</code><span class="sig-paren">(</span><em>parent</em>, <em>presets</em>, <em>container</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.ssh_presets.SshPresets" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#ui.dialogs.dialogs.APresetsDialog" title="ui.dialogs.dialogs.APresetsDialog"><code class="xref py py-class docutils literal"><span class="pre">ui.dialogs.dialogs.APresetsDialog</span></code></a></p>
 <p>Dialog executive code with bindings and other functionality.</p>
-<dl class="method">
-<dt id="ui.dialogs.ssh_presets.SshPresets.create_dialog">
-<code class="descname">create_dialog</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.ssh_presets.SshPresets.create_dialog" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dl class="attribute">
+<dt id="ui.dialogs.ssh_presets.SshPresets.ui">
+<code class="descname">ui</code><em class="property"> = None</em><a class="headerlink" href="#ui.dialogs.ssh_presets.SshPresets.ui" title="Permalink to this definition">¶</a></dt>
+<dd><p>Form builed</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -994,15 +1170,18 @@ out problems with form.
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ui.helpers.html" class="btn btn-neutral float-right" title="ui.helpers package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ui.helpers.html" class="btn btn-neutral float-right" title="ui.helpers package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ui.data.html" class="btn btn-neutral" title="ui.data package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ui.data.html" class="btn btn-neutral" title="ui.data package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -1033,11 +1212,11 @@ out problems with form.
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'1.0.0-beta
-',
+            VERSION:'1.0.0-beta',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>
