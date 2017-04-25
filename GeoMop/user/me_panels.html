@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Pylint Exceptions (czech) &mdash; GeoMop Documentation 1.0.0-beta
+  <title>Model Editor Panels Description (czech) &mdash; GeoMop Documentation 1.0.0-beta
  documentation</title>
   
 
@@ -38,8 +38,8 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="GeoMop Documentation 1.0.0-beta
  documentation" href="../index.html"/>
-        <link rel="next" title="Creating new action (czech)" href="function_action.html"/>
-        <link rel="prev" title="Development Rules (czech)" href="rules.html"/> 
+        <link rel="next" title="Analysis - Pipeline example (czech)" href="analysis_pipeline_example.html"/>
+        <link rel="prev" title="Model Editor" href="model_editor.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -94,23 +94,23 @@
             
             
               <p class="caption"><span class="caption-text">User Guide</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../user/linux_installation_guide.html">Linux Installation Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/model_editor.html">Model Editor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/me_panels.html">Model Editor Panels Description (czech)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/analysis_pipeline_example.html">Analysis - Pipeline example (czech)</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="linux_installation_guide.html">Linux Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_editor.html">Model Editor</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Model Editor Panels Description (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_pipeline_example.html">Analysis - Pipeline example (czech)</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Developer Documentation</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexAN.html">Analysis</a></li>
 <li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexME.html">ModelEditor</a></li>
 <li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexJP.html">JobPanel</a></li>
 <li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexLE.html">LayerEditor</a></li>
 <li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexCommon.html">Common</a></li>
-<li class="toctree-l1"><a class="reference internal" href="procedures.html">Development Procedures (czech)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rules.html">Development Rules (czech)</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Pylint Exceptions (czech)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="function_action.html">Creating new action (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/procedures.html">Development Procedures (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/rules.html">Development Rules (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/pylint_rules.html">Pylint Exceptions (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/function_action.html">Creating new action (czech)</a></li>
 </ul>
 
             
@@ -155,13 +155,13 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Pylint Exceptions (czech)</li>
+      <li>Model Editor Panels Description (czech)</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/organization/pylint_rules.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/user/me_panels.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -174,33 +174,38 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="pylint-exceptions-czech">
-<h1>Pylint Exceptions (czech)<a class="headerlink" href="#pylint-exceptions-czech" title="Permalink to this headline">¶</a></h1>
-<p><strong>Design checker</strong></p>
-<p>u některých voleb pochybuji o významu, u jiných má pylint asi problém
-načíst metody předka a hlášení je chybné</p>
-<p>V <code class="docutils literal"><span class="pre">pylintrc</span></code> jsou odpovídající hlášení vypnuta:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">disable</span> <span class="o">=</span> <span class="n">R0901</span><span class="p">,</span><span class="n">R0902</span><span class="p">,</span><span class="n">R0903</span><span class="p">,</span><span class="n">R0904</span><span class="p">,</span><span class="n">R0911</span><span class="p">,</span><span class="n">R0912</span><span class="p">,</span><span class="n">R0913</span><span class="p">,</span><span class="n">R0914</span><span class="p">,</span><span class="n">R0915</span><span class="p">,</span>
-</pre></div>
-</div>
-<p><strong>Newstyle checker</strong></p>
-<p>U některých massage je v dokumentaci:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>This message can’t be emitted when using Python &gt;= 3.0.
-</pre></div>
-</div>
-<p>V <code class="docutils literal"><span class="pre">pylintrc</span></code> jsou vypnuta pomocí:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">disable</span> <span class="o">=</span> <span class="n">C1001</span><span class="p">,</span><span class="n">W1001</span><span class="p">,</span><span class="n">E1002</span><span class="p">,</span><span class="n">E1001</span><span class="p">,</span><span class="n">E1004</span>
-</pre></div>
-</div>
-<p><strong>no-member (E1101):</strong></p>
-<p>U některých modulů a tříd (převážně qt a z nich odvozených) má pylint problém
-najít jejich funkce.
-V <code class="docutils literal"><span class="pre">pylintrc</span></code> je pak nutné přidat tento modul, nebo třídu:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">typecheck</span><span class="p">]</span>
-<span class="n">ignored</span><span class="o">-</span><span class="n">modules</span><span class="o">=</span><span class="n">PyQt5</span><span class="o">.</span><span class="n">QtWidgets</span><span class="p">,</span><span class="n">PyQt5</span><span class="o">.</span><span class="n">QtCore</span>
-<span class="n">ignored</span><span class="o">-</span><span class="n">classes</span><span class="o">=</span><span class="n">AddPictureWidget</span><span class="p">,</span><span class="n">CanvasWidget</span>
-</pre></div>
-</div>
+  <div class="section" id="model-editor-panels-description-czech">
+<h1>Model Editor Panels Description (czech)<a class="headerlink" href="#model-editor-panels-description-czech" title="Permalink to this headline">¶</a></h1>
+<p>Po otevření dokumentu se jeho obsah zobrazí v hlavním okně programu:</p>
+<img alt="../_images/me-panels.png" src="../_images/me-panels.png" />
+<p>V levém panelu se zobrazí struktura dokumentu jako strom. Kliknutím na číslo řád ku v editoru (3) se ve stromu zvýrazní první element z tohoto řádku. Naopak kliknutím na daný element (4), nebo jeho hodnotu, dojde k vybrání příslušné oblasti v textovém editoru.</p>
+<dl class="docutils">
+<dt>Pokud dojde při validaci dokumentu k chybě, nebo k nejasnostem, je v panelu Messages pod textovým editorem zobrazen komentář. Komentáře jsou podle závažnosti rozděleny do tří kategorií:</dt>
+<dd><ul class="first last simple">
+<li>fatal</li>
+<li>error</li>
+<li>warning</li>
+<li>info</li>
+</ul>
+</dd>
+</dl>
+<p>Fatalem je označena chyba, která zabránila validaci vědší části dokumentů.</p>
+<p>Message je v textovém editoru označen odpovídající ikonkou a oblast ke které se chyba vztahuje pak barevnou čárou před dotčenými řádky. Kliknutím na ikonu (1) dojde k přepnutí na text chyby v panelu messages.</p>
+<p>Místo panelu messages je možné zobrazit panel structure info, který zobrazuje informace o struktuře dokumentu:</p>
+<img alt="../_images/me-strucinfo.png" src="../_images/me-strucinfo.png" />
+<p>Pokud je tento panel zapnutý, vztahuje se vždy k elementu na němž je textový kurzor (1). Pokud je kurzor na prázdném řádku, je zobrazována informace k elementu se stejným odsazením jako je pozice kurzoru.</p>
+<p>V horní části structure info se zobrazuje informace o nadřazeném elementu (2) a jeho typu (3). V pravo je pak seznam hodnot (elementů), kterých může nadřazený element nabývat. Vybraný element je pak zvýrazněn svědlejším pozadím (4).
+Tyto elementy jsou pak podle typu zobrazeny rozdílným typem a barvou písma:</p>
+<blockquote>
+<div><ul class="simple">
+<li>tučně povinné položky</li>
+<li>kurzívou volitelné</li>
+<li>uzavřeny mez hvězdičky položky ke konverzy klíče</li>
+</ul>
+</div></blockquote>
+<p>Po najedtí kurzoru nad element se typ elementu zobrazí i v bublinkové nápovědě.
+V prostřední části structure info se pak zobrazuje informace k aktuálnímu elementu (5) a vlevo pak k typu hodnoty elementu (10)</p>
+<p>Na některé položky, jako například na hodnatu typu elementu pokud je tato abstraktem, je možné kliknout a v okně zobrazit odpovídající nápovědu. K navigaci mezi takto zobrazenými okny slouží navigační panel umístěný vpravo nahoře. Tlačítkem domečku (7) se vždy dostanem zpět na výchozí element, na kterém je kurzor. Šipkou nahoru (6) pak o úroveň výše, podle struktury zobrazovaného dokumentu. Šipky (8) a (9) pak umožňují procházet historii.</p>
 </div>
 
 
@@ -213,10 +218,10 @@ V <code class="docutils literal"><span class="pre">pylintrc</span></code> je pak
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="function_action.html" class="btn btn-neutral float-right" title="Creating new action (czech)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="analysis_pipeline_example.html" class="btn btn-neutral float-right" title="Analysis - Pipeline example (czech)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="rules.html" class="btn btn-neutral" title="Development Rules (czech)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="model_editor.html" class="btn btn-neutral" title="Model Editor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
