@@ -1,0 +1,1104 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>backend package &mdash; Job Panel Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Job Panel Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexJP.html" class="icon icon-home"> Job Panel Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Jobs Scheduler Source</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="communication.html">communication package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">data package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="delegator.html">delegator module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helpers.html">helpers package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="job.html">job module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="locks.html">locks module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mj_service.html">mj_service module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test.html">test module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_app.html">test_app module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_task.html">test_task module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ui.html">ui package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../indexJP.html">Job Panel Source Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../indexJP.html">Docs</a> &raquo;</li>
+        
+      <li>backend package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/aut/JobPanel/backend.rstb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="backend-package">
+<h1>backend package<a class="headerlink" href="#backend-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-backend.async_repeater">
+<span id="backend-async-repeater-module"></span><h2>backend.async_repeater module<a class="headerlink" href="#module-backend.async_repeater" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="backend.async_repeater.AnswerData">
+<em class="property">class </em><code class="descclassname">backend.async_repeater.</code><code class="descname">AnswerData</code><span class="sig-paren">(</span><em>id</em>, <em>sender</em>, <em>request</em>, <em>answer</em>, <em>on_answer</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.AnswerData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Format of answer returned by the AsyncRepeater.</p>
+<dl class="docutils">
+<dt>Attributes:</dt>
+<dd>self.id         request id, unique id= id
+self.sender     sender of answer, target of request
+self.request    request_data
+self.answer     answer_data
+self.on_answer  data stored when request was sent</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="backend.async_repeater.AsyncRepeater">
+<em class="property">class </em><code class="descclassname">backend.async_repeater.</code><code class="descname">AsyncRepeater</code><span class="sig-paren">(</span><em>repeater_address</em>, <em>parent_address=(''</em>, <em>0)</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.AsyncRepeater" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Interface to request-answer communication tree.</p>
+<p>AsyncRepeaters form a tree with root in client, first level with single node (backend),
+second level corresponding to multi jobs, and third level corresponding to Jobs.</p>
+<p>Repeaters handle packing and passing a request from any node to its particular child
+and then propagating back the answer to the request.
+Repeater do not process requests itself.
+Only in the case of error it sends the error answer itself.</p>
+<dl class="method">
+<dt id="backend.async_repeater.AsyncRepeater.add_child">
+<code class="descname">add_child</code><span class="sig-paren">(</span><em>connection</em>, <em>remote_address=None</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.AsyncRepeater.add_child" title="Permalink to this definition">¶</a></dt>
+<dd><p>Setup connection to a child repeater.
+1. Create a Dispatcher for connection to the child repeater, but do not connect.
+2. Ask <cite>connection</cite> for remote port forwarding to the StarterServer port.
+2. StarterServer wait for back connection from the child repeater, to get its listening port.
+3. Then StarterServer asks the Dispatcher to connect to the child repeater through the <cite>connection</cite></p>
+<blockquote>
+<div>passed as parameter (local port forwarding).</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>connection</strong> &#8211; The connection object used for port forwarding (None forwarding or SSH).</li>
+<li><strong>remote_port</strong> &#8211; If the remote port is known, we skip the StarterServer connection and call</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>connection to the child repeater directly.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">( child_id, forwarded_remote_port)
+child_id: ID of the child repeater it must be passed to the repeater when its process is started
+(e.g. as command parameter)
+forwarded_remote_port: a port on the remote machine the child repeater runs on and  to which it should connect
+to send its listening_port to the parent.</td>
+</tr>
+</tbody>
+</table>
+<p>TODO: test and possibly finish support for the remote_port parameter.
+IDEA: to check that we get correct child we may generate child ids not incermentaly, but at random.</p>
+<blockquote>
+<div>Then it servers also as a unique token to check that the correct repeater is connecting to the StarterServer.
+Must keep generating of ID atomic.</div></blockquote>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="backend.async_repeater.AsyncRepeater.add_child_lock">
+<code class="descname">add_child_lock</code><em class="property"> = None</em><a class="headerlink" href="#backend.async_repeater.AsyncRepeater.add_child_lock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lock for add_child()</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="backend.async_repeater.AsyncRepeater.clients">
+<code class="descname">clients</code><em class="property"> = None</em><a class="headerlink" href="#backend.async_repeater.AsyncRepeater.clients" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dict of clients. Keys client_id.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.async_repeater.AsyncRepeater.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.AsyncRepeater.close" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.async_repeater.AsyncRepeater.get_answers">
+<code class="descname">get_answers</code><span class="sig-paren">(</span><em>child_id</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.AsyncRepeater.get_answers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get list of answers from client (child_id).
+:return: [ AnswerData, ... ]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.async_repeater.AsyncRepeater.get_requests">
+<code class="descname">get_requests</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.AsyncRepeater.get_requests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get list of requests to process.
+:return: [ RequestData, ... ]</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.async_repeater.AsyncRepeater.reconnect_child">
+<code class="descname">reconnect_child</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.AsyncRepeater.reconnect_child" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="backend.async_repeater.AsyncRepeater.remove_child">
+<code class="descname">remove_child</code><span class="sig-paren">(</span><em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.AsyncRepeater.remove_child" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="backend.async_repeater.AsyncRepeater.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.AsyncRepeater.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start the repeater loop in separate thread.
+Start starter client.
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.async_repeater.AsyncRepeater.send_answer">
+<code class="descname">send_answer</code><span class="sig-paren">(</span><em>id</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.AsyncRepeater.send_answer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send an answer from local service. This is automatically paired with
+the corresponding request. From which we get the target of the answer.
+:param id: Id of request to which we answer.
+:param data: Answer data.
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.async_repeater.AsyncRepeater.send_request">
+<code class="descname">send_request</code><span class="sig-paren">(</span><em>target</em>, <em>data</em>, <em>on_answer</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.AsyncRepeater.send_request" title="Permalink to this definition">¶</a></dt>
+<dd><p>Send request down through the connection.</p>
+<blockquote>
+<div>The request is given by &#8216;data&#8217;., which could be any JSON serializable structure.
+The request is sent to the &#8216;target&#8217; service.
+The on_naswer parameter gives additional data that are returned together with the answer to the request.</div></blockquote>
+<p>TODO: test and finish.
+:param target: target repeater address relative to local repeater.</p>
+<blockquote>
+<div>I.e. sublist of [ backend_id (=0), mj_id, job_id ]</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data</strong> &#8211; any JSON serializable structure</li>
+<li><strong>on_answer</strong> &#8211; data returned together with answer</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="backend.async_repeater.RequestData">
+<em class="property">class </em><code class="descclassname">backend.async_repeater.</code><code class="descname">RequestData</code><span class="sig-paren">(</span><em>id</em>, <em>sender</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.RequestData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Format of request returned by the AsyncRepeater.
+The processing of the request should not depend on id and sender, but
+they are provided for possible logging.</p>
+<dl class="docutils">
+<dt>Attributes:</dt>
+<dd>self.id          request id, unique per child service
+self.sender      address of the service the send the request
+self.request     request itself</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="backend.async_repeater.Server">
+<em class="property">class </em><code class="descclassname">backend.async_repeater.</code><code class="descname">Server</code><span class="sig-paren">(</span><em>repeater</em>, <em>port</em>, <em>clients</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.Server" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">asyncore.dispatcher</span></code></p>
+<dl class="method">
+<dt id="backend.async_repeater.Server.get_dispatcher">
+<code class="descname">get_dispatcher</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.Server.get_dispatcher" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="backend.async_repeater.Server.handle_accept">
+<code class="descname">handle_accept</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.Server.handle_accept" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="backend.async_repeater.Server.handle_close">
+<code class="descname">handle_close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.Server.handle_close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="backend.async_repeater.ServerDispatcher">
+<em class="property">class </em><code class="descclassname">backend.async_repeater.</code><code class="descname">ServerDispatcher</code><span class="sig-paren">(</span><em>repeater_address</em>, <em>port</em>, <em>clients</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.ServerDispatcher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">asynchat.async_chat</span></code></p>
+<dl class="method">
+<dt id="backend.async_repeater.ServerDispatcher.accept">
+<code class="descname">accept</code><span class="sig-paren">(</span><em>socket</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.ServerDispatcher.accept" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="backend.async_repeater.ServerDispatcher.collect_incoming_data">
+<code class="descname">collect_incoming_data</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.ServerDispatcher.collect_incoming_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read an incoming message from the client and put it into our outgoing queue.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.async_repeater.ServerDispatcher.found_terminator">
+<code class="descname">found_terminator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.ServerDispatcher.found_terminator" title="Permalink to this definition">¶</a></dt>
+<dd><p>The end of a command or message has been seen.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.async_repeater.ServerDispatcher.get_requests">
+<code class="descname">get_requests</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.ServerDispatcher.get_requests" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extract and return (almost) all recieved requests to proceess.
+Since this extraction is done by the single thread, it should be safe.
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.async_repeater.ServerDispatcher.handle_close">
+<code class="descname">handle_close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.ServerDispatcher.handle_close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="backend.async_repeater.ServerDispatcher.handle_error">
+<code class="descname">handle_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.ServerDispatcher.handle_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="backend.async_repeater.ServerDispatcher.process_queues">
+<code class="descname">process_queues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.ServerDispatcher.process_queues" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="backend.async_repeater.ServerDispatcher.push_queue">
+<code class="descname">push_queue</code><em class="property"> = None</em><a class="headerlink" href="#backend.async_repeater.ServerDispatcher.push_queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queue for push request</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.async_repeater.ServerDispatcher.push_safe">
+<code class="descname">push_safe</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.ServerDispatcher.push_safe" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="backend.async_repeater.ServerDispatcher.send_answer">
+<code class="descname">send_answer</code><span class="sig-paren">(</span><em>answer_id</em>, <em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.ServerDispatcher.send_answer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="backend.async_repeater.StarterServer">
+<em class="property">class </em><code class="descclassname">backend.async_repeater.</code><code class="descname">StarterServer</code><span class="sig-paren">(</span><em>async_repeater</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.StarterServer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">asyncore.dispatcher</span></code></p>
+<p>Server which accepts reverse connection from child repeaters.</p>
+<dl class="method">
+<dt id="backend.async_repeater.StarterServer.handle_accepted">
+<code class="descname">handle_accepted</code><span class="sig-paren">(</span><em>sock</em>, <em>addr</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.StarterServer.handle_accepted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="backend.async_repeater.StarterServerDispatcher">
+<em class="property">class </em><code class="descclassname">backend.async_repeater.</code><code class="descname">StarterServerDispatcher</code><span class="sig-paren">(</span><em>sock</em>, <em>async_repeater</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.StarterServerDispatcher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">asyncore.dispatcher</span></code></p>
+<dl class="method">
+<dt id="backend.async_repeater.StarterServerDispatcher.handle_read">
+<code class="descname">handle_read</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.async_repeater.StarterServerDispatcher.handle_read" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="backend-client-test-module">
+<h2>backend.client_test module<a class="headerlink" href="#backend-client-test-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-backend.connection">
+<span id="backend-connection-module"></span><h2>backend.connection module<a class="headerlink" href="#module-backend.connection" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="backend.connection.ConnectionBase">
+<em class="property">class </em><code class="descclassname">backend.connection.</code><code class="descname">ConnectionBase</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#backend.json_data.JsonData" title="backend.json_data.JsonData"><code class="xref py py-class docutils literal"><span class="pre">backend.json_data.JsonData</span></code></a></p>
+<p>Represents connction to a remote machine or local, provides
+hide difference between local and remote</p>
+<dl class="attribute">
+<dt id="backend.connection.ConnectionBase.address">
+<code class="descname">address</code><em class="property"> = None</em><a class="headerlink" href="#backend.connection.ConnectionBase.address" title="Permalink to this definition">¶</a></dt>
+<dd><p>IP or hostname of SSH server ( localhost for LocalConnection)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.connection.ConnectionBase.close_connections">
+<code class="descname">close_connections</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionBase.close_connections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close al connections in peaceful meaner.
+:param self:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.connection.ConnectionBase.connect">
+<code class="descname">connect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionBase.connect" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="backend.connection.ConnectionBase.environment">
+<code class="descname">environment</code><em class="property"> = None</em><a class="headerlink" href="#backend.connection.ConnectionBase.environment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Seems that only path to the installation is necesary, possibly path to python.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.connection.ConnectionBase.get_status">
+<code class="descname">get_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionBase.get_status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="backend.connection.ConnectionBase.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#backend.connection.ConnectionBase.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unique name used in GUI.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="backend.connection.ConnectionBase.password">
+<code class="descname">password</code><em class="property"> = None</em><a class="headerlink" href="#backend.connection.ConnectionBase.password" title="Permalink to this definition">¶</a></dt>
+<dd><p>password for ssh connection</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="backend.connection.ConnectionBase.port">
+<code class="descname">port</code><em class="property"> = None</em><a class="headerlink" href="#backend.connection.ConnectionBase.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>port for ssh connection</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.connection.ConnectionBase.set_local_service">
+<code class="descname">set_local_service</code><span class="sig-paren">(</span><em>local_service</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionBase.set_local_service" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="backend.connection.ConnectionBase.uid">
+<code class="descname">uid</code><em class="property"> = None</em><a class="headerlink" href="#backend.connection.ConnectionBase.uid" title="Permalink to this definition">¶</a></dt>
+<dd><p>user id for ssh connection</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="backend.connection.ConnectionLocal">
+<em class="property">class </em><code class="descclassname">backend.connection.</code><code class="descname">ConnectionLocal</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionLocal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#backend.connection.ConnectionBase" title="backend.connection.ConnectionBase"><code class="xref py py-class docutils literal"><span class="pre">backend.connection.ConnectionBase</span></code></a></p>
+<dl class="method">
+<dt id="backend.connection.ConnectionLocal.download">
+<code class="descname">download</code><span class="sig-paren">(</span><em>paths</em>, <em>local_prefix</em>, <em>remote_prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionLocal.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download given relative &#8216;paths&#8217; to remote, prefixing them by &#8216;local_prefix&#8217; for destination and
+by &#8216;remote_prefix&#8217; for source.
+If target exists, replace it.
+:return: None
+:raises FileNotFoundError:
+:raises PermissionError:</p>
+<p>Implementation: just copy</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.connection.ConnectionLocal.forward_local_port">
+<code class="descname">forward_local_port</code><span class="sig-paren">(</span><em>remote_port</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionLocal.forward_local_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get free local port and open SSH tunel for forwarding connection
+to the local port to the given &#8216;remote port&#8217;.
+:param remote_port:
+:return: local_port</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.connection.ConnectionLocal.forward_remote_port">
+<code class="descname">forward_remote_port</code><span class="sig-paren">(</span><em>local_port</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionLocal.forward_remote_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Try to open SSH tunel for forwarding connection
+from a remote port to the given &#8216;local_port&#8217;.
+Remote port is first choosen same as the local port, but if tunneling fail
+we repeat with higher port (fixed number of tries).
+:param local_port:
+:return: remote_port</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.connection.ConnectionLocal.get_delegator">
+<code class="descname">get_delegator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionLocal.get_delegator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start delegator and return its proxy.</p>
+<p>We assume that Service itself can behave as ServiceProxy but not vice versa.
+:return: service_proxy</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.connection.ConnectionLocal.upload">
+<code class="descname">upload</code><span class="sig-paren">(</span><em>paths</em>, <em>local_prefix</em>, <em>remote_prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionLocal.upload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upload given relative &#8216;paths&#8217; to remote, prefixing them by &#8216;local_prefix&#8217; for source and
+by &#8216;remote_prefix&#8217; for destination.
+If target exists, replace it.
+:return: None
+:raises FileNotFoundError:
+:raises PermissionError:</p>
+<p>Implementation: just copy</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="backend.connection.ConnectionSSH">
+<em class="property">class </em><code class="descclassname">backend.connection.</code><code class="descname">ConnectionSSH</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionSSH" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#backend.connection.ConnectionBase" title="backend.connection.ConnectionBase"><code class="xref py py-class docutils literal"><span class="pre">backend.connection.ConnectionBase</span></code></a></p>
+<dl class="method">
+<dt id="backend.connection.ConnectionSSH.close_connections">
+<code class="descname">close_connections</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionSSH.close_connections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close al connections in peaceful meaner.
+:param self:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.connection.ConnectionSSH.close_forwarded_local_port">
+<code class="descname">close_forwarded_local_port</code><span class="sig-paren">(</span><em>local_port</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionSSH.close_forwarded_local_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close forwarded local port.
+:param local_port:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.connection.ConnectionSSH.close_forwarded_remote_port">
+<code class="descname">close_forwarded_remote_port</code><span class="sig-paren">(</span><em>remote_port</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionSSH.close_forwarded_remote_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close forwarded remote port.
+:param remote_port:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.connection.ConnectionSSH.connect">
+<code class="descname">connect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionSSH.connect" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="#backend.connection.SSHAuthenticationError" title="backend.connection.SSHAuthenticationError"><strong>SSHAuthenticationError</strong></a> &#8211; </li>
+<li><a class="reference internal" href="#backend.connection.SSHError" title="backend.connection.SSHError"><strong>SSHError</strong></a> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.connection.ConnectionSSH.download">
+<code class="descname">download</code><span class="sig-paren">(</span><em>paths</em>, <em>local_prefix</em>, <em>remote_prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionSSH.download" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download given relative &#8216;paths&#8217; to remote, prefixing them by &#8216;local_prefix&#8217; for destination and
+by &#8216;remote_prefix&#8217; for source.
+If target exists, replace it.
+:return: None
+:raises FileNotFoundError:
+:raises PermissionError:
+:raises SSHTimeoutError:</p>
+<p>Implementation: just copy</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.connection.ConnectionSSH.forward_local_port">
+<code class="descname">forward_local_port</code><span class="sig-paren">(</span><em>remote_port</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionSSH.forward_local_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get free local port and open SSH tunel for forwarding connection
+to the local port to the given &#8216;remote port&#8217;.
+:param remote_port:
+:return: local_port</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.connection.ConnectionSSH.forward_remote_port">
+<code class="descname">forward_remote_port</code><span class="sig-paren">(</span><em>local_port</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionSSH.forward_remote_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get free remote port and open SSH tunel for forwarding connection
+from a remote port to the given &#8216;local_port&#8217;.
+:param local_port:
+:return: remote_port
+:raises SSHError:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.connection.ConnectionSSH.get_delegator">
+<code class="descname">get_delegator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionSSH.get_delegator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start delegator and return its proxy.
+MJ and Backand seeervices should be derived from Delegator service or have delegator instance
+so that we can process requests processed by remote delegator localy.</p>
+<p>Process of starting a delegator
+1. Open remote forwarding tunnel (get local port from local_service.repeater.starter_server_port]
+2. Get child ID from repeater ( local_service.repeater.add_child(...) )
+3. Start delegator on remote using SSH exec. Pass: child ID, starter address</p>
+<blockquote>
+<div>(Delegater connect to local repeater, ClientDispatcher gets listenning port of the delegator)</div></blockquote>
+<ol class="arabic simple" start="4">
+<li>wait a bit</li>
+<li>call delegator_proxy.connect_service( child_id)</li>
+<li>store the delegator proxy in connection return it if asked next time</li>
+</ol>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>local_service</strong> &#8211; Instance of ServiceBase (or derived class)</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference internal" href="#backend.connection.SSHError" title="backend.connection.SSHError"><strong>SSHError</strong></a> &#8211; </li>
+<li><a class="reference internal" href="#backend.connection.SSHTimeoutError" title="backend.connection.SSHTimeoutError"><strong>SSHTimeoutError</strong></a> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.connection.ConnectionSSH.get_status">
+<code class="descname">get_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionSSH.get_status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="backend.connection.ConnectionSSH.upload">
+<code class="descname">upload</code><span class="sig-paren">(</span><em>paths</em>, <em>local_prefix</em>, <em>remote_prefix</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.connection.ConnectionSSH.upload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Upload given relative &#8216;paths&#8217; to remote, prefixing them by &#8216;local_prefix&#8217; for source and
+by &#8216;remote_prefix&#8217; for destination.
+If target exists, replace it.
+:return: None
+:raises FileNotFoundError:
+:raises PermissionError:
+:raises SSHTimeoutError:</p>
+<p>Implementation: just copy</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="backend.connection.ConnectionStatus">
+<em class="property">class </em><code class="descclassname">backend.connection.</code><code class="descname">ConnectionStatus</code><a class="headerlink" href="#backend.connection.ConnectionStatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></p>
+<dl class="attribute">
+<dt id="backend.connection.ConnectionStatus.error">
+<code class="descname">error</code><em class="property"> = 4</em><a class="headerlink" href="#backend.connection.ConnectionStatus.error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="backend.connection.ConnectionStatus.not_connected">
+<code class="descname">not_connected</code><em class="property"> = 1</em><a class="headerlink" href="#backend.connection.ConnectionStatus.not_connected" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="backend.connection.ConnectionStatus.offline">
+<code class="descname">offline</code><em class="property"> = 3</em><a class="headerlink" href="#backend.connection.ConnectionStatus.offline" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="backend.connection.ConnectionStatus.online">
+<code class="descname">online</code><em class="property"> = 2</em><a class="headerlink" href="#backend.connection.ConnectionStatus.online" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="backend.connection.Error">
+<em class="property">exception </em><code class="descclassname">backend.connection.</code><code class="descname">Error</code><a class="headerlink" href="#backend.connection.Error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>Base class for exceptions in this module.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="backend.connection.SSHAuthenticationError">
+<em class="property">exception </em><code class="descclassname">backend.connection.</code><code class="descname">SSHAuthenticationError</code><a class="headerlink" href="#backend.connection.SSHAuthenticationError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#backend.connection.SSHError" title="backend.connection.SSHError"><code class="xref py py-class docutils literal"><span class="pre">backend.connection.SSHError</span></code></a></p>
+<p>Raised when authentication fail.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="backend.connection.SSHError">
+<em class="property">exception </em><code class="descclassname">backend.connection.</code><code class="descname">SSHError</code><a class="headerlink" href="#backend.connection.SSHError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#backend.connection.Error" title="backend.connection.Error"><code class="xref py py-class docutils literal"><span class="pre">backend.connection.Error</span></code></a></p>
+<p>Raised when error in SSH session.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="backend.connection.SSHTimeoutError">
+<em class="property">exception </em><code class="descclassname">backend.connection.</code><code class="descname">SSHTimeoutError</code><a class="headerlink" href="#backend.connection.SSHTimeoutError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#backend.connection.SSHError" title="backend.connection.SSHError"><code class="xref py py-class docutils literal"><span class="pre">backend.connection.SSHError</span></code></a></p>
+<p>Raised when timeout occurs.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-backend.environment">
+<span id="backend-environment-module"></span><h2>backend.environment module<a class="headerlink" href="#module-backend.environment" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="backend.environment.Environment">
+<em class="property">class </em><code class="descclassname">backend.environment.</code><code class="descname">Environment</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.environment.Environment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#backend.json_data.JsonData" title="backend.json_data.JsonData"><code class="xref py py-class docutils literal"><span class="pre">backend.json_data.JsonData</span></code></a></p>
+<p>Represents GeoMop backend installation and system configuration.</p>
+<p>Keep information about all executables that are part of the installation,
+metainformation about executables and scripts.
+(Can run given executable)</p>
+<p>Process of initialization. Environment configuration should be part of
+connection as it is related to particular machine. Still allowing to
+copy one connection to other and reuse environment or ssh.
+1. User set root dir.
+2. Default list of executables and other parts of configuration is test
+on the remote (using delegator) and returned back. Possible problems can be resolved
+by user manualy and further tested in a Connection panel.</p>
+<blockquote>
+<div><p>GUI side: Environment configuration should be part of
+connection as it is related to particular machine. Still allowing to
+copy the  connection to new one reusing environment or ssh. Environment setup should be minimalistic
+by default just setting workspace and root dir of GeoMop installation.</p>
+<p>SSH connection test should perform test both test of SSH connection as well as test of installation
+this fill rest of environment and allows to modify invalid setting (mpi, python, etc.)
+Possible problems can be resolved by user manually and further tested in the Connection panel.</p>
+</div></blockquote>
+<dl class="attribute">
+<dt id="backend.environment.Environment.executables">
+<code class="descname">executables</code><em class="property"> = None</em><a class="headerlink" href="#backend.environment.Environment.executables" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of Executables available on the installation.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="backend.environment.Environment.geomop_analysis_workspace">
+<code class="descname">geomop_analysis_workspace</code><em class="property"> = None</em><a class="headerlink" href="#backend.environment.Environment.geomop_analysis_workspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path to the workspace root</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="backend.environment.Environment.geomop_root">
+<code class="descname">geomop_root</code><em class="property"> = None</em><a class="headerlink" href="#backend.environment.Environment.geomop_root" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path to the root directory of the GeoMop backend installtion.
+The only attribute that must be provided by user.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="backend.environment.Environment.mpiexec">
+<code class="descname">mpiexec</code><em class="property"> = None</em><a class="headerlink" href="#backend.environment.Environment.mpiexec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path to the system wide (default) mpiexec.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="backend.environment.Environment.pbs">
+<code class="descname">pbs</code><em class="property"> = None</em><a class="headerlink" href="#backend.environment.Environment.pbs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resolve class to implement details of particular PBS.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="backend.environment.Environment.python">
+<code class="descname">python</code><em class="property"> = None</em><a class="headerlink" href="#backend.environment.Environment.python" title="Permalink to this definition">¶</a></dt>
+<dd><p>Path to the python interpreter.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="backend.environment.Environment.version_id">
+<code class="descname">version_id</code><em class="property"> = None</em><a class="headerlink" href="#backend.environment.Environment.version_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Version ID of the installation. This is set by &#8216;test_installation&#8217;
+and checked against true state of the installation in constructor.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="backend-exception-thread-module">
+<h2>backend.exception_thread module<a class="headerlink" href="#backend-exception-thread-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="backend-executor-module">
+<h2>backend.executor module<a class="headerlink" href="#backend-executor-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-backend.json_data">
+<span id="backend-json-data-module"></span><h2>backend.json_data module<a class="headerlink" href="#module-backend.json_data" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="backend.json_data.ClassFactory">
+<em class="property">class </em><code class="descclassname">backend.json_data.</code><code class="descname">ClassFactory</code><span class="sig-paren">(</span><em>class_list</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.json_data.ClassFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Helper class for JsonData.</p>
+<dl class="method">
+<dt id="backend.json_data.ClassFactory.make_instance">
+<code class="descname">make_instance</code><span class="sig-paren">(</span><em>config</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.json_data.ClassFactory.make_instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make instance from config dict.
+Dict must contain item &#8220;__class__&#8221; with name of desired class.
+Desired class must be in class_list.
+:param config:
+:return:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="backend.json_data.Error">
+<em class="property">exception </em><code class="descclassname">backend.json_data.</code><code class="descname">Error</code><a class="headerlink" href="#backend.json_data.Error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>Base class for exceptions in this module.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="backend.json_data.JsonData">
+<em class="property">class </em><code class="descclassname">backend.json_data.</code><code class="descname">JsonData</code><span class="sig-paren">(</span><em>config</em>, <em>serialized_attr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.json_data.JsonData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Abstract base class for various data classes.
+These classes are basically just documented dictionaries,
+which are JSON serializable and provide some syntactic sugar
+(see DotDict from Flow123d - Jan Hybs)
+In order to simplify also serialization of non-data classes, we
+should implement serialization of __dict__.</p>
+<p>Why use JSON for serialization? (e.g. instead of pickle)
+We want to use it for both sending the data and storing them in files,
+while some of these files should be human readable/writable.</p>
+<p>Serializable classes will be derived from this one. And data members
+that should not be serialized are prefixed by &#8216;_&#8217;.</p>
+<p>If list of serialized attributes is provided to constructor,
+these attributes are serialized no matter if prefixed by &#8216;_&#8217; or not.</p>
+<p>?? Anything similar in current JobPanel?</p>
+<dl class="method">
+<dt id="backend.json_data.JsonData.serialize">
+<code class="descname">serialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.json_data.JsonData.serialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serialize the object.
+:return:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="backend.json_data.WrongKeyError">
+<em class="property">exception </em><code class="descclassname">backend.json_data.</code><code class="descname">WrongKeyError</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.json_data.WrongKeyError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#backend.json_data.Error" title="backend.json_data.Error"><code class="xref py py-class docutils literal"><span class="pre">backend.json_data.Error</span></code></a></p>
+<p>Raised when attempt assign data to key that not exist</p>
+</dd></dl>
+
+</div>
+<div class="section" id="backend-mj-test-module">
+<h2>backend.mj_test module<a class="headerlink" href="#backend-mj-test-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-backend.pbs">
+<span id="backend-pbs-module"></span><h2>backend.pbs module<a class="headerlink" href="#module-backend.pbs" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="backend.pbs.Pbs">
+<em class="property">class </em><code class="descclassname">backend.pbs.</code><code class="descname">Pbs</code><span class="sig-paren">(</span><em>mj_path</em>, <em>config</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.pbs.Pbs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class for configuration qsub command</p>
+<dl class="attribute">
+<dt id="backend.pbs.Pbs.config">
+<code class="descname">config</code><em class="property"> = None</em><a class="headerlink" href="#backend.pbs.Pbs.config" title="Permalink to this definition">¶</a></dt>
+<dd><p>pbs configuration (<a class="reference internal" href="data.html#data.communicator_conf.PbsConfig" title="data.communicator_conf.PbsConfig"><code class="xref py py-class docutils literal"><span class="pre">data.communicator_conf.PbsConfig</span></code></a>)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.pbs.Pbs.get_qsub_args">
+<code class="descname">get_qsub_args</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.pbs.Pbs.get_qsub_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get arguments for qsub function</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="backend.pbs.Pbs.mj_path">
+<code class="descname">mj_path</code><em class="property"> = None</em><a class="headerlink" href="#backend.pbs.Pbs.mj_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>folder name for multijob data</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="backend.pbs.Pbs.prepare_file">
+<code class="descname">prepare_file</code><span class="sig-paren">(</span><em>command</em>, <em>interpreter=None</em>, <em>load_commands=[]</em>, <em>args=[]</em>, <em>limit_args=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.pbs.Pbs.prepare_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open and construct shell file for pbs starting</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="backend.pbs.PbsConfig">
+<em class="property">class </em><code class="descclassname">backend.pbs.</code><code class="descname">PbsConfig</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.pbs.PbsConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#backend.json_data.JsonData" title="backend.json_data.JsonData"><code class="xref py py-class docutils literal"><span class="pre">backend.json_data.JsonData</span></code></a></p>
+<p>Class for configuration qsub command</p>
+<dl class="attribute">
+<dt id="backend.pbs.PbsConfig.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#backend.pbs.PbsConfig.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>name as unique job identifier for files</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="backend.pbs.PbsConfig.scratch">
+<code class="descname">scratch</code><em class="property"> = None</em><a class="headerlink" href="#backend.pbs.PbsConfig.scratch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize communication over socket, True in case of MultiJob
+otherwise False.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="backend.pbs.PbsDialect">
+<em class="property">class </em><code class="descclassname">backend.pbs.</code><code class="descname">PbsDialect</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.pbs.PbsDialect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#backend.json_data.JsonData" title="backend.json_data.JsonData"><code class="xref py py-class docutils literal"><span class="pre">backend.json_data.JsonData</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="backend.pbs.PbsDialectMetacentrum">
+<em class="property">class </em><code class="descclassname">backend.pbs.</code><code class="descname">PbsDialectMetacentrum</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.pbs.PbsDialectMetacentrum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#backend.pbs.PbsDialect" title="backend.pbs.PbsDialect"><code class="xref py py-class docutils literal"><span class="pre">backend.pbs.PbsDialect</span></code></a></p>
+<dl class="staticmethod">
+<dt id="backend.pbs.PbsDialectMetacentrum.get_pbs_directives">
+<em class="property">static </em><code class="descname">get_pbs_directives</code><span class="sig-paren">(</span><em>work_dir</em>, <em>pbs_config</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.pbs.PbsDialectMetacentrum.get_pbs_directives" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates file directives for specific PBS system.
+:param work_dir: Path to MJ, specifies output file.
+:param pbs_config: PbsConf object with data.
+:return: List of PBS directives.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="backend.pbs.PbsDialectMetacentrum.get_qsub_args">
+<em class="property">static </em><code class="descname">get_qsub_args</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.pbs.PbsDialectMetacentrum.get_qsub_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return qsub arguments in list</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="backend.pbs.PbsDialectPBSPro">
+<em class="property">class </em><code class="descclassname">backend.pbs.</code><code class="descname">PbsDialectPBSPro</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.pbs.PbsDialectPBSPro" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#backend.pbs.PbsDialect" title="backend.pbs.PbsDialect"><code class="xref py py-class docutils literal"><span class="pre">backend.pbs.PbsDialect</span></code></a></p>
+<dl class="staticmethod">
+<dt id="backend.pbs.PbsDialectPBSPro.get_pbs_directives">
+<em class="property">static </em><code class="descname">get_pbs_directives</code><span class="sig-paren">(</span><em>work_dir</em>, <em>pbs_config</em><span class="sig-paren">)</span><a class="headerlink" href="#backend.pbs.PbsDialectPBSPro.get_pbs_directives" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates file directives for specific PBS system.
+:param work_dir: Path to MJ, specifies output file.
+:param pbs_config: PbsConf object with data.
+:return: List of PBS directives.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="backend.pbs.PbsDialectPBSPro.get_qsub_args">
+<em class="property">static </em><code class="descname">get_qsub_args</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#backend.pbs.PbsDialectPBSPro.get_qsub_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return qsub arguments in list</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="backend-service-base-module">
+<h2>backend.service_base module<a class="headerlink" href="#backend-service-base-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="backend-service-proxy-module">
+<h2>backend.service_proxy module<a class="headerlink" href="#backend-service-proxy-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-backend">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-backend" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

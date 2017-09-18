@@ -5,12 +5,15 @@ common
    :maxdepth: 4
 
    config
+   exec_with_limit
    flow_util
+   geometry_files
    geomop_analysis
    geomop_dialogs
    geomop_util
    geomop_widgets
    icon
+   json_data
    model_data
    pyperclip
    pyssh

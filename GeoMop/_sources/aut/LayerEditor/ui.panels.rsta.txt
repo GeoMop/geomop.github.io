@@ -12,6 +12,22 @@ ui.panels.diagram module
     :undoc-members:
     :show-inheritance:
 
+ui.panels.layers module
+-----------------------
+
+.. automodule:: ui.panels.layers
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.panels.shpfiles module
+-------------------------
+
+.. automodule:: ui.panels.shpfiles
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 
 Module contents
 ---------------

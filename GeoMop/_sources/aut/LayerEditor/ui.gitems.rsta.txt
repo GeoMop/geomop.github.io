@@ -4,6 +4,22 @@ ui.gitems package
 Submodules
 ----------
 
+ui.gitems.blink module
+----------------------
+
+.. automodule:: ui.gitems.blink
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.gitems.diagram_view module
+-----------------------------
+
+.. automodule:: ui.gitems.diagram_view
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 ui.gitems.line module
 ---------------------
 
@@ -16,6 +32,22 @@ ui.gitems.point module
 ----------------------
 
 .. automodule:: ui.gitems.point
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.gitems.polygon module
+------------------------
+
+.. automodule:: ui.gitems.polygon
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.gitems.shp_background module
+-------------------------------
+
+.. automodule:: ui.gitems.shp_background
     :members:
     :undoc-members:
     :show-inheritance:

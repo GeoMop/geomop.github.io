@@ -40,7 +40,7 @@
  documentation" href="../../index.html"/>
         <link rel="up" title="ui package" href="ui.html"/>
         <link rel="next" title="ui.panels package" href="ui.panels.html"/>
-        <link rel="prev" title="ui.gitems package" href="ui.gitems.html"/> 
+        <link rel="prev" title="ui.helpers package" href="ui.helpers.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -100,11 +100,16 @@
 <li class="toctree-l1 current"><a class="reference internal" href="ui.html">ui package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="ui.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ui.data.html">ui.data package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.dialogs.html">ui.dialogs package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ui.gitems.html">ui.gitems package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.helpers.html">ui.helpers package</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">ui.menus package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-ui.menus.edit">ui.menus.edit module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ui.menus.tools">ui.menus.tools module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.menus.file">ui.menus.file module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.menus.layers">ui.menus.layers module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.menus.shpfiles">ui.menus.shpfiles module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ui-menus-tools-module">ui.menus.tools module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-ui.menus">Module contents</a></li>
 </ul>
 </li>
@@ -201,15 +206,115 @@
 </dd></dl>
 
 </div>
-<div class="section" id="module-ui.menus.tools">
-<span id="ui-menus-tools-module"></span><h2>ui.menus.tools module<a class="headerlink" href="#module-ui.menus.tools" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-ui.menus.file">
+<span id="ui-menus-file-module"></span><h2>ui.menus.file module<a class="headerlink" href="#module-ui.menus.file" title="Permalink to this headline">¶</a></h2>
+<p>Module contains file menu widget.</p>
 <dl class="class">
-<dt id="ui.menus.tools.ToolsMenu">
-<em class="property">class </em><code class="descclassname">ui.menus.tools.</code><code class="descname">ToolsMenu</code><span class="sig-paren">(</span><em>parent</em>, <em>diagram</em>, <em>title='&amp;Settings'</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.tools.ToolsMenu" title="Permalink to this definition">¶</a></dt>
+<dt id="ui.menus.file.MainFileMenu">
+<em class="property">class </em><code class="descclassname">ui.menus.file.</code><code class="descname">MainFileMenu</code><span class="sig-paren">(</span><em>parent</em>, <em>layer_editor</em>, <em>title='&amp;File'</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.file.MainFileMenu" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QMenu</span></code></p>
 <p>Menu with file actions.</p>
+<dl class="method">
+<dt id="ui.menus.file.MainFileMenu.update_recent_files">
+<code class="descname">update_recent_files</code><span class="sig-paren">(</span><em>from_row=1</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.file.MainFileMenu.update_recent_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>update recent file in menu</p>
 </dd></dl>
 
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.menus.layers">
+<span id="ui-menus-layers-module"></span><h2>ui.menus.layers module<a class="headerlink" href="#module-ui.menus.layers" title="Permalink to this headline">¶</a></h2>
+<p>Layers panel contex menus</p>
+<dl class="class">
+<dt id="ui.menus.layers.LayersFractuceMenu">
+<em class="property">class </em><code class="descclassname">ui.menus.layers.</code><code class="descname">LayersFractuceMenu</code><span class="sig-paren">(</span><em>layers_panel</em>, <em>interface_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.layers.LayersFractuceMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QMenu</span></code></p>
+<p>Contex Menu with fracture actions.</p>
+<dl class="attribute">
+<dt id="ui.menus.layers.LayersFractuceMenu.interface_idx">
+<code class="descname">interface_idx</code><em class="property"> = None</em><a class="headerlink" href="#ui.menus.layers.LayersFractuceMenu.interface_idx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selected interface index</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.menus.layers.LayersFractuceMenu.layers_panel">
+<code class="descname">layers_panel</code><em class="property"> = None</em><a class="headerlink" href="#ui.menus.layers.LayersFractuceMenu.layers_panel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Layers panel</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.menus.layers.LayersInterfaceMenu">
+<em class="property">class </em><code class="descclassname">ui.menus.layers.</code><code class="descname">LayersInterfaceMenu</code><span class="sig-paren">(</span><em>layers_panel</em>, <em>interface_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.layers.LayersInterfaceMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QMenu</span></code></p>
+<p>Contex Menu with interface actions.</p>
+<dl class="attribute">
+<dt id="ui.menus.layers.LayersInterfaceMenu.interface_idx">
+<code class="descname">interface_idx</code><em class="property"> = None</em><a class="headerlink" href="#ui.menus.layers.LayersInterfaceMenu.interface_idx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selected interface index</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.menus.layers.LayersInterfaceMenu.layers_panel">
+<code class="descname">layers_panel</code><em class="property"> = None</em><a class="headerlink" href="#ui.menus.layers.LayersInterfaceMenu.layers_panel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Layers panel</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.menus.layers.LayersLayerMenu">
+<em class="property">class </em><code class="descclassname">ui.menus.layers.</code><code class="descname">LayersLayerMenu</code><span class="sig-paren">(</span><em>layers_panel</em>, <em>layer_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.layers.LayersLayerMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QMenu</span></code></p>
+<p>Contex Menu with layer actions</p>
+<dl class="attribute">
+<dt id="ui.menus.layers.LayersLayerMenu.layer_idx">
+<code class="descname">layer_idx</code><em class="property"> = None</em><a class="headerlink" href="#ui.menus.layers.LayersLayerMenu.layer_idx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selected layer index</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.menus.layers.LayersLayerMenu.layers_panel">
+<code class="descname">layers_panel</code><em class="property"> = None</em><a class="headerlink" href="#ui.menus.layers.LayersLayerMenu.layers_panel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Layers panel</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="ui.menus.layers.LayersShadowMenu">
+<em class="property">class </em><code class="descclassname">ui.menus.layers.</code><code class="descname">LayersShadowMenu</code><span class="sig-paren">(</span><em>layers_panel</em>, <em>layer_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.layers.LayersShadowMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QMenu</span></code></p>
+<p>Contex Menu with layer actions</p>
+<dl class="attribute">
+<dt id="ui.menus.layers.LayersShadowMenu.layer_idx">
+<code class="descname">layer_idx</code><em class="property"> = None</em><a class="headerlink" href="#ui.menus.layers.LayersShadowMenu.layer_idx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Selected layer index</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.menus.layers.LayersShadowMenu.layers_panel">
+<code class="descname">layers_panel</code><em class="property"> = None</em><a class="headerlink" href="#ui.menus.layers.LayersShadowMenu.layers_panel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Layers panel</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.menus.shpfiles">
+<span id="ui-menus-shpfiles-module"></span><h2>ui.menus.shpfiles module<a class="headerlink" href="#module-ui.menus.shpfiles" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ui.menus.shpfiles.ShpFilesMenu">
+<em class="property">class </em><code class="descclassname">ui.menus.shpfiles.</code><code class="descname">ShpFilesMenu</code><span class="sig-paren">(</span><em>parent</em>, <em>shape_file_panel</em>, <em>file_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.menus.shpfiles.ShpFilesMenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QMenu</span></code></p>
+<p>Menu with shape file panel context actions.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="ui-menus-tools-module">
+<h2>ui.menus.tools module<a class="headerlink" href="#ui-menus-tools-module" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-ui.menus">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ui.menus" title="Permalink to this headline">¶</a></h2>
@@ -229,7 +334,7 @@
         <a href="ui.panels.html" class="btn btn-neutral float-right" title="ui.panels package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ui.gitems.html" class="btn btn-neutral" title="ui.gitems package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ui.helpers.html" class="btn btn-neutral" title="ui.helpers package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -4,6 +4,7 @@ JobPanel
 .. toctree::
    :maxdepth: 4
 
+   backend
    communication
    data
    delegator

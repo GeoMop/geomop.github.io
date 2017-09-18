@@ -1,0 +1,854 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>geometry_files package &mdash; GeoMop Common Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="GeoMop Common Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexCommon.html" class="icon icon-home"> GeoMop Common Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Common Source</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="flow_util.html">flow_util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_analysis.html">geomop_analysis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_dialogs.html">geomop_dialogs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_util.html">geomop_util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_data.html">model_data package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyperclip.html">pyperclip package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyssh.html">pyssh package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">config module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="icon.html">icon module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version.html">version module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../indexCommon.html">GeoMop Common Source Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../indexCommon.html">Docs</a> &raquo;</li>
+        
+      <li>geometry_files package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/aut/common/geometry_files.rstd.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="geometry-files-package">
+<h1>geometry_files package<a class="headerlink" href="#geometry-files-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-geometry_files.geometry">
+<span id="geometry-files-geometry-module"></span><h2>geometry_files.geometry module<a class="headerlink" href="#module-geometry_files.geometry" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="geometry_files.geometry.GeometrySer">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry.</code><code class="descname">GeometrySer</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry.GeometrySer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>geometry data serializer</p>
+<dl class="attribute">
+<dt id="geometry_files.geometry.GeometrySer.file">
+<code class="descname">file</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry.GeometrySer.file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Json geometry file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry.GeometrySer.read">
+<code class="descname">read</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry.GeometrySer.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>return LayerGeometry data</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry.GeometrySer.write">
+<code class="descname">write</code><span class="sig-paren">(</span><em>lg</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry.GeometrySer.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write LayerGeometry data to file</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geometry_files.geometry_factory">
+<span id="geometry-files-geometry-factory-module"></span><h2>geometry_files.geometry_factory module<a class="headerlink" href="#module-geometry_files.geometry_factory" title="Permalink to this headline">¶</a></h2>
+<p>Structures for Layer Geometry File</p>
+<dl class="class">
+<dt id="geometry_files.geometry_factory.GeometryFactory">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_factory.</code><code class="descname">GeometryFactory</code><span class="sig-paren">(</span><em>geometry=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class for creating geometry file from graphic representation of object</p>
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.add_GL">
+<code class="descname">add_GL</code><span class="sig-paren">(</span><em>name</em>, <em>type</em>, <em>regions_idx</em>, <em>top_type</em>, <em>top</em>, <em>bottom_type=None</em>, <em>bottom=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.add_GL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new main layer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.add_node">
+<code class="descname">add_node</code><span class="sig-paren">(</span><em>node_set_idx</em>, <em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.add_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add one node</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.add_node_set">
+<code class="descname">add_node_set</code><span class="sig-paren">(</span><em>topology_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.add_node_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new node set</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.add_plane_surface">
+<code class="descname">add_plane_surface</code><span class="sig-paren">(</span><em>depth</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.add_plane_surface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new main layer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.add_polygon">
+<code class="descname">add_polygon</code><span class="sig-paren">(</span><em>topology_idx</em>, <em>p_idxs</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.add_polygon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add one polygon</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.add_region">
+<code class="descname">add_region</code><span class="sig-paren">(</span><em>color</em>, <em>name</em>, <em>dim</em>, <em>step</em>, <em>boundary</em>, <em>not_used</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.add_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get list of regions</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.add_segment">
+<code class="descname">add_segment</code><span class="sig-paren">(</span><em>topology_idx</em>, <em>n1_idx</em>, <em>n2_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.add_segment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add one segment</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.add_topologies_to_count">
+<code class="descname">add_topologies_to_count</code><span class="sig-paren">(</span><em>i</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.add_topologies_to_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>If need add topologes to end , end return needed topology</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.add_topology">
+<code class="descname">add_topology</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.add_topology" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new topology and return its idx</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.check_file_consistency">
+<code class="descname">check_file_consistency</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.check_file_consistency" title="Permalink to this definition">¶</a></dt>
+<dd><p>check created file consistency</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_factory.GeometryFactory.geometry">
+<code class="descname">geometry</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.geometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Geometry data object</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.get_GL_regions">
+<code class="descname">get_GL_regions</code><span class="sig-paren">(</span><em>gl_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.get_GL_regions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return lis of gl regions</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.get_gl_topology">
+<code class="descname">get_gl_topology</code><span class="sig-paren">(</span><em>gl</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.get_gl_topology" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get gl topology idx</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.get_interpolated_ns">
+<code class="descname">get_interpolated_ns</code><span class="sig-paren">(</span><em>ns1_idx</em>, <em>ns2_idx</em>, <em>surface_idx</em>, <em>surface_idx_1=None</em>, <em>surface_idx_2=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.get_interpolated_ns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create and return interpolated node set</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.get_nodes">
+<code class="descname">get_nodes</code><span class="sig-paren">(</span><em>node_set_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.get_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get list of nodes</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.get_polygons">
+<code class="descname">get_polygons</code><span class="sig-paren">(</span><em>node_set_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.get_polygons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get list of polygons</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.get_regions">
+<code class="descname">get_regions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.get_regions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get list of regions</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.get_segments">
+<code class="descname">get_segments</code><span class="sig-paren">(</span><em>node_set_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.get_segments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get list of segments</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.get_surface_ns">
+<code class="descname">get_surface_ns</code><span class="sig-paren">(</span><em>ns_idx</em>, <em>surface_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.get_surface_ns" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create and return surface node set</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.get_topology">
+<code class="descname">get_topology</code><span class="sig-paren">(</span><em>node_set_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.get_topology" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get node set topology idx</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all data from base structure</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geometry_files.geometry_structures">
+<span id="geometry-files-geometry-structures-module"></span><h2>geometry_files.geometry_structures module<a class="headerlink" href="#module-geometry_files.geometry_structures" title="Permalink to this headline">¶</a></h2>
+<p>Structures for Layer Geometry File</p>
+<dl class="class">
+<dt id="geometry_files.geometry_structures.Curve">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">Curve</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.Curve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="json_data.html#json_data.JsonData" title="json_data.JsonData"><code class="xref py py-class docutils literal"><span class="pre">json_data.JsonData</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.geometry_structures.FractureLayer">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">FractureLayer</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.FractureLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#geometry_files.geometry_structures.GeoLayer" title="geometry_files.geometry_structures.GeoLayer"><code class="xref py py-class docutils literal"><span class="pre">geometry_files.geometry_structures.GeoLayer</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.geometry_structures.GeoLayer">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">GeoLayer</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.GeoLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="json_data.html#json_data.JsonData" title="json_data.JsonData"><code class="xref py py-class docutils literal"><span class="pre">json_data.JsonData</span></code></a></p>
+<p>Geological layers</p>
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.GeoLayer.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.GeoLayer.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Layer Name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.GeoLayer.top">
+<code class="descname">top</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.GeoLayer.top" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accoding topology type surface node set or interpolated node set</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.geometry_structures.InterpolatedNodeSet">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">InterpolatedNodeSet</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.InterpolatedNodeSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="json_data.html#json_data.JsonData" title="json_data.JsonData"><code class="xref py py-class docutils literal"><span class="pre">json_data.JsonData</span></code></a></p>
+<p>Two node set with same Topology in space for transformation(x,y) -&gt;(u,v).
+If both node sets is same, topology is vertical    
+Only for GL</p>
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.InterpolatedNodeSet.surf_nodesets">
+<code class="descname">surf_nodesets</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.InterpolatedNodeSet.surf_nodesets" title="Permalink to this definition">¶</a></dt>
+<dd><p>Top and bottom node set index</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.InterpolatedNodeSet.surface_id">
+<code class="descname">surface_id</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.InterpolatedNodeSet.surface_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Surface index</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.geometry_structures.LayerGeometry">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">LayerGeometry</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.LayerGeometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="json_data.html#json_data.JsonData" title="json_data.JsonData"><code class="xref py py-class docutils literal"><span class="pre">json_data.JsonData</span></code></a></p>
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.LayerGeometry.curves">
+<code class="descname">curves</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.LayerGeometry.curves" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of B-spline curves,</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.LayerGeometry.layers">
+<code class="descname">layers</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.LayerGeometry.layers" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of geological layers</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.LayerGeometry.node_sets">
+<code class="descname">node_sets</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.LayerGeometry.node_sets" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of node sets</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.LayerGeometry.regions">
+<code class="descname">regions</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.LayerGeometry.regions" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of regions</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.LayerGeometry.supplement">
+<code class="descname">supplement</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.LayerGeometry.supplement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Addition data that is used for displaying in layer editor</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.LayerGeometry.surfaces">
+<code class="descname">surfaces</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.LayerGeometry.surfaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of B-spline surfaces</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.LayerGeometry.topologies">
+<code class="descname">topologies</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.LayerGeometry.topologies" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of topologies</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.geometry_structures.LayerType">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">LayerType</code><a class="headerlink" href="#geometry_files.geometry_structures.LayerType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></p>
+<p>Layer type</p>
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.LayerType.fracture">
+<code class="descname">fracture</code><em class="property"> = 1</em><a class="headerlink" href="#geometry_files.geometry_structures.LayerType.fracture" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.LayerType.shadow">
+<code class="descname">shadow</code><em class="property"> = 2</em><a class="headerlink" href="#geometry_files.geometry_structures.LayerType.shadow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.LayerType.stratum">
+<code class="descname">stratum</code><em class="property"> = 0</em><a class="headerlink" href="#geometry_files.geometry_structures.LayerType.stratum" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.geometry_structures.NodeSet">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">NodeSet</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.NodeSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="json_data.html#json_data.JsonData" title="json_data.JsonData"><code class="xref py py-class docutils literal"><span class="pre">json_data.JsonData</span></code></a></p>
+<p>Set of point (nodes) with topology</p>
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.NodeSet.linked_node_ids">
+<code class="descname">linked_node_ids</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.NodeSet.linked_node_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>If linked_node_set is not None there is list od pair indexes of nodes or none
+if node has not pair</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.NodeSet.linked_node_set_id">
+<code class="descname">linked_node_set_id</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.NodeSet.linked_node_set_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>node_set_idx of pair interface node set or None</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.NodeSet.nodes">
+<code class="descname">nodes</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.NodeSet.nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of Nodes</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_structures.NodeSet.reset">
+<code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.NodeSet.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset node set</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.NodeSet.topology_id">
+<code class="descname">topology_id</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.NodeSet.topology_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Topology index</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.geometry_structures.Polygon">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">Polygon</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.Polygon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="json_data.html#json_data.JsonData" title="json_data.JsonData"><code class="xref py py-class docutils literal"><span class="pre">json_data.JsonData</span></code></a></p>
+<p>Polygon object</p>
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.Polygon.segment_ids">
+<code class="descname">segment_ids</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Polygon.segment_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of segments index</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.Polygon.surface_id">
+<code class="descname">surface_id</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Polygon.surface_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Surface index</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.geometry_structures.Region">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">Region</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.Region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="json_data.html#json_data.JsonData" title="json_data.JsonData"><code class="xref py py-class docutils literal"><span class="pre">json_data.JsonData</span></code></a></p>
+<p>Description of disjunct geometri area sorte by dimension (dim=1 well, dim=2 fracture, dim=3 bulk).</p>
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.Region.boundary">
+<code class="descname">boundary</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Region.boundary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is boundary region</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.Region.brep_shape_ids">
+<code class="descname">brep_shape_ids</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Region.brep_shape_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of shape indexes - in BREP geometry</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.Region.color">
+<code class="descname">color</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Region.color" title="Permalink to this definition">¶</a></dt>
+<dd><p>8-bite region color</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.Region.mesh_step">
+<code class="descname">mesh_step</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Region.mesh_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>mesh step</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.Region.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Region.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>region name</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.Region.not_used">
+<code class="descname">not_used</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Region.not_used" title="Permalink to this definition">¶</a></dt>
+<dd><p>is used - TODO: do we need it??</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.Region.topo_dim">
+<code class="descname">topo_dim</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Region.topo_dim" title="Permalink to this definition">¶</a></dt>
+<dd><p>dimension (0,1,2) in Stratum layer: well, fracture, bulk</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.geometry_structures.RegionDim">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">RegionDim</code><a class="headerlink" href="#geometry_files.geometry_structures.RegionDim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></p>
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.RegionDim.bulk">
+<code class="descname">bulk</code><em class="property"> = 3</em><a class="headerlink" href="#geometry_files.geometry_structures.RegionDim.bulk" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.RegionDim.fracture">
+<code class="descname">fracture</code><em class="property"> = 2</em><a class="headerlink" href="#geometry_files.geometry_structures.RegionDim.fracture" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.RegionDim.well">
+<code class="descname">well</code><em class="property"> = 1</em><a class="headerlink" href="#geometry_files.geometry_structures.RegionDim.well" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.geometry_structures.Segment">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">Segment</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.Segment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="json_data.html#json_data.JsonData" title="json_data.JsonData"><code class="xref py py-class docutils literal"><span class="pre">json_data.JsonData</span></code></a></p>
+<p>Line object</p>
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.Segment.node_ids">
+<code class="descname">node_ids</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Segment.node_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>First point index</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.Segment.surface_id">
+<code class="descname">surface_id</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Segment.surface_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Surface index</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.geometry_structures.ShadowLayer">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">ShadowLayer</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.ShadowLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#geometry_files.geometry_structures.GeoLayer" title="geometry_files.geometry_structures.GeoLayer"><code class="xref py py-class docutils literal"><span class="pre">geometry_files.geometry_structures.GeoLayer</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.geometry_structures.StratumLayer">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">StratumLayer</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.StratumLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#geometry_files.geometry_structures.GeoLayer" title="geometry_files.geometry_structures.GeoLayer"><code class="xref py py-class docutils literal"><span class="pre">geometry_files.geometry_structures.GeoLayer</span></code></a></p>
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.StratumLayer.bottom">
+<code class="descname">bottom</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.StratumLayer.bottom" title="Permalink to this definition">¶</a></dt>
+<dd><p>optional, only for stratum type, accoding bottom topology
+type surface node set or interpolated node set</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.geometry_structures.Surface">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">Surface</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.Surface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="json_data.html#json_data.JsonData" title="json_data.JsonData"><code class="xref py py-class docutils literal"><span class="pre">json_data.JsonData</span></code></a></p>
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.Surface.depth">
+<code class="descname">depth</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Surface.depth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Representative Z coord of the surface.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_structures.Surface.get_depth">
+<code class="descname">get_depth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.Surface.get_depth" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return surface depth in 0</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.Surface.grid_file">
+<code class="descname">grid_file</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Surface.grid_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of input grid 3DPoints. None for plane</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.Surface.grid_polygon">
+<code class="descname">grid_polygon</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Surface.grid_polygon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Vertices of the boundary polygon of the grid.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="geometry_files.geometry_structures.Surface.make_surface">
+<em class="property">static </em><code class="descname">make_surface</code><span class="sig-paren">(</span><em>depth</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.Surface.make_surface" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.Surface.transform_xy">
+<code class="descname">transform_xy</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Surface.transform_xy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transformation matrix and shift in XY plane.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.Surface.transform_z">
+<code class="descname">transform_z</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Surface.transform_z" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transformation in Z direction (scale and shift).</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.geometry_structures.SurfaceApproximation">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">SurfaceApproximation</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.SurfaceApproximation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="json_data.html#json_data.JsonData" title="json_data.JsonData"><code class="xref py py-class docutils literal"><span class="pre">json_data.JsonData</span></code></a></p>
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.SurfaceApproximation.b_spline">
+<code class="descname">b_spline</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.SurfaceApproximation.b_spline" title="Permalink to this definition">¶</a></dt>
+<dd><p>B-spline,None for plane</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.geometry_structures.SurfaceNodeSet">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">SurfaceNodeSet</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.SurfaceNodeSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="json_data.html#json_data.JsonData" title="json_data.JsonData"><code class="xref py py-class docutils literal"><span class="pre">json_data.JsonData</span></code></a></p>
+<p>Node set in space for transformation(x,y) -&gt;(u,v). 
+Only for GL</p>
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.SurfaceNodeSet.nodeset_id">
+<code class="descname">nodeset_id</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.SurfaceNodeSet.nodeset_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Node set index</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.SurfaceNodeSet.surface_id">
+<code class="descname">surface_id</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.SurfaceNodeSet.surface_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Surface index</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.geometry_structures.Topology">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">Topology</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.Topology" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="json_data.html#json_data.JsonData" title="json_data.JsonData"><code class="xref py py-class docutils literal"><span class="pre">json_data.JsonData</span></code></a></p>
+<p>Topological presentation of geometry objects</p>
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.Topology.polygons">
+<code class="descname">polygons</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Topology.polygons" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of topology polygons</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.Topology.segments">
+<code class="descname">segments</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Topology.segments" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of topology segments (line)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.geometry_structures.TopologyDim">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">TopologyDim</code><a class="headerlink" href="#geometry_files.geometry_structures.TopologyDim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></p>
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.TopologyDim.invalid">
+<code class="descname">invalid</code><em class="property"> = -1</em><a class="headerlink" href="#geometry_files.geometry_structures.TopologyDim.invalid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.TopologyDim.node">
+<code class="descname">node</code><em class="property"> = 0</em><a class="headerlink" href="#geometry_files.geometry_structures.TopologyDim.node" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.TopologyDim.polygon">
+<code class="descname">polygon</code><em class="property"> = 2</em><a class="headerlink" href="#geometry_files.geometry_structures.TopologyDim.polygon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.TopologyDim.segment">
+<code class="descname">segment</code><em class="property"> = 1</em><a class="headerlink" href="#geometry_files.geometry_structures.TopologyDim.segment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.geometry_structures.TopologyType">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">TopologyType</code><a class="headerlink" href="#geometry_files.geometry_structures.TopologyType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></p>
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.TopologyType.given">
+<code class="descname">given</code><em class="property"> = 0</em><a class="headerlink" href="#geometry_files.geometry_structures.TopologyType.given" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.TopologyType.interpolated">
+<code class="descname">interpolated</code><em class="property"> = 1</em><a class="headerlink" href="#geometry_files.geometry_structures.TopologyType.interpolated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.geometry_structures.UserSupplement">
+<em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">UserSupplement</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.UserSupplement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="json_data.html#json_data.JsonData" title="json_data.JsonData"><code class="xref py py-class docutils literal"><span class="pre">json_data.JsonData</span></code></a></p>
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.UserSupplement.last_node_set">
+<code class="descname">last_node_set</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.UserSupplement.last_node_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>Last edited node set</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geometry_files">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-geometry_files" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

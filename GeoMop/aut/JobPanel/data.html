@@ -902,6 +902,7 @@ otherwise False.</p>
 :permited actions: resume, stop (but only if js_services is allready installed,
 in gui is action permited and wait ComManager )
 :start app action: terminate job and set error message</p>
+<p>JB: unnecessary</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -910,6 +911,7 @@ in gui is action permited and wait ComManager )
 <dd><p>No respons, connection with application was interupted
 :permited actions: no
 :start app action: resume</p>
+<p>JB: GUI only, rename to &#8220;disconnected&#8221;</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -918,6 +920,7 @@ in gui is action permited and wait ComManager )
 <dd><p>MultiJob is New or state is unknown
 :permited actions: Run, Delete
 :start app action: OK</p>
+<p>JB: unnecessary or just for GUI</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -926,6 +929,7 @@ in gui is action permited and wait ComManager )
 <dd><p>MultiJob is paused (only debug or switch off application)
 :permited actions: no
 :start app action: resume job</p>
+<p>JB: pause and resume</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -934,6 +938,7 @@ in gui is action permited and wait ComManager )
 <dd><p>MultiJob is about pausing
 :permited actions: no
 :start app action: resume job</p>
+<p>JB: unnecessary, have common flag to mark status change in progress</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -951,6 +956,7 @@ in gui is action permited and wait ComManager )
 <dd><p>Job is finished
 :permited actions: no
 :start app action: resume</p>
+<p>JB: unnecessary, duplicate of finished</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -983,8 +989,16 @@ in gui is action permited and wait ComManager )
 <dd><p>Multijob is about stopping
 :permited actions: no
 :start app action: terminate job</p>
+<p>JB: unnecessary</p>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="data">
+<dt id="data.states.logger">
+<code class="descclassname">data.states.</code><code class="descname">logger</code><em class="property"> = &lt;logging.Logger object&gt;</em><a class="headerlink" href="#data.states.logger" title="Permalink to this definition">¶</a></dt>
+<dd><p>JB, question: Why we have two partly same and partly different files with mj ans job states?
+This one and transport_data.</p>
 </dd></dl>
 
 </div>

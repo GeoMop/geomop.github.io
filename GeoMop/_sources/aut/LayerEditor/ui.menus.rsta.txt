@@ -12,6 +12,30 @@ ui.menus.edit module
     :undoc-members:
     :show-inheritance:
 
+ui.menus.file module
+--------------------
+
+.. automodule:: ui.menus.file
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.menus.layers module
+----------------------
+
+.. automodule:: ui.menus.layers
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.menus.shpfiles module
+------------------------
+
+.. automodule:: ui.menus.shpfiles
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 ui.menus.tools module
 ---------------------
 

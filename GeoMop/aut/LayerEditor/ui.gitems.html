@@ -39,8 +39,8 @@
     <link rel="top" title="Layer Editor Source Documentation 1.0.0-beta
  documentation" href="../../index.html"/>
         <link rel="up" title="ui package" href="ui.html"/>
-        <link rel="next" title="ui.menus package" href="ui.menus.html"/>
-        <link rel="prev" title="ui.data package" href="ui.data.html"/> 
+        <link rel="next" title="ui.helpers package" href="ui.helpers.html"/>
+        <link rel="prev" title="ui.dialogs.layers package" href="ui.dialogs.layers.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -100,14 +100,20 @@
 <li class="toctree-l1 current"><a class="reference internal" href="ui.html">ui package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="ui.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="ui.data.html">ui.data package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ui.dialogs.html">ui.dialogs package</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">ui.gitems package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.gitems.blink">ui.gitems.blink module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.gitems.diagram_view">ui.gitems.diagram_view module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-ui.gitems.line">ui.gitems.line module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-ui.gitems.point">ui.gitems.point module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.gitems.polygon">ui.gitems.polygon module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-ui.gitems.shp_background">ui.gitems.shp_background module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-ui.gitems.states">ui.gitems.states module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-ui.gitems">Module contents</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="ui.helpers.html">ui.helpers package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ui.menus.html">ui.menus package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="ui.panels.html">ui.panels package</a></li>
 </ul>
@@ -192,11 +198,58 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
+<div class="section" id="module-ui.gitems.blink">
+<span id="ui-gitems-blink-module"></span><h2>ui.gitems.blink module<a class="headerlink" href="#module-ui.gitems.blink" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ui.gitems.blink.Blink">
+<em class="property">class </em><code class="descclassname">ui.gitems.blink.</code><code class="descname">Blink</code><span class="sig-paren">(</span><em>rect</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.gitems.blink.Blink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QGraphicsRectItem</span></code></p>
+<p>Represents a shp file diagram background</p>
+<dl class="attribute">
+<dt id="ui.gitems.blink.Blink.ZVALUE">
+<code class="descname">ZVALUE</code><em class="property"> = -1000</em><a class="headerlink" href="#ui.gitems.blink.Blink.ZVALUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.gitems.diagram_view">
+<span id="ui-gitems-diagram-view-module"></span><h2>ui.gitems.diagram_view module<a class="headerlink" href="#module-ui.gitems.diagram_view" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ui.gitems.diagram_view.DiagramView">
+<em class="property">class </em><code class="descclassname">ui.gitems.diagram_view.</code><code class="descname">DiagramView</code><span class="sig-paren">(</span><em>diagram_uid</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.gitems.diagram_view.DiagramView" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QGraphicsItem</span></code></p>
+<p>Represents some diagram view in edited diagram background</p>
+<dl class="attribute">
+<dt id="ui.gitems.diagram_view.DiagramView.ZVALUE">
+<code class="descname">ZVALUE</code><em class="property"> = -9</em><a class="headerlink" href="#ui.gitems.diagram_view.DiagramView.ZVALUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.gitems.diagram_view.DiagramView.boundingRect">
+<code class="descname">boundingRect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.gitems.diagram_view.DiagramView.boundingRect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Redefination of standart boundingRect function, that return boun rect</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.gitems.diagram_view.DiagramView.paint">
+<code class="descname">paint</code><span class="sig-paren">(</span><em>painter</em>, <em>option</em>, <em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.gitems.diagram_view.DiagramView.paint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Redefination of standart paint function, that paint object from shape file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.gitems.diagram_view.DiagramView.release_view">
+<code class="descname">release_view</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.gitems.diagram_view.DiagramView.release_view" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
 <div class="section" id="module-ui.gitems.line">
 <span id="ui-gitems-line-module"></span><h2>ui.gitems.line module<a class="headerlink" href="#module-ui.gitems.line" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="ui.gitems.line.Line">
-<em class="property">class </em><code class="descclassname">ui.gitems.line.</code><code class="descname">Line</code><span class="sig-paren">(</span><em>line</em>, <em>data</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.gitems.line.Line" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">ui.gitems.line.</code><code class="descname">Line</code><span class="sig-paren">(</span><em>line</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.gitems.line.Line" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QGraphicsLineItem</span></code></p>
 <p>Represents a join of nodes in the diagram</p>
 <dl class="attribute">
@@ -280,7 +333,7 @@
 <span id="ui-gitems-point-module"></span><h2>ui.gitems.point module<a class="headerlink" href="#module-ui.gitems.point" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="ui.gitems.point.Point">
-<em class="property">class </em><code class="descclassname">ui.gitems.point.</code><code class="descname">Point</code><span class="sig-paren">(</span><em>point</em>, <em>data</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.gitems.point.Point" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">ui.gitems.point.</code><code class="descname">Point</code><span class="sig-paren">(</span><em>point</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.gitems.point.Point" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QGraphicsEllipseItem</span></code></p>
 <p>Represents a block in the diagram</p>
 <dl class="attribute">
@@ -360,6 +413,76 @@
 </dd></dl>
 
 </div>
+<div class="section" id="module-ui.gitems.polygon">
+<span id="ui-gitems-polygon-module"></span><h2>ui.gitems.polygon module<a class="headerlink" href="#module-ui.gitems.polygon" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ui.gitems.polygon.Polygon">
+<em class="property">class </em><code class="descclassname">ui.gitems.polygon.</code><code class="descname">Polygon</code><span class="sig-paren">(</span><em>polygon</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.gitems.polygon.Polygon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QGraphicsPolygonItem</span></code></p>
+<p>Represents a join of nodes in the diagram</p>
+<dl class="attribute">
+<dt id="ui.gitems.polygon.Polygon.STANDART_ZVALUE">
+<code class="descname">STANDART_ZVALUE</code><em class="property"> = -11</em><a class="headerlink" href="#ui.gitems.polygon.Polygon.STANDART_ZVALUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.gitems.polygon.Polygon.refresh_polygon">
+<code class="descname">refresh_polygon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.gitems.polygon.Polygon.refresh_polygon" title="Permalink to this definition">¶</a></dt>
+<dd><p>reload polygon.spolygon.gtpolygon</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.gitems.polygon.Polygon.release_polygon">
+<code class="descname">release_polygon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.gitems.polygon.Polygon.release_polygon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ui.gitems.shp_background">
+<span id="ui-gitems-shp-background-module"></span><h2>ui.gitems.shp_background module<a class="headerlink" href="#module-ui.gitems.shp_background" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="ui.gitems.shp_background.ShpBackground">
+<em class="property">class </em><code class="descclassname">ui.gitems.shp_background.</code><code class="descname">ShpBackground</code><span class="sig-paren">(</span><em>shp</em>, <em>color</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.gitems.shp_background.ShpBackground" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QGraphicsItem</span></code></p>
+<p>Represents a shp file diagram background</p>
+<dl class="attribute">
+<dt id="ui.gitems.shp_background.ShpBackground.ZVALUE">
+<code class="descname">ZVALUE</code><em class="property"> = -10</em><a class="headerlink" href="#ui.gitems.shp_background.ShpBackground.ZVALUE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="ui.gitems.shp_background.ShpBackground.boundingRect">
+<code class="descname">boundingRect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.gitems.shp_background.ShpBackground.boundingRect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Redefination of standart boundingRect function, that return boun rect</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ui.gitems.shp_background.ShpBackground.color">
+<code class="descname">color</code><em class="property"> = None</em><a class="headerlink" href="#ui.gitems.shp_background.ShpBackground.color" title="Permalink to this definition">¶</a></dt>
+<dd><p>shape file objects data color</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.gitems.shp_background.ShpBackground.paint">
+<code class="descname">paint</code><span class="sig-paren">(</span><em>painter</em>, <em>option</em>, <em>widget</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.gitems.shp_background.ShpBackground.paint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Redefination of standart paint function, that paint object from shape file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ui.gitems.shp_background.ShpBackground.release_background">
+<code class="descname">release_background</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.gitems.shp_background.ShpBackground.release_background" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="ui.gitems.shp_background.ShpBackground.shp">
+<code class="descname">shp</code><em class="property"> = None</em><a class="headerlink" href="#ui.gitems.shp_background.ShpBackground.shp" title="Permalink to this definition">¶</a></dt>
+<dd><p>shape file objects data</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
 <div class="section" id="module-ui.gitems.states">
 <span id="ui-gitems-states-module"></span><h2>ui.gitems.states module<a class="headerlink" href="#module-ui.gitems.states" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
@@ -411,10 +534,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ui.menus.html" class="btn btn-neutral float-right" title="ui.menus package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ui.helpers.html" class="btn btn-neutral float-right" title="ui.helpers package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ui.data.html" class="btn btn-neutral" title="ui.data package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ui.dialogs.layers.html" class="btn btn-neutral" title="ui.dialogs.layers package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -1,0 +1,17 @@
+ui.dialogs package
+==================
+
+Subpackages
+-----------
+
+.. toctree::
+
+    ui.dialogs.layers
+
+Module contents
+---------------
+
+.. automodule:: ui.dialogs
+    :members:
+    :undoc-members:
+    :show-inheritance:

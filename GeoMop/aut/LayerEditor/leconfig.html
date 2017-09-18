@@ -183,10 +183,97 @@
 <em class="property">class </em><code class="descclassname">leconfig.leconfig.</code><code class="descname">LEConfig</code><a class="headerlink" href="#leconfig.leconfig.LEConfig" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Static data class</p>
+<dl class="classmethod">
+<dt id="leconfig.leconfig.LEConfig.add_region">
+<em class="property">classmethod </em><code class="descname">add_region</code><span class="sig-paren">(</span><em>color</em>, <em>name</em>, <em>dim</em>, <em>step</em>, <em>boundary</em>, <em>not_used</em><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.add_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add region</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="leconfig.leconfig.LEConfig.add_shapes_to_region">
+<em class="property">classmethod </em><code class="descname">add_shapes_to_region</code><span class="sig-paren">(</span><em>is_fracture</em>, <em>layer_id</em>, <em>layer_name</em>, <em>topology_idx</em>, <em>regions</em><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.add_shapes_to_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add shape to region</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="leconfig.leconfig.LEConfig.changed">
+<em class="property">classmethod </em><code class="descname">changed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.changed" title="Permalink to this definition">¶</a></dt>
+<dd><p>is file changed</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="leconfig.leconfig.LEConfig.config">
 <code class="descname">config</code><em class="property"> = &lt;leconfig.leconfig._Config object&gt;</em><a class="headerlink" href="#leconfig.leconfig.LEConfig.config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Serialized variables</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="leconfig.leconfig.LEConfig.confront_file_timestamp">
+<em class="property">classmethod </em><code class="descname">confront_file_timestamp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.confront_file_timestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compare file timestamp with file time and if is diferent
+show dialog, and reload file content.
+:return: if file is reloaded</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="leconfig.leconfig.LEConfig.curr_file">
+<code class="descname">curr_file</code><em class="property"> = None</em><a class="headerlink" href="#leconfig.leconfig.LEConfig.curr_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of open file</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="leconfig.leconfig.LEConfig.curr_file_timestamp">
+<code class="descname">curr_file_timestamp</code><em class="property"> = None</em><a class="headerlink" href="#leconfig.leconfig.LEConfig.curr_file_timestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Timestamp of opened file, if editor text is
+imported or new timestamp is None</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="leconfig.leconfig.LEConfig.data">
+<code class="descname">data</code><em class="property"> = None</em><a class="headerlink" href="#leconfig.leconfig.LEConfig.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Data from geometry file</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="leconfig.leconfig.LEConfig.diagram">
+<code class="descname">diagram</code><em class="property"> = None</em><a class="headerlink" href="#leconfig.leconfig.LEConfig.diagram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current diagram data</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="leconfig.leconfig.LEConfig.diagram_id">
+<em class="property">classmethod </em><code class="descname">diagram_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.diagram_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return current diagram id</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="leconfig.leconfig.LEConfig.diagrams">
+<code class="descname">diagrams</code><em class="property"> = []</em><a class="headerlink" href="#leconfig.leconfig.LEConfig.diagrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of diagram data</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="leconfig.leconfig.LEConfig.get_curr_diagram">
+<em class="property">classmethod </em><code class="descname">get_curr_diagram</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.get_curr_diagram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get id of diagram that is edited.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="leconfig.leconfig.LEConfig.get_current_view">
+<em class="property">static </em><code class="descname">get_current_view</code><span class="sig-paren">(</span><em>location</em><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.get_current_view" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return current view</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="leconfig.leconfig.LEConfig.get_shapes_from_region">
+<em class="property">classmethod </em><code class="descname">get_shapes_from_region</code><span class="sig-paren">(</span><em>is_fracture</em>, <em>layer_id</em><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.get_shapes_from_region" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get shapes from region</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="leconfig.leconfig.LEConfig.history">
+<code class="descname">history</code><em class="property"> = None</em><a class="headerlink" href="#leconfig.leconfig.LEConfig.history" title="Permalink to this definition">¶</a></dt>
+<dd><p>History for current geometry data</p>
 </dd></dl>
 
 <dl class="classmethod">
@@ -195,16 +282,97 @@
 <dd><p>Init class wit static method</p>
 </dd></dl>
 
+<dl class="classmethod">
+<dt id="leconfig.leconfig.LEConfig.insert_diagrams">
+<em class="property">classmethod </em><code class="descname">insert_diagrams</code><span class="sig-paren">(</span><em>diagrams</em>, <em>id</em>, <em>oper</em><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.insert_diagrams" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert diagrams after set diagram and
+move topologies accoding oper</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="leconfig.leconfig.LEConfig.insert_diagrams_copies">
+<em class="property">classmethod </em><code class="descname">insert_diagrams_copies</code><span class="sig-paren">(</span><em>dup</em>, <em>oper</em><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.insert_diagrams_copies" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert diagrams after set diagram and
+move topologies accoding oper</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="leconfig.leconfig.LEConfig.layers">
+<code class="descname">layers</code><em class="property"> = &lt;ui.data.layers_structures.Layers object&gt;</em><a class="headerlink" href="#leconfig.leconfig.LEConfig.layers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Layers structure</p>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="leconfig.leconfig.LEConfig.logger">
 <code class="descname">logger</code><em class="property"> = &lt;logging.Logger object&gt;</em><a class="headerlink" href="#leconfig.leconfig.LEConfig.logger" title="Permalink to this definition">¶</a></dt>
 <dd><p>root context logger</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="leconfig.leconfig.LEConfig.main_window">
+<code class="descname">main_window</code><em class="property"> = None</em><a class="headerlink" href="#leconfig.leconfig.LEConfig.main_window" title="Permalink to this definition">¶</a></dt>
+<dd><p>parent of dialogs</p>
+</dd></dl>
+
 <dl class="classmethod">
-<dt id="leconfig.leconfig.LEConfig.save">
-<em class="property">classmethod </em><code class="descname">save</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.save" title="Permalink to this definition">¶</a></dt>
-<dd><p>save persistent data</p>
+<dt id="leconfig.leconfig.LEConfig.make_middle_diagram">
+<em class="property">classmethod </em><code class="descname">make_middle_diagram</code><span class="sig-paren">(</span><em>dup</em><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.make_middle_diagram" title="Permalink to this definition">¶</a></dt>
+<dd><p>return interpolated new diagram in set depth</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="leconfig.leconfig.LEConfig.new_file">
+<em class="property">classmethod </em><code class="descname">new_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.new_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open new empty file</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="leconfig.leconfig.LEConfig.open_file">
+<em class="property">classmethod </em><code class="descname">open_file</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.open_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>save file name and timestamp</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="leconfig.leconfig.LEConfig.open_recent_file">
+<em class="property">classmethod </em><code class="descname">open_recent_file</code><span class="sig-paren">(</span><em>file_name</em><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.open_recent_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>read file from recent files</p>
+<p>return: if file have good format (boolean)</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="leconfig.leconfig.LEConfig.open_shape_file">
+<em class="property">classmethod </em><code class="descname">open_shape_file</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.open_shape_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open and add shape file</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="leconfig.leconfig.LEConfig.path">
+<code class="descname">path</code><em class="property"> = None</em><a class="headerlink" href="#leconfig.leconfig.LEConfig.path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current geometry data file path</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="leconfig.leconfig.LEConfig.remove_and_save_diagram">
+<em class="property">classmethod </em><code class="descname">remove_and_save_diagram</code><span class="sig-paren">(</span><em>idx</em><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.remove_and_save_diagram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove diagram from list and save it in history variable</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="leconfig.leconfig.LEConfig.save_file">
+<em class="property">classmethod </em><code class="descname">save_file</code><span class="sig-paren">(</span><em>file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.save_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>save to json file</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="leconfig.leconfig.LEConfig.set_curr_diagram">
+<em class="property">classmethod </em><code class="descname">set_curr_diagram</code><span class="sig-paren">(</span><em>i</em><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.set_curr_diagram" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set i diagram as edited. Return old diagram id</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="leconfig.leconfig.LEConfig.set_main">
+<em class="property">classmethod </em><code class="descname">set_main</code><span class="sig-paren">(</span><em>main_window</em><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.set_main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Init class wit static method</p>
 </dd></dl>
 
 </dd></dl>

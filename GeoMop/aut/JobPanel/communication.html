@@ -195,7 +195,12 @@
 </div>
 <div class="section" id="module-communication.communication">
 <span id="communication-communication-module"></span><h2>communication.communication module<a class="headerlink" href="#module-communication.communication" title="Permalink to this headline">¶</a></h2>
-<p>Classes for handing messages over net</p>
+<p>Base classes for sending and recieving messsages.</p>
+<p>The comunication is always initiated by the client application sending a request message that is forwarded further
+and finally processed and the respond message is forwarded back up to the client application.
+For every connection there are two ends: the output end that is closer to the clinet app and the input end.</p>
+<p>OutputComm - base of class responsible for sending the request and the recieving response
+InputComm - base of class responsible for recieving the request and sending back the response</p>
 <dl class="class">
 <dt id="communication.communication.InputComm">
 <em class="property">class </em><code class="descclassname">communication.communication.</code><code class="descname">InputComm</code><a class="headerlink" href="#communication.communication.InputComm" title="Permalink to this definition">¶</a></dt>
@@ -250,7 +255,10 @@
 <dt id="communication.communication.OutputComm">
 <em class="property">class </em><code class="descclassname">communication.communication.</code><code class="descname">OutputComm</code><span class="sig-paren">(</span><em>host</em>, <em>mj_name</em>, <em>an_name</em><span class="sig-paren">)</span><a class="headerlink" href="#communication.communication.OutputComm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p>Ancestor of output communication classes</p>
+<p>OutputComm - base of classes responsible for sending the request and the recieving response</p>
+<p>JB, Question: Why there are some specific methods for some actions? It should just pass messages
+there and back.</p>
+<p>JB, TODO: Remove unused methods.</p>
 <dl class="method">
 <dt id="communication.communication.OutputComm.connect">
 <code class="descname">connect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#communication.communication.OutputComm.connect" title="Permalink to this definition">¶</a></dt>
@@ -301,13 +309,14 @@
 <dl class="method">
 <dt id="communication.communication.OutputComm.install_job_libs">
 <code class="descname">install_job_libs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#communication.communication.OutputComm.install_job_libs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Install libs for jobs</p>
+<dd><p>Install libs for jobs. Why another method for installation.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="communication.communication.OutputComm.installation">
 <code class="descname">installation</code><em class="property"> = None</em><a class="headerlink" href="#communication.communication.OutputComm.installation" title="Permalink to this definition">¶</a></dt>
-<dd><p>installation where is copied files</p>
+<dd><p>Installation - representation of the next communicator.
+? Can we move this into comunicator?</p>
 </dd></dl>
 
 <dl class="method">
@@ -337,7 +346,9 @@
 <dl class="method">
 <dt id="communication.communication.OutputComm.lock_installation">
 <code class="descname">lock_installation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#communication.communication.OutputComm.lock_installation" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set installation locks, return if should installation continue</p>
+<dd><p>Set installation locks, return if should installation continue
+We need to lock the instalation directory (by a file lock) to prevent simultaneous installation of
+two multijobs etc.</p>
 </dd></dl>
 
 <dl class="method">
@@ -381,6 +392,10 @@
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Class with communication interface, that provide place for action.
 Communicator contains:</p>
+<p>JB, Question: absolutely no idea what next lines describe
+- seems that it describes the constructor, so move it there
+- input and output communicators are not direct parameters, describe init_conf structure
+- refer to particular parameter names otherwise reader is lost</p>
 <blockquote>
 <div><ul class="simple">
 <li>intput - communacion interface 
@@ -396,7 +411,27 @@ from next communicator</li>
 constructor, end is call before resending answer received 
 from previous communicator</li>
 </ul>
+<p>JB, note: parm init_conf is class CommunicatorConfig</p>
 </div></blockquote>
+<p>JB, TODO:
+- Every communicator should have a name (client, delegator, mj, job).
+- Communicator runs in its own thread and is started by a &#8220;processing thread&#8221;.
+- Message must have address:</p>
+<blockquote>
+<div><ul class="simple">
+<li>[ target_communicator ( name of communicator whose processing thread should hadle the request)</li>
+</ul>
+</div></blockquote>
+<ul>
+<li><p class="first">Communicator should be able to recieve requests and recieve answers and send them further unless
+the communicator is the target of the message.</p>
+<blockquote>
+<div><ul class="simple">
+<li></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
 <dl class="attribute">
 <dt id="communication.communicator.Communicator.action_func_after">
 <code class="descname">action_func_after</code><em class="property"> = None</em><a class="headerlink" href="#communication.communicator.Communicator.action_func_after" title="Permalink to this definition">¶</a></dt>
@@ -458,7 +493,13 @@ instead one returned by resend</p>
 <dl class="staticmethod">
 <dt id="communication.communicator.Communicator.get_output">
 <em class="property">static </em><code class="descname">get_output</code><span class="sig-paren">(</span><em>conf</em>, <em>mj_name</em>, <em>an_name</em>, <em>new_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#communication.communicator.Communicator.get_output" title="Permalink to this definition">¶</a></dt>
-<dd><p>Inicialize output using defined type</p>
+<dd><p>Inicialize output communicator according to conf.</p>
+<p>JB, question:
+Why these tests for type? just pass conf and to particular constructor.
+E.g.:
+conf.output_type = SshOutputComm
+output = conf.output_type()
+output.init_from_configuration(conf)</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -768,11 +809,21 @@ connections)</p>
 </div>
 <div class="section" id="module-communication.installation">
 <span id="communication-installation-module"></span><h2>communication.installation module<a class="headerlink" href="#module-communication.installation" title="Permalink to this headline">¶</a></h2>
-<p>class represent instalation</p>
 <dl class="class">
 <dt id="communication.installation.Installation">
 <em class="property">class </em><code class="descclassname">communication.installation.</code><code class="descname">Installation</code><span class="sig-paren">(</span><em>mj_name</em>, <em>an_name</em><span class="sig-paren">)</span><a class="headerlink" href="#communication.installation.Installation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class representing and manipulating with a GeoMop (backend) instalation.
+We assume this installation is on remote hosts, which are assumed to run linux.</p>
+<p>JB, TODO:
+- Overview of functionalities the class cares of.
+- Why all splitting for linux and win case? The work to be done on remote is same, so just make</p>
+<blockquote>
+<div>unified interface to whatever ssh library is in use.</div></blockquote>
+<ul class="simple">
+<li>Do we want to support Windows remote hosts in future? Then make system specific layer
+to perform necessary basic operations as change dir, mkdir, delete, run python script, ...</li>
+</ul>
 <dl class="attribute">
 <dt id="communication.installation.Installation.an_name">
 <code class="descname">an_name</code><em class="property"> = None</em><a class="headerlink" href="#communication.installation.Installation.an_name" title="Permalink to this definition">¶</a></dt>
@@ -1425,7 +1476,8 @@ connections)</p>
 <dl class="method">
 <dt id="communication.ssh_output_comm.SshOutputComm.connect">
 <code class="descname">connect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#communication.ssh_output_comm.SshOutputComm.connect" title="Permalink to this definition">¶</a></dt>
-<dd><p>connect session</p>
+<dd><p>Start SSH connection.</p>
+<p>JB, Question: Why this do not perform also remote installation?</p>
 </dd></dl>
 
 <dl class="method">
@@ -1456,6 +1508,7 @@ connections)</p>
 <dt id="communication.ssh_output_comm.SshOutputComm.is_running_next">
 <code class="descname">is_running_next</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#communication.ssh_output_comm.SshOutputComm.is_running_next" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return if next communicator run</p>
+<p>JB, Question: Where _proc comes from? What &#8220;next&#8221; communicator is meant?</p>
 </dd></dl>
 
 <dl class="method">
