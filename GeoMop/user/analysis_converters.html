@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Analysis - Converters &mdash; GeoMop Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="GeoMop Documentation 1.0.0-beta
+ documentation" href="../index.html"/>
+        <link rel="next" title="Analysis - Actions" href="analysis_actions.html"/>
+        <link rel="prev" title="Analysis - Data types" href="analysis_data_types.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoMop Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="linux_installation_guide.html">Linux Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_editor.html">Model Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="me_panels.html">Model Editor Panels Description (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_data_types.html">Analysis - Data types</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Analysis - Converters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#reformatting">Reformatting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#each">Each</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#select">Select</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sort">Sort</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_actions.html">Analysis - Actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_pipeline_example.html">Analysis - Pipeline example (czech)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexAN.html">Analysis</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexME.html">ModelEditor</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexJP.html">JobPanel</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexLE.html">LayerEditor</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexCommon.html">Common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/procedures.html">Development Procedures (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/rules.html">Development Rules (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/pylint_rules.html">Pylint Exceptions (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/function_action.html">Creating new action (czech)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoMop Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Analysis - Converters</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/user/analysis_converters.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="analysis-converters">
+<h1>Analysis - Converters<a class="headerlink" href="#analysis-converters" title="Permalink to this headline">¶</a></h1>
+<p>It serves only to merge, select and reorganize data, does not make any calculations.
+It is primarily used in action connectors, but one converter can also be used inside another converter,
+especially for Ensemble and Sequence operations.</p>
+<div class="section" id="reformatting">
+<h2>Reformatting<a class="headerlink" href="#reformatting" title="Permalink to this headline">¶</a></h2>
+<p>Converters allow data reorganization, renaming, regrouping.</p>
+<p>An example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># chose Struct items, from Struct(a=Int(), b=Int(), c=Int()) creates Struct with only item &quot;a&quot;</span>
+<span class="n">Converter</span><span class="p">(</span><span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">a</span><span class="p">))</span>
+
+<span class="c1"># rename Struct items, from Struct(a=Int(), b=Int()) creates Struct with same items,</span>
+<span class="c1"># but different item&#39;s names</span>
+<span class="n">Converter</span><span class="p">(</span><span class="n">Struct</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">b</span><span class="p">))</span>
+
+<span class="c1"># convert Struct to Tuple, from Struct(a=Int(), b=Int()) creates Tuple with same items</span>
+<span class="n">Converter</span><span class="p">(</span><span class="n">Tuple</span><span class="p">(</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">b</span><span class="p">))</span>
+
+<span class="c1"># convert Tuple to Struct, from Tuple(Int(), Int()) creates Struct with same items</span>
+<span class="n">Converter</span><span class="p">(</span><span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="n">b</span><span class="o">=</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)[</span><span class="mi">1</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="each">
+<h2>Each<a class="headerlink" href="#each" title="Permalink to this headline">¶</a></h2>
+<p>Is used to apply the converter to each item of Ensemble.
+The converter, which is the &#8216;each&#8217; parameter, must have just one Input(0) input.</p>
+<p>An example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># from Ensemble(Struct(a=Int(), b=Int()) creates Ensemble of type Tuple(Int(), Int())</span>
+<span class="n">Converter</span><span class="p">(</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">each</span><span class="p">(</span><span class="n">Adapter</span><span class="p">(</span><span class="n">Tuple</span><span class="p">(</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">a</span><span class="p">,</span> <span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">b</span><span class="p">))))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="select">
+<h2>Select<a class="headerlink" href="#select" title="Permalink to this headline">¶</a></h2>
+<p>The &#8216;select&#8217; operation selects Ensamble/Sequence only for features accomplish predicate.
+The predicate supports all selection operations as a converter, but does not allow the creation of Structs and Tuples,
+on the other hand, it allows the comparison of scalar values and the application of logical operators.
+The output is an Ensemble containing a subset of data.
+The predicate must have just one input again, resulting in a Bool value.</p>
+<p>An example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># from Ensemble(Int(), Int(1), Int(2), Int(3), Int(4), Int(5))</span>
+<span class="c1"># creates Ensemble(Int(), Int(1), Int(2))</span>
+<span class="n">Converter</span><span class="p">(</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">Predicate</span><span class="p">(</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)))</span>
+
+<span class="c1"># from Ensemble(Int(), Int(1), Int(2), Int(3), Int(4), Int(5))</span>
+<span class="c1"># creates Ensemble(Int(), Int(2), Int(3))</span>
+<span class="n">Converter</span><span class="p">(</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">Predicate</span><span class="p">(</span><span class="n">And</span><span class="p">(</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">))))</span>
+
+<span class="c1"># from Ensemble(Struct(a=Int(), b=String()),</span>
+                <span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Int</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">String</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)),</span>
+                <span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Int</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">String</span><span class="p">(</span><span class="s2">&quot;n&quot;</span><span class="p">)),</span>
+                <span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Int</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">String</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)))</span>
+<span class="c1"># creates Ensemble(Int(), Int(1), Int(3))</span>
+<span class="n">Converter</span><span class="p">(</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">Predicate</span><span class="p">(</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">b</span> <span class="o">==</span> <span class="s2">&quot;y&quot;</span><span class="p">)))</span><span class="o">.</span><span class="n">each</span><span class="p">(</span><span class="n">Adapter</span><span class="p">(</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">a</span><span class="p">))</span>
+
+<span class="c1"># from Ensemble(Struct(a=Int(), b=String()),</span>
+                <span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Int</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">String</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)),</span>
+                <span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Int</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">String</span><span class="p">(</span><span class="s2">&quot;n&quot;</span><span class="p">)),</span>
+                <span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Int</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">String</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)))</span>
+<span class="c1"># creates Ensemble(Int(), Int(3))</span>
+<span class="n">pred</span> <span class="o">=</span> <span class="n">Predicate</span><span class="p">(</span><span class="n">And</span><span class="p">(</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">b</span> <span class="o">==</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">Converter</span><span class="p">(</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">select</span><span class="p">())</span><span class="o">.</span><span class="n">each</span><span class="p">(</span><span class="n">Adapter</span><span class="p">(</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">a</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sort">
+<h2>Sort<a class="headerlink" href="#sort" title="Permalink to this headline">¶</a></h2>
+<p>The &#8216;sort&#8217; operation performs an Ensemble/Sequence arrangement and results in a Sequence.
+The parameter of the operation is a converter that returns a scalar (or, more generally, a comparable type),
+this type of converter is called Selector.
+The selector also has just one input.</p>
+<p>An example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># from Ensemble(Int(), Int(2), Int(3), Int(1)) creates Sequence(Int(), Int(1), Int(2), Int(3))</span>
+<span class="n">Converter</span><span class="p">(</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">KeyConvertor</span><span class="p">(</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">))))</span>
+
+<span class="c1"># from Ensemble(Struct(a=Int(), b=Int()),</span>
+                <span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Int</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">Int</span><span class="p">(</span><span class="mi">2</span><span class="p">)),</span>
+                <span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Int</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">Int</span><span class="p">(</span><span class="mi">1</span><span class="p">)),</span>
+                <span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Int</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">Int</span><span class="p">(</span><span class="mi">3</span><span class="p">)))</span>
+<span class="c1"># creates Sequence(Int(), Int(2), Int(1), Int(3))</span>
+<span class="n">Converter</span><span class="p">(</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">KeyConvertor</span><span class="p">(</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">b</span><span class="p">)))</span><span class="o">.</span><span class="n">each</span><span class="p">(</span><span class="n">Adapter</span><span class="p">(</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">a</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="analysis_actions.html" class="btn btn-neutral float-right" title="Analysis - Actions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="analysis_data_types.html" class="btn btn-neutral" title="Analysis - Data types" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0-beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

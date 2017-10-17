@@ -20,6 +20,14 @@ ui.panels.layers module
     :undoc-members:
     :show-inheritance:
 
+ui.panels.regions module
+------------------------
+
+.. automodule:: ui.panels.regions
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 ui.panels.shpfiles module
 -------------------------
 

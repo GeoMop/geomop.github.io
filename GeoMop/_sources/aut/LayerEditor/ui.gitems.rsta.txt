@@ -20,6 +20,14 @@ ui.gitems.diagram_view module
     :undoc-members:
     :show-inheritance:
 
+ui.gitems.init_area module
+--------------------------
+
+.. automodule:: ui.gitems.init_area
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 ui.gitems.line module
 ---------------------
 

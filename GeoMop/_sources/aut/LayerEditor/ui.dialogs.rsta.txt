@@ -7,6 +7,19 @@ Subpackages
 .. toctree::
 
     ui.dialogs.layers
+    ui.dialogs.regions
+
+Submodules
+----------
+
+ui.dialogs.set_diagram module
+-----------------------------
+
+.. automodule:: ui.dialogs.set_diagram
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 
 Module contents
 ---------------

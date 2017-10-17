@@ -233,7 +233,7 @@ self.head = jd.Factory([Chicken, Duck, Goose], default =def_head)</p>
 </dd>
 <dt>class Chicken(Animal):</dt>
 <dd><p class="first"># explicit specification of attributes to serialize/deserialize.
-__serialized_attrs__ = [ color, tail ]</p>
+_serialized_attrs_ = [ &#8216;color&#8217;, &#8216;tail&#8217; ]</p>
 <dl class="last docutils">
 <dt>def __init__():</dt>
 <dd>def.color = 0
@@ -276,23 +276,7 @@ return x</div></blockquote>
 <p>Helper class for JsonData.</p>
 <dl class="method">
 <dt id="json_data.ClassFactory.make_instance">
-<code class="descname">make_instance</code><span class="sig-paren">(</span><em>config</em><span class="sig-paren">)</span><a class="headerlink" href="#json_data.ClassFactory.make_instance" title="Permalink to this definition">¶</a></dt>
-<dd><p>Make instance from config dict.
-Dict must contain item &#8220;__class__&#8221; with name of desired class.
-Desired class must be in class_list.
-:param config:
-:return:</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="json_data.ClassFromList">
-<em class="property">class </em><code class="descclassname">json_data.</code><code class="descname">ClassFromList</code><span class="sig-paren">(</span><em>class_name</em><span class="sig-paren">)</span><a class="headerlink" href="#json_data.ClassFromList" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#json_data.ClassFactory" title="json_data.ClassFactory"><code class="xref py py-class docutils literal"><span class="pre">json_data.ClassFactory</span></code></a></p>
-<dl class="method">
-<dt id="json_data.ClassFromList.make_instance">
-<code class="descname">make_instance</code><span class="sig-paren">(</span><em>config</em><span class="sig-paren">)</span><a class="headerlink" href="#json_data.ClassFromList.make_instance" title="Permalink to this definition">¶</a></dt>
+<code class="descname">make_instance</code><span class="sig-paren">(</span><em>config</em>, <em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#json_data.ClassFactory.make_instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Make instance from config dict.
 Dict must contain item &#8220;__class__&#8221; with name of desired class.
 Desired class must be in class_list.

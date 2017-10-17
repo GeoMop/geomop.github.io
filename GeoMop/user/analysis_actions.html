@@ -1,0 +1,531 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Analysis - Actions &mdash; GeoMop Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="GeoMop Documentation 1.0.0-beta
+ documentation" href="../index.html"/>
+        <link rel="next" title="Analysis - Pipeline example (czech)" href="analysis_pipeline_example.html"/>
+        <link rel="prev" title="Analysis - Converters" href="analysis_converters.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoMop Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="linux_installation_guide.html">Linux Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_editor.html">Model Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="me_panels.html">Model Editor Panels Description (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_data_types.html">Analysis - Data types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_converters.html">Analysis - Converters</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Analysis - Actions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#generator-actions">Generator actions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#variablegenerator">VariableGenerator</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rangegenerator">RangeGenerator</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#parametrized-actions">Parametrized actions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#flow123daction">Flow123dAction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#functionaction">FunctionAction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#wrapper-actions">Wrapper actions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#foreach">ForEach</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#calibration">Calibration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#output-actions">Output actions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#printdttaction">PrintDTTAction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#special-actions">Special actions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#workflow">Workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pipeline">Pipeline</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connector">Connector</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_pipeline_example.html">Analysis - Pipeline example (czech)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexAN.html">Analysis</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexME.html">ModelEditor</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexJP.html">JobPanel</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexLE.html">LayerEditor</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexCommon.html">Common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/procedures.html">Development Procedures (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/rules.html">Development Rules (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/pylint_rules.html">Pylint Exceptions (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/function_action.html">Creating new action (czech)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoMop Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Analysis - Actions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/user/analysis_actions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="analysis-actions">
+<h1>Analysis - Actions<a class="headerlink" href="#analysis-actions" title="Permalink to this headline">¶</a></h1>
+<p>One action is a specific computational or graphic operation.
+The specific details of the performed operations can be affected by the action configuration.
+Each action has either one Input Slot and one Output Slot.
+The input and output data type is fixed by the action type and its configuration.
+Action configuration can affect the data type of input and output slots.
+The configuration can not be the result of another action, its specification is part of the workflow definition.</p>
+<div class="section" id="generator-actions">
+<h2>Generator actions<a class="headerlink" href="#generator-actions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="variablegenerator">
+<h3>VariableGenerator<a class="headerlink" href="#variablegenerator" title="Permalink to this headline">¶</a></h3>
+<p>The data passed in the configuration, provides on the output.</p>
+<p>An example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="n">Struct</span><span class="p">(</span><span class="n">x1</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span> <span class="n">x2</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">2.0</span><span class="p">))</span>
+<span class="n">gen</span> <span class="o">=</span> <span class="n">VariableGenerator</span><span class="p">(</span><span class="n">Variable</span><span class="o">=</span><span class="n">var</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="rangegenerator">
+<h3>RangeGenerator<a class="headerlink" href="#rangegenerator" title="Permalink to this headline">¶</a></h3>
+<p>Generator for generation parallel lists.</p>
+<p>An example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">items</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;step&#39;</span><span class="p">:</span><span class="mf">0.1</span><span class="p">,</span> <span class="s1">&#39;n_plus&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;n_minus&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;exponential&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">},</span>
+    <span class="p">{</span><span class="s1">&#39;name&#39;</span><span class="p">:</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;step&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;n_plus&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;n_minus&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="s1">&#39;exponential&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">}</span>
+<span class="p">]</span>
+<span class="n">gen</span> <span class="o">=</span> <span class="n">RangeGenerator</span><span class="p">(</span><span class="n">Items</span><span class="o">=</span><span class="n">items</span><span class="p">,</span> <span class="n">AllCases</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output of action &#8220;gen&#8221; is:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Ensemble</span><span class="p">(</span>
+    <span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">10.0</span><span class="p">)),</span>
+    <span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">1.1</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">10.0</span><span class="p">)),</span>
+    <span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">0.9</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">10.0</span><span class="p">)),</span>
+    <span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">11.0</span><span class="p">)),</span>
+    <span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">12.0</span><span class="p">)),</span>
+    <span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">9.0</span><span class="p">)),</span>
+    <span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">8.0</span><span class="p">)),</span>
+    <span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">7.0</span><span class="p">))</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="parametrized-actions">
+<h2>Parametrized actions<a class="headerlink" href="#parametrized-actions" title="Permalink to this headline">¶</a></h2>
+<p>The common denominator of these actions is that they call non-trivial external programs and
+assume the definition of the data of these programs in specific contexts,
+the input of actions can only affect the declared parameters in the input data (files) of each program.</p>
+<div class="section" id="flow123daction">
+<h3>Flow123dAction<a class="headerlink" href="#flow123daction" title="Permalink to this headline">¶</a></h3>
+<p>Action implements Flow123d simulation.
+Configuration includes a YAML file and a given computing network.</p>
+<p>An example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">gen</span> <span class="o">=</span> <span class="n">VariableGenerator</span><span class="p">(</span><span class="n">Variable</span><span class="o">=</span><span class="n">Struct</span><span class="p">(</span><span class="n">par</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">1.2</span><span class="p">)))</span>
+<span class="n">flow</span> <span class="o">=</span> <span class="n">Flow123dAction</span><span class="p">(</span><span class="n">Inputs</span><span class="o">=</span><span class="p">[</span><span class="n">gen</span><span class="p">],</span> <span class="n">YAMLFile</span><span class="o">=</span><span class="s2">&quot;test.yaml&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="functionaction">
+<h3>FunctionAction<a class="headerlink" href="#functionaction" title="Permalink to this headline">¶</a></h3>
+<p>This action compute some mathematical expressions on input data and return results on output.</p>
+<p>An example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="n">Struct</span><span class="p">(</span><span class="n">x1</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span> <span class="n">x2</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">2.0</span><span class="p">),</span> <span class="n">x3</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">gen</span> <span class="o">=</span> <span class="n">VariableGenerator</span><span class="p">(</span><span class="n">Variable</span><span class="o">=</span><span class="n">var</span><span class="p">)</span>
+<span class="n">fun</span> <span class="o">=</span> <span class="n">FunctionAction</span><span class="p">(</span>
+    <span class="n">Inputs</span><span class="o">=</span><span class="p">[</span><span class="n">gen</span><span class="p">],</span>
+    <span class="n">Params</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;x1&quot;</span><span class="p">,</span> <span class="s2">&quot;x2&quot;</span><span class="p">,</span> <span class="s2">&quot;x3&quot;</span><span class="p">],</span>
+    <span class="n">Expressions</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;y1 = 2 * x1 + 3 * x2&quot;</span><span class="p">,</span> <span class="s2">&quot;y2 = sin(x3)&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>Output of action &#8220;fun&#8221; is:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Struct</span><span class="p">(</span><span class="n">y1</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">8.0</span><span class="p">),</span> <span class="n">y2</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">1.0</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="wrapper-actions">
+<h2>Wrapper actions<a class="headerlink" href="#wrapper-actions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="foreach">
+<h3>ForEach<a class="headerlink" href="#foreach" title="Permalink to this headline">¶</a></h3>
+<p>The action configuration includes a workflow with IN input type and OUT output type.
+The workflow is executed on all input elements of type Ensemble(IN), resulting in output of type Ensemble(OUT).</p>
+<p>An example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="n">Ensemble</span><span class="p">(</span><span class="n">Float</span><span class="p">(),</span> <span class="n">Float</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span> <span class="n">Float</span><span class="p">(</span><span class="mf">2.0</span><span class="p">),</span> <span class="n">Float</span><span class="p">(</span><span class="mf">3.0</span><span class="p">))</span>
+<span class="n">gen</span> <span class="o">=</span> <span class="n">VariableGenerator</span><span class="p">(</span><span class="n">Variable</span><span class="o">=</span><span class="n">var</span><span class="p">)</span>
+<span class="n">w</span> <span class="o">=</span> <span class="n">Workflow</span><span class="p">()</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">FunctionAction</span><span class="p">(</span>
+    <span class="n">Inputs</span><span class="o">=</span><span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">input</span><span class="p">()],</span>
+    <span class="n">Params</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">],</span>
+    <span class="n">Expressions</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;y = 2 * x&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">w</span><span class="o">.</span><span class="n">set_config</span><span class="p">(</span>
+    <span class="n">OutputAction</span><span class="o">=</span><span class="n">f</span><span class="p">,</span>
+    <span class="n">InputAction</span><span class="o">=</span><span class="n">f</span>
+<span class="p">)</span>
+<span class="n">for_each</span> <span class="o">=</span> <span class="n">ForEach</span><span class="p">(</span>
+    <span class="n">Inputs</span><span class="o">=</span><span class="p">[</span><span class="n">gen</span><span class="p">],</span>
+    <span class="n">WrappedAction</span><span class="o">=</span><span class="n">w</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="calibration">
+<h3>Calibration<a class="headerlink" href="#calibration" title="Permalink to this headline">¶</a></h3>
+<p>Calibrating a generic model for given data, ie identifying model parameters so that
+the result of the model was in some sense the closest measured data.</p>
+<p>An example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">gen</span> <span class="o">=</span> <span class="n">VariableGenerator</span><span class="p">(</span>
+    <span class="n">Variable</span><span class="o">=</span><span class="p">(</span>
+        <span class="n">Struct</span><span class="p">(</span>
+            <span class="n">observations</span><span class="o">=</span><span class="n">Struct</span><span class="p">(</span>
+                <span class="n">y1</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span>
+                <span class="n">y2</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">5.0</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+<span class="n">w</span> <span class="o">=</span> <span class="n">Workflow</span><span class="p">()</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">FunctionAction</span><span class="p">(</span>
+    <span class="n">Inputs</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">w</span><span class="o">.</span><span class="n">input</span><span class="p">()</span>
+    <span class="p">],</span>
+    <span class="n">Params</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;x1&quot;</span><span class="p">,</span> <span class="s2">&quot;x2&quot;</span><span class="p">],</span>
+    <span class="n">Expressions</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;y1 = 2 * x1 + 2&quot;</span><span class="p">,</span> <span class="s2">&quot;y2 = 2 * x2 + 3&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">w</span><span class="o">.</span><span class="n">set_config</span><span class="p">(</span>
+    <span class="n">OutputAction</span><span class="o">=</span><span class="n">f</span><span class="p">,</span>
+    <span class="n">InputAction</span><span class="o">=</span><span class="n">f</span>
+<span class="p">)</span>
+<span class="n">cal</span> <span class="o">=</span> <span class="n">Calibration</span><span class="p">(</span>
+    <span class="n">Inputs</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">gen</span>
+    <span class="p">],</span>
+    <span class="n">WrappedAction</span><span class="o">=</span><span class="n">w</span><span class="p">,</span>
+    <span class="n">Parameters</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">CalibrationParameter</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;x1&quot;</span><span class="p">,</span>
+            <span class="n">group</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+            <span class="n">bounds</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">1e+10</span><span class="p">,</span> <span class="mf">1e+10</span><span class="p">),</span>
+            <span class="n">init_value</span><span class="o">=</span><span class="mf">1.0</span>
+        <span class="p">),</span>
+        <span class="n">CalibrationParameter</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;x2&quot;</span><span class="p">,</span>
+            <span class="n">group</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+            <span class="n">bounds</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">1e+10</span><span class="p">,</span> <span class="mf">1e+10</span><span class="p">),</span>
+            <span class="n">init_value</span><span class="o">=</span><span class="mf">1.0</span>
+        <span class="p">)</span>
+    <span class="p">],</span>
+    <span class="n">Observations</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">CalibrationObservation</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;y1&quot;</span><span class="p">,</span>
+            <span class="n">group</span><span class="o">=</span><span class="s2">&quot;tunnel&quot;</span><span class="p">,</span>
+            <span class="n">weight</span><span class="o">=</span><span class="mf">1.0</span>
+        <span class="p">),</span>
+        <span class="n">CalibrationObservation</span><span class="p">(</span>
+            <span class="n">name</span><span class="o">=</span><span class="s2">&quot;y2&quot;</span><span class="p">,</span>
+            <span class="n">group</span><span class="o">=</span><span class="s2">&quot;tunnel&quot;</span><span class="p">,</span>
+            <span class="n">weight</span><span class="o">=</span><span class="mf">1.0</span>
+        <span class="p">)</span>
+    <span class="p">],</span>
+    <span class="n">AlgorithmParameters</span><span class="o">=</span><span class="p">[</span>
+        <span class="n">CalibrationAlgorithmParameter</span><span class="p">(</span>
+            <span class="n">group</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+            <span class="n">diff_inc_rel</span><span class="o">=</span><span class="mf">0.01</span><span class="p">,</span>
+            <span class="n">diff_inc_abs</span><span class="o">=</span><span class="mf">0.0</span>
+        <span class="p">)</span>
+    <span class="p">],</span>
+    <span class="n">TerminationCriteria</span><span class="o">=</span><span class="n">CalibrationTerminationCriteria</span><span class="p">(</span>
+        <span class="n">n_max_steps</span><span class="o">=</span><span class="mi">100</span>
+    <span class="p">),</span>
+    <span class="n">MinimizationMethod</span><span class="o">=</span><span class="s2">&quot;SLSQP&quot;</span><span class="p">,</span>
+    <span class="n">BoundsType</span><span class="o">=</span><span class="n">CalibrationBoundsType</span><span class="o">.</span><span class="n">hard</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="output-actions">
+<h2>Output actions<a class="headerlink" href="#output-actions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="printdttaction">
+<h3>PrintDTTAction<a class="headerlink" href="#printdttaction" title="Permalink to this headline">¶</a></h3>
+<p>Saves input data to file.</p>
+<p>An example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">print_action</span> <span class="o">=</span> <span class="n">PrintDTTAction</span><span class="p">(</span>
+    <span class="n">Inputs</span><span class="o">=</span><span class="p">[</span><span class="n">some_action</span><span class="p">],</span>
+    <span class="n">OutputFile</span><span class="o">=</span><span class="s2">&quot;output.txt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="special-actions">
+<h2>Special actions<a class="headerlink" href="#special-actions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="workflow">
+<h3>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h3>
+<p>Encapsulates the entire workflow into a new user-defined action.</p>
+<p>An example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">w</span> <span class="o">=</span> <span class="n">Workflow</span><span class="p">()</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">FunctionAction</span><span class="p">(</span>
+    <span class="n">Inputs</span><span class="o">=</span><span class="p">[</span><span class="n">w</span><span class="o">.</span><span class="n">input</span><span class="p">()],</span>
+    <span class="n">Params</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;x1&quot;</span><span class="p">,</span> <span class="s2">&quot;x2&quot;</span><span class="p">],</span>
+    <span class="n">Expressions</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;y1 = 2 * x1 + 2&quot;</span><span class="p">,</span> <span class="s2">&quot;y2 = 2 * x2 + 3&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">w</span><span class="o">.</span><span class="n">set_config</span><span class="p">(</span>
+    <span class="n">OutputAction</span><span class="o">=</span><span class="n">f</span><span class="p">,</span>
+    <span class="n">InputAction</span><span class="o">=</span><span class="n">f</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="pipeline">
+<h3>Pipeline<a class="headerlink" href="#pipeline" title="Permalink to this headline">¶</a></h3>
+<p>Pipeline groups all of other actions.
+It has not any input action and least one output action.
+Output action define action contained in pipeline.
+Output action would be actions, theirs results will be downloaded.</p>
+<p>An example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="n">Struct</span><span class="p">(</span><span class="n">x1</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span> <span class="n">x2</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">2.0</span><span class="p">))</span>
+<span class="n">gen</span> <span class="o">=</span> <span class="n">VariableGenerator</span><span class="p">(</span><span class="n">Variable</span><span class="o">=</span><span class="n">var</span><span class="p">)</span>
+<span class="n">print_action</span> <span class="o">=</span> <span class="n">PrintDTTAction</span><span class="p">(</span>
+    <span class="n">Inputs</span><span class="o">=</span><span class="p">[</span><span class="n">gen</span><span class="p">],</span>
+    <span class="n">OutputFile</span><span class="o">=</span><span class="s2">&quot;output.txt&quot;</span><span class="p">)</span>
+<span class="n">pipeline</span> <span class="o">=</span> <span class="n">Pipeline</span><span class="p">(</span>
+    <span class="n">ResultActions</span><span class="o">=</span><span class="p">[</span><span class="n">print_action</span><span class="p">]</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="connector">
+<h3>Connector<a class="headerlink" href="#connector" title="Permalink to this headline">¶</a></h3>
+<p>Connectors are used for modification of data between individual actions.</p>
+<p>An example:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="o">=</span> <span class="n">Struct</span><span class="p">(</span><span class="n">x1</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">1.0</span><span class="p">),</span> <span class="n">x2</span><span class="o">=</span><span class="n">Float</span><span class="p">(</span><span class="mf">2.0</span><span class="p">))</span>
+<span class="n">gen</span> <span class="o">=</span> <span class="n">VariableGenerator</span><span class="p">(</span><span class="n">Variable</span><span class="o">=</span><span class="n">var</span><span class="p">)</span>
+
+<span class="c1"># convert data from Struct(x1=Float(), x2=Float()) to Struct(a=Float(), b=Float())</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">Connector</span><span class="p">()</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">set_inputs</span><span class="p">([</span><span class="n">gen</span><span class="p">])</span>
+<span class="n">conn</span><span class="o">.</span><span class="n">set_config</span><span class="p">(</span>
+    <span class="n">Convertor</span><span class="o">=</span><span class="n">Convertor</span><span class="p">(</span><span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">x1</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="n">Input</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">x2</span><span class="p">))</span>
+<span class="p">)</span>
+
+<span class="n">print_action</span> <span class="o">=</span> <span class="n">PrintDTTAction</span><span class="p">(</span>
+    <span class="n">Inputs</span><span class="o">=</span><span class="p">[</span><span class="n">gen</span><span class="p">],</span>
+    <span class="n">OutputFile</span><span class="o">=</span><span class="s2">&quot;output.txt&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="analysis_pipeline_example.html" class="btn btn-neutral float-right" title="Analysis - Pipeline example (czech)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="analysis_converters.html" class="btn btn-neutral" title="Analysis - Converters" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0-beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

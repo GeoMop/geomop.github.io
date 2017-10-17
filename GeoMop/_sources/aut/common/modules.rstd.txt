@@ -4,6 +4,7 @@ common
 .. toctree::
    :maxdepth: 4
 
+   b_spline
    config
    exec_with_limit
    flow_util

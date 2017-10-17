@@ -39,7 +39,7 @@
     <link rel="top" title="Layer Editor Source Documentation 1.0.0-beta
  documentation" href="../../index.html"/>
         <link rel="up" title="ui.dialogs package" href="ui.dialogs.html"/>
-        <link rel="next" title="ui.gitems package" href="ui.gitems.html"/>
+        <link rel="next" title="ui.dialogs.regions package" href="ui.dialogs.regions.html"/>
         <link rel="prev" title="ui.dialogs package" href="ui.dialogs.html"/> 
 
   
@@ -102,7 +102,9 @@
 <li class="toctree-l3"><a class="reference internal" href="ui.data.html">ui.data package</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="ui.dialogs.html">ui.dialogs package</a><ul class="current">
 <li class="toctree-l4 current"><a class="reference internal" href="ui.dialogs.html#subpackages">Subpackages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ui.dialogs.html#module-ui.dialogs">Module contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ui.dialogs.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ui.dialogs.html#ui-dialogs-set-diagram-module">ui.dialogs.set_diagram module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ui.dialogs.html#module-contents">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="ui.gitems.html">ui.gitems package</a></li>
@@ -112,8 +114,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ui.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.mainwindow">ui.mainwindow module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#ui-mainwindow-module">ui.mainwindow module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-contents">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="layer_editor.html">layer_editor module</a></li>
@@ -193,108 +195,26 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-ui.dialogs.layers.add_fracture">
-<span id="ui-dialogs-layers-add-fracture-module"></span><h2>ui.dialogs.layers.add_fracture module<a class="headerlink" href="#module-ui.dialogs.layers.add_fracture" title="Permalink to this headline">¶</a></h2>
-<p>Dialog for adding fracture to interface.</p>
-<dl class="class">
-<dt id="ui.dialogs.layers.add_fracture.AddFractureDlg">
-<em class="property">class </em><code class="descclassname">ui.dialogs.layers.add_fracture.</code><code class="descname">AddFractureDlg</code><span class="sig-paren">(</span><em>fracture_positions</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.layers.add_fracture.AddFractureDlg" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QDialog</span></code></p>
-</dd></dl>
-
+<div class="section" id="ui-dialogs-layers-add-fracture-module">
+<h2>ui.dialogs.layers.add_fracture module<a class="headerlink" href="#ui-dialogs-layers-add-fracture-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-ui.dialogs.layers.append_layer">
-<span id="ui-dialogs-layers-append-layer-module"></span><h2>ui.dialogs.layers.append_layer module<a class="headerlink" href="#module-ui.dialogs.layers.append_layer" title="Permalink to this headline">¶</a></h2>
-<p>Dialog for appending new layer to the end.</p>
-<dl class="class">
-<dt id="ui.dialogs.layers.append_layer.AppendLayerDlg">
-<em class="property">class </em><code class="descclassname">ui.dialogs.layers.append_layer.</code><code class="descname">AppendLayerDlg</code><span class="sig-paren">(</span><em>parent</em>, <em>min_depth=None</em>, <em>max_depth=None</em>, <em>prepend=False</em>, <em>add=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.layers.append_layer.AppendLayerDlg" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QDialog</span></code></p>
-<dl class="method">
-<dt id="ui.dialogs.layers.append_layer.AppendLayerDlg.accept">
-<code class="descname">accept</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.layers.append_layer.AppendLayerDlg.accept" title="Permalink to this definition">¶</a></dt>
-<dd><p>Accepts the form if depth data fields are valid.
-:return: None</p>
-</dd></dl>
-
-</dd></dl>
-
+<div class="section" id="ui-dialogs-layers-append-layer-module">
+<h2>ui.dialogs.layers.append_layer module<a class="headerlink" href="#ui-dialogs-layers-append-layer-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-ui.dialogs.layers.layers_helpers">
-<span id="ui-dialogs-layers-layers-helpers-module"></span><h2>ui.dialogs.layers.layers_helpers module<a class="headerlink" href="#module-ui.dialogs.layers.layers_helpers" title="Permalink to this headline">¶</a></h2>
-<p>Dialogs for settings text name property or depth</p>
-<dl class="class">
-<dt id="ui.dialogs.layers.layers_helpers.LayersHelpers">
-<em class="property">class </em><code class="descclassname">ui.dialogs.layers.layers_helpers.</code><code class="descname">LayersHelpers</code><a class="headerlink" href="#ui.dialogs.layers.layers_helpers.LayersHelpers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<dl class="staticmethod">
-<dt id="ui.dialogs.layers.layers_helpers.LayersHelpers.split_type_combo">
-<em class="property">static </em><code class="descname">split_type_combo</code><span class="sig-paren">(</span><em>copy_block</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.layers.layers_helpers.LayersHelpers.split_type_combo" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get combo box with layer splitting types</p>
-</dd></dl>
-
-<dl class="staticmethod">
-<dt id="ui.dialogs.layers.layers_helpers.LayersHelpers.validate_depth">
-<em class="property">static </em><code class="descname">validate_depth</code><span class="sig-paren">(</span><em>edit</em>, <em>validator</em>, <em>dialog</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.layers.layers_helpers.LayersHelpers.validate_depth" title="Permalink to this definition">¶</a></dt>
-<dd><p>Try validate depth parameter. If problem occured,
-display error and return False</p>
-</dd></dl>
-
-</dd></dl>
-
+<div class="section" id="ui-dialogs-layers-layers-helpers-module">
+<h2>ui.dialogs.layers.layers_helpers module<a class="headerlink" href="#ui-dialogs-layers-layers-helpers-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-ui.dialogs.layers.report_operations">
-<span id="ui-dialogs-layers-report-operations-module"></span><h2>ui.dialogs.layers.report_operations module<a class="headerlink" href="#module-ui.dialogs.layers.report_operations" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="ui.dialogs.layers.report_operations.ReportOperationsDlg">
-<em class="property">class </em><code class="descclassname">ui.dialogs.layers.report_operations.</code><code class="descname">ReportOperationsDlg</code><span class="sig-paren">(</span><em>title</em>, <em>messages</em>, <em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.layers.report_operations.ReportOperationsDlg" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QMessageBox</span></code></p>
-<p>Information dialog for layers</p>
-</dd></dl>
-
+<div class="section" id="ui-dialogs-layers-report-operations-module">
+<h2>ui.dialogs.layers.report_operations module<a class="headerlink" href="#ui-dialogs-layers-report-operations-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-ui.dialogs.layers.set_property">
-<span id="ui-dialogs-layers-set-property-module"></span><h2>ui.dialogs.layers.set_property module<a class="headerlink" href="#module-ui.dialogs.layers.set_property" title="Permalink to this headline">¶</a></h2>
-<p>Dialogs for settings text name property or depth</p>
-<dl class="class">
-<dt id="ui.dialogs.layers.set_property.SetDepthDlg">
-<em class="property">class </em><code class="descclassname">ui.dialogs.layers.set_property.</code><code class="descname">SetDepthDlg</code><span class="sig-paren">(</span><em>value</em>, <em>parent=None</em>, <em>min=None</em>, <em>max=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.layers.set_property.SetDepthDlg" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QDialog</span></code></p>
-<dl class="method">
-<dt id="ui.dialogs.layers.set_property.SetDepthDlg.accept">
-<code class="descname">accept</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.layers.set_property.SetDepthDlg.accept" title="Permalink to this definition">¶</a></dt>
-<dd><p>Accepts the form if depth data fields are valid.
-:return: None</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="class">
-<dt id="ui.dialogs.layers.set_property.SetNameDlg">
-<em class="property">class </em><code class="descclassname">ui.dialogs.layers.set_property.</code><code class="descname">SetNameDlg</code><span class="sig-paren">(</span><em>value</em>, <em>category</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.layers.set_property.SetNameDlg" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QDialog</span></code></p>
-</dd></dl>
-
+<div class="section" id="ui-dialogs-layers-set-property-module">
+<h2>ui.dialogs.layers.set_property module<a class="headerlink" href="#ui-dialogs-layers-set-property-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-ui.dialogs.layers.split_layer">
-<span id="ui-dialogs-layers-split-layer-module"></span><h2>ui.dialogs.layers.split_layer module<a class="headerlink" href="#module-ui.dialogs.layers.split_layer" title="Permalink to this headline">¶</a></h2>
-<p>Dialog for appending new layer to the end.</p>
-<dl class="class">
-<dt id="ui.dialogs.layers.split_layer.SplitLayerDlg">
-<em class="property">class </em><code class="descclassname">ui.dialogs.layers.split_layer.</code><code class="descname">SplitLayerDlg</code><span class="sig-paren">(</span><em>min</em>, <em>max</em>, <em>copy_block</em>, <em>parent=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.layers.split_layer.SplitLayerDlg" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">PyQt5.QtWidgets.QDialog</span></code></p>
-<dl class="method">
-<dt id="ui.dialogs.layers.split_layer.SplitLayerDlg.accept">
-<code class="descname">accept</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.dialogs.layers.split_layer.SplitLayerDlg.accept" title="Permalink to this definition">¶</a></dt>
-<dd><p>Accepts the form if depth data fields are valid.
-:return: None</p>
-</dd></dl>
-
-</dd></dl>
-
+<div class="section" id="ui-dialogs-layers-split-layer-module">
+<h2>ui.dialogs.layers.split_layer module<a class="headerlink" href="#ui-dialogs-layers-split-layer-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-ui.dialogs.layers">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ui.dialogs.layers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -308,7 +228,7 @@ display error and return False</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="ui.gitems.html" class="btn btn-neutral float-right" title="ui.gitems package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="ui.dialogs.regions.html" class="btn btn-neutral float-right" title="ui.dialogs.regions package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="ui.dialogs.html" class="btn btn-neutral" title="ui.dialogs package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

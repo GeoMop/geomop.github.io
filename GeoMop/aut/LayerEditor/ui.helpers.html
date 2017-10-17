@@ -104,8 +104,8 @@
 <li class="toctree-l3"><a class="reference internal" href="ui.gitems.html">ui.gitems package</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">ui.helpers package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ui.helpers.current_view">ui.helpers.current_view module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#module-ui.helpers">Module contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ui-helpers-current-view-module">ui.helpers.current_view module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-contents">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="ui.menus.html">ui.menus package</a></li>
@@ -113,8 +113,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ui.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui.mainwindow">ui.mainwindow module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ui.html#module-ui">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#ui-mainwindow-module">ui.mainwindow module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ui.html#module-contents">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="layer_editor.html">layer_editor module</a></li>
@@ -192,79 +192,11 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-ui.helpers.current_view">
-<span id="ui-helpers-current-view-module"></span><h2>ui.helpers.current_view module<a class="headerlink" href="#module-ui.helpers.current_view" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="ui.helpers.current_view.CurrentView">
-<em class="property">class </em><code class="descclassname">ui.helpers.current_view.</code><code class="descname">CurrentView</code><span class="sig-paren">(</span><em>event_location</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.current_view.CurrentView" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p>State class for description current view. This class helps
-switching between views. If histori changes is made, this helper
-can record view settings and switch to it if is neded</p>
-<dl class="attribute">
-<dt id="ui.helpers.current_view.CurrentView.cfg">
-<code class="descname">cfg</code><em class="property"> = None</em><a class="headerlink" href="#ui.helpers.current_view.CurrentView.cfg" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="method">
-<dt id="ui.helpers.current_view.CurrentView.cmp">
-<code class="descname">cmp</code><span class="sig-paren">(</span><em>event_location</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.current_view.CurrentView.cmp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return if current view is same as actual state</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="ui.helpers.current_view.CurrentView.diagram_id">
-<code class="descname">diagram_id</code><em class="property"> = None</em><a class="headerlink" href="#ui.helpers.current_view.CurrentView.diagram_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Current diagram id</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="ui.helpers.current_view.CurrentView.diagram_pos_x">
-<code class="descname">diagram_pos_x</code><em class="property"> = None</em><a class="headerlink" href="#ui.helpers.current_view.CurrentView.diagram_pos_x" title="Permalink to this definition">¶</a></dt>
-<dd><p>Current diagram x coordinate</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="ui.helpers.current_view.CurrentView.diagram_pos_y">
-<code class="descname">diagram_pos_y</code><em class="property"> = None</em><a class="headerlink" href="#ui.helpers.current_view.CurrentView.diagram_pos_y" title="Permalink to this definition">¶</a></dt>
-<dd><p>Current diagram y coordinate</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="ui.helpers.current_view.CurrentView.diagram_zoom">
-<code class="descname">diagram_zoom</code><em class="property"> = None</em><a class="headerlink" href="#ui.helpers.current_view.CurrentView.diagram_zoom" title="Permalink to this definition">¶</a></dt>
-<dd><p>Current diagram zoom</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="ui.helpers.current_view.CurrentView.event_location">
-<code class="descname">event_location</code><em class="property"> = None</em><a class="headerlink" href="#ui.helpers.current_view.CurrentView.event_location" title="Permalink to this definition">¶</a></dt>
-<dd><p>Place where event come</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ui.helpers.current_view.CurrentView.is_compatible">
-<code class="descname">is_compatible</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.current_view.CurrentView.is_compatible" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return if current view is compatible with actual state</p>
-</dd></dl>
-
-<dl class="classmethod">
-<dt id="ui.helpers.current_view.CurrentView.set_cfg">
-<em class="property">classmethod </em><code class="descname">set_cfg</code><span class="sig-paren">(</span><em>cfg</em><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.current_view.CurrentView.set_cfg" title="Permalink to this definition">¶</a></dt>
-<dd><p>is file changed</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="ui.helpers.current_view.CurrentView.set_view">
-<code class="descname">set_view</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ui.helpers.current_view.CurrentView.set_view" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set current view</p>
-</dd></dl>
-
-</dd></dl>
-
+<div class="section" id="ui-helpers-current-view-module">
+<h2>ui.helpers.current_view module<a class="headerlink" href="#ui-helpers-current-view-module" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-ui.helpers">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ui.helpers" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
