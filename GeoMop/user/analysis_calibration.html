@@ -1,0 +1,418 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Analysis - Calibration &mdash; GeoMop Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="GeoMop Documentation 1.0.0-beta
+ documentation" href="../index.html"/>
+        <link rel="next" title="Analysis - Pipeline example (czech)" href="analysis_pipeline_example.html"/>
+        <link rel="prev" title="Analysis - Actions" href="analysis_actions.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoMop Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="linux_installation_guide.html">Linux Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_editor.html">Model Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="me_panels.html">Model Editor Panels Description (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_data_types.html">Analysis - Data types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_converters.html">Analysis - Converters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_actions.html">Analysis - Actions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Analysis - Calibration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calibration-input">Calibration input</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calibration-output">Calibration output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_pipeline_example.html">Analysis - Pipeline example (czech)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexAN.html">Analysis</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexME.html">ModelEditor</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexJP.html">JobPanel</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexLE.html">LayerEditor</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexCommon.html">Common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/procedures.html">Development Procedures (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/rules.html">Development Rules (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/pylint_rules.html">Pylint Exceptions (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/function_action.html">Creating new action (czech)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoMop Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Analysis - Calibration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/user/analysis_calibration.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="analysis-calibration">
+<h1>Analysis - Calibration<a class="headerlink" href="#analysis-calibration" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>WrappedAction</dt>
+<dd>Workflow of calibrated model</dd>
+<dt>Parameters</dt>
+<dd><p class="first">List of parameters</p>
+<dl class="last docutils">
+<dt>name</dt>
+<dd>Name of parameter in calibration and inside of model</dd>
+<dt>group</dt>
+<dd>Group of parameter</dd>
+<dt>bounds</dt>
+<dd>Upper and lower bound of parameter</dd>
+<dt>init_value</dt>
+<dd>Init value of parameter</dd>
+<dt>offset, scale</dt>
+<dd>Body param. = scale * tuned param. + offset; default offset = 0.0, scale = 1.0</dd>
+<dt>fixed</dt>
+<dd>If True then parameter is fixed in init value</dd>
+<dt>log_transform</dt>
+<dd>If True with parameter is internally operated as log10(parameter value)</dd>
+<dt>tied_params</dt>
+<dd>Parameters used in tied_expression</dd>
+<dt>tied_expression</dt>
+<dd>Python expression, may use other parameters (defined in tied_params),
+this parameter is not calibrated</dd>
+</dl>
+</dd>
+<dt>Observations</dt>
+<dd><p class="first">List of observations</p>
+<dl class="last docutils">
+<dt>name</dt>
+<dd>Name of observation</dd>
+<dt>group</dt>
+<dd>Group of observation</dd>
+<dt>weight</dt>
+<dd>Observation weight in target function</dd>
+<dt>upper_bound:</dt>
+<dd>If computed value is greater than this parameter, special penalization is applied</dd>
+<dt>lower_bound:</dt>
+<dd>If computed value is smaller than this parameter, special penalization is applied</dd>
+</dl>
+</dd>
+<dt>AlgorithmParameters</dt>
+<dd><p class="first">Define approximation of derivatives, for each group of parameters.</p>
+<dl class="last docutils">
+<dt>group:</dt>
+<dd>Parameter group</dd>
+<dt>diff_inc_rel</dt>
+<dd>Step for derivation eval relative</dd>
+<dt>diff_inc_abs</dt>
+<dd>Step for derivation eval absolute</dd>
+</dl>
+</dd>
+<dt>TerminationCriteria</dt>
+<dd><p class="first">Define criteria for termination of calibration process.</p>
+<dl class="last docutils">
+<dt>n_lowest, tol_lowest</dt>
+<dd>Stop if difference of min and max from n_lowest min values of objective function</dd>
+<dt>n_from_lowest</dt>
+<dd>Stop if n iterations without improvement</dd>
+<dt>n_param_change, tol_rel_param_change</dt>
+<dd>Stop if max relative change of parameter form last n_param_change is lower than tol_rel_param_change
+(must be satisfied for all parameters)</dd>
+<dt>n_max_steps</dt>
+<dd>Maximum number of iterations to perform</dd>
+</dl>
+</dd>
+<dt>MinimizationMethod</dt>
+<dd><p class="first">Sets minimalization method. Must be one of:</p>
+<blockquote class="last">
+<div><ul class="simple">
+<li>L-BFGS-B - Limited-memory Broyden–Fletcher–Goldfarb–Shanno with bounds</li>
+<li>SLSQP - Sequential Least SQuares Programming</li>
+</ul>
+</div></blockquote>
+</dd>
+<dt>BoundsType</dt>
+<dd><p class="first">Sets type of bounds of parameters. Must be one of:</p>
+<blockquote class="last">
+<div><ul class="simple">
+<li>hard - use bounds from underlying SciPy minimize</li>
+<li>soft - use penalization if parameter go out of bounds</li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+</div>
+<div class="section" id="calibration-input">
+<h2>Calibration input<a class="headerlink" href="#calibration-input" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>observations</dt>
+<dd>Struct of individual observations</dd>
+</dl>
+</div>
+<div class="section" id="calibration-output">
+<h2>Calibration output<a class="headerlink" href="#calibration-output" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>optimisation</dt>
+<dd><p class="first">Sequence of individual iterations:</p>
+<dl class="last docutils">
+<dt>converge_reason</dt>
+<dd>Reason of convergence</dd>
+<dt>cumulative_n_evaluation</dt>
+<dd>Number of evaluation of criterial functon</dd>
+<dt>residual</dt>
+<dd>Criterial function in this iteration</dd>
+<dt>observations</dt>
+<dd><dl class="first last docutils">
+<dt>measured_value</dt>
+<dd>Desired value</dd>
+<dt>model_value</dt>
+<dd>Observation value corresponding to input parameters</dd>
+<dt>residual</dt>
+<dd>Difference between measured_value and model_value</dd>
+<dt>sensitivity</dt>
+<dd>Sensitivity of observation j is the magnitude of the j’th row of the
+Jacobian multiplied by the weight associated with that observation; this magnitude is then
+divided by the number of adjustable parameters. It is thus a measure of the sensitivity of that
+observation to all parameters involved in the parameter estimation process.</dd>
+</dl>
+</dd>
+<dt>parameters</dt>
+<dd><dl class="first last docutils">
+<dt>parameter_type</dt>
+<dd>Type of parameter, is one of Free, Tied, Fixed, Frozen</dd>
+<dt>value</dt>
+<dd>Parameter value in this iteration</dd>
+<dt>interval_estimate</dt>
+<dd>Not implemented yet</dd>
+<dt>sensitivity</dt>
+<dd>Sensitivity of the i’th parameter is the normalised (with respect to the number of observations)
+magnitude of the column of the Jacobian matrix pertaining to that parameter, with each
+element of that column multiplied by the weight pertaining to the respective observation.</dd>
+<dt>relative_sensitivity</dt>
+<dd>The relative sensitivity of a parameter is obtained by multiplying its
+sensitivity by the magnitude of the value of the parameter. It is thus a measure of the
+changes in model outputs that are incurred by a fractional change in the value of
+the parameter.</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>result</dt>
+<dd><dl class="first last docutils">
+<dt>n_iter</dt>
+<dd>Number of iterations</dd>
+<dt>converge_reason</dt>
+<dd>Reason of convergence</dd>
+<dt>residual</dt>
+<dd>Criterial function after calibration</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="analysis_pipeline_example.html" class="btn btn-neutral float-right" title="Analysis - Pipeline example (czech)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="analysis_actions.html" class="btn btn-neutral" title="Analysis - Actions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0-beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
