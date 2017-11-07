@@ -19,10 +19,10 @@ helpers.autocomplete_helper module
     :undoc-members:
     :show-inheritance:
 
-helpers.keyboard_shortcuts module
----------------------------------
+helpers.keyboard_shortcuts_definition module
+--------------------------------------------
 
-.. automodule:: helpers.keyboard_shortcuts
+.. automodule:: helpers.keyboard_shortcuts_definition
     :members:
     :undoc-members:
     :show-inheritance:

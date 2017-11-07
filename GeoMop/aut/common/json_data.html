@@ -242,19 +242,23 @@ def.wing = 1 # not serialized</dd>
 </dd>
 </dl>
 <p>TODO:
-- Is __init__ the best place to specify types and do deserialization as well?</p>
+- Need to separate data validation and serialization/deserialization, default values. E.g.</p>
 <blockquote>
-<div><p>We have no way to initialize private attributes (not accesible from input, but known at construction time of the class
+<div>I need validation against [[int]], but default value []. But otherwise the default could be [[]], or None, ...</div></blockquote>
+<ul>
+<li><p class="first">Is __init__ the best place to specify types and do deserialization as well?
+We have no way to initialize private attributes (not accesible from input, but known at construction time of the class
 - object created dynamicaly at run time.
 Possibly we can convert this deserialization init into static factory method:</p>
 <p>&#64;class
 def deserialize( cls, config ):</p>
 <blockquote>
-<div>x = cls.__new__()
+<div><p>x = cls.__new__()
 x.n_legs = 4
 # other type definitions
 super().deserialize(x, config )
-return x</div></blockquote>
+return x</p>
+</div></blockquote>
 <dl class="docutils">
 <dt>pros:</dt>
 <dd><ul class="first last simple">
@@ -268,7 +272,8 @@ return x</div></blockquote>
 </ul>
 </dd>
 </dl>
-</div></blockquote>
+</li>
+</ul>
 <dl class="class">
 <dt id="json_data.ClassFactory">
 <em class="property">class </em><code class="descclassname">json_data.</code><code class="descname">ClassFactory</code><span class="sig-paren">(</span><em>class_list</em><span class="sig-paren">)</span><a class="headerlink" href="#json_data.ClassFactory" title="Permalink to this definition">¶</a></dt>

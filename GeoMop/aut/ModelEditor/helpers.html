@@ -103,7 +103,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-helpers.autocomplete_helper">helpers.autocomplete_helper module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#module-helpers.keyboard_shortcuts">helpers.keyboard_shortcuts module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-helpers.keyboard_shortcuts_definition">helpers.keyboard_shortcuts_definition module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#module-helpers">Module contents</a></li>
 </ul>
 </li>
@@ -383,98 +383,31 @@ options, set the autocomplete state to hidden.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="module-helpers.keyboard_shortcuts">
-<span id="helpers-keyboard-shortcuts-module"></span><h2>helpers.keyboard_shortcuts module<a class="headerlink" href="#module-helpers.keyboard_shortcuts" title="Permalink to this headline">¶</a></h2>
-<p>Keyboard shortcuts helper.</p>
+<div class="section" id="module-helpers.keyboard_shortcuts_definition">
+<span id="helpers-keyboard-shortcuts-definition-module"></span><h2>helpers.keyboard_shortcuts_definition module<a class="headerlink" href="#module-helpers.keyboard_shortcuts_definition" title="Permalink to this headline">¶</a></h2>
+<p>Keyboard shortcuts definition.</p>
 <dl class="data">
-<dt id="helpers.keyboard_shortcuts.DEFAULT_USER_SHORTCUTS">
-<code class="descclassname">helpers.keyboard_shortcuts.</code><code class="descname">DEFAULT_USER_SHORTCUTS</code><em class="property"> = {'exit': 'Ctrl+Q', 'new_file': 'Ctrl+N', 'comment': 'Ctrl+/', 'import_file': 'Ctrl+I', 'undo': 'Ctrl+Z', 'save_file_as': 'Ctrl+Shift+S', 'edit_format': 'Ctrl+E', 'show_autocompletion': 'Ctrl+Space', 'open_window': 'Ctrl+W', 'open_file': 'Ctrl+O', 'find': 'Ctrl+F', 'replace': 'Ctrl+H', 'redo': 'Ctrl+Y', 'save_file': 'Ctrl+S'}</em><a class="headerlink" href="#helpers.keyboard_shortcuts.DEFAULT_USER_SHORTCUTS" title="Permalink to this definition">¶</a></dt>
+<dt id="helpers.keyboard_shortcuts_definition.DEFAULT_USER_SHORTCUTS">
+<code class="descclassname">helpers.keyboard_shortcuts_definition.</code><code class="descname">DEFAULT_USER_SHORTCUTS</code><em class="property"> = {'redo': 'Ctrl+Y', 'save_file': 'Ctrl+S', 'save_file_as': 'Ctrl+Shift+S', 'exit': 'Ctrl+Q', 'new_file': 'Ctrl+N', 'comment': 'Ctrl+/', 'edit_format': 'Ctrl+E', 'open_window': 'Ctrl+W', 'undo': 'Ctrl+Z', 'find': 'Ctrl+F', 'replace': 'Ctrl+H', 'show_autocompletion': 'Ctrl+Space', 'open_file': 'Ctrl+O', 'import_file': 'Ctrl+I'}</em><a class="headerlink" href="#helpers.keyboard_shortcuts_definition.DEFAULT_USER_SHORTCUTS" title="Permalink to this definition">¶</a></dt>
 <dd><p>default keyboard shortcuts</p>
 </dd></dl>
 
-<dl class="class">
-<dt id="helpers.keyboard_shortcuts.KeyboardShortcut">
-<em class="property">class </em><code class="descclassname">helpers.keyboard_shortcuts.</code><code class="descname">KeyboardShortcut</code><span class="sig-paren">(</span><em>shortcut</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.keyboard_shortcuts.KeyboardShortcut" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p>Represents a keyboard shortcut.</p>
-<dl class="staticmethod">
-<dt id="helpers.keyboard_shortcuts.KeyboardShortcut.get_shortcut">
-<em class="property">static </em><code class="descname">get_shortcut</code><span class="sig-paren">(</span><em>shortcut</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.keyboard_shortcuts.KeyboardShortcut.get_shortcut" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return KeyboardShortcut from cache for this shortcut string.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>shortcut</strong> (<em>str</em>) &#8211; string of the shortcut</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">keyboard shortcut</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#helpers.keyboard_shortcuts.KeyboardShortcut" title="helpers.keyboard_shortcuts.KeyboardShortcut">KeyboardShortcut</a></td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="helpers.keyboard_shortcuts.KeyboardShortcut.matches_key_event">
-<code class="descname">matches_key_event</code><span class="sig-paren">(</span><em>event</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.keyboard_shortcuts.KeyboardShortcut.matches_key_event" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return True if this keyboard shortcut matches the key event.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>event</strong> (<em>QKeyEvent</em>) &#8211; event that occurred</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if this shortcut matches the event</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="helpers.keyboard_shortcuts.KeyboardShortcut.qt_modifiers">
-<code class="descname">qt_modifiers</code><a class="headerlink" href="#helpers.keyboard_shortcuts.KeyboardShortcut.qt_modifiers" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return Qt KeyModifiers.</p>
-</dd></dl>
-
-</dd></dl>
-
 <dl class="data">
-<dt id="helpers.keyboard_shortcuts.SCINTILLA_DISABLE">
-<code class="descclassname">helpers.keyboard_shortcuts.</code><code class="descname">SCINTILLA_DISABLE</code><em class="property"> = ['copy', 'paste', 'cut', 'undo', 'redo', 'unindent', 'comment', 'delete', 'select_all', 'show_autocompletion']</em><a class="headerlink" href="#helpers.keyboard_shortcuts.SCINTILLA_DISABLE" title="Permalink to this definition">¶</a></dt>
+<dt id="helpers.keyboard_shortcuts_definition.SCINTILLA_DISABLE">
+<code class="descclassname">helpers.keyboard_shortcuts_definition.</code><code class="descname">SCINTILLA_DISABLE</code><em class="property"> = ['copy', 'paste', 'cut', 'undo', 'redo', 'unindent', 'comment', 'delete', 'select_all', 'show_autocompletion']</em><a class="headerlink" href="#helpers.keyboard_shortcuts_definition.SCINTILLA_DISABLE" title="Permalink to this definition">¶</a></dt>
 <dd><p>shortcuts to be disabled in default scintilla behavior</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="helpers.keyboard_shortcuts.SHORTCUT_LABELS">
-<code class="descclassname">helpers.keyboard_shortcuts.</code><code class="descname">SHORTCUT_LABELS</code><em class="property"> = {'exit': 'Quit application', 'new_file': 'New file', 'comment': 'Toggle comment', 'import_file': 'Import file', 'undo': 'Undo an action', 'save_file_as': 'Save file as', 'edit_format': 'Edit format file', 'show_autocompletion': 'Display autocompletion options', 'open_window': 'Open window', 'open_file': 'Open file', 'find': 'Find dialog', 'replace': 'Replace dialog', 'redo': 'Redo an action', 'save_file': 'Save file'}</em><a class="headerlink" href="#helpers.keyboard_shortcuts.SHORTCUT_LABELS" title="Permalink to this definition">¶</a></dt>
+<dt id="helpers.keyboard_shortcuts_definition.SHORTCUT_LABELS">
+<code class="descclassname">helpers.keyboard_shortcuts_definition.</code><code class="descname">SHORTCUT_LABELS</code><em class="property"> = {'redo': 'Redo an action', 'save_file': 'Save file', 'save_file_as': 'Save file as', 'exit': 'Quit application', 'new_file': 'New file', 'comment': 'Toggle comment', 'edit_format': 'Edit format file', 'open_window': 'Open window', 'undo': 'Undo an action', 'find': 'Find dialog', 'replace': 'Replace dialog', 'show_autocompletion': 'Display autocompletion options', 'open_file': 'Open file', 'import_file': 'Import file'}</em><a class="headerlink" href="#helpers.keyboard_shortcuts_definition.SHORTCUT_LABELS" title="Permalink to this definition">¶</a></dt>
 <dd><p>labels of shortcuts to be displayed in the user interface</p>
 </dd></dl>
 
 <dl class="data">
-<dt id="helpers.keyboard_shortcuts.SYSTEM_SHORTCUTS">
-<code class="descclassname">helpers.keyboard_shortcuts.</code><code class="descname">SYSTEM_SHORTCUTS</code><em class="property"> = {'escape': 'Esc', 'cut': 'Ctrl+X', 'select_all': 'Ctrl+A', 'copy': 'Ctrl+C', 'backspace': 'Backspace', 'tab': 'Tab', 'f3': 'F3', 'unindent': 'Shift+Tab', 'delete': 'Delete', 'paste': 'Ctrl+V'}</em><a class="headerlink" href="#helpers.keyboard_shortcuts.SYSTEM_SHORTCUTS" title="Permalink to this definition">¶</a></dt>
+<dt id="helpers.keyboard_shortcuts_definition.SYSTEM_SHORTCUTS">
+<code class="descclassname">helpers.keyboard_shortcuts_definition.</code><code class="descname">SYSTEM_SHORTCUTS</code><em class="property"> = {'cut': 'Ctrl+X', 'unindent': 'Shift+Tab', 'copy': 'Ctrl+C', 'select_all': 'Ctrl+A', 'paste': 'Ctrl+V', 'tab': 'Tab', 'escape': 'Esc', 'backspace': 'Backspace', 'f3': 'F3', 'delete': 'Delete'}</em><a class="headerlink" href="#helpers.keyboard_shortcuts_definition.SYSTEM_SHORTCUTS" title="Permalink to this definition">¶</a></dt>
 <dd><p>system keyboard shortcuts that can not be changed by user</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="helpers.keyboard_shortcuts.get_shortcut">
-<code class="descclassname">helpers.keyboard_shortcuts.</code><code class="descname">get_shortcut</code><span class="sig-paren">(</span><em>shortcut</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.keyboard_shortcuts.get_shortcut" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return KeyboardShortcut from cache for this shortcut string.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>shortcut</strong> (<em>str</em>) &#8211; string of the shortcut</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">keyboard shortcut</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#helpers.keyboard_shortcuts.KeyboardShortcut" title="helpers.keyboard_shortcuts.KeyboardShortcut">KeyboardShortcut</a></td>
-</tr>
-</tbody>
-</table>
 </dd></dl>
 
 </div>

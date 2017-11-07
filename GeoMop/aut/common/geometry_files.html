@@ -175,34 +175,6 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-geometry_files.geometry">
-<span id="geometry-files-geometry-module"></span><h2>geometry_files.geometry module<a class="headerlink" href="#module-geometry_files.geometry" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
-<dt id="geometry_files.geometry.GeometrySer">
-<em class="property">class </em><code class="descclassname">geometry_files.geometry.</code><code class="descname">GeometrySer</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry.GeometrySer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p>geometry data serializer</p>
-<dl class="attribute">
-<dt id="geometry_files.geometry.GeometrySer.file">
-<code class="descname">file</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry.GeometrySer.file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Json geometry file</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="geometry_files.geometry.GeometrySer.read">
-<code class="descname">read</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry.GeometrySer.read" title="Permalink to this definition">¶</a></dt>
-<dd><p>return LayerGeometry data</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="geometry_files.geometry.GeometrySer.write">
-<code class="descname">write</code><span class="sig-paren">(</span><em>lg</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry.GeometrySer.write" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write LayerGeometry data to file</p>
-</dd></dl>
-
-</dd></dl>
-
-</div>
 <div class="section" id="module-geometry_files.geometry_factory">
 <span id="geometry-files-geometry-factory-module"></span><h2>geometry_files.geometry_factory module<a class="headerlink" href="#module-geometry_files.geometry_factory" title="Permalink to this headline">¶</a></h2>
 <p>Structures for Layer Geometry File</p>
@@ -218,27 +190,9 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="geometry_files.geometry_factory.GeometryFactory.add_node">
-<code class="descname">add_node</code><span class="sig-paren">(</span><em>node_set_idx</em>, <em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.add_node" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add one node</p>
-</dd></dl>
-
-<dl class="method">
 <dt id="geometry_files.geometry_factory.GeometryFactory.add_node_set">
-<code class="descname">add_node_set</code><span class="sig-paren">(</span><em>topology_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.add_node_set" title="Permalink to this definition">¶</a></dt>
+<code class="descname">add_node_set</code><span class="sig-paren">(</span><em>topology_idx</em>, <em>points=[]</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.add_node_set" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add new node set</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="geometry_files.geometry_factory.GeometryFactory.add_plane_surface">
-<code class="descname">add_plane_surface</code><span class="sig-paren">(</span><em>surface</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.add_plane_surface" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add new main layer</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="geometry_files.geometry_factory.GeometryFactory.add_polygon">
-<code class="descname">add_polygon</code><span class="sig-paren">(</span><em>topology_idx</em>, <em>p_idxs</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.add_polygon" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add one polygon</p>
 </dd></dl>
 
 <dl class="method">
@@ -248,9 +202,15 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="geometry_files.geometry_factory.GeometryFactory.add_segment">
-<code class="descname">add_segment</code><span class="sig-paren">(</span><em>topology_idx</em>, <em>n1_idx</em>, <em>n2_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.add_segment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Add one segment</p>
+<dt id="geometry_files.geometry_factory.GeometryFactory.add_surface">
+<code class="descname">add_surface</code><span class="sig-paren">(</span><em>surface</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.add_surface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new main layer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.add_surface_plane">
+<code class="descname">add_surface_plane</code><span class="sig-paren">(</span><em>depth</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.add_surface_plane" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add new main layer</p>
 </dd></dl>
 
 <dl class="method">
@@ -261,7 +221,7 @@
 
 <dl class="method">
 <dt id="geometry_files.geometry_factory.GeometryFactory.add_topology">
-<code class="descname">add_topology</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.add_topology" title="Permalink to this definition">¶</a></dt>
+<code class="descname">add_topology</code><span class="sig-paren">(</span><em>topology=&lt;geometry_files.geometry_structures.Topology object&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.add_topology" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add new topology and return its idx</p>
 </dd></dl>
 
@@ -269,12 +229,6 @@
 <dt id="geometry_files.geometry_factory.GeometryFactory.check_file_consistency">
 <code class="descname">check_file_consistency</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.check_file_consistency" title="Permalink to this definition">¶</a></dt>
 <dd><p>check created file consistency</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="geometry_files.geometry_factory.GeometryFactory.geometry">
-<code class="descname">geometry</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.geometry" title="Permalink to this definition">¶</a></dt>
-<dd><p>Geometry data object</p>
 </dd></dl>
 
 <dl class="method">
@@ -302,21 +256,9 @@
 </dd></dl>
 
 <dl class="method">
-<dt id="geometry_files.geometry_factory.GeometryFactory.get_polygons">
-<code class="descname">get_polygons</code><span class="sig-paren">(</span><em>node_set_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.get_polygons" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get list of polygons</p>
-</dd></dl>
-
-<dl class="method">
 <dt id="geometry_files.geometry_factory.GeometryFactory.get_regions">
 <code class="descname">get_regions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.get_regions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get list of regions</p>
-</dd></dl>
-
-<dl class="method">
-<dt id="geometry_files.geometry_factory.GeometryFactory.get_segments">
-<code class="descname">get_segments</code><span class="sig-paren">(</span><em>node_set_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.get_segments" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get list of segments</p>
 </dd></dl>
 
 <dl class="method">
@@ -336,6 +278,16 @@
 <code class="descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove all data from base structure</p>
 </dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.set_default">
+<code class="descname">set_default</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.set_default" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_factory.GeometryFactory.set_topology">
+<code class="descname">set_topology</code><span class="sig-paren">(</span><em>tp_idx</em>, <em>topology</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_factory.GeometryFactory.set_topology" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </dd></dl>
 
@@ -360,6 +312,11 @@
 <em class="property">class </em><code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">GeoLayer</code><span class="sig-paren">(</span><em>config={}</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.GeoLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="json_data.html#json_data.JsonData" title="json_data.JsonData"><code class="xref py py-class docutils literal"><span class="pre">json_data.JsonData</span></code></a></p>
 <p>Geological layers</p>
+<dl class="method">
+<dt id="geometry_files.geometry_structures.GeoLayer.fix_region_dim">
+<code class="descname">fix_region_dim</code><span class="sig-paren">(</span><em>regions</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.GeoLayer.fix_region_dim" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="attribute">
 <dt id="geometry_files.geometry_structures.GeoLayer.name">
 <code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.GeoLayer.name" title="Permalink to this definition">¶</a></dt>
@@ -441,6 +398,12 @@ Only for GL</p>
 <dd><p>List of topologies</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.LayerGeometry.version">
+<code class="descname">version</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.LayerGeometry.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Version of the file format.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -473,7 +436,7 @@ Only for GL</p>
 <dl class="attribute">
 <dt id="geometry_files.geometry_structures.NodeSet.linked_node_ids">
 <code class="descname">linked_node_ids</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.NodeSet.linked_node_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>If linked_node_set is not None there is list od pair indexes of nodes or none
+<dd><p>List of node IDs that match node ids in other nodesets on the same interface. I.e. arbitrary number of nodesets can be linkedIf linked_node_set is not None there is list od pair indexes of nodes or none
 if node has not pair</p>
 </dd></dl>
 
@@ -509,9 +472,21 @@ if node has not pair</p>
 <dd><p>Bases: <a class="reference internal" href="json_data.html#json_data.JsonData" title="json_data.JsonData"><code class="xref py py-class docutils literal"><span class="pre">json_data.JsonData</span></code></a></p>
 <p>Polygon object</p>
 <dl class="attribute">
+<dt id="geometry_files.geometry_structures.Polygon.free_points">
+<code class="descname">free_points</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Polygon.free_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of free points in polygon.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.Polygon.holes">
+<code class="descname">holes</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Polygon.holes" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of lists of segments of hole&#8217;s wires</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="geometry_files.geometry_structures.Polygon.segment_ids">
 <code class="descname">segment_ids</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Polygon.segment_ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>List of segments index</p>
+<dd><p>List of segments index of the outer wire.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -546,6 +521,17 @@ if node has not pair</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="geometry_files.geometry_structures.Region.dim">
+<code class="descname">dim</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Region.dim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Real dimension of the region. (0,1,2,3)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.geometry_structures.Region.fix_dim">
+<code class="descname">fix_dim</code><span class="sig-paren">(</span><em>extruded</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.Region.fix_dim" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
 <dt id="geometry_files.geometry_structures.Region.mesh_step">
 <code class="descname">mesh_step</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Region.mesh_step" title="Permalink to this definition">¶</a></dt>
 <dd><p>mesh step</p>
@@ -566,7 +552,7 @@ if node has not pair</p>
 <dl class="attribute">
 <dt id="geometry_files.geometry_structures.Region.topo_dim">
 <code class="descname">topo_dim</code><em class="property"> = None</em><a class="headerlink" href="#geometry_files.geometry_structures.Region.topo_dim" title="Permalink to this definition">¶</a></dt>
-<dd><p>dimension (0,1,2) in Stratum layer: well, fracture, bulk</p>
+<dd><p>For backward compatibility. Dimension (0,1,2) in Stratum layer: node, segment, polygon</p>
 </dd></dl>
 
 </dd></dl>
@@ -583,6 +569,21 @@ if node has not pair</p>
 <dl class="attribute">
 <dt id="geometry_files.geometry_structures.RegionDim.fracture">
 <code class="descname">fracture</code><em class="property"> = 2</em><a class="headerlink" href="#geometry_files.geometry_structures.RegionDim.fracture" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.RegionDim.invalid">
+<code class="descname">invalid</code><em class="property"> = -2</em><a class="headerlink" href="#geometry_files.geometry_structures.RegionDim.invalid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.RegionDim.none">
+<code class="descname">none</code><em class="property"> = -1</em><a class="headerlink" href="#geometry_files.geometry_structures.RegionDim.none" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.geometry_structures.RegionDim.point">
+<code class="descname">point</code><em class="property"> = 0</em><a class="headerlink" href="#geometry_files.geometry_structures.RegionDim.point" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -786,6 +787,629 @@ Only for GL</p>
 <dd><p>Last edited node set</p>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="geometry_files.geometry_structures.read_geometry">
+<code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">read_geometry</code><span class="sig-paren">(</span><em>file_name</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.read_geometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>return LayerGeometry data</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geometry_files.geometry_structures.write_geometry">
+<code class="descclassname">geometry_files.geometry_structures.</code><code class="descname">write_geometry</code><span class="sig-paren">(</span><em>file_name</em>, <em>lg</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.geometry_structures.write_geometry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write LayerGeometry data to file</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geometry_files.polygons">
+<span id="geometry-files-polygons-module"></span><h2>geometry_files.polygons module<a class="headerlink" href="#module-geometry_files.polygons" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="geometry_files.polygons.IdMap">
+<em class="property">class </em><code class="descclassname">geometry_files.polygons.</code><code class="descname">IdMap</code><a class="headerlink" href="#geometry_files.polygons.IdMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">dict</span></code></p>
+<dl class="method">
+<dt id="geometry_files.polygons.IdMap.append">
+<code class="descname">append</code><span class="sig-paren">(</span><em>obj</em>, <em>id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.IdMap.append" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.IdMap.get_new_id">
+<code class="descname">get_new_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.IdMap.get_new_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.polygons.IdObject">
+<em class="property">class </em><code class="descclassname">geometry_files.polygons.</code><code class="descname">IdObject</code><a class="headerlink" href="#geometry_files.polygons.IdObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.polygons.Point">
+<em class="property">class </em><code class="descclassname">geometry_files.polygons.</code><code class="descname">Point</code><span class="sig-paren">(</span><em>point</em>, <em>poly</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#geometry_files.polygons.IdObject" title="geometry_files.polygons.IdObject"><code class="xref py py-class docutils literal"><span class="pre">geometry_files.polygons.IdObject</span></code></a></p>
+<dl class="method">
+<dt id="geometry_files.polygons.Point.colocated">
+<code class="descname">colocated</code><span class="sig-paren">(</span><em>xy_pt</em>, <em>tol</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Point.colocated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if other point is close to  &#8216;self&#8217; point.
+:param xy_pt: Numpy array (X,Y)
+:param tol: Tolerance.
+:return: bool</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Point.insert_segment">
+<code class="descname">insert_segment</code><span class="sig-paren">(</span><em>vector</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Point.insert_segment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert a vector between segments connected to the point.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vector</strong> &#8211; (X, Y) ... any indexable pair.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">( (prev_seg, prev_side), (next_seg, next_side), wire )</td>
+</tr>
+</tbody>
+</table>
+<p>Previous segment side, and next segment side relative from inserted vector and the
+wire separated by the vector.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Point.is_free">
+<code class="descname">is_free</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Point.is_free" title="Permalink to this definition">¶</a></dt>
+<dd><p>Indicator of a free point, not connected to eny segment.
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Point.join_segment">
+<code class="descname">join_segment</code><span class="sig-paren">(</span><em>seg</em>, <em>vtx</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Point.join_segment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect a segment side to the point.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Point.rm_segment">
+<code class="descname">rm_segment</code><span class="sig-paren">(</span><em>seg</em>, <em>vtx</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Point.rm_segment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disconnect segment side.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Point.segments">
+<code class="descname">segments</code><span class="sig-paren">(</span><em>start=(None</em>, <em>None)</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Point.segments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generator for segments joined to the point. Segments are yielded in the clock wise direction.
+:param :start = (segment, vtx_idx)
+yields: (segment, vtx_idx), where vtx_idx is index of &#8216;point&#8217; in &#8216;segment&#8217;</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Point.set_polygon">
+<code class="descname">set_polygon</code><span class="sig-paren">(</span><em>polygon</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Point.set_polygon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.polygons.Polygon">
+<em class="property">class </em><code class="descclassname">geometry_files.polygons.</code><code class="descname">Polygon</code><span class="sig-paren">(</span><em>outer_wire</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Polygon" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#geometry_files.polygons.IdObject" title="geometry_files.polygons.IdObject"><code class="xref py py-class docutils literal"><span class="pre">geometry_files.polygons.IdObject</span></code></a></p>
+<dl class="method">
+<dt id="geometry_files.polygons.Polygon.child_polygons">
+<code class="descname">child_polygons</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Polygon.child_polygons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield all child polygons, i.e. polygons inside the self.outer_wire.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Polygon.contains_point">
+<code class="descname">contains_point</code><span class="sig-paren">(</span><em>xy</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Polygon.contains_point" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Polygon.depth">
+<code class="descname">depth</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Polygon.depth" title="Permalink to this definition">¶</a></dt>
+<dd><p>LAYERS
+Return depth of the polygon. That is number of other polygons it is contained in.
+:return: int</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Polygon.vertices">
+<code class="descname">vertices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Polygon.vertices" title="Permalink to this definition">¶</a></dt>
+<dd><p>LAYERS
+Return list of polygon vertices (point objects) in counter clockwise direction.
+:return:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.polygons.PolygonChange">
+<em class="property">class </em><code class="descclassname">geometry_files.polygons.</code><code class="descname">PolygonChange</code><a class="headerlink" href="#geometry_files.polygons.PolygonChange" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.Enum</span></code></p>
+<dl class="attribute">
+<dt id="geometry_files.polygons.PolygonChange.add">
+<code class="descname">add</code><em class="property"> = 2</em><a class="headerlink" href="#geometry_files.polygons.PolygonChange.add" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.polygons.PolygonChange.join">
+<code class="descname">join</code><em class="property"> = 5</em><a class="headerlink" href="#geometry_files.polygons.PolygonChange.join" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.polygons.PolygonChange.none">
+<code class="descname">none</code><em class="property"> = 0</em><a class="headerlink" href="#geometry_files.polygons.PolygonChange.none" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.polygons.PolygonChange.remove">
+<code class="descname">remove</code><em class="property"> = 3</em><a class="headerlink" href="#geometry_files.polygons.PolygonChange.remove" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.polygons.PolygonChange.shape">
+<code class="descname">shape</code><em class="property"> = 1</em><a class="headerlink" href="#geometry_files.polygons.PolygonChange.shape" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="geometry_files.polygons.PolygonChange.split">
+<code class="descname">split</code><em class="property"> = 4</em><a class="headerlink" href="#geometry_files.polygons.PolygonChange.split" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.polygons.PolygonDecomposition">
+<em class="property">class </em><code class="descclassname">geometry_files.polygons.</code><code class="descname">PolygonDecomposition</code><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Decomposition of a plane into (non-convex) polygonal subsets (not necessarily domains).</p>
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.add_free_point">
+<code class="descname">add_free_point</code><span class="sig-paren">(</span><em>point_id</em>, <em>xy</em>, <em>polygon_id</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.add_free_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>LAYERS
+:param: ID of point to add.
+:param: point: (X,Y)
+:return: Point instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.add_line">
+<code class="descname">add_line</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.add_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Try to add new line from point A to point B. Check intersection with any other line and
+call add_point for endpoints, call split_segment for intersections, then call operation new_segment for individual
+segments.
+:param a: numpy array X, Y
+:param b: numpy array X, Y
+:return: List of subdivided segments. Split segments are not reported.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.add_point">
+<code class="descname">add_point</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.add_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Try to add a new point, snap to lines and existing points.
+:param point: numpy array with XY coordinates
+:return: Point instance.</p>
+<p>This operation translates to atomic operations: add_free_point and split_line_by_point.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.check_consistency">
+<code class="descname">check_consistency</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.check_consistency" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.check_displacment">
+<code class="descname">check_displacment</code><span class="sig-paren">(</span><em>points</em>, <em>displacement</em>, <em>margin</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.check_displacment" title="Permalink to this definition">¶</a></dt>
+<dd><p>LAYERS
+param: points: List of Points to move.
+param: displacement: Numpy array, 2D vector of displacement to add to the points.
+param: margin: float between (0, 1), displacement margin as a fraction of maximal displacement
+:return: Shortened displacement to not cross any segment.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.deep_copy">
+<code class="descname">deep_copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.deep_copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform deep copy of polygon decomposition without preserving object IDs.
+:return: (copy_decomp, (point_map, segment_map, polygon_map)), decomposition copy, new id to old id maps</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.delete_point">
+<code class="descname">delete_point</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.delete_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete given point with all connected segments.
+:param point:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.delete_segment">
+<code class="descname">delete_segment</code><span class="sig-paren">(</span><em>segment</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.delete_segment" title="Permalink to this definition">¶</a></dt>
+<dd><p>LAYERS
+Remove specified segment.
+:param segment:
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.get_childs">
+<code class="descname">get_childs</code><span class="sig-paren">(</span><em>polygon_id</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.get_childs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of child ploygons (including itself).
+:param polygon_id:
+:return: List of polygon IDs.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.get_last_polygon_changes">
+<code class="descname">get_last_polygon_changes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.get_last_polygon_changes" title="Permalink to this definition">¶</a></dt>
+<dd><p>LAYERS
+Return information about polygon changes during last new_segment or delete_segment operations.
+:return: ( PolygonChange, p0.id, p1.id)
+cases:
+(PolygonChange.none, None, None) - no change in any polygon, already existed segment
+(PolygonChange.shape, list_poly_id, None) - list of polygons that have changed shape, e.g. add/remove dendrite
+(PolygonChange.add, orig_poly_id, new_poly_id) - new polygon inside other polygon
+(PolygonChange.remove, orig_poly_id, new_poly_id) - deleted polygon inside other polygon
+(PolygonChange.split, orig_poly_id, new_poly_id) - split new_poly from orig_poly
+(PolygonChange.join, orig_poly_id, del_poly_id) - join both polygons into orig_poly</p>
+<p>After init of PolygonDecomposition this method returns:
+(PolygonChange.add, outer_polygon_id, outer_polygon_id)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.intersection">
+<code class="descname">intersection</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.intersection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make new decomposition that is intersection of &#8216;self&#8217; and &#8216;other&#8217;, that is polygons of
+both &#8216;self&#8217; and &#8216;other&#8217; are further splitted to polygons of resulting decomposition.
+A copy of &#8216;self&#8217; is used as starting point, adding incrementaly segments of &#8216;other&#8217;.
+Resulting decompositionAdd all segments of &#8216;other; decomposition to &#8216;self&#8217;, splitting polygons of &#8216;self&#8217;.</p>
+<p>TODO: Add information about linked nodes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>other</strong> &#8211; PolygonDecomposition.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">(decomp, polygon_map_self, polygon_map_other)</td>
+</tr>
+</tbody>
+</table>
+<p>Returns &#8216;decomp&#8217; the intersection decomposition and maps that
+maps id of a polygon P of the intersection decomposition to the pair
+(self_id, other_id) of polygons in &#8216;self&#8217; and &#8216;other&#8217; respectively to which
+P belongs.</p>
+<p>Algorithm:
+- add segments of &#8216;other&#8217; to &#8216;self&#8217; keeping map from segments of new_decomp to
+pairs (self_segment, other_segment), one of them may be None.
+- for parent_decomp in [self, other] consider a graph where vertices are all polygons of
+new_decomp and edges are segments in new_decomp that have None in the segment map, i.e. there is
+no coincident segment in parent_decomp.
+- For a parent_decomp go through segments in segment_map that is not None and color polygons/graph vertices
+by related polygon in parent_decomp matching the polygons on segment sides.
+- Color rest of polygons in the same component using DFS or BFS.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.make_indices">
+<code class="descname">make_indices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.make_indices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Asign index to every node, segment and ppolygon.
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.make_polygon">
+<code class="descname">make_polygon</code><span class="sig-paren">(</span><em>outer_segments</em>, <em>holes</em>, <em>free_points</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.make_polygon" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.make_segment">
+<code class="descname">make_segment</code><span class="sig-paren">(</span><em>node_ids</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.make_segment" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.make_wire_from_segments">
+<code class="descname">make_wire_from_segments</code><span class="sig-paren">(</span><em>seg_ids</em>, <em>polygon</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.make_wire_from_segments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set half segments of the wire, and the wire itself.
+:param seg_ids: Segment ids, at least 2 and listed in the orientation matching the wire (cc wise)
+:param polygon: Polygon the wire is part of.
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.move_points">
+<code class="descname">move_points</code><span class="sig-paren">(</span><em>points</em>, <em>displacement</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.move_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move given points by given displacement vector. Assumes no intersections. But possible
+segment splitting (add_point is called).
+param: points: List of Points to move.
+param: displacement: Numpy array, 2D vector of displacement to add to the points.
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.new_segment">
+<code class="descname">new_segment</code><span class="sig-paren">(</span><em>a_pt</em>, <em>b_pt</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.new_segment" title="Permalink to this definition">¶</a></dt>
+<dd><p>LAYERS
+Add segment between given existing points. Assumes that there is no intersection with other segment.
+Just return the segment if it exists.
+:param a_pt: Start point of the segment.
+:param b_pt: End point.
+:return: new segment</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.remove_free_point">
+<code class="descname">remove_free_point</code><span class="sig-paren">(</span><em>point_id</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.remove_free_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>LAYERS
+:param: point_id - ID of free point to remove
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.set_tolerance">
+<code class="descname">set_tolerance</code><span class="sig-paren">(</span><em>tolerance</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.set_tolerance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set tolerance for snapping to existing points and lines.
+Should be given by actual zoom level.
+:param tolerance: float, a distance used to snap points to existing objects.
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.set_wire_parents">
+<code class="descname">set_wire_parents</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.set_wire_parents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recursively set parent wire links from holes.
+:param polygon: Which polygon&#8217;s holes to set.
+:param parent_wire: parent wire to set to holes.
+:return: None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.PolygonDecomposition.snap_point">
+<code class="descname">snap_point</code><span class="sig-paren">(</span><em>point</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.PolygonDecomposition.snap_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find object (point, segment, polygon) within tolerance from given point.
+:param point: numpy array X, Y
+:return: (dim, obj, param) Where dim is object dimension (0, 1, 2), obj is the object (Point, Segment, Polygon).
+&#8216;param&#8217; is:</p>
+<blockquote>
+<div>Point: polygon containing the free point
+Segment: parameter &#8216;t&#8217; of snapped point on the segment
+Polygon: None</div></blockquote>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.polygons.Segment">
+<em class="property">class </em><code class="descclassname">geometry_files.polygons.</code><code class="descname">Segment</code><span class="sig-paren">(</span><em>vtxs</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Segment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#geometry_files.polygons.IdObject" title="geometry_files.polygons.IdObject"><code class="xref py py-class docutils literal"><span class="pre">geometry_files.polygons.IdObject</span></code></a></p>
+<dl class="method">
+<dt id="geometry_files.polygons.Segment.connect_free_vtx">
+<code class="descname">connect_free_vtx</code><span class="sig-paren">(</span><em>vtx_idx</em>, <em>wire</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Segment.connect_free_vtx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect &#8216;self&#8217; segment to a free point.
+:param vtx_idx: out_idx / in_idx; specification of the segment&#8217;s endpoint to connect.
+:param wire: Wire to set to the related side of the segment (in fact both sides should have same wire).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Segment.connect_vtx">
+<code class="descname">connect_vtx</code><span class="sig-paren">(</span><em>vtx_idx</em>, <em>insert_info</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Segment.connect_vtx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Connect &#8216;self&#8217; segment to a non-free point.
+:param vtx_idx: out_idx / in_idx; specification of the segment&#8217;s endpoint to connect.
+:param insert_info: (prev_side, next_side, wire)</p>
+<blockquote>
+<div>... as returned by Point.insert_segment and self.vtx_insert_info</div></blockquote>
+<p>TODO: merge with connect_free_vtx ... common notation fo insert info.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Segment.contains_point">
+<code class="descname">contains_point</code><span class="sig-paren">(</span><em>pt</em>, <em>tol</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Segment.contains_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Project point to segment line in X or Y direction and check if
+projection is close to the point in max norm.
+:param pt:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Segment.disconnect_vtx">
+<code class="descname">disconnect_vtx</code><span class="sig-paren">(</span><em>vtx_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Segment.disconnect_vtx" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disconect next links of one vtx side of self segment.
+:param vtx_idx: out_vtx or in_vtx</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Segment.disconnect_wires">
+<code class="descname">disconnect_wires</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Segment.disconnect_wires" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove segment -&gt; wire and wire -&gt;segment links.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Segment.intersection">
+<code class="descname">intersection</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Segment.intersection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find intersection of &#8216;self&#8217; and (a,b) edges.
+:param a: start vtx of edge1
+:param b: end vtx of edge1
+:return: (t0, t1) Parameters of the intersection for &#8216;sef&#8217; and other edge.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Segment.is_dendrite">
+<code class="descname">is_dendrite</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Segment.is_dendrite" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Segment.is_on_x_line">
+<code class="descname">is_on_x_line</code><span class="sig-paren">(</span><em>xy</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Segment.is_on_x_line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if the segment is on the right horizontal halfline. starting in given point.
+TODO: Careful test of numerical stability when x_axis goes through
+a point or a segment is on it.
+:param xy: (x, y) left tip of the horizontal half line
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Segment.parametric">
+<code class="descname">parametric</code><span class="sig-paren">(</span><em>t</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Segment.parametric" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Segment.point_side">
+<code class="descname">point_side</code><span class="sig-paren">(</span><em>pt</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Segment.point_side" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Segment.polygons">
+<code class="descname">polygons</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Segment.polygons" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return pair of polygons on the sides of the segment.
+:return: (right_side_polygon, left_side_polygon)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Segment.previous">
+<code class="descname">previous</code><span class="sig-paren">(</span><em>side</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Segment.previous" title="Permalink to this definition">¶</a></dt>
+<dd><p>Oposite of seg.next[side]. Implemented through loop around a node.
+:param seg:
+:param side:
+:return: (previous segment, previous side), i.e. prev_seg.next[prev_side] == (self, side)</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="geometry_files.polygons.Segment.side_to_vtx">
+<em class="property">static </em><code class="descname">side_to_vtx</code><span class="sig-paren">(</span><em>side</em>, <em>side_vtx</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Segment.side_to_vtx" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Segment.vector">
+<code class="descname">vector</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Segment.vector" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Segment.vtx_insert_info">
+<code class="descname">vtx_insert_info</code><span class="sig-paren">(</span><em>vtx_idx</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Segment.vtx_insert_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return insert info for connecting after disconnect.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Segment.vtxs_ids">
+<code class="descname">vtxs_ids</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Segment.vtxs_ids" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Segment.x_line_isec">
+<code class="descname">x_line_isec</code><span class="sig-paren">(</span><em>xy</em>, <em>tol=1e-12</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Segment.x_line_isec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find intersection of the segment with a horizontal line passing through the given point.
+:param xy: The point. (X,Y) any indexable.
+:param tol: Tolerance. TODO: no default tolerance, pas in the tolerance of the Decomposition.
+:return: List of zero, one or two points. corresponding to no, point and segment intersections respectively.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="geometry_files.polygons.Wire">
+<em class="property">class </em><code class="descclassname">geometry_files.polygons.</code><code class="descname">Wire</code><a class="headerlink" href="#geometry_files.polygons.Wire" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#geometry_files.polygons.IdObject" title="geometry_files.polygons.IdObject"><code class="xref py py-class docutils literal"><span class="pre">geometry_files.polygons.IdObject</span></code></a></p>
+<dl class="method">
+<dt id="geometry_files.polygons.Wire.child_wires">
+<code class="descname">child_wires</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Wire.child_wires" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields all child wires recursively.
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Wire.contains_point">
+<code class="descname">contains_point</code><span class="sig-paren">(</span><em>xy</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Wire.contains_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the wire contains given point.
+TODO: use tolerance.
+:param xy:
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Wire.contains_wire">
+<code class="descname">contains_wire</code><span class="sig-paren">(</span><em>wire</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Wire.contains_wire" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the &#8216;self&#8217; wire contains other wire.
+Translates to call of &#8216;contains_point&#8217; for carefully selected point.
+TODO: use tolerance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Wire.is_root">
+<code class="descname">is_root</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Wire.is_root" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Wire.repr_id">
+<code class="descname">repr_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Wire.repr_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Wire.segments">
+<code class="descname">segments</code><span class="sig-paren">(</span><em>start=(None</em>, <em>None)</em>, <em>end=(None</em>, <em>None)</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Wire.segments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yields all (segmnet, side) of the same wire as the &#8216;start&#8217; segment side,
+up to end segment side.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geometry_files.polygons.Wire.set_parent">
+<code class="descname">set_parent</code><span class="sig-paren">(</span><em>parent_wire</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.Wire.set_parent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="geometry_files.polygons.id_list">
+<code class="descclassname">geometry_files.polygons.</code><code class="descname">id_list</code><span class="sig-paren">(</span><em>obj_list</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons.id_list" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>obj_list</strong> &#8211; List/tuple of IdObjects.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">List of their ids.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geometry_files.polygons_io">
+<span id="geometry-files-polygons-io-module"></span><h2>geometry_files.polygons_io module<a class="headerlink" href="#module-geometry_files.polygons_io" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="geometry_files.polygons_io.deserialize">
+<code class="descclassname">geometry_files.polygons_io.</code><code class="descname">deserialize</code><span class="sig-paren">(</span><em>nodes</em>, <em>topology</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons_io.deserialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deserialize PolygonDecomposition, reconstruct all internal information.
+:param nodes: list of node coordinates, (x,y)
+:param topology: Geometry, Topology object, containing: nodes, segments and polygons
+produced by serialize function.
+:return: PolygonDecomposition. The attributes &#8216;id&#8217; and &#8216;index&#8217; of nodes, segments and polygons
+are set to their indices in the input file lists, counting from 0.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="geometry_files.polygons_io.reconstruction_from_old_input">
+<code class="descclassname">geometry_files.polygons_io.</code><code class="descname">reconstruction_from_old_input</code><span class="sig-paren">(</span><em>decomp</em>, <em>topology</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons_io.reconstruction_from_old_input" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="geometry_files.polygons_io.serialize">
+<code class="descclassname">geometry_files.polygons_io.</code><code class="descname">serialize</code><span class="sig-paren">(</span><em>decomp</em><span class="sig-paren">)</span><a class="headerlink" href="#geometry_files.polygons_io.serialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serialization of the PolygonDecomposition, into geometry objects, storing:
+- nodes, given by coordinates (x,y)
+- segments, given by node indices in nodes array: (out_vtx_idx, in_vtx_idx)
+- polygons, given as:</p>
+<blockquote>
+<div><ul class="simple">
+<li>list of segments on outer wire</li>
+<li>list of holes, every hole is list of segments in its wire</li>
+<li>list of free points inside the polygon</li>
+</ul>
+</div></blockquote>
+<p>After call of this function, every node, segment, polygon have attribute &#8216;index&#8217;
+containing the index of the object in the output file lists.
+:param decomp: PolygonDecomposition
+:return: (nodes, topology)</p>
 </dd></dl>
 
 </div>

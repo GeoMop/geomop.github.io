@@ -4,6 +4,14 @@ ui.menus package
 Submodules
 ----------
 
+ui.menus.analysis module
+------------------------
+
+.. automodule:: ui.menus.analysis
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 ui.menus.edit module
 --------------------
 
@@ -24,6 +32,14 @@ ui.menus.layers module
 ----------------------
 
 .. automodule:: ui.menus.layers
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.menus.settings module
+------------------------
+
+.. automodule:: ui.menus.settings
     :members:
     :undoc-members:
     :show-inheritance:

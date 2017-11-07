@@ -229,12 +229,6 @@ imported or new timestamp is None</p>
 </dd></dl>
 
 <dl class="attribute">
-<dt id="leconfig.leconfig.LEConfig.data">
-<code class="descname">data</code><em class="property"> = None</em><a class="headerlink" href="#leconfig.leconfig.LEConfig.data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Data from geometry file</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="leconfig.leconfig.LEConfig.diagram">
 <code class="descname">diagram</code><em class="property"> = None</em><a class="headerlink" href="#leconfig.leconfig.LEConfig.diagram" title="Permalink to this definition">¶</a></dt>
 <dd><p>Current diagram data</p>
@@ -270,6 +264,24 @@ imported or new timestamp is None</p>
 <dd><p>Get shapes from region</p>
 </dd></dl>
 
+<dl class="classmethod">
+<dt id="leconfig.leconfig.LEConfig.get_shortcut">
+<em class="property">classmethod </em><code class="descname">get_shortcut</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.get_shortcut" title="Permalink to this definition">¶</a></dt>
+<dd><p>Locate a keyboard shortcut by its action name.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>name</strong> (<em>str</em>) &#8211; name of the shortcut</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the assigned shortcut</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><code class="xref py py-class docutils literal"><span class="pre">helpers.keyboard_shortcuts.KeyboardShortcut</span></code> or <code class="docutils literal"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="attribute">
 <dt id="leconfig.leconfig.LEConfig.history">
 <code class="descname">history</code><em class="property"> = None</em><a class="headerlink" href="#leconfig.leconfig.LEConfig.history" title="Permalink to this definition">¶</a></dt>
@@ -300,6 +312,12 @@ move topologies accoding oper</p>
 <dt id="leconfig.leconfig.LEConfig.layers">
 <code class="descname">layers</code><em class="property"> = &lt;ui.data.layers_structures.Layers object&gt;</em><a class="headerlink" href="#leconfig.leconfig.LEConfig.layers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Layers structure</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="leconfig.leconfig.LEConfig.le_serializer">
+<code class="descname">le_serializer</code><em class="property"> = None</em><a class="headerlink" href="#leconfig.leconfig.LEConfig.le_serializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Data from geometry file</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -343,12 +361,6 @@ move topologies accoding oper</p>
 <dt id="leconfig.leconfig.LEConfig.open_shape_file">
 <em class="property">classmethod </em><code class="descname">open_shape_file</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#leconfig.leconfig.LEConfig.open_shape_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Open and add shape file</p>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="leconfig.leconfig.LEConfig.path">
-<code class="descname">path</code><em class="property"> = None</em><a class="headerlink" href="#leconfig.leconfig.LEConfig.path" title="Permalink to this definition">¶</a></dt>
-<dd><p>Current geometry data file path</p>
 </dd></dl>
 
 <dl class="classmethod">
