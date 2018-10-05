@@ -1,0 +1,19 @@
+
+<h2>Developers</h2>
+<div class="member-list">
+{% for member in site.data.members.developers %}
+    <a class="gravatar" data-gravatar="{{ member.email }}" href="https://github.com/{{ member.github }}" target="_blank">
+        {{ member.name }}
+    </a>
+{% endfor %}
+</div>
+
+
+<h2>Testers</h2>
+<div class="member-list">
+{% for member in site.data.members.mentions %}
+    <span class="gravatar-mention">
+        {{ member }}
+    </span>
+{% endfor %}
+</div>

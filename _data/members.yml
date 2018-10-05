@@ -1,0 +1,49 @@
+developers:
+  - name: Jan Brezina
+    email: jan.brezina
+    github: jbrezmorf
+
+  - name: Jan Stebel
+    email: jan.stebel
+    github: jstebel
+
+  - name:   Jan Hybs
+    email:  jan.hybs
+    github: janhybs
+
+  - name: Radek Srb
+    email: radek.srb
+    github: radeksrb
+
+  - name: Pavel Richter
+    github: richtertul
+
+  - name: Jan Gabriel
+    email: jan.gabriel
+    github: johnymachine
+
+  - name: Martin Matusu
+    github: MMatusu
+    # email: Martin.Matusu
+
+  - name: Tomas Krizek
+    github: tomaskrizek
+    # email: tomas.krizek
+
+  - name: David Flanderka
+    github: dflanderka
+    # email: david.flanderka
+
+
+mentions:
+  - Aleš Balvín
+  - Milan Hokr
+  - Jiří Hnídek
+  - Jakub Šístek
+  - Lukáš Zedek
+  - Vojtěch Wrnata
+  - Jiří Kopal
+  - Otto Severýn
+  - Dalibor Frydrych
+  - Jan Šembera
+  - Jiří Jeníček
