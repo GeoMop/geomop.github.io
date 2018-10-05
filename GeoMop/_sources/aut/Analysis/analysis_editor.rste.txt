@@ -1,7 +1,0 @@
-analysis_editor module
-======================
-
-.. automodule:: analysis_editor
-    :members:
-    :undoc-members:
-    :show-inheritance:

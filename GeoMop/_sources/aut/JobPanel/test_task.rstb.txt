@@ -1,7 +1,0 @@
-test_task module
-================
-
-.. automodule:: test_task
-    :members:
-    :undoc-members:
-    :show-inheritance:

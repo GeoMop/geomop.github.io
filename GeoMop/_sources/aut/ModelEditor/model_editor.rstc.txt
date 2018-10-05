@@ -1,7 +1,0 @@
-model_editor module
-===================
-
-.. automodule:: model_editor
-    :members:
-    :undoc-members:
-    :show-inheritance:

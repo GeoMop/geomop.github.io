@@ -1,7 +1,0 @@
-delegator module
-================
-
-.. automodule:: delegator
-    :members:
-    :undoc-members:
-    :show-inheritance:
