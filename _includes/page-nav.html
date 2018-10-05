@@ -1,16 +1,36 @@
 <nav>
   <div class="ng--binding" ng-cloak>
-    <h2>Releases</h2>
     <select class="version" name='version' ng-model="version" ng-change="versionChanged()" ng-cloak>
     	<option ng-repeat="option in options" value='{$ option.version $}'>{$ option.display $}</option>
     </select>
 
     <ul class="version-menu">
-      <li ng-show="item.visible.download"><a href="/releases/{$ version $}/download">download</a></li>
-      <li ng-show="item.visible.features"><a href="/releases/{$ version $}/features">features</a></li>
-      <li ng-show="item.visible.changes"><a href="/releases/{$ version $}/changes">changes</a></li>
-      <li ng-show="item.visible.source"><a href="/releases/{$ version $}/source">source</a></li>
-      <li ng-show="item.visible.manual"><a href="{$ versionRoot $}/Geomop {$ version $} reference guide.pdf" target="_blank">user PDF manual</a></li>
+      <!-- <li ng-show="item.visible.download">
+        <a href="/releases/{$ version $}/download">
+          download
+        </a>
+      </li> -->
+      <li ng-show="item.visible.features">
+        <a href="/releases/{$ version $}/features" title="Features overview">
+          features
+        </a>
+      </li>
+      <li ng-show="item.visible.changes">
+        <a href="/releases/{$ version $}/changes" title="Change log">
+          changes
+        </a>
+      </li>
+      <li ng-show="item.visible.source">
+        <a href="/releases/{$ version $}/source" title="Source documentation">
+          source
+        </a>
+      </li>
+      <li ng-show="item.visible.manual">
+        <a href="{$ versionRoot $}/Geomop {$ version $} reference guide.pdf" target="_blank" title="reference guide in PDF format">
+          reference guide
+          <i class="text-danger fa fa-file-pdf-o" alt="PDF format" aria-hidden="true"></i>
+        </a>
+      </li>
     </ul>
   </div>
 
