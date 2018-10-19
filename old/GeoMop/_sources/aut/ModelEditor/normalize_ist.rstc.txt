@@ -1,0 +1,7 @@
+normalize_ist module
+====================
+
+.. automodule:: normalize_ist
+    :members:
+    :undoc-members:
+    :show-inheritance:

@@ -1,0 +1,54 @@
+helpers.subyaml package
+=======================
+
+Submodules
+----------
+
+helpers.subyaml.change_analyzer module
+--------------------------------------
+
+.. automodule:: helpers.subyaml.change_analyzer
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+helpers.subyaml.line_analyzer module
+------------------------------------
+
+.. automodule:: helpers.subyaml.line_analyzer
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+helpers.subyaml.node_analyzer module
+------------------------------------
+
+.. automodule:: helpers.subyaml.node_analyzer
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+helpers.subyaml.structure_analyzer module
+-----------------------------------------
+
+.. automodule:: helpers.subyaml.structure_analyzer
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+helpers.subyaml.structure_changer module
+----------------------------------------
+
+.. automodule:: helpers.subyaml.structure_changer
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: helpers.subyaml
+    :members:
+    :undoc-members:
+    :show-inheritance:

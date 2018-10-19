@@ -1,0 +1,10 @@
+b_spline package
+================
+
+Module contents
+---------------
+
+.. automodule:: b_spline
+    :members:
+    :undoc-members:
+    :show-inheritance:

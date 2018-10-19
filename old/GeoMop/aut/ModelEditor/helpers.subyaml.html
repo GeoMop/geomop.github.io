@@ -1,0 +1,875 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>helpers.subyaml package &mdash; Model Editor Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Model Editor Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="up" title="helpers package" href="helpers.html"/>
+        <link rel="next" title="importer module" href="importer.html"/>
+        <link rel="prev" title="helpers package" href="helpers.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexME.html" class="icon icon-home"> Model Editor Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Model Editor Source</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="data.html">data package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="helpers.html">helpers package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="helpers.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">helpers.subyaml package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-helpers.subyaml.change_analyzer">helpers.subyaml.change_analyzer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-helpers.subyaml.line_analyzer">helpers.subyaml.line_analyzer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-helpers.subyaml.node_analyzer">helpers.subyaml.node_analyzer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-helpers.subyaml.structure_analyzer">helpers.subyaml.structure_analyzer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-helpers.subyaml.structure_changer">helpers.subyaml.structure_changer module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-helpers.subyaml">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="helpers.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helpers.html#module-helpers.autocomplete_helper">helpers.autocomplete_helper module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helpers.html#module-helpers.keyboard_shortcuts_definition">helpers.keyboard_shortcuts_definition module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helpers.html#module-helpers">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="importer.html">importer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ist.html">ist package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meconfig.html">meconfig package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_editor.html">model_editor module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ui.html">ui package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="util.html">util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exporter.html">exporter module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="normalize_ist.html">normalize_ist module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../indexME.html">Model Editor Source Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../indexME.html">Docs</a> &raquo;</li>
+        
+          <li><a href="helpers.html">helpers package</a> &raquo;</li>
+        
+      <li>helpers.subyaml package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/aut/ModelEditor/helpers.subyaml.rstc.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="helpers-subyaml-package">
+<h1>helpers.subyaml package<a class="headerlink" href="#helpers-subyaml-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-helpers.subyaml.change_analyzer">
+<span id="helpers-subyaml-change-analyzer-module"></span><h2>helpers.subyaml.change_analyzer module<a class="headerlink" href="#module-helpers.subyaml.change_analyzer" title="Permalink to this headline">¶</a></h2>
+<p>Helper for yaml text editor</p>
+<dl class="class">
+<dt id="helpers.subyaml.change_analyzer.ChangeAnalyzer">
+<em class="property">class </em><code class="descclassname">helpers.subyaml.change_analyzer.</code><code class="descname">ChangeAnalyzer</code><span class="sig-paren">(</span><em>cursor_line</em>, <em>cursor_index</em>, <em>area</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.change_analyzer.ChangeAnalyzer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Analyzes incomplete YAML text and reports changes.</p>
+<p>Description: This quick partial text analysis is used to decide whether more time consuming
+text parsing is necessary.</p>
+<p>This class works with dirty data, that is not refreshed in data node structure.</p>
+<dl class="method">
+<dt id="helpers.subyaml.change_analyzer.ChangeAnalyzer.get_key_pos_type">
+<code class="descname">get_key_pos_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.change_analyzer.ChangeAnalyzer.get_key_pos_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get more specific key type definition.</p>
+<p>When the <code class="docutils literal"><span class="pre">get_pos_type</span></code> method returns <code class="docutils literal"><span class="pre">in_key</span></code>, more specific position may
+be acquired by this method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">specific position in key (like key, tag, anchor or reference)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="util.html#util.enums.KeyType" title="util.enums.KeyType">KeyType</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="helpers.subyaml.change_analyzer.ChangeAnalyzer.get_pos_type">
+<code class="descname">get_pos_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.change_analyzer.ChangeAnalyzer.get_pos_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Recognize the part of the data structure that is pointed to by a current cursor.</p>
+<p>There are a couple of reasons to call this function.</p>
+<p>When this method returns <code class="docutils literal"><span class="pre">in_inner</span></code>, it signifies that some changes in structure may have
+happened. If there has been any text changes when this method returns <code class="docutils literal"><span class="pre">in_inner</span></code>, a
+complete structure reload is needed. If there hasn&#8217;t been any text changes, the currently
+active (selected) node has been changed and the managing class has to reflect this change.</p>
+<p>The method is also useful to figure out which part of the data node structure
+has been changed. If there are multiple changes in one data node structure, a reload
+is needed.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">position indicator of the part of the structure below cursor<ul class="simple">
+<li><code class="docutils literal"><span class="pre">in_key</span></code> for key, tag, reference or anchor, but only if this belong to set data node</li>
+<li><code class="docutils literal"><span class="pre">comment</span></code> for cursor above comment</li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">in_inner</span></code> for child <code class="xref py py-class docutils literal"><span class="pre">DataNode</span></code> structure. This value is returned when the</dt>
+<dd>previous cursor position was in parent node and the child node has been entered.
+If the cursor was previously at a different position, something else is returned
+(most likely <code class="docutils literal"><span class="pre">in_value</span></code>).</dd>
+</dl>
+</li>
+<li><code class="docutils literal"><span class="pre">in_value</span></code> for scalar node value or structure between child nodes</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="util.html#util.enums.PosType" title="util.enums.PosType">PosType</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.change_analyzer.ChangeAnalyzer.is_base_struct">
+<em class="property">static </em><code class="descname">is_base_struct</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.change_analyzer.ChangeAnalyzer.is_base_struct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return if is in line base structure for evaluation</p>
+<p>If line was empty, and now is there base structure, reload is needed</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.change_analyzer.ChangeAnalyzer.is_basejson_struct">
+<em class="property">static </em><code class="descname">is_basejson_struct</code><span class="sig-paren">(</span><em>add</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.change_analyzer.ChangeAnalyzer.is_basejson_struct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return if is in line json base structure for evaluation</p>
+<p>If line has new json structure added in json node, reload is needed</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.change_analyzer.ChangeAnalyzer.is_fulljson_struct">
+<em class="property">static </em><code class="descname">is_fulljson_struct</code><span class="sig-paren">(</span><em>add</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.change_analyzer.ChangeAnalyzer.is_fulljson_struct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return if is in line json base structure for evaluation</p>
+<p>If line has new json structure, reload is needed</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-helpers.subyaml.line_analyzer">
+<span id="helpers-subyaml-line-analyzer-module"></span><h2>helpers.subyaml.line_analyzer module<a class="headerlink" href="#module-helpers.subyaml.line_analyzer" title="Permalink to this headline">¶</a></h2>
+<p>Line Analyzer provides functions to analyze a single line of text.</p>
+<dl class="class">
+<dt id="helpers.subyaml.line_analyzer.LineAnalyzer">
+<em class="property">class </em><code class="descclassname">helpers.subyaml.line_analyzer.</code><code class="descname">LineAnalyzer</code><a class="headerlink" href="#helpers.subyaml.line_analyzer.LineAnalyzer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Analyze a single YAML line.</p>
+<p>Valid line can not contain an end of line symbol <code class="samp docutils literal"><span class="pre">\n</span></code>. The methods may not work
+as expected if the line contains one or more <code class="samp docutils literal"><span class="pre">\n</span></code> symbols.</p>
+<dl class="attribute">
+<dt id="helpers.subyaml.line_analyzer.LineAnalyzer.TAB_WIDTH">
+<code class="descname">TAB_WIDTH</code><em class="property"> = 2</em><a class="headerlink" href="#helpers.subyaml.line_analyzer.LineAnalyzer.TAB_WIDTH" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.line_analyzer.LineAnalyzer.begins_with_comment">
+<em class="property">static </em><code class="descname">begins_with_comment</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.line_analyzer.LineAnalyzer.begins_with_comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if line begins with a comment.</p>
+<p>The line can contain any number of whitespace characters before the first
+comment sign <code class="samp docutils literal"><span class="pre">#</span></code>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>line</strong> (<em>str</em>) &#8211; a line of text</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if line begins with a comment, False otherwise</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="helpers.subyaml.line_analyzer.LineAnalyzer.get_after_key_area_end">
+<em class="property">classmethod </em><code class="descname">get_after_key_area_end</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.line_analyzer.LineAnalyzer.get_after_key_area_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the line begins an after_key area, return its end position.</p>
+<p>The after_key area can be a tag, anchor, reference or merge. Empty spaces are also
+considered after_key area.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>line</strong> (<em>str</em>) &#8211; the line to be analyzed (can contain comments)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><ul class="simple">
+<li><code class="samp docutils literal"><span class="pre">-1</span></code> if the entire line is an after_key area</li>
+<li>index of the last character in the after_key area</li>
+<li><code class="docutils literal"><span class="pre">None</span></code> if the line has no after_key area</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int or <code class="docutils literal"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.line_analyzer.LineAnalyzer.get_autocomplete_context">
+<em class="property">static </em><code class="descname">get_autocomplete_context</code><span class="sig-paren">(</span><em>line</em>, <em>index</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.line_analyzer.LineAnalyzer.get_autocomplete_context" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create autocomplete context for this line at give cursor position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>line</strong> (<em>str</em>) &#8211; line of text</li>
+<li><strong>index</strong> (<em>int</em>) &#8211; position of cursor in the line</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">word being completed and index of cursor in the word</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">tuple(str, int)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.line_analyzer.LineAnalyzer.get_autocompletion_word">
+<em class="property">static </em><code class="descname">get_autocompletion_word</code><span class="sig-paren">(</span><em>line</em>, <em>start_index=None</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.line_analyzer.LineAnalyzer.get_autocompletion_word" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the entire word to be replace by autocompletion.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>line</strong> (<em>str</em>) &#8211; text of a single line</li>
+<li><strong>start_index</strong> (<em>int</em>) &#8211; the start index of the word; assume word start at the
+line beginning if not specified</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">the entire word to be replaced</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str or <code class="docutils literal"><span class="pre">None</span></code></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.line_analyzer.LineAnalyzer.get_changed_position">
+<em class="property">static </em><code class="descname">get_changed_position</code><span class="sig-paren">(</span><em>new_line</em>, <em>old_line</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.line_analyzer.LineAnalyzer.get_changed_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return start, end possition of changed text</p>
+<p>Start possition is from beginning and
+last possition is from end</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.line_analyzer.LineAnalyzer.get_indent">
+<em class="property">static </em><code class="descname">get_indent</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.line_analyzer.LineAnalyzer.get_indent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of spaces from the beginning of the line.</p>
+<p>Tab characters are treated as <code class="docutils literal"><span class="pre">TAB_WIDTH</span></code> amount of spaces.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>line</strong> (<em>str</em>) &#8211; line of text</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="helpers.subyaml.line_analyzer.LineAnalyzer.get_key_area_end">
+<em class="property">classmethod </em><code class="descname">get_key_area_end</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.line_analyzer.LineAnalyzer.get_key_area_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Search the line for a key area and find where it ends if it exists.</p>
+<p>The key expression can be extended beyond the end of the key (&#8216;: &#8216;) if it
+contains anchors or tags. These will be considered as a part of the key.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>line</strong> (<em>str</em>) &#8211; a single line of text (can contain comments)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><ul class="simple">
+<li><code class="samp docutils literal"><span class="pre">-1</span></code> if the entire line is a key area</li>
+<li>index of the last character in the key area</li>
+<li><code class="docutils literal"><span class="pre">None</span></code> if the line has no key area</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int or <code class="docutils literal"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.line_analyzer.LineAnalyzer.get_node_start">
+<em class="property">static </em><code class="descname">get_node_start</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.line_analyzer.LineAnalyzer.get_node_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find position of a start of a node in line.</p>
+<p>For arrays, <code class="samp docutils literal"><span class="pre">-</span></code> is ignored if there is at least one other (non-space) character
+that follows.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>line</strong> (<em>str</em>) &#8211; a line of text</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">index of the position after the first character in node</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int or <code class="docutils literal"><span class="pre">None</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="helpers.subyaml.line_analyzer.LineAnalyzer.get_separator">
+<em class="property">classmethod </em><code class="descname">get_separator</code><span class="sig-paren">(</span><em>line</em>, <em>char</em>, <em>start</em>, <em>end</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.line_analyzer.LineAnalyzer.get_separator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return possition of char between start and end or -1</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.line_analyzer.LineAnalyzer.get_str_position">
+<em class="property">static </em><code class="descname">get_str_position</code><span class="sig-paren">(</span><em>line</em>, <em>string</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.line_analyzer.LineAnalyzer.get_str_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find a string ended by a space or a new line and return its start position.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>line</strong> (<em>str</em>) &#8211; a single line of text</li>
+<li><strong>string</strong> (<em>str</em>) &#8211; a character or string to be found (without the space / end of line)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">index of the start of the found string or <code class="samp docutils literal"><span class="pre">-1</span></code> if the string is not found</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">int</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.line_analyzer.LineAnalyzer.indent_changed">
+<em class="property">static </em><code class="descname">indent_changed</code><span class="sig-paren">(</span><em>new_row</em>, <em>old_row</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.line_analyzer.LineAnalyzer.indent_changed" title="Permalink to this definition">¶</a></dt>
+<dd><p>compare intendation two rows</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.line_analyzer.LineAnalyzer.is_array_char_only">
+<em class="property">static </em><code class="descname">is_array_char_only</code><span class="sig-paren">(</span><em>row</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.line_analyzer.LineAnalyzer.is_array_char_only" title="Permalink to this definition">¶</a></dt>
+<dd><p>return if is on line only arry char</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.line_analyzer.LineAnalyzer.is_empty">
+<em class="property">static </em><code class="descname">is_empty</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.line_analyzer.LineAnalyzer.is_empty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether line contains only whitespace characters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>line</strong> (<em>str</em>) &#8211; the line to be analyzed</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True when line contains only whitespace</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.line_analyzer.LineAnalyzer.strip_comment">
+<em class="property">static </em><code class="descname">strip_comment</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.line_analyzer.LineAnalyzer.strip_comment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove comment from line.
+:param str line: line of text
+:return: line stripped of comment
+:rtype: str</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.line_analyzer.LineAnalyzer.uncomment">
+<em class="property">static </em><code class="descname">uncomment</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.line_analyzer.LineAnalyzer.uncomment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove comment symbol at the start of the line and leave indentation level intact.</p>
+<p>If the comment symbol <code class="samp docutils literal"><span class="pre">#</span></code> is immediately followed by a space, remove it as well.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>line</strong> (<em>str</em>) &#8211; a line of text possibly starting with a comment symbol</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">line without the leading comment symbol</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-helpers.subyaml.node_analyzer">
+<span id="helpers-subyaml-node-analyzer-module"></span><h2>helpers.subyaml.node_analyzer module<a class="headerlink" href="#module-helpers.subyaml.node_analyzer" title="Permalink to this headline">¶</a></h2>
+<p>Node analyzer.</p>
+<dl class="class">
+<dt id="helpers.subyaml.node_analyzer.NodeAnalyzer">
+<em class="property">class </em><code class="descclassname">helpers.subyaml.node_analyzer.</code><code class="descname">NodeAnalyzer</code><span class="sig-paren">(</span><em>lines</em>, <em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.node_analyzer.NodeAnalyzer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Anayze partial yaml node</p>
+<p>Description: This quick party text analyzing contains node
+specific function.</p>
+<dl class="method">
+<dt id="helpers.subyaml.node_analyzer.NodeAnalyzer.get_end_inner_json_tag">
+<code class="descname">get_end_inner_json_tag</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.node_analyzer.NodeAnalyzer.get_end_inner_json_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find start possition of inner json</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="helpers.subyaml.node_analyzer.NodeAnalyzer.get_node_key_end">
+<code class="descname">get_node_key_end</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.node_analyzer.NodeAnalyzer.get_node_key_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get possition after key (or tag, anchor, ... if is not None)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="helpers.subyaml.node_analyzer.NodeAnalyzer.get_node_structure_type">
+<code class="descname">get_node_structure_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.node_analyzer.NodeAnalyzer.get_node_structure_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get node structure type
+<code class="xref py py-class docutils literal"><span class="pre">helpers.subyaml.node_analyzer.DataNode.StructureType</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="helpers.subyaml.node_analyzer.NodeAnalyzer.get_parent_for_unfinished">
+<code class="descname">get_parent_for_unfinished</code><span class="sig-paren">(</span><em>line</em>, <em>index</em>, <em>line_text</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.node_analyzer.NodeAnalyzer.get_parent_for_unfinished" title="Permalink to this definition">¶</a></dt>
+<dd><p>return parent node for unfinished node</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="helpers.subyaml.node_analyzer.NodeAnalyzer.get_prev_node">
+<code class="descname">get_prev_node</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.node_analyzer.NodeAnalyzer.get_prev_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get node before line</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="helpers.subyaml.node_analyzer.NodeAnalyzer.get_root_node">
+<code class="descname">get_root_node</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.node_analyzer.NodeAnalyzer.get_root_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>get root node</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="helpers.subyaml.node_analyzer.NodeAnalyzer.get_start_inner_json_tag">
+<code class="descname">get_start_inner_json_tag</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.node_analyzer.NodeAnalyzer.get_start_inner_json_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find start possition of inner json</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-helpers.subyaml.structure_analyzer">
+<span id="helpers-subyaml-structure-analyzer-module"></span><h2>helpers.subyaml.structure_analyzer module<a class="headerlink" href="#module-helpers.subyaml.structure_analyzer" title="Permalink to this headline">¶</a></h2>
+<p>Structure analyzer.</p>
+<dl class="class">
+<dt id="helpers.subyaml.structure_analyzer.StructureAnalyzer">
+<em class="property">class </em><code class="descclassname">helpers.subyaml.structure_analyzer.</code><code class="descname">StructureAnalyzer</code><a class="headerlink" href="#helpers.subyaml.structure_analyzer.StructureAnalyzer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Anayze yaml file for find specific attribute, for examle json structure</p>
+<dl class="classmethod">
+<dt id="helpers.subyaml.structure_analyzer.StructureAnalyzer.add_node_info">
+<em class="property">classmethod </em><code class="descname">add_node_info</code><span class="sig-paren">(</span><em>doc</em>, <em>root</em>, <em>notification_handler</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.structure_analyzer.StructureAnalyzer.add_node_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add border information about nodes</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.structure_analyzer.StructureAnalyzer.is_edit_parent_array">
+<em class="property">static </em><code class="descname">is_edit_parent_array</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.structure_analyzer.StructureAnalyzer.is_edit_parent_array" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return whether parent node is array. If parent was created
+by autoconversion, is tested parent.parent</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>node</strong> (<em>Node</em>) &#8211; test node</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True when parent is array</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-helpers.subyaml.structure_changer">
+<span id="helpers-subyaml-structure-changer-module"></span><h2>helpers.subyaml.structure_changer module<a class="headerlink" href="#module-helpers.subyaml.structure_changer" title="Permalink to this headline">¶</a></h2>
+<p>Structure changer.</p>
+<dl class="class">
+<dt id="helpers.subyaml.structure_changer.NodeDescription">
+<em class="property">class </em><code class="descclassname">helpers.subyaml.structure_changer.</code><code class="descname">NodeDescription</code><span class="sig-paren">(</span><em>type</em>, <em>key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.structure_changer.NodeDescription" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="helpers.subyaml.structure_changer.NodeDescription.key">
+<code class="descname">key</code><em class="property"> = None</em><a class="headerlink" href="#helpers.subyaml.structure_changer.NodeDescription.key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of key</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="helpers.subyaml.structure_changer.NodeDescription.type">
+<code class="descname">type</code><em class="property"> = None</em><a class="headerlink" href="#helpers.subyaml.structure_changer.NodeDescription.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of parent node</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="helpers.subyaml.structure_changer.StructureChanger">
+<em class="property">class </em><code class="descclassname">helpers.subyaml.structure_changer.</code><code class="descname">StructureChanger</code><a class="headerlink" href="#helpers.subyaml.structure_changer.StructureChanger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Function for formating and adding yaml text
+Note:</p>
+<blockquote>
+<div><p>This class use l1, c1, l2, c2 instad  Position and Span classes.
+When I created it, I wasn&#8217;t using it. I was thinking about rafactoring,
+but in classes where is StructureChanger used, is using l1, c1, l2, c2
+more comfort. There is a lot various comparation, assignation and 
+other operations of itself variables, that code is shorter and more clearly.</p>
+<p>Use  node_pos and value_pos for conversion from span to 
+l1, c1, l2, c2.</p>
+</div></blockquote>
+<dl class="staticmethod">
+<dt id="helpers.subyaml.structure_changer.StructureChanger.add_comments">
+<em class="property">static </em><code class="descname">add_comments</code><span class="sig-paren">(</span><em>lines</em>, <em>l1</em>, <em>c1</em>, <em>l2</em>, <em>c2</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.structure_changer.StructureChanger.add_comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Try find comments before and after node and add it to node</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.structure_changer.StructureChanger.add_delete_item_chars">
+<em class="property">static </em><code class="descname">add_delete_item_chars</code><span class="sig-paren">(</span><em>lines</em>, <em>l1</em>, <em>c1</em>, <em>l2</em>, <em>c2</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.structure_changer.StructureChanger.add_delete_item_chars" title="Permalink to this definition">¶</a></dt>
+<dd><p>If is deleted array node, is needed delete next empty chars and center
+next item as array or delete array char too</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.structure_changer.StructureChanger.add_key">
+<em class="property">static </em><code class="descname">add_key</code><span class="sig-paren">(</span><em>key</em>, <em>indent</em>, <em>value=None</em>, <em>tag=None</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.structure_changer.StructureChanger.add_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create new line with tet key</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="helpers.subyaml.structure_changer.StructureChanger.add_tag">
+<em class="property">classmethod </em><code class="descname">add_tag</code><span class="sig-paren">(</span><em>lines</em>, <em>node</em>, <em>new</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.structure_changer.StructureChanger.add_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>add node tag</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="helpers.subyaml.structure_changer.StructureChanger.change_tag">
+<em class="property">classmethod </em><code class="descname">change_tag</code><span class="sig-paren">(</span><em>lines</em>, <em>node</em>, <em>old</em>, <em>new</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.structure_changer.StructureChanger.change_tag" title="Permalink to this definition">¶</a></dt>
+<dd><p>change node tag</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.structure_changer.StructureChanger.copy_absent_path">
+<em class="property">static </em><code class="descname">copy_absent_path</code><span class="sig-paren">(</span><em>root</em>, <em>lines</em>, <em>dest_path</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.structure_changer.StructureChanger.copy_absent_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return different path (it is not existing path in  dest_path constracted 
+from source_node ) in array of NodeDescription. This structure is suitable 
+for next processing for some function as is paste_absent_path.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.structure_changer.StructureChanger.copy_structure">
+<em class="property">static </em><code class="descname">copy_structure</code><span class="sig-paren">(</span><em>lines</em>, <em>l1</em>, <em>c1</em>, <em>l2</em>, <em>c2</em>, <em>indent</em>, <em>parent=True</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.structure_changer.StructureChanger.copy_structure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy structure from lines to separate array. Structure is
+move by indentation.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.structure_changer.StructureChanger.delete_structure">
+<em class="property">static </em><code class="descname">delete_structure</code><span class="sig-paren">(</span><em>lines</em>, <em>l1</em>, <em>c1</em>, <em>l2</em>, <em>c2</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.structure_changer.StructureChanger.delete_structure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete structure from yaml file (lines array)</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.structure_changer.StructureChanger.get_indentation">
+<em class="property">static </em><code class="descname">get_indentation</code><span class="sig-paren">(</span><em>lines</em>, <em>l</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.structure_changer.StructureChanger.get_indentation" title="Permalink to this definition">¶</a></dt>
+<dd><p>get indentation of block thet start in set line</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.structure_changer.StructureChanger.key_pos">
+<em class="property">static </em><code class="descname">key_pos</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.structure_changer.StructureChanger.key_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>return key position in file of set node</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.structure_changer.StructureChanger.leave_comments">
+<em class="property">static </em><code class="descname">leave_comments</code><span class="sig-paren">(</span><em>lines</em>, <em>l1</em>, <em>c1</em>, <em>l2</em>, <em>c2</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.structure_changer.StructureChanger.leave_comments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Try find comments in start and end of node and exclude it from node</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.structure_changer.StructureChanger.node_pos">
+<em class="property">static </em><code class="descname">node_pos</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.structure_changer.StructureChanger.node_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>return position of node in file</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.structure_changer.StructureChanger.paste_absent_path">
+<em class="property">static </em><code class="descname">paste_absent_path</code><span class="sig-paren">(</span><em>add</em>, <em>node_struct</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.structure_changer.StructureChanger.paste_absent_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add node structure to add array and icrease its indentation.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.structure_changer.StructureChanger.paste_structure">
+<em class="property">static </em><code class="descname">paste_structure</code><span class="sig-paren">(</span><em>lines</em>, <em>line</em>, <em>add</em>, <em>after_line</em>, <em>strip_empty=False</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.structure_changer.StructureChanger.paste_structure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Paste add structure accoding after_line parameter 
+before or after set possion.</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.structure_changer.StructureChanger.replace">
+<em class="property">static </em><code class="descname">replace</code><span class="sig-paren">(</span><em>lines</em>, <em>new</em>, <em>old</em>, <em>l1</em>, <em>c1</em>, <em>l2</em>, <em>c2</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.structure_changer.StructureChanger.replace" title="Permalink to this definition">¶</a></dt>
+<dd><p>replace first occurence of defined value, and return if is len updated</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.structure_changer.StructureChanger.skip_tar">
+<em class="property">static </em><code class="descname">skip_tar</code><span class="sig-paren">(</span><em>lines</em>, <em>l1</em>, <em>c1</em>, <em>l2</em>, <em>c2</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.structure_changer.StructureChanger.skip_tar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return start possition of value from set possition of node. 
+( Start node structure witout tag, anchor or ref )</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="helpers.subyaml.structure_changer.StructureChanger.value_pos">
+<em class="property">static </em><code class="descname">value_pos</code><span class="sig-paren">(</span><em>node</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.subyaml.structure_changer.StructureChanger.value_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>return value position in file of set node</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-helpers.subyaml">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-helpers.subyaml" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="importer.html" class="btn btn-neutral float-right" title="importer module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="helpers.html" class="btn btn-neutral" title="helpers package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

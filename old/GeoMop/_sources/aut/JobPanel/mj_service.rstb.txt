@@ -1,0 +1,7 @@
+mj_service module
+=================
+
+.. automodule:: mj_service
+    :members:
+    :undoc-members:
+    :show-inheritance:

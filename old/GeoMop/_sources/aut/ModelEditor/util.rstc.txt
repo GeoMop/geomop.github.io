@@ -1,0 +1,30 @@
+util package
+============
+
+Submodules
+----------
+
+util.constants module
+---------------------
+
+.. automodule:: util.constants
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+util.enums module
+-----------------
+
+.. automodule:: util.enums
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: util
+    :members:
+    :undoc-members:
+    :show-inheritance:

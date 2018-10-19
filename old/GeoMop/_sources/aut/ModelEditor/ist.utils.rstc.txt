@@ -1,0 +1,22 @@
+ist.utils package
+=================
+
+Submodules
+----------
+
+ist.utils.htmltree module
+-------------------------
+
+.. automodule:: ist.utils.htmltree
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: ist.utils
+    :members:
+    :undoc-members:
+    :show-inheritance:

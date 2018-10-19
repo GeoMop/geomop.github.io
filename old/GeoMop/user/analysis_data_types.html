@@ -1,0 +1,414 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Analysis - Data types &mdash; GeoMop Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="GeoMop Documentation 1.0.0-beta
+ documentation" href="../index.html"/>
+        <link rel="next" title="Analysis - Converters" href="analysis_converters.html"/>
+        <link rel="prev" title="Model Editor Panels Description (czech)" href="me_panels.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoMop Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="linux_installation_guide.html">Linux Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_editor.html">Model Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="me_panels.html">Model Editor Panels Description (czech)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Analysis - Data types</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic-data-types">Basic data types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bool">Bool</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#int">Int</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#float">Float</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#string">String</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enum">Enum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#composite-data-types">Composite data types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#struct">Struct</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tuple">Tuple</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ensemble">Ensemble</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sequence">Sequence</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#examples-of-more-complicated-data-structures">Examples of more complicated data structures</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_converters.html">Analysis - Converters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_actions.html">Analysis - Actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_calibration.html">Analysis - Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_pipeline_example.html">Analysis - Pipeline example (czech)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexAN.html">Analysis</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexME.html">ModelEditor</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexJP.html">JobPanel</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexLE.html">LayerEditor</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexCommon.html">Common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/procedures.html">Development Procedures (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/rules.html">Development Rules (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/pylint_rules.html">Pylint Exceptions (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/function_action.html">Creating new action (czech)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoMop Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Analysis - Data types</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/user/analysis_data_types.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="analysis-data-types">
+<h1>Analysis - Data types<a class="headerlink" href="#analysis-data-types" title="Permalink to this headline">¶</a></h1>
+<p>Data types in the analysis are used for type checking and data transfer between actions.</p>
+<div class="section" id="basic-data-types">
+<h2>Basic data types<a class="headerlink" href="#basic-data-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bool">
+<h3>Bool<a class="headerlink" href="#bool" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># type definition</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Bool</span><span class="p">()</span>
+
+<span class="c1"># value definition</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Bool</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="int">
+<h3>Int<a class="headerlink" href="#int" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># type definition</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Int</span><span class="p">()</span>
+
+<span class="c1"># value definition</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Int</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="float">
+<h3>Float<a class="headerlink" href="#float" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># type definition</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Float</span><span class="p">()</span>
+
+<span class="c1"># value definition</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Float</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="string">
+<h3>String<a class="headerlink" href="#string" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># type definition</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">String</span><span class="p">()</span>
+
+<span class="c1"># value definition</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="enum">
+<h3>Enum<a class="headerlink" href="#enum" title="Permalink to this headline">¶</a></h3>
+<p>Enum is a descendant of String.
+In addition, it contains a list of values that may be assigned to it.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># type definition</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Enum</span><span class="p">([</span><span class="s2">&quot;option1&quot;</span><span class="p">,</span> <span class="s2">&quot;option2&quot;</span><span class="p">])</span>
+
+<span class="c1"># value definition</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Enum</span><span class="p">([</span><span class="s2">&quot;option1&quot;</span><span class="p">,</span> <span class="s2">&quot;option2&quot;</span><span class="p">],</span> <span class="s2">&quot;option1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="composite-data-types">
+<h2>Composite data types<a class="headerlink" href="#composite-data-types" title="Permalink to this headline">¶</a></h2>
+<p>Composite types allow data to be organized into larger units.</p>
+<div class="section" id="struct">
+<h3>Struct<a class="headerlink" href="#struct" title="Permalink to this headline">¶</a></h3>
+<p>It is like a Python dictionary where the keys are string-only.
+The specific type of struct is given by the names of its keys and the types of their values.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># type definition</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Struct</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Int</span><span class="p">(),</span> <span class="n">y</span><span class="o">=</span><span class="n">String</span><span class="p">())</span>
+
+<span class="c1"># value definition</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Struct</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">Int</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">y</span><span class="o">=</span><span class="n">String</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">))</span>
+
+<span class="c1"># access to items</span>
+<span class="n">bx</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">x</span>
+<span class="n">by</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="tuple">
+<h3>Tuple<a class="headerlink" href="#tuple" title="Permalink to this headline">¶</a></h3>
+<p>Python tuple, fixed length and fixed (but possibly different) types.
+It is like the Struct type, where natural numbers (from zero) are used as keys.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># type definition</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Tuple</span><span class="p">(</span><span class="n">Int</span><span class="p">(),</span> <span class="n">String</span><span class="p">())</span>
+
+<span class="c1"># value definition</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Tuple</span><span class="p">(</span><span class="n">Int</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">String</span><span class="p">(</span><span class="s2">&quot;text&quot;</span><span class="p">))</span>
+
+<span class="c1"># access to items</span>
+<span class="n">b0</span> <span class="o">=</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">b1</span> <span class="o">=</span> <span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="ensemble">
+<h3>Ensemble<a class="headerlink" href="#ensemble" title="Permalink to this headline">¶</a></h3>
+<p>Data set of the same type without any order. Output of some generators.
+Input of reduction operations.
+Operations for all elements using the ForEach action.
+For a type tree, it contains only one type with an internal type.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># type definition</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Ensemble</span><span class="p">(</span><span class="n">Int</span><span class="p">())</span>
+
+<span class="c1"># value definition</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Ensemble</span><span class="p">(</span><span class="n">Int</span><span class="p">(),</span> <span class="n">Int</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">Int</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">Int</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sequence">
+<h3>Sequence<a class="headerlink" href="#sequence" title="Permalink to this headline">¶</a></h3>
+<p>He&#8217;s a descendant of Ensemble.
+Additionally, the order of elements is defined and has operations:</p>
+<ul class="simple">
+<li>head - selects the first element</li>
+<li>tail - selects the last element</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># type definition</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">(</span><span class="n">Int</span><span class="p">())</span>
+
+<span class="c1"># value definition</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Sequence</span><span class="p">(</span><span class="n">Int</span><span class="p">(),</span> <span class="n">Int</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">Int</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">Int</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+
+<span class="c1"># access to items</span>
+<span class="n">head</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">tail</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="examples-of-more-complicated-data-structures">
+<h2>Examples of more complicated data structures<a class="headerlink" href="#examples-of-more-complicated-data-structures" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Ensemble of struct with item &quot;a&quot; of type Int and item &quot;b&quot; with type String</span>
+<span class="n">en</span> <span class="o">=</span> <span class="n">Ensemble</span><span class="p">(</span><span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Int</span><span class="p">(),</span> <span class="n">b</span><span class="o">=</span><span class="n">String</span><span class="p">()),</span>
+              <span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Int</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">String</span><span class="p">(</span><span class="s2">&quot;t1&quot;</span><span class="p">))</span>
+              <span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Int</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">String</span><span class="p">(</span><span class="s2">&quot;t2&quot;</span><span class="p">))</span>
+              <span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Int</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">String</span><span class="p">(</span><span class="s2">&quot;t3&quot;</span><span class="p">))</span>
+
+ <span class="c1"># type of &quot;en&quot; is:</span>
+ <span class="n">t</span> <span class="o">=</span> <span class="n">Ensemble</span><span class="p">(</span><span class="n">Struct</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">Int</span><span class="p">(),</span> <span class="n">b</span><span class="o">=</span><span class="n">String</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="analysis_converters.html" class="btn btn-neutral float-right" title="Analysis - Converters" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="me_panels.html" class="btn btn-neutral" title="Model Editor Panels Description (czech)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0-beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

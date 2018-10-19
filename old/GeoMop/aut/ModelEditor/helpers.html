@@ -1,0 +1,492 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>helpers package &mdash; Model Editor Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Model Editor Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="next" title="helpers.subyaml package" href="helpers.subyaml.html"/>
+        <link rel="prev" title="data.yaml package" href="data.yaml.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexME.html" class="icon icon-home"> Model Editor Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Model Editor Source</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="data.html">data package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">helpers package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="helpers.subyaml.html">helpers.subyaml package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-helpers.autocomplete_helper">helpers.autocomplete_helper module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-helpers.keyboard_shortcuts_definition">helpers.keyboard_shortcuts_definition module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-helpers">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="importer.html">importer module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ist.html">ist package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="meconfig.html">meconfig package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_editor.html">model_editor module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ui.html">ui package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="util.html">util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exporter.html">exporter module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="normalize_ist.html">normalize_ist module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../indexME.html">Model Editor Source Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../indexME.html">Docs</a> &raquo;</li>
+        
+      <li>helpers package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/aut/ModelEditor/helpers.rstc.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="helpers-package">
+<h1>helpers package<a class="headerlink" href="#helpers-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="helpers.subyaml.html">helpers.subyaml package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="helpers.subyaml.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helpers.subyaml.html#module-helpers.subyaml.change_analyzer">helpers.subyaml.change_analyzer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helpers.subyaml.html#module-helpers.subyaml.line_analyzer">helpers.subyaml.line_analyzer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helpers.subyaml.html#module-helpers.subyaml.node_analyzer">helpers.subyaml.node_analyzer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helpers.subyaml.html#module-helpers.subyaml.structure_analyzer">helpers.subyaml.structure_analyzer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helpers.subyaml.html#module-helpers.subyaml.structure_changer">helpers.subyaml.structure_changer module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="helpers.subyaml.html#module-helpers.subyaml">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-helpers.autocomplete_helper">
+<span id="helpers-autocomplete-helper-module"></span><h2>helpers.autocomplete_helper module<a class="headerlink" href="#module-helpers.autocomplete_helper" title="Permalink to this headline">¶</a></h2>
+<p>Module for handling autocomplete in editor.</p>
+<dl class="class">
+<dt id="helpers.autocomplete_helper.AutocompleteContext">
+<em class="property">class </em><code class="descclassname">helpers.autocomplete_helper.</code><code class="descname">AutocompleteContext</code><span class="sig-paren">(</span><em>word=None</em>, <em>index=None</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.autocomplete_helper.AutocompleteContext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Holds the context information about the word being autocompleted.</p>
+<dl class="attribute">
+<dt id="helpers.autocomplete_helper.AutocompleteContext.hint">
+<code class="descname">hint</code><a class="headerlink" href="#helpers.autocomplete_helper.AutocompleteContext.hint" title="Permalink to this definition">¶</a></dt>
+<dd><p>the beginning of the word up to the cursor</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="helpers.autocomplete_helper.AutocompleteContext.index">
+<code class="descname">index</code><em class="property"> = None</em><a class="headerlink" href="#helpers.autocomplete_helper.AutocompleteContext.index" title="Permalink to this definition">¶</a></dt>
+<dd><p>the position of cursor from the beginning of the word</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="helpers.autocomplete_helper.AutocompleteContext.word">
+<code class="descname">word</code><em class="property"> = None</em><a class="headerlink" href="#helpers.autocomplete_helper.AutocompleteContext.word" title="Permalink to this definition">¶</a></dt>
+<dd><p>the entire word to be replaced if the autocompletion is triggered</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="helpers.autocomplete_helper.AutocompleteHelper">
+<em class="property">class </em><code class="descclassname">helpers.autocomplete_helper.</code><code class="descname">AutocompleteHelper</code><span class="sig-paren">(</span><em>editor=None</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.autocomplete_helper.AutocompleteHelper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Creates autocomplete options and manages the autocomplete state.</p>
+<dl class="attribute">
+<dt id="helpers.autocomplete_helper.AutocompleteHelper.SORTING_ALPHABET">
+<code class="descname">SORTING_ALPHABET</code><em class="property"> = ['0', '1', '2', '3', '4', '5', '6', '7', '8', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '!', '&lt;', '&gt;', '*', '_', '-']</em><a class="headerlink" href="#helpers.autocomplete_helper.AutocompleteHelper.SORTING_ALPHABET" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="helpers.autocomplete_helper.AutocompleteHelper.clear_anchors">
+<code class="descname">clear_anchors</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#helpers.autocomplete_helper.AutocompleteHelper.clear_anchors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the anchor list.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="helpers.autocomplete_helper.AutocompleteHelper.context">
+<code class="descname">context</code><em class="property"> = None</em><a class="headerlink" href="#helpers.autocomplete_helper.AutocompleteHelper.context" title="Permalink to this definition">¶</a></dt>
+<dd><p><a class="reference internal" href="#helpers.autocomplete_helper.AutocompleteContext" title="helpers.autocomplete_helper.AutocompleteContext"><code class="xref py py-class docutils literal"><span class="pre">AutocompleteContext</span></code></a> for the current word</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="helpers.autocomplete_helper.AutocompleteHelper.create_options">
+<code class="descname">create_options</code><span class="sig-paren">(</span><em>input_type</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.autocomplete_helper.AutocompleteHelper.create_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a list of options based on the input type.</p>
+<p>Each option is identified by a string that should be displayed as QScintilla
+autocomplete option. Set the autocomplete state to hidden.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>input_type</strong> (<em>dict</em>) &#8211; specification of the input_type</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">string of sorted options separated by a space (for QScintilla API)</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="helpers.autocomplete_helper.AutocompleteHelper.get_autocompletion">
+<code class="descname">get_autocompletion</code><span class="sig-paren">(</span><em>option</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.autocomplete_helper.AutocompleteHelper.get_autocompletion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get autocompletion string for the selected option.</p>
+<p>Set the autocompletion state to hidden if an option is selected.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>option</strong> (<em>str</em>) &#8211; option string returned by QScintilla</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">an autocompletion string that replaces the word in current context</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body">ValueError - if option is not one of possible options</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="helpers.autocomplete_helper.AutocompleteHelper.hide_autocompletion">
+<code class="descname">hide_autocompletion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#helpers.autocomplete_helper.AutocompleteHelper.hide_autocompletion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the autocompletion state to hidden.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="helpers.autocomplete_helper.AutocompleteHelper.pending_check">
+<code class="descname">pending_check</code><em class="property"> = None</em><a class="headerlink" href="#helpers.autocomplete_helper.AutocompleteHelper.pending_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>is autocompletion pending to be checked for automatic display</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="helpers.autocomplete_helper.AutocompleteHelper.possible_options">
+<code class="descname">possible_options</code><em class="property"> = None</em><a class="headerlink" href="#helpers.autocomplete_helper.AutocompleteHelper.possible_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>a list of possible options for the current context</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="helpers.autocomplete_helper.AutocompleteHelper.refresh_autocompletion">
+<code class="descname">refresh_autocompletion</code><span class="sig-paren">(</span><em>context=None</em>, <em>create_options=False</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.autocomplete_helper.AutocompleteHelper.refresh_autocompletion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Refresh possible autocomplete option based on context.</p>
+<p>Do not show any options if the autocomplete is hidden. If there are no
+options, set the autocomplete state to hidden.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>context</strong> (<a class="reference internal" href="#helpers.autocomplete_helper.AutocompleteContext" title="helpers.autocomplete_helper.AutocompleteContext"><em>AutocompleteContext</em></a>) &#8211; current word and position</li>
+<li><strong>create_options</strong> (<em>bool</em>) &#8211; create options even if autocompletion is not visible</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="helpers.autocomplete_helper.AutocompleteHelper.register_anchor">
+<code class="descname">register_anchor</code><span class="sig-paren">(</span><em>anchor_name</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.autocomplete_helper.AutocompleteHelper.register_anchor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registers an anchor by its name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="helpers.autocomplete_helper.AutocompleteHelper.scintilla_options">
+<code class="descname">scintilla_options</code><em class="property"> = None</em><a class="headerlink" href="#helpers.autocomplete_helper.AutocompleteHelper.scintilla_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>the QScintilla options string encoded in utf-8</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="helpers.autocomplete_helper.AutocompleteHelper.set_editor">
+<code class="descname">set_editor</code><span class="sig-paren">(</span><em>editor</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.autocomplete_helper.AutocompleteHelper.set_editor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the editor that receives show and hide method calls.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>editor</strong> (<a class="reference internal" href="ui.panels.html#ui.panels.yaml_editor.YamlEditorWidget" title="ui.panels.yaml_editor.YamlEditorWidget"><em>YamlEditorWidget</em></a>) &#8211; editor that can show and hide autocompletion</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="helpers.autocomplete_helper.AutocompleteHelper.show_autocompletion">
+<code class="descname">show_autocompletion</code><span class="sig-paren">(</span><em>context=None</em><span class="sig-paren">)</span><a class="headerlink" href="#helpers.autocomplete_helper.AutocompleteHelper.show_autocompletion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get autocomplete options for the context.</p>
+<p>If there are some options to be displayed, <a class="reference internal" href="#helpers.autocomplete_helper.AutocompleteHelper.visible" title="helpers.autocomplete_helper.AutocompleteHelper.visible"><code class="xref py py-attr docutils literal"><span class="pre">visible</span></code></a> is set to True.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>context</strong> (<a class="reference internal" href="#helpers.autocomplete_helper.AutocompleteContext" title="helpers.autocomplete_helper.AutocompleteContext"><em>AutocompleteContext</em></a>) &#8211; current word and position</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="helpers.autocomplete_helper.AutocompleteHelper.visible">
+<code class="descname">visible</code><a class="headerlink" href="#helpers.autocomplete_helper.AutocompleteHelper.visible" title="Permalink to this definition">¶</a></dt>
+<dd><p>whether autocompletion list is displayed</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-helpers.keyboard_shortcuts_definition">
+<span id="helpers-keyboard-shortcuts-definition-module"></span><h2>helpers.keyboard_shortcuts_definition module<a class="headerlink" href="#module-helpers.keyboard_shortcuts_definition" title="Permalink to this headline">¶</a></h2>
+<p>Keyboard shortcuts definition.</p>
+<dl class="data">
+<dt id="helpers.keyboard_shortcuts_definition.DEFAULT_USER_SHORTCUTS">
+<code class="descclassname">helpers.keyboard_shortcuts_definition.</code><code class="descname">DEFAULT_USER_SHORTCUTS</code><em class="property"> = {'redo': 'Ctrl+Y', 'save_file': 'Ctrl+S', 'save_file_as': 'Ctrl+Shift+S', 'exit': 'Ctrl+Q', 'new_file': 'Ctrl+N', 'comment': 'Ctrl+/', 'edit_format': 'Ctrl+E', 'open_window': 'Ctrl+W', 'undo': 'Ctrl+Z', 'find': 'Ctrl+F', 'replace': 'Ctrl+H', 'show_autocompletion': 'Ctrl+Space', 'open_file': 'Ctrl+O', 'import_file': 'Ctrl+I'}</em><a class="headerlink" href="#helpers.keyboard_shortcuts_definition.DEFAULT_USER_SHORTCUTS" title="Permalink to this definition">¶</a></dt>
+<dd><p>default keyboard shortcuts</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="helpers.keyboard_shortcuts_definition.SCINTILLA_DISABLE">
+<code class="descclassname">helpers.keyboard_shortcuts_definition.</code><code class="descname">SCINTILLA_DISABLE</code><em class="property"> = ['copy', 'paste', 'cut', 'undo', 'redo', 'unindent', 'comment', 'delete', 'select_all', 'show_autocompletion']</em><a class="headerlink" href="#helpers.keyboard_shortcuts_definition.SCINTILLA_DISABLE" title="Permalink to this definition">¶</a></dt>
+<dd><p>shortcuts to be disabled in default scintilla behavior</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="helpers.keyboard_shortcuts_definition.SHORTCUT_LABELS">
+<code class="descclassname">helpers.keyboard_shortcuts_definition.</code><code class="descname">SHORTCUT_LABELS</code><em class="property"> = {'redo': 'Redo an action', 'save_file': 'Save file', 'save_file_as': 'Save file as', 'exit': 'Quit application', 'new_file': 'New file', 'comment': 'Toggle comment', 'edit_format': 'Edit format file', 'open_window': 'Open window', 'undo': 'Undo an action', 'find': 'Find dialog', 'replace': 'Replace dialog', 'show_autocompletion': 'Display autocompletion options', 'open_file': 'Open file', 'import_file': 'Import file'}</em><a class="headerlink" href="#helpers.keyboard_shortcuts_definition.SHORTCUT_LABELS" title="Permalink to this definition">¶</a></dt>
+<dd><p>labels of shortcuts to be displayed in the user interface</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="helpers.keyboard_shortcuts_definition.SYSTEM_SHORTCUTS">
+<code class="descclassname">helpers.keyboard_shortcuts_definition.</code><code class="descname">SYSTEM_SHORTCUTS</code><em class="property"> = {'cut': 'Ctrl+X', 'unindent': 'Shift+Tab', 'copy': 'Ctrl+C', 'select_all': 'Ctrl+A', 'paste': 'Ctrl+V', 'tab': 'Tab', 'escape': 'Esc', 'backspace': 'Backspace', 'f3': 'F3', 'delete': 'Delete'}</em><a class="headerlink" href="#helpers.keyboard_shortcuts_definition.SYSTEM_SHORTCUTS" title="Permalink to this definition">¶</a></dt>
+<dd><p>system keyboard shortcuts that can not be changed by user</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-helpers">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-helpers" title="Permalink to this headline">¶</a></h2>
+<p>Helpers module.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="helpers.subyaml.html" class="btn btn-neutral float-right" title="helpers.subyaml package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="data.yaml.html" class="btn btn-neutral" title="data.yaml package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

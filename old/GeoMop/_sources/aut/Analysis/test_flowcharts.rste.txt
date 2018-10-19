@@ -1,0 +1,7 @@
+test_flowcharts module
+======================
+
+.. automodule:: test_flowcharts
+    :members:
+    :undoc-members:
+    :show-inheritance:

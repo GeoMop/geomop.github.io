@@ -1,0 +1,22 @@
+meconfig package
+================
+
+Submodules
+----------
+
+meconfig.meconfig module
+------------------------
+
+.. automodule:: meconfig.meconfig
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: meconfig
+    :members:
+    :undoc-members:
+    :show-inheritance:

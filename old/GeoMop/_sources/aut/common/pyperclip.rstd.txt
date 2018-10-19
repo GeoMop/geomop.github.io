@@ -1,0 +1,38 @@
+pyperclip package
+=================
+
+Submodules
+----------
+
+pyperclip.clipboards module
+---------------------------
+
+.. automodule:: pyperclip.clipboards
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pyperclip.exceptions module
+---------------------------
+
+.. automodule:: pyperclip.exceptions
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pyperclip.windows module
+------------------------
+
+.. automodule:: pyperclip.windows
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: pyperclip
+    :members:
+    :undoc-members:
+    :show-inheritance:

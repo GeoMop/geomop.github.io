@@ -1,0 +1,448 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Development Procedures (czech) &mdash; GeoMop Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="GeoMop Documentation 1.0.0-beta
+ documentation" href="../index.html"/>
+        <link rel="next" title="Development Rules (czech)" href="rules.html"/>
+        <link rel="prev" title="Analysis - Pipeline example (czech)" href="../user/analysis_pipeline_example.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoMop Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../user/linux_installation_guide.html">Linux Installation Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/model_editor.html">Model Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/me_panels.html">Model Editor Panels Description (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/analysis_data_types.html">Analysis - Data types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/analysis_converters.html">Analysis - Converters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/analysis_actions.html">Analysis - Actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/analysis_calibration.html">Analysis - Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../user/analysis_pipeline_example.html">Analysis - Pipeline example (czech)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexAN.html">Analysis</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexME.html">ModelEditor</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexJP.html">JobPanel</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexLE.html">LayerEditor</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexCommon.html">Common</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Development Procedures (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rules.html">Development Rules (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pylint_rules.html">Pylint Exceptions (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_action.html">Creating new action (czech)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoMop Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Development Procedures (czech)</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/organization/procedures.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="development-procedures-czech">
+<h1>Development Procedures (czech)<a class="headerlink" href="#development-procedures-czech" title="Permalink to this headline">¶</a></h1>
+<p>Tento dokument popisuje postupy používané pri vývoji aplikace</p>
+<div class="section" id="adresarova-struktura">
+<h2>Adresářová struktura<a class="headerlink" href="#adresarova-struktura" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal"><span class="pre">doc</span></code> - Dokumentace</li>
+<li><code class="docutils literal"><span class="pre">resources</span></code> - Zdroje, které nejsou součástí aplikace</li>
+<li><code class="docutils literal"><span class="pre">src/JobsScheduler</span></code> - Modul pro vzdálené spouštění výpočtů</li>
+<li><code class="docutils literal"><span class="pre">src/LayerEditor</span></code> - Modul pro zobrazení a úpravu vrstev</li>
+<li><code class="docutils literal"><span class="pre">src/LayerEditor</span></code> - Modul pro úpravu konfiguračních souborů</li>
+<li><code class="docutils literal"><span class="pre">src/lib</span></code> - Modul s knihovnami používanými ostatními moduly</li>
+<li><code class="docutils literal"><span class="pre">testing</span></code> - Automatické testy</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="kontrola-kodu">
+<h2>Kontrola kódu<a class="headerlink" href="#kontrola-kodu" title="Permalink to this headline">¶</a></h2>
+<p>Pro kontrolu se používá <a class="reference external" href="www.pylint.org">pyLint</a>. V hlavním adresáři každého
+modulu je soubor pylintrc, v kterém se píší pravidla pro vyjímky. Další vyjímky
+je možné napsat na začátek souboru, nebo nad vyjmutý řádek. Pravidla pro tyto
+vyjímky budou vznikat během vývoje a budou zapisovány do <a class="reference internal" href="pylint_rules.html"><span class="doc">samostatného souboru</span></a>.</p>
+<p>Bohužel s kontrolou kódu nemám zkušenosti a některé požadavky vyplynou až během
+vývoje. Proto zde popíši oblasti, na které by jsem se chtěl při kontrole kódu
+zaměřit a to co nekontrolovat vyplyne z porovnání poměru režie/přínos. To co
+nebude odpovídat mé představě o programování vyřadím. Bohužel zatím mám spíše
+dojem, že to nabízenými nástroji nedokáži udělat dostatečně adresně, aby zůstalo
+zachováno i co se mi líbí. Přehled pylintem kontrolovaných oblastí (lze použít
+pro vypnutí testu) je <a class="reference external" href="http://docs.pylint.org/features.html">zde</a>.</p>
+<p><strong>Odsazení</strong></p>
+<p>V Pythonu asi nezbytnost.</p>
+<p><strong>prázné znaky na konci řádků</strong></p>
+<dl class="docutils">
+<dt>Je to dost otrava</dt>
+<dd><ul class="first last simple">
+<li><em>zjistit zda to může něčemu vadit</em></li>
+<li><em>zjistit zda to něco neumí udělat automaticky</em></li>
+</ul>
+</dd>
+</dl>
+<p><strong>Pravidla psaní kódu</strong></p>
+<p>Jednotná pravidla psaní kódu jsou hezká a asi i něco zvýší přehlednost kódu.
+Sice to není nijak zvlášt důležité, ale předpokládám že po několika kontrolách
+pylintem přejdou do krve a nebudou moc zdržovat.</p>
+<p>Pylint používá konvenci <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP 0008</a></p>
+<p><strong>Konvence pojmenování souborů, tříd, proměnných ...</strong></p>
+<p>Pylint pro kontrolu názvů používá tuto
+<a class="reference external" href="http://pylint-messages.wikidot.com/messages:c0103">konvenci</a>. O tomto platí
+to samé jako o předcházejícím. Mě nedělá problém číst kód napsaný jakoukoliv
+konvencí, spíš jí mám problém udržet. Doufám že pomocí pylintu bude můj kód,
+co se týká jednotnosti pojmenování, konzistentní. Škoda že to neumí hledat
+české názvy.</p>
+<p><strong>Kontrola použití lokální proměnné (_xxx) jiného modulu</strong></p>
+<p>Python nemá žádnou přímou cestu jak schovat proměnnou. (Jedině jí dát do souboru
+který je schovaný pomocí __init__.py) Osobně si myslím že bez nějaký formy
+<code class="docutils literal"><span class="pre">zapouzdření</span></code> to větším projektu nejde. Proto bych poprosil o důsledné rozlišení
+a označování lokálních proměnných pomocí <code class="docutils literal"><span class="pre">_</span></code>. A doufám že chybu
+<code class="docutils literal"><span class="pre">protected-access</span> <span class="pre">(W0212):</span> <span class="pre">Access</span> <span class="pre">to</span> <span class="pre">a</span> <span class="pre">protected</span> <span class="pre">member</span> <span class="pre">...</span></code> nikde neuvidím.
+Jen kromě testů, kde je testování lokálních proměnných praktické.</p>
+<p><strong>Starý styl vytvoření třídy</strong></p>
+<dl class="docutils">
+<dt>super-on-old-class (E1002)</dt>
+<dd><ul class="first last simple">
+<li><em>s někým se poradit a zjistit co to dělá</em></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="dokumentace">
+<h2>Dokumentace<a class="headerlink" href="#dokumentace" title="Permalink to this headline">¶</a></h2>
+<p>Dokumentace je psaná v <a class="reference external" href="http://sphinx-doc.org/rest.html#paragraphs">reStructuredText</a>
+a do finální podoby generována pomocí <a class="reference external" href="http://sphinx-doc.org/index.htmls">sphinx</a>.
+<a class="reference external" href="http://sphinx-doc.org/rest.html#paragraphs">reStructuredText</a> je docstring formát a
+<a class="reference external" href="http://sphinx-doc.org/index.htmls">sphinx</a> pak umožnuje dodat pěkné formátování textu
+a vygenerovat požadovaný formát dokumentu. Generovat celou vývojářskou je možné
+z adresáře <code class="docutils literal"><span class="pre">doc/</span></code> pomocí make a požadovaného formátu. Například:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">html</span>
+</pre></div>
+</div>
+<p>Dokumentace se skládá z uživatelské příručky, organizačních pokynů pro vývoj (v adresáři
+doc/organization) a z dokumentace samotných zdrojových kódů. Ta je automaticky generována po
+jednotlivých GeoMop modulech pomocí sphinx modulu
+<a class="reference external" href="http://sphinx-doc.org/man/sphinx-apidoc.html">sphinx-apidoc</a> příkazem umístěným v <code class="docutils literal"><span class="pre">Makefile</span></code>.</p>
+<p><a class="reference external" href="http://sphinx-doc.org/index.htmls">sphinx</a> není úplně jednoduchý nástroj na osvojení a je
+primárně určený na psaní dokumentace obecně. Naopak jako nástroj pro generování dokumentace
+ze zdrojových kódů není ideální a má mnoho much. Ale alternativy již nejsou zrovna aktivně
+vyvíjený a <a class="reference external" href="http://sphinx-doc.org/index.htmls">sphinx</a> následně můžeme použít i na psaní
+uživatelské dokumentace.</p>
+<div class="section" id="generovani-dokumentace-pri-push">
+<h3>Generování dokumentace při push<a class="headerlink" href="#generovani-dokumentace-pri-push" title="Permalink to this headline">¶</a></h3>
+<p>Pro automatické generování dokumentace lze využít git hook <code class="docutils literal"><span class="pre">pre-push</span></code>. Skript, který vygeneruje
+a pushne vytvořenou dokumentaci je umísťen v adresáři <code class="docutils literal"><span class="pre">resources/development</span></code>. Pro použití je
+potřeba ho po naklonování repozitáře přesunout mezi git hooks, které se mají vykonat.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>cp resources/development/pre-push .git/hooks/
+chmod +x .git/hooks/pre-push
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="testovani-kodu-po-sobe">
+<h2>Testování kódu po sobě<a class="headerlink" href="#testovani-kodu-po-sobe" title="Permalink to this headline">¶</a></h2>
+<p>Kód je nutné otestova kompletně a pokud víme že ovlivní i jiné části programu, pak i ty.
+Tam kde jsou psané kompletní testy stačí zběžně, v jiném případě by mělo být testování
+kompletnější.</p>
+</div>
+<div class="section" id="testovani-automaticke-testy">
+<h2>Testování - automatické testy<a class="headerlink" href="#testovani-automaticke-testy" title="Permalink to this headline">¶</a></h2>
+<p>Pro psaní automatických testů je použit <a class="reference external" href="http://pytest.org/latest/">pyTest</a>. Testy
+je možné lokálně spustit z testing adresáře příkazem:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">RunTests</span><span class="o">.</span><span class="n">sh</span>
+</pre></div>
+</div>
+<p>UI testy qt částí aplikace je možné dělat pomocí qt knihovny
+<a class="reference external" href="http://doc.qt.io/qt-5/qtest.html">QTest</a> (Jen Qt dokumentace). Testování je popsáno
+<a class="reference external" href="http://johnnado.com/pyqt-qtest-example/">v tomto článku</a>.</p>
+<p>V budoucnu je třeba spouštět testy automaticky po každém poslání do gitu nejlépe na
+deployi ve virtuálním prostředí.</p>
+<dl class="docutils">
+<dt><strong>Co se musí aut. testovat</strong>:</dt>
+<dd><ul class="first last simple">
+<li>přítomnost souboru v prostředí (z každého souboru zavolat nějakou funkci)</li>
+<li>pokud je kód souboru závislý na nějakém resourci, knihově, nebo na něčem jiném, pak
+otestovat jejich přítomnost (zavolat část kódu, která danou závislost načte, nebo kde
+proběhne inicializace)</li>
+<li>pokud jde o qt třídu, která obsahuje signál, pak otestovat signál</li>
+</ul>
+</dd>
+<dt><strong>Co je dobré aut. testovat</strong>:</dt>
+<dd><ul class="first last simple">
+<li>Psaní automatických testů může být činnost, jež ušetří mnoho práce v budoucnosti,
+naopak muže být i velmi časově náročné a výsledek nevalný. Něco se testuje lépe a
+něco hůře. Na každém z nás je aby našel tu hranici, kde je to výhoddné.</li>
+<li>Některý kód vede na něco jako úplné testy. Například implementujeme-li něco, co se
+může během vývoje (přidávání nové vlastnosti) lehce rozbít. Přičemž lze relativně
+lehce otestovat, že se nezměnila již nainplementovaná část. Pokud tomu tak je,
+určitě se o takovýto test pokusit. Do popisu třídy se pak poznačí, že jsou k ní k
+dispozici úplné testy</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="pozadavky-na-vyvojovy-pc">
+<h2>Požadavky na vývojový PC<a class="headerlink" href="#pozadavky-na-vyvojovy-pc" title="Permalink to this headline">¶</a></h2>
+<p>Vše je psané pro Linux. Pokud by se mělo vyvíjet i na window, je nutné tam nainstalovat
+maketool a asi napsat nějaké alternativy k sh skriptům, ale ten je použit jen pro testy.
+Pokud by se našel někdo, kdo by chtěl vyvíjet na windows, je to v zásadě vítané, ale bude
+to znamenat vyřešit a zdokumentovat instalaci prostředí a přidání alternativních skriptů.</p>
+<dl class="docutils">
+<dt>Požadavky:</dt>
+<dd><ul class="first last simple">
+<li>Python3 (včetně pip)</li>
+<li>PyQt5 (včetně QScintilla a QWebKit)</li>
+</ul>
+</dd>
+</dl>
+<div class="section" id="instalace-python-zavislosti">
+<h3>Instalace Python závislostí<a class="headerlink" href="#instalace-python-zavislosti" title="Permalink to this headline">¶</a></h3>
+<p>Pro vývoj i běh se doporučuje používat virtuální prostředí, více viz
+<a class="reference external" href="../install/linux_installation_guide.html#virtual-environment">uživatelská dokumentace</a>. Pro
+instalaci závislostí potřebných k vývoji aplikace lze použít následující příkaz:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">-</span><span class="n">development</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="ide">
+<h2>IDE<a class="headerlink" href="#ide" title="Permalink to this headline">¶</a></h2>
+<p>Je možné používat IDE dle uvážení. Projektové soubory se do Gitem neverzují. Každý je
+zodpovědný za to aby mu to fungovalo na jeho Počítači.</p>
+<dl class="docutils">
+<dt>Možnosti:</dt>
+<dd><ul class="first last simple">
+<li>Eclipse + <a class="reference external" href="http://pydev.org/manual_101_root.html">PyDev</a> - netestoval jsem, eclipse
+nemám rád</li>
+<li><a class="reference external" href="https://www.jetbrains.com/pycharm/">PyCharm</a> - měl problémy s qt a nenašel jsem
+rychle přijatelné řešení , ale jinak docela dobré</li>
+<li><a class="reference external" href="https://www.jetbrains.com/pycharm/">Eric IDE</a> - není s ním úplně jednoduché začít
+vyvíjet, ale když si na něj člověk zvykne ... . Tento nástroj budu používat asi já,
+takže budu schopný poradit a asi v něm půjde i generovat z docstringů i bublinková
+nápověda pro náš kód.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="build">
+<h2>Build<a class="headerlink" href="#build" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><em>rozhodnout jaké instalační balíčky a systémy podporovat a dopsat</em></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="rules.html" class="btn btn-neutral float-right" title="Development Rules (czech)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../user/analysis_pipeline_example.html" class="btn btn-neutral" title="Analysis - Pipeline example (czech)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0-beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

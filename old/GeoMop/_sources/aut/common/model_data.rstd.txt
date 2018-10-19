@@ -1,0 +1,63 @@
+model_data package
+==================
+
+Subpackages
+-----------
+
+.. toctree::
+
+    model_data.notifications
+    model_data.validation
+    model_data.yaml
+
+Submodules
+----------
+
+model_data.autoconversion module
+--------------------------------
+
+.. automodule:: model_data.autoconversion
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+model_data.data_node module
+---------------------------
+
+.. automodule:: model_data.data_node
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+model_data.export_con module
+----------------------------
+
+.. automodule:: model_data.export_con
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+model_data.format module
+------------------------
+
+.. automodule:: model_data.format
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+model_data.import_json module
+-----------------------------
+
+.. automodule:: model_data.import_json
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: model_data
+    :members:
+    :undoc-members:
+    :show-inheritance:

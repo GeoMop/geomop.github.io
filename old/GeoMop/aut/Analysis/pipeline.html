@@ -1,0 +1,1919 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pipeline package &mdash; GeoMop Analysis Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="GeoMop Analysis Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="next" title="ui package" href="ui.html"/>
+        <link rel="prev" title="client_pipeline package" href="client_pipeline.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexAN.html" class="icon icon-home"> GeoMop Analysis Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Analysis Source</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="aeconfig.html">aeconfig package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client_pipeline.html">client_pipeline package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pipeline package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pipeline.action_types">pipeline.action_types module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pipeline.calibration_data_types">pipeline.calibration_data_types module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pipeline.calibration_lbfgsb">pipeline.calibration_lbfgsb module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pipeline.calibration_slsqp">pipeline.calibration_slsqp module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pipeline.code_formater">pipeline.code_formater module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pipeline.connector_actions">pipeline.connector_actions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pipeline.convertors">pipeline.convertors module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pipeline.data_types_tree">pipeline.data_types_tree module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pipeline.flow_data_types">pipeline.flow_data_types module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pipeline.generator_actions">pipeline.generator_actions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pipeline.generic_tree">pipeline.generic_tree module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pipeline.identical_list">pipeline.identical_list module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pipeline.output_actions">pipeline.output_actions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pipeline.parametrized_actions">pipeline.parametrized_actions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pipeline.pipeline">pipeline.pipeline module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pipeline.pipeline_processor">pipeline.pipeline_processor module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pipeline.workflow_actions">pipeline.workflow_actions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pipeline.wrapper_actions">pipeline.wrapper_actions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pipeline">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ui.html">ui package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_editor.html">analysis_editor module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../indexAN.html">GeoMop Analysis Source Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../indexAN.html">Docs</a> &raquo;</li>
+        
+      <li>pipeline package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/aut/Analysis/pipeline.rste.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pipeline-package">
+<h1>pipeline package<a class="headerlink" href="#pipeline-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pipeline.action_types">
+<span id="pipeline-action-types-module"></span><h2>pipeline.action_types module<a class="headerlink" href="#module-pipeline.action_types" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pipeline.action_types.ActionRunningState">
+<em class="property">class </em><code class="descclassname">pipeline.action_types.</code><code class="descname">ActionRunningState</code><a class="headerlink" href="#pipeline.action_types.ActionRunningState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></p>
+<p>IAction state after run processing</p>
+<dl class="attribute">
+<dt id="pipeline.action_types.ActionRunningState.error">
+<code class="descname">error</code><em class="property"> = 3</em><a class="headerlink" href="#pipeline.action_types.ActionRunningState.error" title="Permalink to this definition">¶</a></dt>
+<dd><p>end processing and send error</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.action_types.ActionRunningState.finished">
+<code class="descname">finished</code><em class="property"> = 0</em><a class="headerlink" href="#pipeline.action_types.ActionRunningState.finished" title="Permalink to this definition">¶</a></dt>
+<dd><p>Action is finished, runner is None</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.action_types.ActionRunningState.repeat">
+<code class="descname">repeat</code><em class="property"> = 1</em><a class="headerlink" href="#pipeline.action_types.ActionRunningState.repeat" title="Permalink to this definition">¶</a></dt>
+<dd><p>action can return next runner, runner is None or value</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.action_types.ActionRunningState.wait">
+<code class="descname">wait</code><em class="property"> = 2</em><a class="headerlink" href="#pipeline.action_types.ActionRunningState.wait" title="Permalink to this definition">¶</a></dt>
+<dd><p>action wait to external job processing</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.action_types.ActionStateType">
+<em class="property">class </em><code class="descclassname">pipeline.action_types.</code><code class="descname">ActionStateType</code><a class="headerlink" href="#pipeline.action_types.ActionStateType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></p>
+<p>Action type</p>
+<dl class="attribute">
+<dt id="pipeline.action_types.ActionStateType.created">
+<code class="descname">created</code><em class="property"> = 0</em><a class="headerlink" href="#pipeline.action_types.ActionStateType.created" title="Permalink to this definition">¶</a></dt>
+<dd><p>action is created</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.action_types.ActionStateType.finished">
+<code class="descname">finished</code><em class="property"> = 3</em><a class="headerlink" href="#pipeline.action_types.ActionStateType.finished" title="Permalink to this definition">¶</a></dt>
+<dd><p>action is finished</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.action_types.ActionStateType.initialized">
+<code class="descname">initialized</code><em class="property"> = 1</em><a class="headerlink" href="#pipeline.action_types.ActionStateType.initialized" title="Permalink to this definition">¶</a></dt>
+<dd><p>action is inicialized</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.action_types.ActionStateType.processed">
+<code class="descname">processed</code><em class="property"> = 2</em><a class="headerlink" href="#pipeline.action_types.ActionStateType.processed" title="Permalink to this definition">¶</a></dt>
+<dd><p>action is processed</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.action_types.ActionsStatistics">
+<em class="property">class </em><code class="descclassname">pipeline.action_types.</code><code class="descname">ActionsStatistics</code><a class="headerlink" href="#pipeline.action_types.ActionsStatistics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="pipeline.action_types.ActionsStatistics.add">
+<code class="descname">add</code><span class="sig-paren">(</span><em>astat</em>, <em>multiplied=1</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.ActionsStatistics.add" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pipeline.action_types.ActionsStatistics.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.ActionsStatistics.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.action_types.ActionsStatistics.estimated_jobs">
+<code class="descname">estimated_jobs</code><em class="property"> = None</em><a class="headerlink" href="#pipeline.action_types.ActionsStatistics.estimated_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>estimated count of jobs</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.action_types.ActionsStatistics.finished_jobs">
+<code class="descname">finished_jobs</code><em class="property"> = None</em><a class="headerlink" href="#pipeline.action_types.ActionsStatistics.finished_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>count of finished jobs</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.action_types.ActionsStatistics.known_jobs">
+<code class="descname">known_jobs</code><em class="property"> = None</em><a class="headerlink" href="#pipeline.action_types.ActionsStatistics.known_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>count of known jobs (minimal amount of jobs)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.action_types.ActionsStatistics.running_jobs">
+<code class="descname">running_jobs</code><em class="property"> = None</em><a class="headerlink" href="#pipeline.action_types.ActionsStatistics.running_jobs" title="Permalink to this definition">¶</a></dt>
+<dd><p>count of running jobs</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.action_types.BaseActionType">
+<em class="property">class </em><code class="descclassname">pipeline.action_types.</code><code class="descname">BaseActionType</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.BaseActionType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Abstract class of action type, that define tasks method for
+tasks classes</p>
+<p>Thread safety and processing rules:
+Action in state less processed state is use only from
+one thread. Functions _get_variables_script and
+validate return right result only in initialized state.
+Action in processed state can be processed from 
+one partcular thread.
+Action dat in finished state can&#8217;t be changed.
+State and priority variables are changed in _state_lock 
+and can be accessed from any thread by defined functions.</p>
+<dl class="attribute">
+<dt id="pipeline.action_types.BaseActionType.description">
+<code class="descname">description</code><em class="property"> = ''</em><a class="headerlink" href="#pipeline.action_types.BaseActionType.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of action</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.action_types.BaseActionType.get_input_val">
+<code class="descname">get_input_val</code><span class="sig-paren">(</span><em>number</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.BaseActionType.get_input_val" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gain input from preceding action, check type and
+duplicate it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.action_types.BaseActionType.get_resources">
+<code class="descname">get_resources</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.BaseActionType.get_resources" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of resource files</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.action_types.BaseActionType.name">
+<code class="descname">name</code><em class="property"> = ''</em><a class="headerlink" href="#pipeline.action_types.BaseActionType.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of action</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.action_types.BaseActionType.set_config">
+<code class="descname">set_config</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.BaseActionType.set_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>set action config variables</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.action_types.BaseActionType.set_inputs">
+<code class="descname">set_inputs</code><span class="sig-paren">(</span><em>inputs</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.BaseActionType.set_inputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>set action input variables</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.action_types.BaseActionType.set_orig_name">
+<code class="descname">set_orig_name</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.BaseActionType.set_orig_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set original name</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.action_types.BaseActionType.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.BaseActionType.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>validate variables, input and output</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.action_types.Bridge">
+<em class="property">class </em><code class="descclassname">pipeline.action_types.</code><code class="descname">Bridge</code><span class="sig-paren">(</span><em>workflow</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.Bridge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.action_types.BaseActionType" title="pipeline.action_types.BaseActionType"><code class="xref py py-class docutils literal"><span class="pre">pipeline.action_types.BaseActionType</span></code></a></p>
+<p>Action that directed output to output method of link class</p>
+<dl class="attribute">
+<dt id="pipeline.action_types.Bridge.action_checkable">
+<code class="descname">action_checkable</code><em class="property"> = None</em><a class="headerlink" href="#pipeline.action_types.Bridge.action_checkable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is possible check linke action (output is not parssed  from previous action)</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.action_types.Bridge.check_action">
+<code class="descname">check_action</code><span class="sig-paren">(</span><em>actions</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.Bridge.check_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>return True if bridge direct to one of set actions</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.action_types.Bridge.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.Bridge.validate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.action_types.ConnectorActionType">
+<em class="property">class </em><code class="descclassname">pipeline.action_types.</code><code class="descname">ConnectorActionType</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.ConnectorActionType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.action_types.BaseActionType" title="pipeline.action_types.BaseActionType"><code class="xref py py-class docutils literal"><span class="pre">pipeline.action_types.BaseActionType</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.action_types.GeneratorActionType">
+<em class="property">class </em><code class="descclassname">pipeline.action_types.</code><code class="descname">GeneratorActionType</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.GeneratorActionType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.action_types.BaseActionType" title="pipeline.action_types.BaseActionType"><code class="xref py py-class docutils literal"><span class="pre">pipeline.action_types.BaseActionType</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.action_types.OutputActionType">
+<em class="property">class </em><code class="descclassname">pipeline.action_types.</code><code class="descname">OutputActionType</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.OutputActionType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.action_types.BaseActionType" title="pipeline.action_types.BaseActionType"><code class="xref py py-class docutils literal"><span class="pre">pipeline.action_types.BaseActionType</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.action_types.ParametrizedActionType">
+<em class="property">class </em><code class="descclassname">pipeline.action_types.</code><code class="descname">ParametrizedActionType</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.ParametrizedActionType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.action_types.BaseActionType" title="pipeline.action_types.BaseActionType"><code class="xref py py-class docutils literal"><span class="pre">pipeline.action_types.BaseActionType</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.action_types.QueueType">
+<em class="property">class </em><code class="descclassname">pipeline.action_types.</code><code class="descname">QueueType</code><a class="headerlink" href="#pipeline.action_types.QueueType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></p>
+<p>Action type</p>
+<dl class="attribute">
+<dt id="pipeline.action_types.QueueType.external">
+<code class="descname">external</code><em class="property"> = 1</em><a class="headerlink" href="#pipeline.action_types.QueueType.external" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.action_types.QueueType.internal">
+<code class="descname">internal</code><em class="property"> = 0</em><a class="headerlink" href="#pipeline.action_types.QueueType.internal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.action_types.Runner">
+<em class="property">class </em><code class="descclassname">pipeline.action_types.</code><code class="descname">Runner</code><span class="sig-paren">(</span><em>action</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.Runner" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Data crate for action process runner description</p>
+<dl class="attribute">
+<dt id="pipeline.action_types.Runner.action">
+<code class="descname">action</code><em class="property"> = None</em><a class="headerlink" href="#pipeline.action_types.Runner.action" title="Permalink to this definition">¶</a></dt>
+<dd><p>action</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.action_types.Runner.command">
+<code class="descname">command</code><em class="property"> = None</em><a class="headerlink" href="#pipeline.action_types.Runner.command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Command for popen</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.action_types.Runner.id">
+<code class="descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pipeline.action_types.Runner.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>action unique id</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.action_types.Runner.name">
+<code class="descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pipeline.action_types.Runner.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runner name for loging</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.action_types.WorkflowActionType">
+<em class="property">class </em><code class="descclassname">pipeline.action_types.</code><code class="descname">WorkflowActionType</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.WorkflowActionType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.action_types.BaseActionType" title="pipeline.action_types.BaseActionType"><code class="xref py py-class docutils literal"><span class="pre">pipeline.action_types.BaseActionType</span></code></a></p>
+<dl class="method">
+<dt id="pipeline.action_types.WorkflowActionType.get_resources">
+<code class="descname">get_resources</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.WorkflowActionType.get_resources" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of resource files</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.action_types.WrapperActionType">
+<em class="property">class </em><code class="descclassname">pipeline.action_types.</code><code class="descname">WrapperActionType</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.WrapperActionType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.action_types.BaseActionType" title="pipeline.action_types.BaseActionType"><code class="xref py py-class docutils literal"><span class="pre">pipeline.action_types.BaseActionType</span></code></a></p>
+<p>Wrapper for some action (usualy workflow), that provide cyclic
+procesing</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>WrappedAction</strong> (<a class="reference internal" href="#pipeline.action_types.WorkflowActionType" title="pipeline.action_types.WorkflowActionType"><em>WorkflowActionType</em></a>) &#8211; Wrapped action
+that is processed by wrapper action.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pipeline.action_types.WrapperActionType.get_resources">
+<code class="descname">get_resources</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.action_types.WrapperActionType.get_resources" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of resource files</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pipeline.calibration_data_types">
+<span id="pipeline-calibration-data-types-module"></span><h2>pipeline.calibration_data_types module<a class="headerlink" href="#module-pipeline.calibration_data_types" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pipeline.calibration_data_types.CalibrationAlgorithmParameter">
+<em class="property">class </em><code class="descclassname">pipeline.calibration_data_types.</code><code class="descname">CalibrationAlgorithmParameter</code><span class="sig-paren">(</span><em>group=''</em>, <em>diff_inc_rel=0.01</em>, <em>diff_inc_abs=0.01</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.calibration_data_types.CalibrationAlgorithmParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.calibration_data_types.CalibrationBoundsType">
+<em class="property">class </em><code class="descclassname">pipeline.calibration_data_types.</code><code class="descname">CalibrationBoundsType</code><a class="headerlink" href="#pipeline.calibration_data_types.CalibrationBoundsType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></p>
+<p>Calibration bounds type</p>
+<dl class="attribute">
+<dt id="pipeline.calibration_data_types.CalibrationBoundsType.hard">
+<code class="descname">hard</code><em class="property"> = 0</em><a class="headerlink" href="#pipeline.calibration_data_types.CalibrationBoundsType.hard" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.calibration_data_types.CalibrationBoundsType.soft">
+<code class="descname">soft</code><em class="property"> = 1</em><a class="headerlink" href="#pipeline.calibration_data_types.CalibrationBoundsType.soft" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.calibration_data_types.CalibrationObservation">
+<em class="property">class </em><code class="descclassname">pipeline.calibration_data_types.</code><code class="descname">CalibrationObservation</code><span class="sig-paren">(</span><em>name</em>, <em>group=''</em>, <em>observation_type=&lt;CalibrationObservationType.scalar: 0&gt;</em>, <em>weight=1.0</em>, <em>upper_bound=None</em>, <em>lower_bound=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.calibration_data_types.CalibrationObservation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.calibration_data_types.CalibrationObservationType">
+<em class="property">class </em><code class="descclassname">pipeline.calibration_data_types.</code><code class="descname">CalibrationObservationType</code><a class="headerlink" href="#pipeline.calibration_data_types.CalibrationObservationType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></p>
+<p>Calibration Observation Type</p>
+<dl class="attribute">
+<dt id="pipeline.calibration_data_types.CalibrationObservationType.scalar">
+<code class="descname">scalar</code><em class="property"> = 0</em><a class="headerlink" href="#pipeline.calibration_data_types.CalibrationObservationType.scalar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.calibration_data_types.CalibrationObservationType.time_series">
+<code class="descname">time_series</code><em class="property"> = 1</em><a class="headerlink" href="#pipeline.calibration_data_types.CalibrationObservationType.time_series" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.calibration_data_types.CalibrationOutputType">
+<em class="property">class </em><code class="descclassname">pipeline.calibration_data_types.</code><code class="descname">CalibrationOutputType</code><a class="headerlink" href="#pipeline.calibration_data_types.CalibrationOutputType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="staticmethod">
+<dt id="pipeline.calibration_data_types.CalibrationOutputType.create_type">
+<em class="property">static </em><code class="descname">create_type</code><span class="sig-paren">(</span><em>parameters</em>, <em>observations</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.calibration_data_types.CalibrationOutputType.create_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.calibration_data_types.CalibrationParameter">
+<em class="property">class </em><code class="descclassname">pipeline.calibration_data_types.</code><code class="descname">CalibrationParameter</code><span class="sig-paren">(</span><em>name</em>, <em>group=''</em>, <em>bounds=(0.0</em>, <em>1.0)</em>, <em>init_value=None</em>, <em>offset=None</em>, <em>scale=1.0</em>, <em>fixed=False</em>, <em>log_transform=False</em>, <em>tied_params=None</em>, <em>tied_expression=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.calibration_data_types.CalibrationParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.calibration_data_types.CalibrationTerminationCriteria">
+<em class="property">class </em><code class="descclassname">pipeline.calibration_data_types.</code><code class="descname">CalibrationTerminationCriteria</code><span class="sig-paren">(</span><em>n_lowest=10</em>, <em>tol_lowest=1e-06</em>, <em>n_from_lowest=10</em>, <em>n_param_change=10</em>, <em>tol_rel_param_change=1e-06</em>, <em>n_max_steps=100</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.calibration_data_types.CalibrationTerminationCriteria" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="pipeline.calibration_data_types.CalibrationTerminationCriteria.get_terminator">
+<code class="descname">get_terminator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.calibration_data_types.CalibrationTerminationCriteria.get_terminator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.calibration_data_types.SingleIterationInfo">
+<em class="property">class </em><code class="descclassname">pipeline.calibration_data_types.</code><code class="descname">SingleIterationInfo</code><a class="headerlink" href="#pipeline.calibration_data_types.SingleIterationInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="staticmethod">
+<dt id="pipeline.calibration_data_types.SingleIterationInfo.create_type">
+<em class="property">static </em><code class="descname">create_type</code><span class="sig-paren">(</span><em>parameters</em>, <em>observations</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.calibration_data_types.SingleIterationInfo.create_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.calibration_data_types.SingleObservationOutput">
+<em class="property">class </em><code class="descclassname">pipeline.calibration_data_types.</code><code class="descname">SingleObservationOutput</code><a class="headerlink" href="#pipeline.calibration_data_types.SingleObservationOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="staticmethod">
+<dt id="pipeline.calibration_data_types.SingleObservationOutput.create_type">
+<em class="property">static </em><code class="descname">create_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.calibration_data_types.SingleObservationOutput.create_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.calibration_data_types.SingleParameterOutput">
+<em class="property">class </em><code class="descclassname">pipeline.calibration_data_types.</code><code class="descname">SingleParameterOutput</code><a class="headerlink" href="#pipeline.calibration_data_types.SingleParameterOutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="staticmethod">
+<dt id="pipeline.calibration_data_types.SingleParameterOutput.create_type">
+<em class="property">static </em><code class="descname">create_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.calibration_data_types.SingleParameterOutput.create_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pipeline.calibration_lbfgsb">
+<span id="pipeline-calibration-lbfgsb-module"></span><h2>pipeline.calibration_lbfgsb module<a class="headerlink" href="#module-pipeline.calibration_lbfgsb" title="Permalink to this headline">¶</a></h2>
+<p>replacement of _minimize_lbfgsb from scipy.optimize.lbfgsb
+scipy version 0.18.1</p>
+<dl class="function">
+<dt id="pipeline.calibration_lbfgsb.min_lbfgsb">
+<code class="descclassname">pipeline.calibration_lbfgsb.</code><code class="descname">min_lbfgsb</code><span class="sig-paren">(</span><em>fun</em>, <em>x0</em>, <em>args=()</em>, <em>jac=None</em>, <em>bounds=None</em>, <em>disp=None</em>, <em>maxcor=10</em>, <em>ftol=2.220446049250313e-09</em>, <em>gtol=1e-05</em>, <em>eps=1e-08</em>, <em>maxfun=15000</em>, <em>maxiter=15000</em>, <em>iprint=-1</em>, <em>callback=None</em>, <em>maxls=20</em>, <em>ter_crit=None</em>, <em>**unknown_options</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.calibration_lbfgsb.min_lbfgsb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimize a scalar function of one or more variables using the L-BFGS-B
+algorithm.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pipeline.calibration_slsqp">
+<span id="pipeline-calibration-slsqp-module"></span><h2>pipeline.calibration_slsqp module<a class="headerlink" href="#module-pipeline.calibration_slsqp" title="Permalink to this headline">¶</a></h2>
+<p>replacement of _minimize_slsqp from scipy.optimize.slsqp
+scipy version 0.18.1</p>
+<dl class="function">
+<dt id="pipeline.calibration_slsqp.min_slsqp">
+<code class="descclassname">pipeline.calibration_slsqp.</code><code class="descname">min_slsqp</code><span class="sig-paren">(</span><em>func</em>, <em>x0</em>, <em>args=()</em>, <em>jac=None</em>, <em>bounds=None</em>, <em>constraints=()</em>, <em>maxiter=100</em>, <em>ftol=1e-06</em>, <em>iprint=1</em>, <em>disp=False</em>, <em>eps=1.4901161193847656e-08</em>, <em>callback=None</em>, <em>ter_crit=None</em>, <em>**unknown_options</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.calibration_slsqp.min_slsqp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Minimize a scalar function of one or more variables using Sequential
+Least SQuares Programming (SLSQP).</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pipeline.code_formater">
+<span id="pipeline-code-formater-module"></span><h2>pipeline.code_formater module<a class="headerlink" href="#module-pipeline.code_formater" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pipeline.code_formater.Formater">
+<em class="property">class </em><code class="descclassname">pipeline.code_formater.</code><code class="descname">Formater</code><a class="headerlink" href="#pipeline.code_formater.Formater" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="classmethod">
+<dt id="pipeline.code_formater.Formater.format_parameter">
+<em class="property">classmethod </em><code class="descname">format_parameter</code><span class="sig-paren">(</span><em>param</em>, <em>spaces</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.code_formater.Formater.format_parameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>if param is one line, return indented one line,
+otherwise indented lines in bracket</p>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="pipeline.code_formater.Formater.format_variable">
+<em class="property">classmethod </em><code class="descname">format_variable</code><span class="sig-paren">(</span><em>name</em>, <em>param</em>, <em>spaces</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.code_formater.Formater.format_variable" title="Permalink to this definition">¶</a></dt>
+<dd><p>if param is one line, return indented one line,
+otherwise indented lines in bracket</p>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="pipeline.code_formater.Formater.indent">
+<em class="property">static </em><code class="descname">indent</code><span class="sig-paren">(</span><em>lines</em>, <em>spaces</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.code_formater.Formater.indent" title="Permalink to this definition">¶</a></dt>
+<dd><p>indent code in line</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pipeline.connector_actions">
+<span id="pipeline-connector-actions-module"></span><h2>pipeline.connector_actions module<a class="headerlink" href="#module-pipeline.connector_actions" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pipeline.connector_actions.Connector">
+<em class="property">class </em><code class="descclassname">pipeline.connector_actions.</code><code class="descname">Connector</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.connector_actions.Connector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.action_types.ConnectorActionType" title="pipeline.action_types.ConnectorActionType"><code class="xref py py-class docutils literal"><span class="pre">pipeline.action_types.ConnectorActionType</span></code></a></p>
+<dl class="attribute">
+<dt id="pipeline.connector_actions.Connector.description">
+<code class="descname">description</code><em class="property"> = 'Convertor for base variable manipulation'</em><a class="headerlink" href="#pipeline.connector_actions.Connector.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of action</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.connector_actions.Connector.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.connector_actions.Connector.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Duplicate convertor. Returned convertor is not inicialized and checked</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.connector_actions.Connector.name">
+<code class="descname">name</code><em class="property"> = 'Conn'</em><a class="headerlink" href="#pipeline.connector_actions.Connector.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of action</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.connector_actions.Connector.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.connector_actions.Connector.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>validate variables, input and output</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pipeline.convertors">
+<span id="pipeline-convertors-module"></span><h2>pipeline.convertors module<a class="headerlink" href="#module-pipeline.convertors" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pipeline.convertors.Adapter">
+<em class="property">class </em><code class="descclassname">pipeline.convertors.</code><code class="descname">Adapter</code><span class="sig-paren">(</span><em>output</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.convertors.Adapter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.convertors.IConvertor" title="pipeline.convertors.IConvertor"><code class="xref py py-class docutils literal"><span class="pre">pipeline.convertors.IConvertor</span></code></a></p>
+<p>Class for filter defination</p>
+<dl class="attribute">
+<dt id="pipeline.convertors.Adapter.description">
+<code class="descname">description</code><em class="property"> = 'Adapter'</em><a class="headerlink" href="#pipeline.convertors.Adapter.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of action</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.convertors.Adapter.name">
+<code class="descname">name</code><em class="property"> = 'Adap'</em><a class="headerlink" href="#pipeline.convertors.Adapter.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of action</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.convertors.Convertor">
+<em class="property">class </em><code class="descclassname">pipeline.convertors.</code><code class="descname">Convertor</code><span class="sig-paren">(</span><em>def_output</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.convertors.Convertor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Parent class for convertors. Convertors define output
+data structure for connectors or some commposit
+data tree structure function (select, sort each).</p>
+<p>Convertor class is use by connector, ancestors have
+some output restrictions and is use by composite DDT
+functions.</p>
+<dl class="attribute">
+<dt id="pipeline.convertors.Convertor.description">
+<code class="descname">description</code><em class="property"> = 'Convertor'</em><a class="headerlink" href="#pipeline.convertors.Convertor.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of action</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.convertors.Convertor.name">
+<code class="descname">name</code><em class="property"> = 'Conv'</em><a class="headerlink" href="#pipeline.convertors.Convertor.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of action</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.convertors.IConvertor">
+<em class="property">class </em><code class="descclassname">pipeline.convertors.</code><code class="descname">IConvertor</code><span class="sig-paren">(</span><em>def_output</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.convertors.IConvertor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.convertors.Convertor" title="pipeline.convertors.Convertor"><code class="xref py py-class docutils literal"><span class="pre">pipeline.convertors.Convertor</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.convertors.KeyConvertor">
+<em class="property">class </em><code class="descclassname">pipeline.convertors.</code><code class="descname">KeyConvertor</code><span class="sig-paren">(</span><em>output</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.convertors.KeyConvertor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.convertors.IConvertor" title="pipeline.convertors.IConvertor"><code class="xref py py-class docutils literal"><span class="pre">pipeline.convertors.IConvertor</span></code></a></p>
+<p>Class for filter defination</p>
+<dl class="attribute">
+<dt id="pipeline.convertors.KeyConvertor.description">
+<code class="descname">description</code><em class="property"> = 'Convert structuru to key for comaparation'</em><a class="headerlink" href="#pipeline.convertors.KeyConvertor.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of action</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.convertors.KeyConvertor.name">
+<code class="descname">name</code><em class="property"> = 'Key'</em><a class="headerlink" href="#pipeline.convertors.KeyConvertor.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of action</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.convertors.Predicate">
+<em class="property">class </em><code class="descclassname">pipeline.convertors.</code><code class="descname">Predicate</code><span class="sig-paren">(</span><em>output</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.convertors.Predicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.convertors.IConvertor" title="pipeline.convertors.IConvertor"><code class="xref py py-class docutils literal"><span class="pre">pipeline.convertors.IConvertor</span></code></a></p>
+<p>Class for filter defination</p>
+<dl class="attribute">
+<dt id="pipeline.convertors.Predicate.description">
+<code class="descname">description</code><em class="property"> = 'Predicate'</em><a class="headerlink" href="#pipeline.convertors.Predicate.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of action</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.convertors.Predicate.name">
+<code class="descname">name</code><em class="property"> = 'Pred'</em><a class="headerlink" href="#pipeline.convertors.Predicate.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of action</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pipeline.data_types_tree">
+<span id="pipeline-data-types-tree-module"></span><h2>pipeline.data_types_tree module<a class="headerlink" href="#module-pipeline.data_types_tree" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pipeline.data_types_tree.BaseDTT">
+<em class="property">class </em><code class="descclassname">pipeline.data_types_tree.</code><code class="descname">BaseDTT</code><a class="headerlink" href="#pipeline.data_types_tree.BaseDTT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.data_types_tree.DTT" title="pipeline.data_types_tree.DTT"><code class="xref py py-class docutils literal"><span class="pre">pipeline.data_types_tree.DTT</span></code></a></p>
+<p>Abstract class for defination data tree , that is use for
+description structures flow thrue pipeline</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Description:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<p>Structures may be defined as empty (by empty constructor),
+or with data. If structure is empty, it is supossed that is assigned
+later.</p>
+<dl class="attribute">
+<dt id="pipeline.data_types_tree.BaseDTT.description">
+<code class="descname">description</code><em class="property"> = ''</em><a class="headerlink" href="#pipeline.data_types_tree.BaseDTT.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of variable type</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.data_types_tree.BaseDTT.name">
+<code class="descname">name</code><em class="property"> = ''</em><a class="headerlink" href="#pipeline.data_types_tree.BaseDTT.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of variable type</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.data_types_tree.BaseDTT.value">
+<code class="descname">value</code><a class="headerlink" href="#pipeline.data_types_tree.BaseDTT.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.data_types_tree.Bool">
+<em class="property">class </em><code class="descclassname">pipeline.data_types_tree.</code><code class="descname">Bool</code><span class="sig-paren">(</span><em>bool=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Bool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.data_types_tree.BaseDTT" title="pipeline.data_types_tree.BaseDTT"><code class="xref py py-class docutils literal"><span class="pre">pipeline.data_types_tree.BaseDTT</span></code></a></p>
+<dl class="attribute">
+<dt id="pipeline.data_types_tree.Bool.description">
+<code class="descname">description</code><em class="property"> = 'Wrapper for standart python Boolean variable'</em><a class="headerlink" href="#pipeline.data_types_tree.Bool.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of variable type</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.data_types_tree.Bool.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Bool.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>make deep copy</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.data_types_tree.Bool.name">
+<code class="descname">name</code><em class="property"> = 'Bool'</em><a class="headerlink" href="#pipeline.data_types_tree.Bool.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of variable type</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.data_types_tree.CompositeDTT">
+<em class="property">class </em><code class="descclassname">pipeline.data_types_tree.</code><code class="descname">CompositeDTT</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.CompositeDTT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.data_types_tree.DTT" title="pipeline.data_types_tree.DTT"><code class="xref py py-class docutils literal"><span class="pre">pipeline.data_types_tree.DTT</span></code></a></p>
+<p>Abbstract class od port types, that define user for
+validation and translation to string</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.data_types_tree.CompositiIter">
+<em class="property">class </em><code class="descclassname">pipeline.data_types_tree.</code><code class="descname">CompositiIter</code><span class="sig-paren">(</span><em>composite</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.CompositiIter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Help class for iteration composites</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.data_types_tree.DTT">
+<em class="property">class </em><code class="descclassname">pipeline.data_types_tree.</code><code class="descname">DTT</code><a class="headerlink" href="#pipeline.data_types_tree.DTT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.generic_tree.TT" title="pipeline.generic_tree.TT"><code class="xref py py-class docutils literal"><span class="pre">pipeline.generic_tree.TT</span></code></a></p>
+<p>Abstract class for defination data tree</p>
+<dl class="method">
+<dt id="pipeline.data_types_tree.DTT.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.DTT.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>make deep copy</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.data_types_tree.Ensemble">
+<em class="property">class </em><code class="descclassname">pipeline.data_types_tree.</code><code class="descname">Ensemble</code><span class="sig-paren">(</span><em>subtype</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Ensemble" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.data_types_tree.SortableDTT" title="pipeline.data_types_tree.SortableDTT"><code class="xref py py-class docutils literal"><span class="pre">pipeline.data_types_tree.SortableDTT</span></code></a></p>
+<p>Array</p>
+<dl class="method">
+<dt id="pipeline.data_types_tree.Ensemble.add_item">
+<code class="descname">add_item</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Ensemble.add_item" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.data_types_tree.Ensemble.description">
+<code class="descname">description</code><em class="property"> = 'Not ordered type list'</em><a class="headerlink" href="#pipeline.data_types_tree.Ensemble.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of variable type</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.data_types_tree.Ensemble.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Ensemble.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>make deep copy</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.data_types_tree.Ensemble.each">
+<code class="descname">each</code><span class="sig-paren">(</span><em>adapter</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Ensemble.each" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adapt list items structure</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.data_types_tree.Ensemble.get_item">
+<code class="descname">get_item</code><span class="sig-paren">(</span><em>i</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Ensemble.get_item" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.data_types_tree.Ensemble.name">
+<code class="descname">name</code><em class="property"> = 'Ensemble'</em><a class="headerlink" href="#pipeline.data_types_tree.Ensemble.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of variable type</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.data_types_tree.Ensemble.select">
+<code class="descname">select</code><span class="sig-paren">(</span><em>predicate</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Ensemble.select" title="Permalink to this definition">¶</a></dt>
+<dd><p>return selected Ensamble accoding set predicate</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.data_types_tree.Ensemble.sort">
+<code class="descname">sort</code><span class="sig-paren">(</span><em>key_selector</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Ensemble.sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>return sorted Sequence accoding set predicate</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.data_types_tree.Float">
+<em class="property">class </em><code class="descclassname">pipeline.data_types_tree.</code><code class="descname">Float</code><span class="sig-paren">(</span><em>float=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Float" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.data_types_tree.BaseDTT" title="pipeline.data_types_tree.BaseDTT"><code class="xref py py-class docutils literal"><span class="pre">pipeline.data_types_tree.BaseDTT</span></code></a></p>
+<dl class="attribute">
+<dt id="pipeline.data_types_tree.Float.description">
+<code class="descname">description</code><em class="property"> = 'Wrapper for standart python float variable'</em><a class="headerlink" href="#pipeline.data_types_tree.Float.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of variable type</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.data_types_tree.Float.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Float.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>make deep copy</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.data_types_tree.Float.name">
+<code class="descname">name</code><em class="property"> = 'Float'</em><a class="headerlink" href="#pipeline.data_types_tree.Float.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of variable type</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.data_types_tree.Int">
+<em class="property">class </em><code class="descclassname">pipeline.data_types_tree.</code><code class="descname">Int</code><span class="sig-paren">(</span><em>integer=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.data_types_tree.BaseDTT" title="pipeline.data_types_tree.BaseDTT"><code class="xref py py-class docutils literal"><span class="pre">pipeline.data_types_tree.BaseDTT</span></code></a></p>
+<p>Integer</p>
+<dl class="attribute">
+<dt id="pipeline.data_types_tree.Int.description">
+<code class="descname">description</code><em class="property"> = 'Wrapper for standart python integer variable'</em><a class="headerlink" href="#pipeline.data_types_tree.Int.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of variable type</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.data_types_tree.Int.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Int.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>make deep copy</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.data_types_tree.Int.name">
+<code class="descname">name</code><em class="property"> = 'Integer'</em><a class="headerlink" href="#pipeline.data_types_tree.Int.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of variable type</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.data_types_tree.ListDTT">
+<em class="property">class </em><code class="descclassname">pipeline.data_types_tree.</code><code class="descname">ListDTT</code><span class="sig-paren">(</span><em>subtype</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.ListDTT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.data_types_tree.CompositeDTT" title="pipeline.data_types_tree.CompositeDTT"><code class="xref py py-class docutils literal"><span class="pre">pipeline.data_types_tree.CompositeDTT</span></code></a></p>
+<p>Sortable composite data tree</p>
+<dl class="method">
+<dt id="pipeline.data_types_tree.ListDTT.each">
+<code class="descname">each</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.ListDTT.each" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adapt list items structure</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.data_types_tree.ListDTT.subtype">
+<code class="descname">subtype</code><em class="property"> = None</em><a class="headerlink" href="#pipeline.data_types_tree.ListDTT.subtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>iterator possition</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.data_types_tree.Sequence">
+<em class="property">class </em><code class="descclassname">pipeline.data_types_tree.</code><code class="descname">Sequence</code><span class="sig-paren">(</span><em>subtype</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Sequence" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.data_types_tree.Ensemble" title="pipeline.data_types_tree.Ensemble"><code class="xref py py-class docutils literal"><span class="pre">pipeline.data_types_tree.Ensemble</span></code></a></p>
+<dl class="attribute">
+<dt id="pipeline.data_types_tree.Sequence.description">
+<code class="descname">description</code><em class="property"> = 'Ordered type list'</em><a class="headerlink" href="#pipeline.data_types_tree.Sequence.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of variable type</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.data_types_tree.Sequence.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Sequence.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>make deep copy</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.data_types_tree.Sequence.each">
+<code class="descname">each</code><span class="sig-paren">(</span><em>adapter</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Sequence.each" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adapt list items structure</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.data_types_tree.Sequence.head">
+<code class="descname">head</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Sequence.head" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.data_types_tree.Sequence.name">
+<code class="descname">name</code><em class="property"> = 'Sequence'</em><a class="headerlink" href="#pipeline.data_types_tree.Sequence.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of variable type</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.data_types_tree.Sequence.select">
+<code class="descname">select</code><span class="sig-paren">(</span><em>predicate</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Sequence.select" title="Permalink to this definition">¶</a></dt>
+<dd><p>return selected Ensamble accoding set predicate</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.data_types_tree.Sequence.tail">
+<code class="descname">tail</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Sequence.tail" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.data_types_tree.SortableDTT">
+<em class="property">class </em><code class="descclassname">pipeline.data_types_tree.</code><code class="descname">SortableDTT</code><span class="sig-paren">(</span><em>subtype</em>, <em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.SortableDTT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.data_types_tree.ListDTT" title="pipeline.data_types_tree.ListDTT"><code class="xref py py-class docutils literal"><span class="pre">pipeline.data_types_tree.ListDTT</span></code></a></p>
+<p>Sortable composite data tree</p>
+<dl class="method">
+<dt id="pipeline.data_types_tree.SortableDTT.select">
+<code class="descname">select</code><span class="sig-paren">(</span><em>predicate</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.SortableDTT.select" title="Permalink to this definition">¶</a></dt>
+<dd><p>return selected Ensamble accoding set predicate</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.data_types_tree.SortableDTT.sort">
+<code class="descname">sort</code><span class="sig-paren">(</span><em>predicate</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.SortableDTT.sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>return sorted Ensamble accoding set predicate</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.data_types_tree.String">
+<em class="property">class </em><code class="descclassname">pipeline.data_types_tree.</code><code class="descname">String</code><span class="sig-paren">(</span><em>string=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.String" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.data_types_tree.BaseDTT" title="pipeline.data_types_tree.BaseDTT"><code class="xref py py-class docutils literal"><span class="pre">pipeline.data_types_tree.BaseDTT</span></code></a></p>
+<dl class="method">
+<dt id="pipeline.data_types_tree.String.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.String.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>make deep copy</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.data_types_tree.Struct">
+<em class="property">class </em><code class="descclassname">pipeline.data_types_tree.</code><code class="descname">Struct</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Struct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.data_types_tree.CompositeDTT" title="pipeline.data_types_tree.CompositeDTT"><code class="xref py py-class docutils literal"><span class="pre">pipeline.data_types_tree.CompositeDTT</span></code></a></p>
+<p>Object</p>
+<dl class="attribute">
+<dt id="pipeline.data_types_tree.Struct.description">
+<code class="descname">description</code><em class="property"> = 'Composite structure variable'</em><a class="headerlink" href="#pipeline.data_types_tree.Struct.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of variable type</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.data_types_tree.Struct.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Struct.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>make deep copy</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.data_types_tree.Struct.name">
+<code class="descname">name</code><em class="property"> = 'Struct'</em><a class="headerlink" href="#pipeline.data_types_tree.Struct.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of variable type</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.data_types_tree.Tuple">
+<em class="property">class </em><code class="descclassname">pipeline.data_types_tree.</code><code class="descname">Tuple</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Tuple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.data_types_tree.CompositeDTT" title="pipeline.data_types_tree.CompositeDTT"><code class="xref py py-class docutils literal"><span class="pre">pipeline.data_types_tree.CompositeDTT</span></code></a></p>
+<p>Object</p>
+<dl class="attribute">
+<dt id="pipeline.data_types_tree.Tuple.description">
+<code class="descname">description</code><em class="property"> = 'Composite tuple variable like python tuple'</em><a class="headerlink" href="#pipeline.data_types_tree.Tuple.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of variable type</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.data_types_tree.Tuple.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.data_types_tree.Tuple.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>make deep copy</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.data_types_tree.Tuple.name">
+<code class="descname">name</code><em class="property"> = 'Tuple'</em><a class="headerlink" href="#pipeline.data_types_tree.Tuple.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of variable type</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pipeline.flow_data_types">
+<span id="pipeline-flow-data-types-module"></span><h2>pipeline.flow_data_types module<a class="headerlink" href="#module-pipeline.flow_data_types" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pipeline.flow_data_types.BalanceType">
+<em class="property">class </em><code class="descclassname">pipeline.flow_data_types.</code><code class="descname">BalanceType</code><a class="headerlink" href="#pipeline.flow_data_types.BalanceType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="staticmethod">
+<dt id="pipeline.flow_data_types.BalanceType.create_iner_test_data">
+<em class="property">static </em><code class="descname">create_iner_test_data</code><span class="sig-paren">(</span><em>region_options</em>, <em>quantity_options</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.BalanceType.create_iner_test_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="pipeline.flow_data_types.BalanceType.create_iner_type">
+<em class="property">static </em><code class="descname">create_iner_type</code><span class="sig-paren">(</span><em>region_options</em>, <em>quantity_options</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.BalanceType.create_iner_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="pipeline.flow_data_types.BalanceType.create_test_data">
+<em class="property">static </em><code class="descname">create_test_data</code><span class="sig-paren">(</span><em>region_options</em>, <em>quantity_options</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.BalanceType.create_test_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="pipeline.flow_data_types.BalanceType.create_type">
+<em class="property">static </em><code class="descname">create_type</code><span class="sig-paren">(</span><em>region_options</em>, <em>quantity_options</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.BalanceType.create_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="pipeline.flow_data_types.BalanceType.parse_data_from_file">
+<em class="property">static </em><code class="descname">parse_data_from_file</code><span class="sig-paren">(</span><em>file</em>, <em>region_options</em>, <em>quantity_options</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.BalanceType.parse_data_from_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.flow_data_types.Enum">
+<em class="property">class </em><code class="descclassname">pipeline.flow_data_types.</code><code class="descname">Enum</code><span class="sig-paren">(</span><em>option_list</em>, <em>string=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.Enum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.data_types_tree.String" title="pipeline.data_types_tree.String"><code class="xref py py-class docutils literal"><span class="pre">pipeline.data_types_tree.String</span></code></a></p>
+<dl class="method">
+<dt id="pipeline.flow_data_types.Enum.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.Enum.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>make deep copy</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.flow_data_types.FlowOutputType">
+<em class="property">class </em><code class="descclassname">pipeline.flow_data_types.</code><code class="descname">FlowOutputType</code><a class="headerlink" href="#pipeline.flow_data_types.FlowOutputType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="staticmethod">
+<dt id="pipeline.flow_data_types.FlowOutputType.create_data">
+<em class="property">static </em><code class="descname">create_data</code><span class="sig-paren">(</span><em>yaml_support</em>, <em>output_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.FlowOutputType.create_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="pipeline.flow_data_types.FlowOutputType.create_type">
+<em class="property">static </em><code class="descname">create_type</code><span class="sig-paren">(</span><em>yaml_support</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.FlowOutputType.create_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.flow_data_types.MeshType">
+<em class="property">class </em><code class="descclassname">pipeline.flow_data_types.</code><code class="descname">MeshType</code><span class="sig-paren">(</span><em>mesh=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.MeshType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.data_types_tree.BaseDTT" title="pipeline.data_types_tree.BaseDTT"><code class="xref py py-class docutils literal"><span class="pre">pipeline.data_types_tree.BaseDTT</span></code></a></p>
+<dl class="attribute">
+<dt id="pipeline.flow_data_types.MeshType.description">
+<code class="descname">description</code><em class="property"> = 'Type for handling meshes'</em><a class="headerlink" href="#pipeline.flow_data_types.MeshType.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of variable type</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.flow_data_types.MeshType.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.MeshType.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>make deep copy</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.flow_data_types.MeshType.name">
+<code class="descname">name</code><em class="property"> = 'Mesh'</em><a class="headerlink" href="#pipeline.flow_data_types.MeshType.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of variable type</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.flow_data_types.ObservationType">
+<em class="property">class </em><code class="descclassname">pipeline.flow_data_types.</code><code class="descname">ObservationType</code><a class="headerlink" href="#pipeline.flow_data_types.ObservationType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="staticmethod">
+<dt id="pipeline.flow_data_types.ObservationType.create_single_time_data_type">
+<em class="property">static </em><code class="descname">create_single_time_data_type</code><span class="sig-paren">(</span><em>observed_quantities</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.ObservationType.create_single_time_data_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="pipeline.flow_data_types.ObservationType.create_type">
+<em class="property">static </em><code class="descname">create_type</code><span class="sig-paren">(</span><em>observed_quantities</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.ObservationType.create_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="pipeline.flow_data_types.ObservationType.parse_data_from_file">
+<em class="property">static </em><code class="descname">parse_data_from_file</code><span class="sig-paren">(</span><em>file</em>, <em>observed_quantities</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.ObservationType.parse_data_from_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.flow_data_types.PVD_Type">
+<em class="property">class </em><code class="descclassname">pipeline.flow_data_types.</code><code class="descname">PVD_Type</code><a class="headerlink" href="#pipeline.flow_data_types.PVD_Type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="staticmethod">
+<dt id="pipeline.flow_data_types.PVD_Type.create_type">
+<em class="property">static </em><code class="descname">create_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.PVD_Type.create_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="pipeline.flow_data_types.PVD_Type.parse_data_from_file">
+<em class="property">static </em><code class="descname">parse_data_from_file</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.PVD_Type.parse_data_from_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.flow_data_types.PositionVector">
+<em class="property">class </em><code class="descclassname">pipeline.flow_data_types.</code><code class="descname">PositionVector</code><a class="headerlink" href="#pipeline.flow_data_types.PositionVector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="staticmethod">
+<dt id="pipeline.flow_data_types.PositionVector.create_data">
+<em class="property">static </em><code class="descname">create_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.PositionVector.create_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="pipeline.flow_data_types.PositionVector.create_type">
+<em class="property">static </em><code class="descname">create_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.PositionVector.create_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.flow_data_types.SimulationTime">
+<em class="property">class </em><code class="descclassname">pipeline.flow_data_types.</code><code class="descname">SimulationTime</code><span class="sig-paren">(</span><em>float=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.SimulationTime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.data_types_tree.Float" title="pipeline.data_types_tree.Float"><code class="xref py py-class docutils literal"><span class="pre">pipeline.data_types_tree.Float</span></code></a></p>
+<dl class="attribute">
+<dt id="pipeline.flow_data_types.SimulationTime.description">
+<code class="descname">description</code><em class="property"> = 'Simulation Time'</em><a class="headerlink" href="#pipeline.flow_data_types.SimulationTime.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of variable type</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.flow_data_types.SimulationTime.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.SimulationTime.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>make deep copy</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.flow_data_types.SimulationTime.name">
+<code class="descname">name</code><em class="property"> = 'SimulationTime'</em><a class="headerlink" href="#pipeline.flow_data_types.SimulationTime.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of variable type</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.flow_data_types.XYZEquationResultType">
+<em class="property">class </em><code class="descclassname">pipeline.flow_data_types.</code><code class="descname">XYZEquationResultType</code><a class="headerlink" href="#pipeline.flow_data_types.XYZEquationResultType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="staticmethod">
+<dt id="pipeline.flow_data_types.XYZEquationResultType.create_data">
+<em class="property">static </em><code class="descname">create_data</code><span class="sig-paren">(</span><em>yaml_support</em>, <em>equation</em>, <em>output_dir</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.XYZEquationResultType.create_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="pipeline.flow_data_types.XYZEquationResultType.create_type">
+<em class="property">static </em><code class="descname">create_type</code><span class="sig-paren">(</span><em>yaml_support</em>, <em>equation</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.flow_data_types.XYZEquationResultType.create_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pipeline.generator_actions">
+<span id="pipeline-generator-actions-module"></span><h2>pipeline.generator_actions module<a class="headerlink" href="#module-pipeline.generator_actions" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pipeline.generator_actions.RangeGenerator">
+<em class="property">class </em><code class="descclassname">pipeline.generator_actions.</code><code class="descname">RangeGenerator</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.generator_actions.RangeGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.action_types.GeneratorActionType" title="pipeline.action_types.GeneratorActionType"><code class="xref py py-class docutils literal"><span class="pre">pipeline.action_types.GeneratorActionType</span></code></a></p>
+<dl class="attribute">
+<dt id="pipeline.generator_actions.RangeGenerator.description">
+<code class="descname">description</code><em class="property"> = 'Generator for generation parallel list'</em><a class="headerlink" href="#pipeline.generator_actions.RangeGenerator.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of action</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.generator_actions.RangeGenerator.name">
+<code class="descname">name</code><em class="property"> = 'RangeGenerator'</em><a class="headerlink" href="#pipeline.generator_actions.RangeGenerator.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of action</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.generator_actions.RangeGenerator.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.generator_actions.RangeGenerator.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>validate variables, input and output</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.generator_actions.VariableGenerator">
+<em class="property">class </em><code class="descclassname">pipeline.generator_actions.</code><code class="descname">VariableGenerator</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.generator_actions.VariableGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.action_types.GeneratorActionType" title="pipeline.action_types.GeneratorActionType"><code class="xref py py-class docutils literal"><span class="pre">pipeline.action_types.GeneratorActionType</span></code></a></p>
+<dl class="attribute">
+<dt id="pipeline.generator_actions.VariableGenerator.description">
+<code class="descname">description</code><em class="property"> = 'Generator for creating static DTT variable'</em><a class="headerlink" href="#pipeline.generator_actions.VariableGenerator.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of action</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.generator_actions.VariableGenerator.name">
+<code class="descname">name</code><em class="property"> = 'VariableGenerator'</em><a class="headerlink" href="#pipeline.generator_actions.VariableGenerator.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of action</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.generator_actions.VariableGenerator.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.generator_actions.VariableGenerator.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>validate variables, input and output</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pipeline.generic_tree">
+<span id="pipeline-generic-tree-module"></span><h2>pipeline.generic_tree module<a class="headerlink" href="#module-pipeline.generic_tree" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pipeline.generic_tree.And">
+<code class="descclassname">pipeline.generic_tree.</code><code class="descname">And</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.generic_tree.And" title="Permalink to this definition">¶</a></dt>
+<dd><p>Global and opperator</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.generic_tree.GDTT">
+<em class="property">class </em><code class="descclassname">pipeline.generic_tree.</code><code class="descname">GDTT</code><span class="sig-paren">(</span><em>parent</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.generic_tree.GDTT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.generic_tree.GTT" title="pipeline.generic_tree.GTT"><code class="xref py py-class docutils literal"><span class="pre">pipeline.generic_tree.GTT</span></code></a></p>
+<p>Class for abstract code, wothout acurate determination DTT type</p>
+<dl class="method">
+<dt id="pipeline.generic_tree.GDTT.each">
+<code class="descname">each</code><span class="sig-paren">(</span><em>convertor</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.generic_tree.GDTT.each" title="Permalink to this definition">¶</a></dt>
+<dd><p>GDTT call sort function</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.generic_tree.GDTT.head">
+<code class="descname">head</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.generic_tree.GDTT.head" title="Permalink to this definition">¶</a></dt>
+<dd><p>save head function</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.generic_tree.GDTT.select">
+<code class="descname">select</code><span class="sig-paren">(</span><em>predicate</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.generic_tree.GDTT.select" title="Permalink to this definition">¶</a></dt>
+<dd><p>GDTT call select function</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.generic_tree.GDTT.sort">
+<code class="descname">sort</code><span class="sig-paren">(</span><em>key_convertor</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.generic_tree.GDTT.sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>GDTT call sort function</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.generic_tree.GDTT.tail">
+<code class="descname">tail</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.generic_tree.GDTT.tail" title="Permalink to this definition">¶</a></dt>
+<dd><p>save tail function</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.generic_tree.GDTT.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><em>output</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.generic_tree.GDTT.validate" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div>validate structure and return erros array and structure to next validation
+(function at the earliest call parent, in reverse passing each structure</div></blockquote>
+<p>return all errors and unvalidate child structure)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.generic_tree.GDTTFunc">
+<em class="property">class </em><code class="descclassname">pipeline.generic_tree.</code><code class="descname">GDTTFunc</code><span class="sig-paren">(</span><em>operator</em>, <em>*o</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.generic_tree.GDTTFunc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.generic_tree.GTT" title="pipeline.generic_tree.GTT"><code class="xref py py-class docutils literal"><span class="pre">pipeline.generic_tree.GTT</span></code></a></p>
+<p>Class for save function code with GDTT variables</p>
+<dl class="attribute">
+<dt id="pipeline.generic_tree.GDTTFunc.operator">
+<code class="descname">operator</code><em class="property"> = None</em><a class="headerlink" href="#pipeline.generic_tree.GDTTFunc.operator" title="Permalink to this definition">¶</a></dt>
+<dd><p>operator</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.generic_tree.GTT">
+<em class="property">class </em><code class="descclassname">pipeline.generic_tree.</code><code class="descname">GTT</code><a class="headerlink" href="#pipeline.generic_tree.GTT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.generic_tree.TT" title="pipeline.generic_tree.TT"><code class="xref py py-class docutils literal"><span class="pre">pipeline.generic_tree.TT</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.generic_tree.Input">
+<em class="property">class </em><code class="descclassname">pipeline.generic_tree.</code><code class="descname">Input</code><span class="sig-paren">(</span><em>num=0</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.generic_tree.Input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.generic_tree.GDTT" title="pipeline.generic_tree.GDTT"><code class="xref py py-class docutils literal"><span class="pre">pipeline.generic_tree.GDTT</span></code></a></p>
+<p>Class for defination connector input and its number</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pipeline.generic_tree.Or">
+<code class="descclassname">pipeline.generic_tree.</code><code class="descname">Or</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.generic_tree.Or" title="Permalink to this definition">¶</a></dt>
+<dd><p>Global or opperator</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.generic_tree.TT">
+<em class="property">class </em><code class="descclassname">pipeline.generic_tree.</code><code class="descname">TT</code><a class="headerlink" href="#pipeline.generic_tree.TT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Abstract class for defination general tree</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pipeline.identical_list">
+<span id="pipeline-identical-list-module"></span><h2>pipeline.identical_list module<a class="headerlink" href="#module-pipeline.identical_list" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pipeline.identical_list.IdenticalList">
+<em class="property">class </em><code class="descclassname">pipeline.identical_list.</code><code class="descname">IdenticalList</code><span class="sig-paren">(</span><em>instance_dict={}</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.identical_list.IdenticalList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class for save status information between sessions</p>
+<dl class="method">
+<dt id="pipeline.identical_list.IdenticalList.get_old_iname">
+<code class="descname">get_old_iname</code><span class="sig-paren">(</span><em>new_iname</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.identical_list.IdenticalList.get_old_iname" title="Permalink to this definition">¶</a></dt>
+<dd><p>return old instance name from IdenticalList or None</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.identical_list.IdenticalList.load">
+<code class="descname">load</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.identical_list.IdenticalList.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Try load IdenticalList from file</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.identical_list.IdenticalList.save">
+<code class="descname">save</code><span class="sig-paren">(</span><em>file</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.identical_list.IdenticalList.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>save Identical list</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pipeline.output_actions">
+<span id="pipeline-output-actions-module"></span><h2>pipeline.output_actions module<a class="headerlink" href="#module-pipeline.output_actions" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pipeline.output_actions.PrintDTTAction">
+<em class="property">class </em><code class="descclassname">pipeline.output_actions.</code><code class="descname">PrintDTTAction</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.output_actions.PrintDTTAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.action_types.OutputActionType" title="pipeline.action_types.OutputActionType"><code class="xref py py-class docutils literal"><span class="pre">pipeline.action_types.OutputActionType</span></code></a></p>
+<dl class="attribute">
+<dt id="pipeline.output_actions.PrintDTTAction.description">
+<code class="descname">description</code><em class="property"> = 'PrintDTT'</em><a class="headerlink" href="#pipeline.output_actions.PrintDTTAction.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of action</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.output_actions.PrintDTTAction.name">
+<code class="descname">name</code><em class="property"> = 'PrintDTT'</em><a class="headerlink" href="#pipeline.output_actions.PrintDTTAction.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of action</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.output_actions.PrintDTTAction.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.output_actions.PrintDTTAction.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>validate variables, input and output</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pipeline.parametrized_actions">
+<span id="pipeline-parametrized-actions-module"></span><h2>pipeline.parametrized_actions module<a class="headerlink" href="#module-pipeline.parametrized_actions" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pipeline.parametrized_actions.Flow123dAction">
+<em class="property">class </em><code class="descclassname">pipeline.parametrized_actions.</code><code class="descname">Flow123dAction</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.parametrized_actions.Flow123dAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.action_types.ParametrizedActionType" title="pipeline.action_types.ParametrizedActionType"><code class="xref py py-class docutils literal"><span class="pre">pipeline.action_types.ParametrizedActionType</span></code></a></p>
+<dl class="attribute">
+<dt id="pipeline.parametrized_actions.Flow123dAction.description">
+<code class="descname">description</code><em class="property"> = 'Flow123d'</em><a class="headerlink" href="#pipeline.parametrized_actions.Flow123dAction.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of action</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.parametrized_actions.Flow123dAction.get_resources">
+<code class="descname">get_resources</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.parametrized_actions.Flow123dAction.get_resources" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return list of resource files</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.parametrized_actions.Flow123dAction.name">
+<code class="descname">name</code><em class="property"> = 'Flow123d'</em><a class="headerlink" href="#pipeline.parametrized_actions.Flow123dAction.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of action</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.parametrized_actions.Flow123dAction.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.parametrized_actions.Flow123dAction.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>validate variables, input and output</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.parametrized_actions.FunctionAction">
+<em class="property">class </em><code class="descclassname">pipeline.parametrized_actions.</code><code class="descname">FunctionAction</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.parametrized_actions.FunctionAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.action_types.ParametrizedActionType" title="pipeline.action_types.ParametrizedActionType"><code class="xref py py-class docutils literal"><span class="pre">pipeline.action_types.ParametrizedActionType</span></code></a></p>
+<dl class="attribute">
+<dt id="pipeline.parametrized_actions.FunctionAction.description">
+<code class="descname">description</code><em class="property"> = 'Function'</em><a class="headerlink" href="#pipeline.parametrized_actions.FunctionAction.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of action</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.parametrized_actions.FunctionAction.name">
+<code class="descname">name</code><em class="property"> = 'Function'</em><a class="headerlink" href="#pipeline.parametrized_actions.FunctionAction.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of action</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.parametrized_actions.FunctionAction.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.parametrized_actions.FunctionAction.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>validate variables, input and output</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pipeline.pipeline">
+<span id="pipeline-pipeline-module"></span><h2>pipeline.pipeline module<a class="headerlink" href="#module-pipeline.pipeline" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pipeline.pipeline.Pipeline">
+<em class="property">class </em><code class="descclassname">pipeline.pipeline.</code><code class="descname">Pipeline</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.pipeline.Pipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.action_types.WorkflowActionType" title="pipeline.action_types.WorkflowActionType"><code class="xref py py-class docutils literal"><span class="pre">pipeline.action_types.WorkflowActionType</span></code></a></p>
+<dl class="attribute">
+<dt id="pipeline.pipeline.Pipeline.description">
+<code class="descname">description</code><em class="property"> = 'Group of all actions'</em><a class="headerlink" href="#pipeline.pipeline.Pipeline.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of action</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.pipeline.Pipeline.name">
+<code class="descname">name</code><em class="property"> = 'Pipeline'</em><a class="headerlink" href="#pipeline.pipeline.Pipeline.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of action</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.pipeline.Pipeline.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.pipeline.Pipeline.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>validate variables, input and output</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.pipeline.PipelineResult">
+<em class="property">class </em><code class="descclassname">pipeline.pipeline.</code><code class="descname">PipelineResult</code><span class="sig-paren">(</span><em>action</em>, <em>output</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.pipeline.PipelineResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.action_types.WorkflowActionType" title="pipeline.action_types.WorkflowActionType"><code class="xref py py-class docutils literal"><span class="pre">pipeline.action_types.WorkflowActionType</span></code></a></p>
+<dl class="attribute">
+<dt id="pipeline.pipeline.PipelineResult.action">
+<code class="descname">action</code><em class="property"> = None</em><a class="headerlink" href="#pipeline.pipeline.PipelineResult.action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Action determine downloading output</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pipeline.pipeline_processor">
+<span id="pipeline-pipeline-processor-module"></span><h2>pipeline.pipeline_processor module<a class="headerlink" href="#module-pipeline.pipeline_processor" title="Permalink to this headline">¶</a></h2>
+<p>Pipeline help function for internall using in tak JobPanel only</p>
+<dl class="class">
+<dt id="pipeline.pipeline_processor.Pipelineprocessor">
+<em class="property">class </em><code class="descclassname">pipeline.pipeline_processor.</code><code class="descname">Pipelineprocessor</code><span class="sig-paren">(</span><em>pipeline</em>, <em>log_path=None</em>, <em>log_level=30</em>, <em>save_path='./backup'</em>, <em>identical_list=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.pipeline_processor.Pipelineprocessor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Class for pipeline processing.</p>
+<p>This class contain pipeline action and
+process some job that is defined
+pipeline python script, pipeline validation
+and returning pipeline statiscics.</p>
+<p>Pipeline processing can be stated by run
+function and stoped by stop function. If pipeline
+is started, get_next_job function return next
+action for external processing, that can be 
+processed. After job processing is nessery call function 
+set_job_finished(). If not any job is available,
+get_next_job return None.</p>
+<p>All internall action is made in workers threads if
+action state is processed. Processed state is set
+in action code during _plan_action function and
+action is responsible for state locking. After settings 
+processed state is action assigned to one worker 
+thread, and in end of action processing is state
+set to finished. After this (in finished state) can&#8217;t be 
+any update of action variables make. (Action output 
+for next action will be read from diferrent threads)</p>
+<p>!!! If run function is started, all operation with pipeline 
+is done in sepparate thread or workers threads. Variables
+runners arrays, _stop, pause and _statistics is
+protected by action_lock. Any access to pipeline can&#8217;t
+be made directly from communication thread.
+For logging is used standart python logging, that is thread-save</p>
+<dl class="class">
+<dt id="pipeline.pipeline_processor.Pipelineprocessor.WorkerThread">
+<em class="property">class </em><code class="descname">WorkerThread</code><a class="headerlink" href="#pipeline.pipeline_processor.Pipelineprocessor.WorkerThread" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="pipeline.pipeline_processor.Pipelineprocessor.WorkerThread.add_action">
+<code class="descname">add_action</code><span class="sig-paren">(</span><em>action</em>, <em>after_run=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.pipeline_processor.Pipelineprocessor.WorkerThread.add_action" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add action if is empty, and return if is action added</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.pipeline_processor.Pipelineprocessor.WorkerThread.get_error">
+<code class="descname">get_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.pipeline_processor.Pipelineprocessor.WorkerThread.get_error" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pipeline.pipeline_processor.Pipelineprocessor.WorkerThread.is_empty">
+<code class="descname">is_empty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.pipeline_processor.Pipelineprocessor.WorkerThread.is_empty" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add action if is empty, and return if is action added</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.pipeline_processor.Pipelineprocessor.WorkerThread.run">
+<code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.pipeline_processor.Pipelineprocessor.WorkerThread.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>worker thread</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.pipeline_processor.Pipelineprocessor.WorkerThread.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.pipeline_processor.Pipelineprocessor.WorkerThread.stop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.pipeline_processor.Pipelineprocessor.get_next_job">
+<code class="descclassname">Pipelineprocessor.</code><code class="descname">get_next_job</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.pipeline_processor.Pipelineprocessor.get_next_job" title="Permalink to this definition">¶</a></dt>
+<dd><p>return next job that require externall processing</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.pipeline_processor.Pipelineprocessor.get_script">
+<code class="descclassname">Pipelineprocessor.</code><code class="descname">get_script</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.pipeline_processor.Pipelineprocessor.get_script" title="Permalink to this definition">¶</a></dt>
+<dd><p>return pipeline python script</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.pipeline_processor.Pipelineprocessor.get_statistics">
+<code class="descclassname">Pipelineprocessor.</code><code class="descname">get_statistics</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.pipeline_processor.Pipelineprocessor.get_statistics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get pipeline statistics. First statistics are ready after 
+validation</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.pipeline_processor.Pipelineprocessor.is_run">
+<code class="descclassname">Pipelineprocessor.</code><code class="descname">is_run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.pipeline_processor.Pipelineprocessor.is_run" title="Permalink to this definition">¶</a></dt>
+<dd><p>return if if pipeline processor is started</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.pipeline_processor.Pipelineprocessor.pause">
+<code class="descclassname">Pipelineprocessor.</code><code class="descname">pause</code><span class="sig-paren">(</span><em>pause</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.pipeline_processor.Pipelineprocessor.pause" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pause or rerun sepparate thread</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.pipeline_processor.Pipelineprocessor.run">
+<code class="descclassname">Pipelineprocessor.</code><code class="descname">run</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.pipeline_processor.Pipelineprocessor.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start pipeline processing in separate thread</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.pipeline_processor.Pipelineprocessor.set_job_finished">
+<code class="descclassname">Pipelineprocessor.</code><code class="descname">set_job_finished</code><span class="sig-paren">(</span><em>job_id</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.pipeline_processor.Pipelineprocessor.set_job_finished" title="Permalink to this definition">¶</a></dt>
+<dd><p>set job as finished</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.pipeline_processor.Pipelineprocessor.stop">
+<code class="descclassname">Pipelineprocessor.</code><code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.pipeline_processor.Pipelineprocessor.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Terminate pipeline thread and stop procesing</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.pipeline_processor.Pipelineprocessor.validate">
+<code class="descclassname">Pipelineprocessor.</code><code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.pipeline_processor.Pipelineprocessor.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>validate pipeline</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pipeline.workflow_actions">
+<span id="pipeline-workflow-actions-module"></span><h2>pipeline.workflow_actions module<a class="headerlink" href="#module-pipeline.workflow_actions" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pipeline.workflow_actions.Workflow">
+<em class="property">class </em><code class="descclassname">pipeline.workflow_actions.</code><code class="descname">Workflow</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.workflow_actions.Workflow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.action_types.WorkflowActionType" title="pipeline.action_types.WorkflowActionType"><code class="xref py py-class docutils literal"><span class="pre">pipeline.action_types.WorkflowActionType</span></code></a></p>
+<dl class="attribute">
+<dt id="pipeline.workflow_actions.Workflow.bridge">
+<code class="descname">bridge</code><em class="property"> = None</em><a class="headerlink" href="#pipeline.workflow_actions.Workflow.bridge" title="Permalink to this definition">¶</a></dt>
+<dd><p>link to bridge class</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.workflow_actions.Workflow.description">
+<code class="descname">description</code><em class="property"> = 'Series of action'</em><a class="headerlink" href="#pipeline.workflow_actions.Workflow.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of action</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.workflow_actions.Workflow.duplicate">
+<code class="descname">duplicate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.workflow_actions.Workflow.duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Duplicate workflow. Returned workflow is not inicialized and checked</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.workflow_actions.Workflow.input">
+<code class="descname">input</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.workflow_actions.Workflow.input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return input type</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.workflow_actions.Workflow.name">
+<code class="descname">name</code><em class="property"> = 'Workflow'</em><a class="headerlink" href="#pipeline.workflow_actions.Workflow.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of action</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.workflow_actions.Workflow.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.workflow_actions.Workflow.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>validate variables, input and output</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pipeline.wrapper_actions">
+<span id="pipeline-wrapper-actions-module"></span><h2>pipeline.wrapper_actions module<a class="headerlink" href="#module-pipeline.wrapper_actions" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pipeline.wrapper_actions.Calibration">
+<em class="property">class </em><code class="descclassname">pipeline.wrapper_actions.</code><code class="descname">Calibration</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.wrapper_actions.Calibration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.action_types.WrapperActionType" title="pipeline.action_types.WrapperActionType"><code class="xref py py-class docutils literal"><span class="pre">pipeline.action_types.WrapperActionType</span></code></a></p>
+<dl class="class">
+<dt id="pipeline.wrapper_actions.Calibration.ScipyState">
+<em class="property">class </em><code class="descname">ScipyState</code><a class="headerlink" href="#pipeline.wrapper_actions.Calibration.ScipyState" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">enum.IntEnum</span></code></p>
+<dl class="attribute">
+<dt id="pipeline.wrapper_actions.Calibration.ScipyState.created">
+<code class="descname">created</code><em class="property"> = 0</em><a class="headerlink" href="#pipeline.wrapper_actions.Calibration.ScipyState.created" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.wrapper_actions.Calibration.ScipyState.finished">
+<code class="descname">finished</code><em class="property"> = 3</em><a class="headerlink" href="#pipeline.wrapper_actions.Calibration.ScipyState.finished" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.wrapper_actions.Calibration.ScipyState.running">
+<code class="descname">running</code><em class="property"> = 1</em><a class="headerlink" href="#pipeline.wrapper_actions.Calibration.ScipyState.running" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.wrapper_actions.Calibration.description">
+<code class="descclassname">Calibration.</code><code class="descname">description</code><em class="property"> = 'Calibration of model parameters'</em><a class="headerlink" href="#pipeline.wrapper_actions.Calibration.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of action</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.wrapper_actions.Calibration.name">
+<code class="descclassname">Calibration.</code><code class="descname">name</code><em class="property"> = 'Calibration'</em><a class="headerlink" href="#pipeline.wrapper_actions.Calibration.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of action</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.wrapper_actions.Calibration.validate">
+<code class="descclassname">Calibration.</code><code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.wrapper_actions.Calibration.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>validate variables, input and output</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pipeline.wrapper_actions.ForEach">
+<em class="property">class </em><code class="descclassname">pipeline.wrapper_actions.</code><code class="descname">ForEach</code><span class="sig-paren">(</span><em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.wrapper_actions.ForEach" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pipeline.action_types.WrapperActionType" title="pipeline.action_types.WrapperActionType"><code class="xref py py-class docutils literal"><span class="pre">pipeline.action_types.WrapperActionType</span></code></a></p>
+<dl class="attribute">
+<dt id="pipeline.wrapper_actions.ForEach.description">
+<code class="descname">description</code><em class="property"> = 'Cyclic action processor'</em><a class="headerlink" href="#pipeline.wrapper_actions.ForEach.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display description of action</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pipeline.wrapper_actions.ForEach.name">
+<code class="descname">name</code><em class="property"> = 'ForEach'</em><a class="headerlink" href="#pipeline.wrapper_actions.ForEach.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of action</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pipeline.wrapper_actions.ForEach.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pipeline.wrapper_actions.ForEach.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>validate variables, input and output</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pipeline">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pipeline" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ui.html" class="btn btn-neutral float-right" title="ui package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="client_pipeline.html" class="btn btn-neutral" title="client_pipeline package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

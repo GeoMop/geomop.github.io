@@ -1,0 +1,429 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Model Editor &mdash; GeoMop Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="GeoMop Documentation 1.0.0-beta
+ documentation" href="../index.html"/>
+        <link rel="next" title="Model Editor Panels Description (czech)" href="me_panels.html"/>
+        <link rel="prev" title="Linux Installation Guide" href="linux_installation_guide.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> GeoMop Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="linux_installation_guide.html">Linux Installation Guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Model Editor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#exploring-a-configuration-file">Exploring a configuration file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#yaml-format">YAML Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transformation">Transformation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="me_panels.html">Model Editor Panels Description (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_data_types.html">Analysis - Data types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_converters.html">Analysis - Converters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_actions.html">Analysis - Actions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_calibration.html">Analysis - Calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analysis_pipeline_example.html">Analysis - Pipeline example (czech)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexAN.html">Analysis</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexME.html">ModelEditor</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexJP.html">JobPanel</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexLE.html">LayerEditor</a></li>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/indexCommon.html">Common</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/procedures.html">Development Procedures (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/rules.html">Development Rules (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/pylint_rules.html">Pylint Exceptions (czech)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../organization/function_action.html">Creating new action (czech)</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GeoMop Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Model Editor</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/user/model_editor.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="model-editor">
+<h1>Model Editor<a class="headerlink" href="#model-editor" title="Permalink to this headline">¶</a></h1>
+<p>The ModelEditor context serves as an interactive text editor for the YAML configuration files.</p>
+<p>Main features of the editor include:</p>
+<blockquote>
+<div><ul class="simple">
+<li>validation of the configuration files (notification window)</li>
+<li>context-sensitive help widget describing the data types (documentation window)</li>
+<li>visual representation of the data structure (tree window)</li>
+<li>autocompletion of keys and values while typing</li>
+<li>import of old-format (CON) configuration files</li>
+<li>data structure transformations of the edited files</li>
+<li>basic text editor functions</li>
+</ul>
+</div></blockquote>
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<p>The editor has three main components that are interconnected and change dynamically as you navigate
+through or modify the configuration file.</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Text Editor</p>
+<blockquote>
+<div><p>It displays the contents of the opened file and allows it to be edited as text. The editor
+offers a context-sensitive autocompletion feature that can be activated by pressing
+<code class="kbd docutils literal"><span class="pre">Ctrl+Space</span></code>.</p>
+</div></blockquote>
+</li>
+<li><p class="first">Data Visualization Tree</p>
+<blockquote>
+<div><p>This widget displays the loaded structure of the edited document. Please note that the
+displayed structure may be slightly different from the written configuration file, because
+the structure is shown after all the automatic conversions are applied. As of version 1.0.0,
+the Data Visualization Tree does not allow any user input and all changes must be made by
+editing the text in the Text Editor.</p>
+</div></blockquote>
+</li>
+<li><p class="first">Information Tabs</p>
+<blockquote>
+<div><p>This widget contains multiple components. The Structure Info displays the documentation for
+the current cursor position in the configuration file. Click on different parts of the
+file or use the links to explore the documentation. Next, the Messages widget contains
+any notifications, warning or errors that were detected during the validation process, which
+happens automatically as you edit the file.</p>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>Components functions is describe in <cite>separate document&lt;me_panels&gt;</cite></p>
+<div class="section" id="exploring-a-configuration-file">
+<h3>Exploring a configuration file<a class="headerlink" href="#exploring-a-configuration-file" title="Permalink to this headline">¶</a></h3>
+<p>From the <cite>File</cite> menu, select <cite>Open File...</cite> or press <code class="kbd docutils literal"><span class="pre">Ctrl+O</span></code>. If you don&#8217;t have any
+YAML configuration files, you can check out the samples that are a part of the ModelEditor
+installation. Under Windows, these are located in
+<code class="docutils literal"><span class="pre">C:\Program</span> <span class="pre">Files</span> <span class="pre">(x86)\GeoMop\sample\ModelEditor\YamlFiles</span></code>. You can try and open the
+<code class="docutils literal"><span class="pre">flow_implicit_fields_gmsh.yaml</span></code> file.</p>
+<p>Once you open the file, you will see any validation notifications in the Messages window. Click the
+Structure Info tab and try clicking on different keys and values in the Text Editor. The Structure
+Info should displays all the relevant information to the particular node you&#8217;re editing.</p>
+<p>Next, you can check out the file structure in the Data Visualization Tree. If you click on any of
+the keys or values in the Tree, the relevant part of the configuration file is highlighted in the
+Text Editor (unless it is not present in the file and was added by an automatic conversion).</p>
+<p>Finally, you can try the autocompletion feature. It is very handy to speed up typing and prevent
+typing errors. For example, select a value from the Data Visualization Tree. If you scroll up, you
+should see <cite>pressure_p1</cite> as item with index <cite>1</cite> in the <cite>output_fields</cite> (about half way down the
+component). If you click the <cite>pressure_p1</cite> in the Tree, the value will be highlighted in the Text
+Editor.</p>
+<p>Delete the text and trigger the autocompletion feature by pressing <code class="kbd docutils literal"><span class="pre">Ctrl+Space</span></code>.
+You will see a window pop up with possible values. You can choose a value with arrows keys and
+select it by pressing <code class="kbd docutils literal"><span class="pre">Enter</span></code> or <code class="kbd docutils literal"><span class="pre">Tab</span></code>. The autocompletion is automatically filtered as
+you type. The autocompletion has to be triggered by the keypress by default, but you can change it
+in the Settings to display automatically, if you prefer.</p>
+<p>Once you&#8217;re done editing the file, you can save your changes by choosing <cite>Save File</cite> or <cite>Save As...</cite>
+from the <cite>File</cite> menu. You can also check out the editor features in the <cite>Edit</cite> menu. In the
+<cite>Settings</cite> -&gt; <cite>Options</cite> menu, you can turn on automatic autocompletion or change some keyboard
+shortcuts.</p>
+</div>
+</div>
+<div class="section" id="yaml-format">
+<h2>YAML Format<a class="headerlink" href="#yaml-format" title="Permalink to this headline">¶</a></h2>
+<p>Instead of the old CON format, the configuration files for Flow123d since version 2 use YAML.
+This guide briefly describes the most common use cases and some key differences from the old CON
+format.</p>
+<p>Here is an example of a CON file.</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span>{
+  // Example
+  problem = {
+    TYPE = &quot;SequentialCoupling&quot;,
+    description = &quot;Steady flow + transport with source&quot;,
+    mesh = {
+      mesh_file = &quot;./input/test16.msh&quot;
+    },
+    primary_equation = {
+      TYPE = &quot;Steady_MH&quot;,
+      input_fields= [
+        {
+          r_set = &quot;BOUNDARY&quot;,
+          bc_type = &quot;dirichlet&quot;,
+          bc_pressure = {
+            TYPE=&quot;FieldFormula&quot;,
+            value=&quot;y&quot;
+          }
+        },
+        {
+          r_set = &quot;BULK&quot;,
+          cross_section = 1,
+          conductivity = 1
+        }
+      ],
+     ...
+    }
+  }
+}
+</pre></div>
+</div>
+<p>This is what the same configuration file looks like in YAML.</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="c1"># Example</span>
+<span class="l l-Scalar l-Scalar-Plain">problem</span><span class="p p-Indicator">:</span> <span class="kt">!SequentialCoupling</span>
+  <span class="l l-Scalar l-Scalar-Plain">description</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">Steady flow + transport with source</span>
+  <span class="l l-Scalar l-Scalar-Plain">mesh</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">mesh_file</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">./input/test16.msh</span>
+  <span class="l l-Scalar l-Scalar-Plain">primary_equation</span><span class="p p-Indicator">:</span> <span class="kt">!SteadyMH</span>
+    <span class="l l-Scalar l-Scalar-Plain">input_fields</span><span class="p p-Indicator">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">r_set</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">BOUNDARY</span>
+        <span class="l l-Scalar l-Scalar-Plain">bc_type</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">dirichlet</span>
+        <span class="l l-Scalar l-Scalar-Plain">bc_pressure</span><span class="p p-Indicator">:</span> <span class="kt">!FieldFormula</span> <span class="l l-Scalar l-Scalar-Plain">y</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">r_set</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">BULK</span>
+        <span class="l l-Scalar l-Scalar-Plain">cross_section</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+        <span class="l l-Scalar l-Scalar-Plain">conductivity</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+    <span class="l l-Scalar l-Scalar-Plain">...</span>
+</pre></div>
+</div>
+<p>There are a few key differences:</p>
+<blockquote>
+<div><ul>
+<li><p class="first">Indentation</p>
+<blockquote>
+<div><p>In YAML, brackets are replaced by indentation. Although any number or spaces or tabs may be used
+for indentation (if used consistently across the whole file), it is recommended to use 2 spaces
+for indentation. When you use the <code class="kbd docutils literal"><span class="pre">Tab</span></code> key in the Text Editor to indent, it automatically
+uses 2 spaces for indentation.</p>
+</div></blockquote>
+</li>
+<li><p class="first">Specifying AbstractRecord type</p>
+<blockquote>
+<div><p>Use <code class="docutils literal"><span class="pre">!SelectedType</span></code> tag to specify the type of the AbstractRecord.</p>
+</div></blockquote>
+</li>
+<li><p class="first">Strings do not need to be delimited by <code class="docutils literal"><span class="pre">&quot;</span></code></p>
+</li>
+<li><p class="first">Key-Value pairs use <code class="docutils literal"><span class="pre">:</span></code> as a separator</p>
+</li>
+<li><p class="first">Array items are delimited by <code class="docutils literal"><span class="pre">-</span></code></p>
+</li>
+<li><p class="first">Everything behind a <code class="docutils literal"><span class="pre">#</span></code> character until the end of line is a comment</p>
+</li>
+</ul>
+</div></blockquote>
+<p>For more information about YAML syntax and features, please refer to the
+<a class="reference external" href="http://yaml.org/spec/1.2/spec.html">YAML 1.2 specification</a>.</p>
+</div>
+<div class="section" id="transformation">
+<h2>Transformation<a class="headerlink" href="#transformation" title="Permalink to this headline">¶</a></h2>
+<p>Information about the transformation module can be found in the
+<a class="reference external" href="http://geomop.github.io/GeoMop/aut/ModelEditor/data.yaml.html#module-data.yaml.transformator">developer documentation</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="me_panels.html" class="btn btn-neutral float-right" title="Model Editor Panels Description (czech)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="linux_installation_guide.html" class="btn btn-neutral" title="Linux Installation Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0-beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

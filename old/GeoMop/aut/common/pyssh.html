@@ -1,0 +1,867 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pyssh package &mdash; GeoMop Common Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="GeoMop Common Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/>
+        <link rel="next" title="config module" href="config.html"/>
+        <link rel="prev" title="pyperclip package" href="pyperclip.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexCommon.html" class="icon icon-home"> GeoMop Common Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Common Source</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="flow_util.html">flow_util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_analysis.html">geomop_analysis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_dialogs.html">geomop_dialogs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_util.html">geomop_util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_data.html">model_data package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyperclip.html">pyperclip package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pyssh package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyssh.api">pyssh.api module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyssh.compat">pyssh.compat module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyssh.exceptions">pyssh.exceptions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyssh.forward">pyssh.forward module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyssh.result">pyssh.result module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyssh.session">pyssh.session module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyssh.sftp">pyssh.sftp module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyssh.shell">pyssh.shell module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-pyssh">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">config module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="icon.html">icon module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version.html">version module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../indexCommon.html">GeoMop Common Source Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../indexCommon.html">Docs</a> &raquo;</li>
+        
+      <li>pyssh package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/aut/common/pyssh.rstd.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pyssh-package">
+<h1>pyssh package<a class="headerlink" href="#pyssh-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pyssh.api">
+<span id="pyssh-api-module"></span><h2>pyssh.api module<a class="headerlink" href="#module-pyssh.api" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pyssh.api.SftpAttributes">
+<em class="property">class </em><code class="descclassname">pyssh.api.</code><code class="descname">SftpAttributes</code><a class="headerlink" href="#pyssh.api.SftpAttributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">_ctypes.Structure</span></code></p>
+<dl class="attribute">
+<dt id="pyssh.api.SftpAttributes.flags">
+<code class="descname">flags</code><a class="headerlink" href="#pyssh.api.SftpAttributes.flags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyssh.api.SftpAttributes.longname">
+<code class="descname">longname</code><a class="headerlink" href="#pyssh.api.SftpAttributes.longname" title="Permalink to this definition">¶</a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyssh.api.SftpAttributes.name">
+<code class="descname">name</code><a class="headerlink" href="#pyssh.api.SftpAttributes.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyssh.api.SftpAttributes.size">
+<code class="descname">size</code><a class="headerlink" href="#pyssh.api.SftpAttributes.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyssh.api.SftpAttributes.type">
+<code class="descname">type</code><a class="headerlink" href="#pyssh.api.SftpAttributes.type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Structure/Union member</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="pyssh.api.load_library">
+<code class="descclassname">pyssh.api.</code><code class="descname">load_library</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.api.load_library" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-pyssh.compat">
+<span id="pyssh-compat-module"></span><h2>pyssh.compat module<a class="headerlink" href="#module-pyssh.compat" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyssh.compat.to_bytes">
+<code class="descclassname">pyssh.compat.</code><code class="descname">to_bytes</code><span class="sig-paren">(</span><em>data</em>, <em>encoding='utf-8'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.compat.to_bytes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="pyssh.compat.to_text">
+<code class="descclassname">pyssh.compat.</code><code class="descname">to_text</code><span class="sig-paren">(</span><em>data</em>, <em>encoding='utf-8'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.compat.to_text" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-pyssh.exceptions">
+<span id="pyssh-exceptions-module"></span><h2>pyssh.exceptions module<a class="headerlink" href="#module-pyssh.exceptions" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="pyssh.exceptions.AuthenticationError">
+<em class="property">exception </em><code class="descclassname">pyssh.exceptions.</code><code class="descname">AuthenticationError</code><a class="headerlink" href="#pyssh.exceptions.AuthenticationError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyssh.exceptions.SshError" title="pyssh.exceptions.SshError"><code class="xref py py-class docutils literal"><span class="pre">pyssh.exceptions.SshError</span></code></a></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyssh.exceptions.ConnectionError">
+<em class="property">exception </em><code class="descclassname">pyssh.exceptions.</code><code class="descname">ConnectionError</code><a class="headerlink" href="#pyssh.exceptions.ConnectionError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyssh.exceptions.SshError" title="pyssh.exceptions.SshError"><code class="xref py py-class docutils literal"><span class="pre">pyssh.exceptions.SshError</span></code></a></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyssh.exceptions.HostVerificationError">
+<em class="property">exception </em><code class="descclassname">pyssh.exceptions.</code><code class="descname">HostVerificationError</code><a class="headerlink" href="#pyssh.exceptions.HostVerificationError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyssh.exceptions.SshError" title="pyssh.exceptions.SshError"><code class="xref py py-class docutils literal"><span class="pre">pyssh.exceptions.SshError</span></code></a></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyssh.exceptions.ResourceManagementError">
+<em class="property">exception </em><code class="descclassname">pyssh.exceptions.</code><code class="descname">ResourceManagementError</code><a class="headerlink" href="#pyssh.exceptions.ResourceManagementError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyssh.exceptions.SshError" title="pyssh.exceptions.SshError"><code class="xref py py-class docutils literal"><span class="pre">pyssh.exceptions.SshError</span></code></a></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyssh.exceptions.SftpError">
+<em class="property">exception </em><code class="descclassname">pyssh.exceptions.</code><code class="descname">SftpError</code><a class="headerlink" href="#pyssh.exceptions.SftpError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyssh.exceptions.SshError" title="pyssh.exceptions.SshError"><code class="xref py py-class docutils literal"><span class="pre">pyssh.exceptions.SshError</span></code></a></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="pyssh.exceptions.SshError">
+<em class="property">exception </em><code class="descclassname">pyssh.exceptions.</code><code class="descname">SshError</code><a class="headerlink" href="#pyssh.exceptions.SshError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyssh.forward">
+<span id="pyssh-forward-module"></span><h2>pyssh.forward module<a class="headerlink" href="#module-pyssh.forward" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-pyssh.result">
+<span id="pyssh-result-module"></span><h2>pyssh.result module<a class="headerlink" href="#module-pyssh.result" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pyssh.result.LazyResult">
+<em class="property">class </em><code class="descclassname">pyssh.result.</code><code class="descname">LazyResult</code><span class="sig-paren">(</span><em>session</em>, <em>command</em><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.result.LazyResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Lazy command execution result wrapper.</p>
+<p>This wrapper implements a iterator interface.</p>
+<dl class="method">
+<dt id="pyssh.result.LazyResult.as_bytes">
+<code class="descname">as_bytes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.result.LazyResult.as_bytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Launch the command and return a result as bytes.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bytes chunk of command execution result</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bytes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyssh.result.LazyResult.as_str">
+<code class="descname">as_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.result.LazyResult.as_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Launch the command and return a result as unicode string</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">unicode chunk of command execution result</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str/unicode</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyssh.result.LazyResult.return_code">
+<code class="descname">return_code</code><a class="headerlink" href="#pyssh.result.LazyResult.return_code" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyssh.result.LazyResult.wait">
+<code class="descname">wait</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.result.LazyResult.wait" title="Permalink to this definition">¶</a></dt>
+<dd><p>Waits a complete command execution and returns the return code</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">execution result return code</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyssh.result.Result">
+<em class="property">class </em><code class="descclassname">pyssh.result.</code><code class="descname">Result</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.result.Result" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pyssh.result.LazyResult" title="pyssh.result.LazyResult"><code class="xref py py-class docutils literal"><span class="pre">pyssh.result.LazyResult</span></code></a></p>
+<p>Consumed version of LazyResult. Useful for simple command
+execution.</p>
+<dl class="method">
+<dt id="pyssh.result.Result.as_bytes">
+<code class="descname">as_bytes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.result.Result.as_bytes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a cached result.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bytes chunk of command execution result</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bytes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyssh.result.Result.wait">
+<code class="descname">wait</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.result.Result.wait" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyssh.session">
+<span id="pyssh-session-module"></span><h2>pyssh.session module<a class="headerlink" href="#module-pyssh.session" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pyssh.session.Session">
+<em class="property">class </em><code class="descclassname">pyssh.session.</code><code class="descname">Session</code><span class="sig-paren">(</span><em>hostname</em>, <em>port=22</em>, <em>username=None</em>, <em>password=None</em>, <em>passphrase=None</em>, <em>verify_knownhost_callback=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.session.Session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>SSH Session wrapper.</p>
+<p>Actually accepts two methods for authentication: the simple a simple password or
+a pubkey. If password is not provided, attempts using pubkey, with or without pasphrase.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="#module-pyssh.session" title="pyssh.session"><strong>session</strong></a> (<em>pointer</em>) &#8211; c ssh session pointer</li>
+<li><a class="reference internal" href="#pyssh.session.Session.username" title="pyssh.session.Session.username"><strong>username</strong></a> (<em>bytes</em>) &#8211; current username</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>hostname</strong> (<em>str</em>) &#8211; remote ip or host</li>
+<li><strong>port</strong> (<em>int</em>) &#8211; remote port</li>
+<li><strong>username</strong> (<em>str</em>) &#8211; remote user name with which you want to authenticate</li>
+<li><strong>password</strong> (<em>str</em>) &#8211; remote user password.</li>
+<li><strong>passphrase</strong> (<em>str</em>) &#8211; passphrase in case you would authenticate with pubkey</li>
+<li><strong>verify_knownhost_callback</strong> (<em>func</em>) &#8211; function which gets called upon connecting to host. Should return
+True if connection is allowed, False otherwise. The only parameter to the function is remote host key 
+SHA1 hash. WARNING: you should always verify host signature!</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pyssh.session.Session.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.session.Session.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close initialized ssh connection.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyssh.session.Session.create_sftp">
+<code class="descname">create_sftp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.session.Session.create_sftp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a new sftp session throught current ssh channel.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">Sftp instance</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#pyssh.sftp.Sftp" title="pyssh.sftp.Sftp"><code class="xref py py-class docutils literal"><span class="pre">pyssh.sftp.Sftp</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyssh.session.Session.create_shell">
+<code class="descname">create_shell</code><span class="sig-paren">(</span><em>pty_size=(80</em>, <em>24)</em>, <em>env={}</em><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.session.Session.create_shell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new shell session  throught current ssh channel.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>pty_size</strong> (<em>tuple</em>) &#8211; in case of shell is true this indicates
+the size of a virtual terminal</li>
+<li><strong>env</strong> (<a class="reference internal" href="model_data.html#model_data.import_json.Comments.BlokType.dict" title="model_data.import_json.Comments.BlokType.dict"><em>dict</em></a>) &#8211; addiotional environ variables</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyssh.session.Session.execute">
+<code class="descname">execute</code><span class="sig-paren">(</span><em>command</em>, <em>lazy=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.session.Session.execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute command on remote host.</p>
+<p>This command can return <a class="reference internal" href="#pyssh.result.Result" title="pyssh.result.Result"><code class="xref py py-class docutils literal"><span class="pre">Result</span></code></a> or
+<a class="reference internal" href="#pyssh.result.LazyResult" title="pyssh.result.LazyResult"><code class="xref py py-class docutils literal"><span class="pre">LazyResult</span></code></a> depending of lazy parameter.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>command</strong> (<em>str</em>) &#8211; command string</li>
+<li><strong>lazy</strong> (<em>bool</em>) &#8211; set true for return a lazy result
+instead a evaluated. Useful for execute
+commands with large output (default: False)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">Result instance</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#pyssh.result.Result" title="pyssh.result.Result"><code class="xref py py-class docutils literal"><span class="pre">pyssh.result.Result</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyssh.session.Session.password">
+<code class="descname">password</code><em class="property"> = None</em><a class="headerlink" href="#pyssh.session.Session.password" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyssh.session.Session.session">
+<code class="descname">session</code><em class="property"> = None</em><a class="headerlink" href="#pyssh.session.Session.session" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyssh.session.Session.username">
+<code class="descname">username</code><em class="property"> = None</em><a class="headerlink" href="#pyssh.session.Session.username" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyssh.sftp">
+<span id="pyssh-sftp-module"></span><h2>pyssh.sftp module<a class="headerlink" href="#module-pyssh.sftp" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pyssh.sftp.Sftp">
+<em class="property">class </em><code class="descclassname">pyssh.sftp.</code><code class="descname">Sftp</code><span class="sig-paren">(</span><em>session</em>, <em>buffer_size=16384</em><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.sftp.Sftp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Sftp wrapper.</p>
+<p>Exposes api for interacting with sftp subsystem: put or get files,
+open files with random read-write access, etc.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Variables:</th><td class="field-body"><ul class="first simple">
+<li><a class="reference internal" href="#module-pyssh.sftp" title="pyssh.sftp"><strong>sftp</strong></a> (<em>ponter</em>) &#8211; c sftp session pointer</li>
+<li><a class="reference internal" href="#module-pyssh.session" title="pyssh.session"><strong>session</strong></a> (<em>pointer</em>) &#8211; c ssh session pointer</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first last"><strong>session</strong> (<a class="reference internal" href="#pyssh.session.Session" title="pyssh.session.Session"><em>pyssh.session.Session</em></a>) &#8211; initialized and connected
+<a class="reference internal" href="#pyssh.session.Session" title="pyssh.session.Session"><code class="xref py py-class docutils literal"><span class="pre">pyssh.session.Session</span></code></a> instance.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="pyssh.sftp.Sftp.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>remote_path</em>, <em>local_path</em><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.sftp.Sftp.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a remote file to local.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>remote_path</strong> (<em>str</em>) &#8211; remote file path</li>
+<li><strong>local_path</strong> (<em>str</em>) &#8211; local file path</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyssh.sftp.Sftp.open">
+<code class="descname">open</code><span class="sig-paren">(</span><em>path</em>, <em>mode</em><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.sftp.Sftp.open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a remote file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>path</strong> (<em>str</em>) &#8211; remote file path</li>
+<li><strong>mode</strong> (<em>int</em>) &#8211; open file model
+(see <a class="reference external" href="http://docs.python.org/3.3/library/os.html#open-flag-constants">http://docs.python.org/3.3/library/os.html#open-flag-constants</a>)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">SFTP File wrapper</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">pyssh.SftpFile</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyssh.sftp.Sftp.put">
+<code class="descname">put</code><span class="sig-paren">(</span><em>path</em>, <em>remote_path</em><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.sftp.Sftp.put" title="Permalink to this definition">¶</a></dt>
+<dd><p>Puts the local file to remote host.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>path</strong> (<em>str</em>) &#8211; local file path</li>
+<li><strong>remote_path</strong> (<em>str</em>) &#8211; remote file path</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyssh.sftp.Sftp.session">
+<code class="descname">session</code><em class="property"> = None</em><a class="headerlink" href="#pyssh.sftp.Sftp.session" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="pyssh.sftp.Sftp.sftp">
+<code class="descname">sftp</code><em class="property"> = None</em><a class="headerlink" href="#pyssh.sftp.Sftp.sftp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pyssh.sftp.SftpFile">
+<em class="property">class </em><code class="descclassname">pyssh.sftp.</code><code class="descname">SftpFile</code><span class="sig-paren">(</span><em>path</em>, <em>mode</em>, <em>sftp_wrapper</em><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.sftp.SftpFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>SFTP File wrapper</p>
+<dl class="method">
+<dt id="pyssh.sftp.SftpFile.close">
+<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.sftp.SftpFile.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Close a opened file.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyssh.sftp.SftpFile.read">
+<code class="descname">read</code><span class="sig-paren">(</span><em>num=None</em>, <em>buffer_length=1024</em><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.sftp.SftpFile.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read from remote file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>num</strong> (<em>int</em>) &#8211; number of bytes to read, if num is None reads all.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">readed bytes chunk</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bytes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyssh.sftp.SftpFile.seek">
+<code class="descname">seek</code><span class="sig-paren">(</span><em>offset</em><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.sftp.SftpFile.seek" title="Permalink to this definition">¶</a></dt>
+<dd><p>Change position on a remote file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>offset</strong> (<em>int</em>) &#8211; file position</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">boolean value if seek is success or not</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyssh.sftp.SftpFile.tell">
+<code class="descname">tell</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.sftp.SftpFile.tell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Query the current position on a file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">a current position.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyssh.sftp.SftpFile.write">
+<code class="descname">write</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.sftp.SftpFile.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write bytes to remote file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>bytes</em>) &#8211; bytes chunk of data</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">number of bytes are written</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyssh.shell">
+<span id="pyssh-shell-module"></span><h2>pyssh.shell module<a class="headerlink" href="#module-pyssh.shell" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pyssh.shell.Shell">
+<em class="property">class </em><code class="descclassname">pyssh.shell.</code><code class="descname">Shell</code><span class="sig-paren">(</span><em>session</em>, <em>pty_size</em>, <em>env</em><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.shell.Shell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Shell session.</p>
+<dl class="attribute">
+<dt id="pyssh.shell.Shell.channel">
+<code class="descname">channel</code><a class="headerlink" href="#pyssh.shell.Shell.channel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pyssh.shell.Shell.read">
+<code class="descname">read</code><span class="sig-paren">(</span><em>n</em><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.shell.Shell.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read bytes from remote shell.</p>
+<p>This method always return value, if not bytes available to read
+it returns an empty bytestring.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>n</strong> (<em>int</em>) &#8211; number of bytes to read</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">bytestring of readed data.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">bytes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyssh.shell.Shell.write">
+<code class="descname">write</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.shell.Shell.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write bytes to remote shell.</p>
+<p>The <cite>data</cite> parameter accept both str and bytes, if you passes str (unicode) is
+automatically converted to bytes using utf-8 encoding.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> (<em>bytes</em>) &#8211; arbitrary length of bytes.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">a number of bytes written to remote shell.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pyssh">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pyssh" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pyssh.connect">
+<code class="descclassname">pyssh.</code><code class="descname">connect</code><span class="sig-paren">(</span><em>hostname='localhost'</em>, <em>port='22'</em>, <em>username=None</em>, <em>password=None</em>, <em>passphrase=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.connect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shortcut method for create new session and connects to remote server.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>hostname</strong> (<em>str</em>) &#8211; remote ip or host</li>
+<li><strong>port</strong> (<em>int</em>) &#8211; remote port</li>
+<li><strong>username</strong> (<em>str</em>) &#8211; remote user name with which you want to authenticate</li>
+<li><strong>password</strong> (<em>str</em>) &#8211; remote user password.</li>
+<li><strong>passphrase</strong> (<em>str</em>) &#8211; passphrase in case you would authenticate with pubkey</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NOTE:</strong> this method is deprecated.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pyssh.new_session">
+<code class="descclassname">pyssh.</code><code class="descname">new_session</code><span class="sig-paren">(</span><em>hostname='localhost'</em>, <em>port='22'</em>, <em>username=None</em>, <em>password=None</em>, <em>passphrase=None</em>, <em>connect_on_init=False</em>, <em>verify_knownhost_callback=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyssh.new_session" title="Permalink to this definition">¶</a></dt>
+<dd><p>Shortcut method for create new session instance.</p>
+<p>Session by default has lazy connection management. It only connects
+when it is need. But this this function you can pass <cite>connect_on_init</cite>
+parameter with True and session connects to the remote server before
+it are returned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>hostname</strong> (<em>str</em>) &#8211; remote ip or host</li>
+<li><strong>port</strong> (<em>int</em>) &#8211; remote port</li>
+<li><strong>username</strong> (<em>str</em>) &#8211; remote user name with which you want to authenticate</li>
+<li><strong>password</strong> (<em>str</em>) &#8211; remote user password.</li>
+<li><strong>passphrase</strong> (<em>str</em>) &#8211; passphrase in case you would authenticate with pubkey</li>
+<li><strong>connect_on_init</strong> (<em>bool</em>) &#8211; determines the lazyness of connection with
+remote server.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="config.html" class="btn btn-neutral float-right" title="config module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pyperclip.html" class="btn btn-neutral" title="pyperclip package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

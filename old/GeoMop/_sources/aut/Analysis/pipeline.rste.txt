@@ -1,0 +1,158 @@
+pipeline package
+================
+
+Submodules
+----------
+
+pipeline.action_types module
+----------------------------
+
+.. automodule:: pipeline.action_types
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pipeline.calibration_data_types module
+--------------------------------------
+
+.. automodule:: pipeline.calibration_data_types
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pipeline.calibration_lbfgsb module
+----------------------------------
+
+.. automodule:: pipeline.calibration_lbfgsb
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pipeline.calibration_slsqp module
+---------------------------------
+
+.. automodule:: pipeline.calibration_slsqp
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pipeline.code_formater module
+-----------------------------
+
+.. automodule:: pipeline.code_formater
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pipeline.connector_actions module
+---------------------------------
+
+.. automodule:: pipeline.connector_actions
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pipeline.convertors module
+--------------------------
+
+.. automodule:: pipeline.convertors
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pipeline.data_types_tree module
+-------------------------------
+
+.. automodule:: pipeline.data_types_tree
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pipeline.flow_data_types module
+-------------------------------
+
+.. automodule:: pipeline.flow_data_types
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pipeline.generator_actions module
+---------------------------------
+
+.. automodule:: pipeline.generator_actions
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pipeline.generic_tree module
+----------------------------
+
+.. automodule:: pipeline.generic_tree
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pipeline.identical_list module
+------------------------------
+
+.. automodule:: pipeline.identical_list
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pipeline.output_actions module
+------------------------------
+
+.. automodule:: pipeline.output_actions
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pipeline.parametrized_actions module
+------------------------------------
+
+.. automodule:: pipeline.parametrized_actions
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pipeline.pipeline module
+------------------------
+
+.. automodule:: pipeline.pipeline
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pipeline.pipeline_processor module
+----------------------------------
+
+.. automodule:: pipeline.pipeline_processor
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pipeline.workflow_actions module
+--------------------------------
+
+.. automodule:: pipeline.workflow_actions
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+pipeline.wrapper_actions module
+-------------------------------
+
+.. automodule:: pipeline.wrapper_actions
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: pipeline
+    :members:
+    :undoc-members:
+    :show-inheritance:

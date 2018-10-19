@@ -1,0 +1,16 @@
+ModelEditor
+===========
+
+.. toctree::
+   :maxdepth: 4
+
+   data
+   exporter
+   helpers
+   importer
+   ist
+   meconfig
+   model_editor
+   normalize_ist
+   ui
+   util

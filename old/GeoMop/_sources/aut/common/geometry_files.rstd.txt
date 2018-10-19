@@ -1,0 +1,46 @@
+geometry_files package
+======================
+
+Submodules
+----------
+
+geometry_files.geometry_factory module
+--------------------------------------
+
+.. automodule:: geometry_files.geometry_factory
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+geometry_files.geometry_structures module
+-----------------------------------------
+
+.. automodule:: geometry_files.geometry_structures
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+geometry_files.polygons module
+------------------------------
+
+.. automodule:: geometry_files.polygons
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+geometry_files.polygons_io module
+---------------------------------
+
+.. automodule:: geometry_files.polygons_io
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: geometry_files
+    :members:
+    :undoc-members:
+    :show-inheritance:

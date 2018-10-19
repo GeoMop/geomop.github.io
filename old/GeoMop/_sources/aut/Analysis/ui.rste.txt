@@ -1,0 +1,31 @@
+ui package
+==========
+
+Subpackages
+-----------
+
+.. toctree::
+
+    ui.data
+    ui.gitems
+    ui.panels
+
+Submodules
+----------
+
+ui.mainwindow module
+--------------------
+
+.. automodule:: ui.mainwindow
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: ui
+    :members:
+    :undoc-members:
+    :show-inheritance:

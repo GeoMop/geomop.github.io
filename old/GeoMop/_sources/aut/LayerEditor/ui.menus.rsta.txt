@@ -1,0 +1,70 @@
+ui.menus package
+================
+
+Submodules
+----------
+
+ui.menus.analysis module
+------------------------
+
+.. automodule:: ui.menus.analysis
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.menus.edit module
+--------------------
+
+.. automodule:: ui.menus.edit
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.menus.file module
+--------------------
+
+.. automodule:: ui.menus.file
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.menus.layers module
+----------------------
+
+.. automodule:: ui.menus.layers
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.menus.settings module
+------------------------
+
+.. automodule:: ui.menus.settings
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.menus.shpfiles module
+------------------------
+
+.. automodule:: ui.menus.shpfiles
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+ui.menus.tools module
+---------------------
+
+.. automodule:: ui.menus.tools
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: ui.menus
+    :members:
+    :undoc-members:
+    :show-inheritance:

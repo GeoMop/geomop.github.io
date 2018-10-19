@@ -1,0 +1,38 @@
+model_data.notifications package
+================================
+
+Submodules
+----------
+
+model_data.notifications.handler module
+---------------------------------------
+
+.. automodule:: model_data.notifications.handler
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+model_data.notifications.list module
+------------------------------------
+
+.. automodule:: model_data.notifications.list
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+model_data.notifications.notification module
+--------------------------------------------
+
+.. automodule:: model_data.notifications.notification
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: model_data.notifications
+    :members:
+    :undoc-members:
+    :show-inheritance:

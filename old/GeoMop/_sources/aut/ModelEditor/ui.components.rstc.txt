@@ -1,0 +1,22 @@
+ui.components package
+=====================
+
+Submodules
+----------
+
+ui.components.keyboard_shortcut_picker module
+---------------------------------------------
+
+.. automodule:: ui.components.keyboard_shortcut_picker
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: ui.components
+    :members:
+    :undoc-members:
+    :show-inheritance:

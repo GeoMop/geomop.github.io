@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>json_data module &mdash; GeoMop Common Source Documentation 1.0.0-beta
+ documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="GeoMop Common Source Documentation 1.0.0-beta
+ documentation" href="../../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../indexCommon.html" class="icon icon-home"> GeoMop Common Source Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0-beta
+
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Common Source</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="flow_util.html">flow_util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_analysis.html">geomop_analysis package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_dialogs.html">geomop_dialogs package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geomop_util.html">geomop_util package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model_data.html">model_data package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyperclip.html">pyperclip package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pyssh.html">pyssh package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">config module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="icon.html">icon module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version.html">version module</a></li>
+</ul>
+<p class="caption"><span class="caption-text">GeoMop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="http://geomop.github.io/GeoMop/">GeoMop Documentation</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../indexCommon.html">GeoMop Common Source Documentation</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../indexCommon.html">Docs</a> &raquo;</li>
+        
+      <li>json_data module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/aut/common/json_data.rstd.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-json_data">
+<span id="json-data-module"></span><h1>json_data module<a class="headerlink" href="#module-json_data" title="Permalink to this headline">¶</a></h1>
+<p>json_data module provides base class for generic serialization/deserialiation
+of derived classes with elementaty type checking.</p>
+<p>Rules:
+- classes are converted into dictionaries, tuples to the lists and scalar types (str, float, int, bool) and then</p>
+<blockquote>
+<div>serialized/deserialized  to/from JSON format.</div></blockquote>
+<ul class="simple">
+<li>all attributes not starting with underscore are serialized by default. Class may provide list of attributes that should not be serialized
+or list of attributes that should be serialized to override this implicit mechanism.</li>
+<li>All attributes have to be created (in constructor) before serialization/deserialization. One can either assign default values
+in which case the input value must have the same type (checked recursively). Or just assign the type in which case the
+input value is checked against the type. If the value is not on input the value None is assigned.</li>
+<li>Attributes with type None can get any value from input, no checks or conversions are performed.</li>
+<li><dl class="first docutils">
+<dt>None values propagates upwards through the recursion tree as follows:</dt>
+<dd><ul class="first last">
+<li>[None ] -&gt; []                         # Full sequence is [ int ] - no value on input -&gt; [None] -&gt; []</li>
+<li>{a: None, b:x}  -&gt; {a: None, b:x}     # nothing special</li>
+<li>self.x = None  -&gt; self..x = None      # nothing special</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Lists may have specified type of elements, setting just single element:</dt>
+<dd>[ int ]
+[ ClassFactory( [ A, B ] ) ]
+or default value with singel element (not very usefull)
+[ 0 ]</dd>
+</dl>
+</li>
+<li>Lists with no elements are treated as [ None ], i.e. list of anything.</li>
+<li>self.x = ClassFactory( class_list = [ A, B ] )
+Input for attribute x should be a dictionary, that should contain key &#8216;__class__&#8217; which
+must be name  of a class containd in the &#8216;class_list&#8217;. The class of that name is constructed using deserialization recoursively.
+For class_lists of length 1, the &#8216;__class__&#8217; key is optional.</li>
+<li>self.x = Obligatory(&lt;Type&gt;)
+To mark an attribute with type &lt;Type&gt; that is obligatory on input.</li>
+</ul>
+<p>Example:
+import json_data as jd</p>
+<dl class="docutils">
+<dt>class Animal(jd.JsonData):</dt>
+<dd><dl class="first last docutils">
+<dt>def __init__(config = {}):</dt>
+<dd><p class="first">self.n_legs = 4       # Default value, type given implicitely, optional on input.
+self.n_legs = int     # Just type, input value obligatory
+self.length = float   # floats are initializble also from ints</p>
+<p>self.head = Chicken   # Construct Chicken form the value
+self.head = jd.Factory({ Chicken, Duck, Goose}) # construct one of given types according to &#8216;__class__&#8217; key on input</p>
+<p>self.
+def_head = Chicken(dict( chicken_color: &#8220;brown&#8221;) )
+self.head = jd.Factory([Chicken, Duck, Goose], default =def_head)</p>
+<p class="last">super().__init__(config, fill_attrs = []) # run deserialization and checks
+# By default all public attributes (not starting with underscore) are
+# initialized. Alternatively the list of attributes may be provided by the fill_attrs parameter.</p>
+</dd>
+</dl>
+</dd>
+<dt>class Chicken(Animal):</dt>
+<dd><p class="first"># explicit specification of attributes to serialize/deserialize.
+_serialized_attrs_ = [ &#8216;color&#8217;, &#8216;tail&#8217; ]</p>
+<dl class="last docutils">
+<dt>def __init__():</dt>
+<dd>def.color = 0
+def.wing = 1 # not serialized</dd>
+</dl>
+</dd>
+</dl>
+<p>TODO:
+- Need to separate data validation and serialization/deserialization, default values. E.g.</p>
+<blockquote>
+<div>I need validation against [[int]], but default value []. But otherwise the default could be [[]], or None, ...</div></blockquote>
+<ul>
+<li><p class="first">Is __init__ the best place to specify types and do deserialization as well?
+We have no way to initialize private attributes (not accesible from input, but known at construction time of the class
+- object created dynamicaly at run time.
+Possibly we can convert this deserialization init into static factory method:</p>
+<p>&#64;class
+def deserialize( cls, config ):</p>
+<blockquote>
+<div><p>x = cls.__new__()
+x.n_legs = 4
+# other type definitions
+super().deserialize(x, config )
+return x</p>
+</div></blockquote>
+<dl class="docutils">
+<dt>pros:</dt>
+<dd><ul class="first last simple">
+<li>can add serialization/deserialization to already existing classes with its own constructors</li>
+<li>allow explicti construction/initialization of the instancies</li>
+</ul>
+</dd>
+<dt>cons:</dt>
+<dd><ul class="first last simple">
+<li>Two places where we fill and possibly check class attributes</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<dl class="class">
+<dt id="json_data.ClassFactory">
+<em class="property">class </em><code class="descclassname">json_data.</code><code class="descname">ClassFactory</code><span class="sig-paren">(</span><em>class_list</em><span class="sig-paren">)</span><a class="headerlink" href="#json_data.ClassFactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Helper class for JsonData.</p>
+<dl class="method">
+<dt id="json_data.ClassFactory.make_instance">
+<code class="descname">make_instance</code><span class="sig-paren">(</span><em>config</em>, <em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#json_data.ClassFactory.make_instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make instance from config dict.
+Dict must contain item &#8220;__class__&#8221; with name of desired class.
+Desired class must be in class_list.
+:param config:
+:return:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="json_data.Error">
+<em class="property">exception </em><code class="descclassname">json_data.</code><code class="descname">Error</code><a class="headerlink" href="#json_data.Error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">Exception</span></code></p>
+<p>Base class for exceptions in this module.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="json_data.JsonData">
+<em class="property">class </em><code class="descclassname">json_data.</code><code class="descname">JsonData</code><span class="sig-paren">(</span><em>config</em><span class="sig-paren">)</span><a class="headerlink" href="#json_data.JsonData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Abstract base class for various data classes.
+These classes are basically just documented dictionaries,
+which are JSON serializable and provide some syntactic sugar
+(see DotDict from Flow123d - Jan Hybs)
+In order to simplify also serialization of non-data classes, we
+should implement serialization of __dict__.</p>
+<p>Why use JSON for serialization? (e.g. instead of pickle)
+We want to use it for both sending the data and storing them in files,
+while some of these files should be human readable/writable.</p>
+<p>Serializable classes will be derived from this one. And data members
+that should not be serialized are prefixed by &#8216;_&#8217;.</p>
+<p>If list of serialized attributes is provided to constructor,
+these attributes are serialized no matter if prefixed by &#8216;_&#8217; or not.</p>
+<p>?? Anything similar in current JobPanel?</p>
+<dl class="method">
+<dt id="json_data.JsonData.serialize">
+<code class="descname">serialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#json_data.JsonData.serialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serialize the object.
+:return:</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="json_data.Obligatory">
+<em class="property">class </em><code class="descclassname">json_data.</code><code class="descname">Obligatory</code><span class="sig-paren">(</span><em>type_spec</em><span class="sig-paren">)</span><a class="headerlink" href="#json_data.Obligatory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Wrapper to specify that the value is obligatory on input.</p>
+<dl class="method">
+<dt id="json_data.Obligatory.type">
+<code class="descname">type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#json_data.Obligatory.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="json_data.WrongKeyError">
+<em class="property">exception </em><code class="descclassname">json_data.</code><code class="descname">WrongKeyError</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="headerlink" href="#json_data.WrongKeyError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#json_data.Error" title="json_data.Error"><code class="xref py py-class docutils literal"><span class="pre">json_data.Error</span></code></a></p>
+<p>Raised when attempt assign data to key that not exist</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, TUL.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0.0-beta',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

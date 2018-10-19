@@ -1,0 +1,7 @@
+remove_pyc module
+=================
+
+.. automodule:: remove_pyc
+    :members:
+    :undoc-members:
+    :show-inheritance:

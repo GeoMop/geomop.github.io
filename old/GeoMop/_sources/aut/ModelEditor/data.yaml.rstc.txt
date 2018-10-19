@@ -1,0 +1,22 @@
+data.yaml package
+=================
+
+Submodules
+----------
+
+data.yaml.transformator module
+------------------------------
+
+.. automodule:: data.yaml.transformator
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: data.yaml
+    :members:
+    :undoc-members:
+    :show-inheritance:
