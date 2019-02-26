@@ -9,5 +9,10 @@
         display:  "release 1.0.0",
         links:    ['download', 'features', 'changes', 'manual', 'source', 'readme'],
       },
+      {
+        version:  "1.1.0",
+        display:  "release 1.1.0",
+        links:    ['download', 'features', 'changes', 'manual', 'source', 'readme'],
+      },
   ];
 })(window);
