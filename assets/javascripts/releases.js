@@ -8,7 +8,7 @@
         version:  "2.0.0",
         display:  "release 2.0.0",
         links:    ['download', 'features', 'changes', 'manual', 'readme'],
-        documentation_relative: html/index.html,
+        documentation_relative: "html/index.html"
         // link to documentation file (PDF or HTML) relative to geomop.nti.tul.cz/packages/{version}/
       },
       {
