@@ -26,10 +26,21 @@ The graphical aplication package contains:
 
 
 ## Acknowledgement 
-[![TAČR](assets/logo_TACR_zakl_inv.png)](https://www.tacr.cz)
+<div style="-webkit-column-count: 2; -moz-column-count: 2; column-count: 2; -webkit-column-rule: 1px dotted #e0e0e0; -moz-column-rule: 1px dotted #e0e0e0; column-rule: 1px dotted #e0e0e0;">
+    <div style="display: inline-block;">
+        <a href=https://www.tacr.cz>
+            <img src="assets/logo_TACR_zakl_inv.png" alt="TAČR_logo" width="200"/>
+        </a>
+    </div>
+    <div style="display: inline-block;">
+        <par>
+        Tento software byl vytvořen se státní podporou Technologické agentury 
+        ČR v rámci Programu Epsilon 3. (projekt TH03010227)
 
-Tento software byl vytvořen se státní podporou Technologické agentury 
-ČR v rámci Programu Epsilon 3. (projekt TH03010227)
+        <par>  
+        This software was created with support of Technoligical agency of Czech Republic within
+        the Program Epsilon 3. (project no.  TH03010227) 
+    </div>
+</div>
 
-This software was created with support of Technoligical agency of Czech Republic within
-the Program Epsilon 3. (project no.  TH03010227) 
+
