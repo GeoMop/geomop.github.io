@@ -37,7 +37,6 @@ The graphical aplication package contains:
           Tento software byl vytvořen se státní podporou Technologické agentury 
           ČR v rámci Programu Epsilon 3. (projekt TH03010227)
         </p>
-     
         <p>
           This software was created with support of Technoligical agency of Czech Republic within
           the Program Epsilon 3. (project no.  TH03010227) 
