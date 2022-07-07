@@ -26,13 +26,16 @@ The graphical aplication package contains:
 
 
 ## Acknowledgement 
-<div style="-webkit-column-count: 2; -moz-column-count: 2; column-count: 2; -webkit-column-rule: 1px dotted #e0e0e0; -moz-column-rule: 1px dotted #e0e0e0; column-rule: 1px dotted #e0e0e0;">
-    <div style="display: inline-block;">
-        <a href=https://www.tacr.cz>
-            <img src="assets/logo_TACR_zakl_inv.png" alt="TAČR_logo" width="100"/>
-        </a>
-    </div>
-    <div style="display: inline-block;">
+<table style="border-collapse:collapse" width="100%">
+  <tr>
+  <td width="20%">
+      <a href=https://www.tacr.cz>
+      <img src="assets/logo_TACR_zakl_inv.png" alt="TAČR_logo" width="1000"/>
+      </a>
+  </td>
+  <td width="5%"></td>
+  <td width="75%">
+    <div>
         <p>
           Tento software byl vytvořen se státní podporou Technologické agentury 
           ČR v rámci Programu Epsilon 3. (projekt TH03010227)
@@ -42,6 +45,7 @@ The graphical aplication package contains:
           the Program Epsilon 3. (project no.  TH03010227) 
         </p>
     </div>
-</div>
-
+  </td>
+  </tr>
+</table>
 
