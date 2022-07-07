@@ -29,7 +29,7 @@ The graphical aplication package contains:
 <table style="border-collapse:collapse" width="100%">
   <tr>
   <td width="20%">
-      <a href=https://www.tacr.cz>
+      <a href="https://www.tacr.cz">
       <img src="assets/logo_TACR_zakl_inv.png" alt="TAČR_logo" width="1000"/>
       </a>
   </td>
